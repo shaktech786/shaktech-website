@@ -49,7 +49,7 @@ const PrivacyPage = () => {
                 Introduction
               </h2>
               <p className="text-gray-300 leading-relaxed">
-                ShakTech ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we 
+                ShakTech (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we 
                 collect, use, disclose, and safeguard your information when you use our website and services. Please read this 
                 privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access our services.
               </p>
@@ -222,7 +222,7 @@ const PrivacyPage = () => {
             {/* Children's Privacy */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-white mb-4">
-                8. Children's Privacy
+                8. Children&apos;s Privacy
               </h2>
               <p className="text-gray-300 leading-relaxed">
                 Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal 
@@ -288,7 +288,7 @@ const PrivacyPage = () => {
               </h2>
               <p className="text-gray-300 leading-relaxed">
                 We may update this Privacy Policy from time to time. The updated version will be indicated by an updated 
-                "Last Updated" date. We encourage you to review this Privacy Policy periodically. Continued use of our services 
+                &ldquo;Last Updated&rdquo; date. We encourage you to review this Privacy Policy periodically. Continued use of our services 
                 after changes constitutes acceptance of the updated policy.
               </p>
             </div>
@@ -299,7 +299,7 @@ const PrivacyPage = () => {
                 13. Do Not Track Signals
               </h2>
               <p className="text-gray-300 leading-relaxed">
-                Some browsers have a "Do Not Track" feature that lets you tell websites you do not want your online activities 
+                Some browsers have a &ldquo;Do Not Track&rdquo; feature that lets you tell websites you do not want your online activities 
                 tracked. We currently do not respond to browser Do Not Track signals.
               </p>
             </div>
@@ -319,7 +319,7 @@ const PrivacyPage = () => {
                 <p>Atlanta, Georgia, United States</p>
               </div>
               <p className="text-gray-300 leading-relaxed mt-4">
-                For privacy-specific inquiries, please include "Privacy Inquiry" in the subject line of your email.
+                For privacy-specific inquiries, please include &ldquo;Privacy Inquiry&rdquo; in the subject line of your email.
               </p>
             </div>
 

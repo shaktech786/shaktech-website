@@ -49,7 +49,7 @@ const TermsPage = () => {
                 1. Agreement to Terms
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                By accessing or using ShakTech's services ("Services"), you agree to be bound by these Terms of Service ("Terms"). 
+                By accessing or using ShakTech&apos;s services (&ldquo;Services&rdquo;), you agree to be bound by these Terms of Service (&ldquo;Terms&rdquo;). 
                 If you disagree with any part of these terms, you do not have permission to access our Services.
               </p>
               <p className="text-gray-300 leading-relaxed">
@@ -88,13 +88,13 @@ const TermsPage = () => {
               <p className="text-gray-300 leading-relaxed mb-4">
                 Unless otherwise specified in writing, all deliverables created specifically for a client under a paid engagement 
                 become the property of the client upon full payment. This includes custom code, documentation, and designs created 
-                exclusively for the client's project.
+                exclusively for the client&apos;s project.
               </p>
               
               <h3 className="text-xl font-semibold text-white mb-3">3.2 Pre-existing IP</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 ShakTech retains all rights to pre-existing intellectual property, including but not limited to frameworks, 
-                methodologies, tools, and generic code libraries that were not created specifically for the client's project.
+                methodologies, tools, and generic code libraries that were not created specifically for the client&apos;s project.
               </p>
               
               <h3 className="text-xl font-semibold text-white mb-3">3.3 Open Source</h3>
@@ -148,7 +148,7 @@ const TermsPage = () => {
                 TO THE MAXIMUM EXTENT PERMITTED BY LAW:
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4 mb-4">
-                <li>SHAKTECH'S TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID FOR THE SPECIFIC SERVICES GIVING RISE TO THE CLAIM</li>
+                <li>SHAKTECH&apos;S TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID FOR THE SPECIFIC SERVICES GIVING RISE TO THE CLAIM</li>
                 <li>SHAKTECH SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES</li>
                 <li>SHAKTECH SHALL NOT BE LIABLE FOR LOSS OF PROFITS, DATA, BUSINESS, OR GOODWILL</li>
                 <li>THESE LIMITATIONS APPLY REGARDLESS OF THE THEORY OF LIABILITY</li>
@@ -165,7 +165,7 @@ const TermsPage = () => {
                 standards. However:
               </p>
               <p className="text-gray-300 leading-relaxed uppercase font-semibold">
-                THE SERVICES ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
+                THE SERVICES ARE PROVIDED &ldquo;AS IS&rdquo; WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
                 WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
               </p>
             </div>
@@ -177,7 +177,7 @@ const TermsPage = () => {
               </h2>
               <p className="text-gray-300 leading-relaxed">
                 You agree to indemnify, defend, and hold harmless ShakTech, its officers, directors, employees, and agents from 
-                any claims, damages, losses, liabilities, and expenses (including attorney's fees) arising from your use of the 
+                any claims, damages, losses, liabilities, and expenses (including attorney&apos;s fees) arising from your use of the 
                 Services, violation of these Terms, or infringement of any third-party rights.
               </p>
             </div>
@@ -209,7 +209,7 @@ const TermsPage = () => {
               </p>
               <p className="text-gray-300 leading-relaxed">
                 If negotiations fail, disputes shall be resolved through binding arbitration in Atlanta, Georgia, under the rules 
-                of the American Arbitration Association. The prevailing party may recover reasonable attorney's fees.
+                of the American Arbitration Association. The prevailing party may recover reasonable attorney&apos;s fees.
               </p>
             </div>
 
