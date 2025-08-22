@@ -78,7 +78,7 @@ const Testimonials = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             What <span className="text-gradient-primary">Clients Say</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             From empathetic consulting to cutting-edge AI solutions – 
             see why clients trust ShakTech for their most important projects.
           </p>
@@ -99,10 +99,10 @@ const Testimonials = () => {
         {/* Trust Indicators */}
         <div className="mt-16 pt-16 border-t border-gray-200 dark:border-gray-700">
           <div className="text-center mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            <h3 className="text-lg font-semibold text-white mb-2">
               Trusted Experience
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-gray-400">
               10+ years of enterprise-grade software development
             </p>
           </div>

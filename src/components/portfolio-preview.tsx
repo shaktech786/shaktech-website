@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </CardTitle>
     </CardHeader>
     <CardContent>
-      <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+      <p className="text-gray-300 mb-4 leading-relaxed">
         {description}
       </p>
       
@@ -129,13 +129,13 @@ const PortfolioPreview = () => {
   ]
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-primary-950/20">
+    <section className="py-24 bg-primary-950/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             AI-Powered <span className="text-gradient-primary">Portfolio</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             From autonomous AI agents to intelligent platforms – see how I&apos;m pushing the boundaries 
             of what&apos;s possible when human creativity meets artificial intelligence.
           </p>

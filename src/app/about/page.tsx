@@ -45,7 +45,7 @@ const AboutPage = () => {
                 <span className="block text-gradient-creative">AI Pioneer</span>
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-xl text-gray-300 leading-relaxed">
                 My journey from <strong>TEDx stages</strong> to <strong>Thoughtworks consulting</strong> to 
                 <strong> AI-first software delivery</strong> has taught me that the most powerful technology 
                 solutions come from understanding the <em>human story</em> behind every project.
@@ -90,13 +90,13 @@ const AboutPage = () => {
       </section>
 
       {/* Journey Timeline */}
-      <section className="py-24 bg-white dark:bg-primary-950/10">
+      <section className="py-24 bg-primary-950/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               My <span className="text-gradient-primary">Journey</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               A unique path that combines technical excellence, creative expression, 
               and empathetic leadership to deliver AI-first solutions.
             </p>
@@ -114,10 +114,10 @@ const AboutPage = () => {
                         Present
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       Lead Software Consultant at Thoughtworks
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       Leading AI-first software delivery initiatives, building digital accelerator programs, 
                       and mentoring diverse engineering teams. Received commendation from Thoughtworks North America CEO 
                       for successfully training 11 diverse interns who all received full-time offers.
@@ -148,10 +148,10 @@ const AboutPage = () => {
                         2012-2016
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       Georgia Institute of Technology
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       B.S. in Computer Science with Dean&apos;s List honors. Served as Peer Leader mentoring 30 students, 
                       while simultaneously developing my beatboxing skills that would later lead to championship performances.
                     </p>
@@ -171,10 +171,10 @@ const AboutPage = () => {
                         2017
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       Loopstation Vice Champion & TEDx Speaker
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       Achieved vice champion status at the American Beatbox Championships and delivered a TEDx talk. 
                       This experience taught me the power of creative expression and performing under pressure - 
                       skills I now apply to technical presentations and client engagements.
@@ -193,13 +193,13 @@ const AboutPage = () => {
       </section>
 
       {/* Philosophy & Approach */}
-      <section className="py-24 bg-gray-50 dark:bg-primary-950/20">
+      <section className="py-24 bg-primary-950/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               My <span className="text-gradient-creative">Philosophy</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               The intersection of empathy, creativity, and technical excellence drives everything I do.
             </p>
           </div>
@@ -210,8 +210,8 @@ const AboutPage = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Empathy First</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-4">Empathy First</h3>
+                <p className="text-gray-300 leading-relaxed">
                   Every project starts with understanding the human story. Whether it&apos;s a founder&apos;s vision 
                   or a team&apos;s challenges, I listen first and build solutions that truly serve people.
                 </p>
@@ -223,8 +223,8 @@ const AboutPage = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-creative-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Lightbulb className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Creative Innovation</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-4">Creative Innovation</h3>
+                <p className="text-gray-300 leading-relaxed">
                   My beatboxing background taught me that the most powerful expressions come from 
                   combining existing elements in new ways. I bring this creative thinking to AI solutions.
                 </p>
@@ -236,8 +236,8 @@ const AboutPage = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-primary-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Pragmatic Excellence</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl font-bold text-white mb-4">Pragmatic Excellence</h3>
+                <p className="text-gray-300 leading-relaxed">
                   Thoughtworks trained me in enterprise-grade practices: test-driven development, 
                   continuous integration, and agile methodologies. I combine rigor with innovation.
                 </p>
@@ -248,10 +248,10 @@ const AboutPage = () => {
       </section>
 
       {/* Skills & Expertise */}
-      <section className="py-24 bg-white dark:bg-primary-950/10">
+      <section className="py-24 bg-primary-950/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Core <span className="text-gradient-primary">Expertise</span>
             </h2>
           </div>
@@ -259,7 +259,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                   <Code className="w-6 h-6 text-primary-600 mr-3" />
                   Technical Skills
                 </h3>
@@ -279,7 +279,7 @@ const AboutPage = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                   <Lightbulb className="w-6 h-6 text-creative-600 mr-3" />
                   AI & Machine Learning
                 </h3>
@@ -299,7 +299,7 @@ const AboutPage = () => {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                   <Users className="w-6 h-6 text-accent-600 mr-3" />
                   Leadership & Consulting
                 </h3>
@@ -324,7 +324,7 @@ const AboutPage = () => {
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   🏆 Key Achievements
                 </h4>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                <ul className="space-y-2 text-gray-300">
                   <li>• Led 11 diverse interns to 100% full-time offer rate</li>
                   <li>• TEDx Speaker on creativity and technology</li>
                   <li>• Beatbox Loopstation Vice Champion 2017</li>
@@ -337,7 +337,7 @@ const AboutPage = () => {
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   🎯 What Drives Me
                 </h4>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   I believe the future belongs to those who can bridge the gap between human creativity 
                   and artificial intelligence. Every project is an opportunity to create something 
                   that makes people&apos;s lives better, easier, or more meaningful.
