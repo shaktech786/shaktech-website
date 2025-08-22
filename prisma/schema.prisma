@@ -1,0 +1,127 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String
+  content     String
+  imageUrl    String?
+  techStack   String[] // Array of tech stack items
+  demoUrl     String?
+  githubUrl   String?
+  category    String   // e.g., "AI Platform", "Web Development", "Automation"
+  featured    Boolean  @default(false)
+  published   Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("projects")
+}
+
+model Post {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String
+  content     String
+  imageUrl    String?
+  tags        String[] // Array of tags
+  published   Boolean  @default(false)
+  featured    Boolean  @default(false)
+  readTime    Int?     // estimated reading time in minutes
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("posts")
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String
+  features    String[] // Array of feature descriptions
+  pricing     String?  // e.g., "Starting at $5,000", "Custom Quote"
+  tier        String   // "strategy", "development", "training"
+  published   Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("services")
+}
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  clientName  String
+  clientTitle String?
+  company     String
+  content     String
+  rating      Int      @default(5)
+  imageUrl    String?
+  published   Boolean  @default(false)
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("testimonials")
+}
+
+model CaseStudy {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  client      String
+  challenge   String
+  solution    String
+  results     String
+  imageUrl    String?
+  techStack   String[]
+  duration    String?  // e.g., "3 months", "6 weeks"
+  projectId   String?  // Optional link to Project
+  published   Boolean  @default(false)
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("case_studies")
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  company   String?
+  message   String
+  service   String?  // Which service they're interested in
+  budget    String?
+  timeline  String?
+  responded Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("contacts")
+}
