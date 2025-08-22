@@ -1,38 +1,44 @@
 "use client"
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, Zap, Code2 } from "lucide-react"
 import Link from "next/link"
 
-const CodeParticle = ({ delay = 0, symbol = "{}", className = "" }) => (
-  <div 
-    className={`absolute code-particle text-primary-300/40 text-lg font-mono select-none ${className}`}
-    style={{ animationDelay: `${delay}s` }}
-  >
-    {symbol}
-  </div>
-)
-
 const HeroSection = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20
+      const y = (e.clientY / window.innerHeight - 0.5) * 20
+      setMousePosition({ x, y })
+    }
+    
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Neural Network Background */}
-      <div className="neural-bg" />
-      
-      {/* Floating Code Particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <CodeParticle symbol="<>" delay={0} className="top-1/4 left-1/4" />
-        <CodeParticle symbol="{AI}" delay={1} className="top-1/3 right-1/4" />
-        <CodeParticle symbol="()=>" delay={2} className="bottom-1/3 left-1/3" />
-        <CodeParticle symbol="[ML]" delay={0.5} className="top-1/2 right-1/3" />
-        <CodeParticle symbol="<Dev/>" delay={1.5} className="bottom-1/4 right-1/4" />
-        <CodeParticle symbol="{}" delay={2.5} className="top-1/6 left-1/2" />
-        <CodeParticle symbol="AI()" delay={3} className="bottom-1/6 left-1/6" />
+      {/* Subtle gradient background with parallax effect */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+          transition: 'transform 0.5s ease-out'
+        }}
+      >
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-creative-500/10 rounded-full blur-3xl" />
       </div>
       
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-8 animate-slide-up">
+        <div className="space-y-8 animate-fade-in-up">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full border border-primary-200 dark:border-primary-700">
             <Sparkles className="w-4 h-4 text-primary-600" />
@@ -44,7 +50,7 @@ const HeroSection = () => {
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
             <span className="block text-white">I Turn Ideas Into</span>
-            <span className="block text-gradient-creative beat-sync mt-2">AI-Powered Reality</span>
+            <span className="block text-gradient-creative mt-2 hover-glow">AI-Powered Reality</span>
           </h1>
 
           {/* Subheading */}
