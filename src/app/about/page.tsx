@@ -33,14 +33,14 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid-jazz items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center space-x-2 bg-primary-100 dark:bg-primary-900/30 px-4 py-2 rounded-full border border-primary-200 dark:border-primary-700">
-                <Sparkles className="w-4 h-4 text-primary-600" />
-                <span className="text-sm font-medium text-primary-700 dark:text-primary-300">
+              <div className="inline-flex items-center space-x-2 bg-primary-900/30 px-4 py-2 rounded-full border border-primary-700">
+                <Sparkles className="w-4 h-4 text-primary-400" />
+                <span className="text-sm font-medium text-primary-300">
                   About Shakeel Bhamani
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
                 From Beatbox Champion to
                 <span className="block text-gradient-creative">AI Pioneer</span>
               </h1>
@@ -80,7 +80,7 @@ const AboutPage = () => {
                 </div>
                 <div className="text-center mt-6 space-y-1">
                   <p className="font-bold text-xl text-white">Shakeel Bhamani</p>
-                  <p className="text-gray-400">Lead Software Consultant at Thoughtworks</p>
+                  <p className="text-gray-400">AI-First Software Expert</p>
                   <p className="text-gray-400">TEDx Speaker & Beatbox Champion</p>
                 </div>
               </div>

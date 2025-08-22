@@ -62,7 +62,7 @@ const Footer = () => {
             
             <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
               Empathetic AI Software Delivery where human creativity meets AI acceleration. 
-              From Thoughtworks consulting to beatboxing championships – bridging worlds to build yours.
+              Building the future with enterprise expertise and creative innovation.
             </p>
             
             <div className="flex items-center space-x-4">

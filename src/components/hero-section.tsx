@@ -40,10 +40,10 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8 animate-fade-in-up">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-primary-50 dark:bg-primary-900/30 px-4 py-2 rounded-full border border-primary-200 dark:border-primary-700">
-            <Sparkles className="w-4 h-4 text-primary-600" />
-            <span className="text-sm font-medium text-primary-700 dark:text-primary-300">
-              TEDx Speaker • Lead Software Consultant • AI Pioneer
+          <div className="inline-flex items-center space-x-2 bg-primary-900/30 px-4 py-2 rounded-full border border-primary-700">
+            <Sparkles className="w-4 h-4 text-primary-400" />
+            <span className="text-sm font-medium text-primary-300">
+              TEDx Speaker • AI-First Software Expert • Beatbox Champion
             </span>
           </div>
 
@@ -81,31 +81,31 @@ const HeroSection = () => {
           {/* Key Stats/Features */}
           <div className="pt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
-                <Zap className="w-8 h-8 text-primary-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
+                <Zap className="w-8 h-8 text-primary-400" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">AI-First Development</h3>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
+              <h3 className="text-lg font-semibold text-white">AI-First Development</h3>
+              <p className="text-gray-400 mt-2">
                 Building with AI from day one, not as an afterthought
               </p>
             </div>
             
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-100 dark:bg-accent-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
-                <Code2 className="w-8 h-8 text-accent-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
+                <Code2 className="w-8 h-8 text-accent-400" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">10+ Years Experience</h3>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
-                Thoughtworks-trained with enterprise-grade practices
+              <h3 className="text-lg font-semibold text-white">10+ Years Experience</h3>
+              <p className="text-gray-400 mt-2">
+                Enterprise-grade practices and proven methodologies
               </p>
             </div>
             
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-creative-100 dark:bg-creative-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
-                <Sparkles className="w-8 h-8 text-creative-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-creative-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
+                <Sparkles className="w-8 h-8 text-creative-400" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Creative Innovation</h3>
-              <p className="text-gray-600 dark:text-gray-400 mt-2">
+              <h3 className="text-lg font-semibold text-white">Creative Innovation</h3>
+              <p className="text-gray-400 mt-2">
                 From beatbox champion to tech innovator
               </p>
             </div>
@@ -113,12 +113,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-300 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary-500 rounded-full mt-2 animate-pulse" />
-        </div>
-      </div>
     </section>
   )
 }
