@@ -153,8 +153,9 @@ const ServicesPage = () => {
   return (
     <main className="min-h-screen bg-primary-950">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-primary-900 via-primary-950 to-accent-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-24 pt-40 bg-gradient-to-br from-primary-900 via-primary-950 to-accent-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh-gradient" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
             AI-First Software
             <span className="block text-gradient-creative">Services</span>
@@ -182,8 +183,9 @@ const ServicesPage = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 bg-primary-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-primary-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <Card 
@@ -279,8 +281,9 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-gradient-to-br from-primary-900 to-accent-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-primary-900 to-accent-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots-pattern opacity-20" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               My <span className="text-gradient-creative">Process</span>

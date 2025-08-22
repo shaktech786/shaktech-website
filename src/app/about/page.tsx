@@ -29,8 +29,9 @@ const AboutPage = () => {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-primary-950/20 via-primary-950/10 to-accent-950/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 pt-40 bg-gradient-to-br from-primary-950/20 via-primary-950/10 to-accent-950/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh-gradient" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid-jazz items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center space-x-2 bg-primary-900/30 px-4 py-2 rounded-full border border-primary-700">
@@ -90,8 +91,9 @@ const AboutPage = () => {
       </section>
 
       {/* Journey Timeline */}
-      <section className="py-24 bg-primary-950/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-primary-950/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots-pattern opacity-30" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               My <span className="text-gradient-primary">Journey</span>
@@ -193,8 +195,9 @@ const AboutPage = () => {
       </section>
 
       {/* Philosophy & Approach */}
-      <section className="py-24 bg-primary-950/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-primary-950/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-diagonal-lines" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               My <span className="text-gradient-creative">Philosophy</span>
@@ -248,8 +251,9 @@ const AboutPage = () => {
       </section>
 
       {/* Skills & Expertise */}
-      <section className="py-24 bg-primary-950/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-primary-950/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots-pattern opacity-30" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Core <span className="text-gradient-primary">Expertise</span>

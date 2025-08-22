@@ -170,8 +170,9 @@ const PortfolioPage = () => {
   return (
     <main className="min-h-screen bg-primary-950">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-primary-900 via-primary-950 to-accent-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-24 pt-40 bg-gradient-to-br from-primary-900 via-primary-950 to-accent-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-diagonal-lines" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center space-x-2 bg-primary-800/50 px-4 py-2 rounded-full border border-primary-700 mb-8">
             <Sparkles className="w-4 h-4 text-accent-400" />
             <span className="text-sm font-medium text-accent-300">
@@ -206,8 +207,9 @@ const PortfolioPage = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-24 bg-primary-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-primary-950 relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots-pattern opacity-20" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Featured <span className="text-gradient-primary">Projects</span>
@@ -308,7 +310,7 @@ const PortfolioPage = () => {
 
       {/* Client Work Section */}
       <section className="py-24 bg-gradient-to-br from-primary-900 to-accent-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Client <span className="text-gradient-creative">Success Stories</span>
