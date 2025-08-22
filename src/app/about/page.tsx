@@ -21,8 +21,8 @@ import {
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "About Shakeel Bhamani - Lead Software Consultant & TEDx Speaker",
-  description: "From Thoughtworks consulting to beatboxing championships - learn about Shakeel's unique journey in AI-first software delivery, empathetic leadership, and creative innovation.",
+  title: "About Shakeel Bhamani - AI Expert & TEDx Speaker",
+  description: "From enterprise consulting to beatboxing championships - learn about Shakeel's unique journey in AI-first software delivery, empathetic leadership, and creative innovation.",
 }
 
 const AboutPage = () => {

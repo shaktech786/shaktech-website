@@ -55,9 +55,9 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed">
-            Empathetic AI Software Delivery where <span className="text-primary-600 font-semibold">human creativity</span> meets 
-            <span className="text-accent-500 font-semibold"> AI acceleration</span>. 
-            From <span className="text-creative-500 font-semibold">Thoughtworks consulting</span> to 
+            Empathetic AI Software Delivery where <span className="text-primary-400 font-semibold">human creativity</span> meets 
+            <span className="text-accent-400 font-semibold"> AI acceleration</span>. 
+            From <span className="text-creative-400 font-semibold">enterprise consulting</span> to 
             <span className="text-gradient-primary font-semibold"> beatboxing championships</span> – 
             I bridge worlds to build yours.
           </p>
