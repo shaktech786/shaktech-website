@@ -12,14 +12,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ShakTech - AI-First Software Delivery",
-  description: "Empathetic AI Software Delivery where human creativity meets AI acceleration. Led by Shakeel Bhamani, Lead Software Consultant and TEDx Speaker.",
-  keywords: ["AI Software Development", "AI-First Development", "Software Consulting", "Thoughtworks", "TEDx Speaker", "Shakeel Bhamani"],
+  title: "ShakTech - US-Based AI-First Software Delivery",
+  description: "US-based AI Software Expert in Atlanta. Georgia Tech educated, Fortune 500 experienced. Clear communication, EST timezone, no offshore delays. Led by Shakeel Bhamani.",
+  keywords: ["US-Based AI Developer", "Atlanta Software Consultant", "AI-First Development", "Georgia Tech", "American Software Developer", "TEDx Speaker", "Shakeel Bhamani"],
   authors: [{ name: "Shakeel Bhamani" }],
   creator: "Shakeel Bhamani",
   openGraph: {
-    title: "ShakTech - AI-First Software Delivery",
-    description: "Empathetic AI Software Delivery where human creativity meets AI acceleration.",
+    title: "ShakTech - US-Based AI-First Software Delivery",
+    description: "US-based AI expert in Atlanta. Clear communication, EST timezone, enterprise experience.",
     url: "https://shak-tech.com",
     siteName: "ShakTech",
     locale: "en_US",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ShakTech - AI-First Software Delivery",
+    title: "ShakTech - US-Based AI Expert",
     description: "Empathetic AI Software Delivery where human creativity meets AI acceleration.",
   },
   robots: {

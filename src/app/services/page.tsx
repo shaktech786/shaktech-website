@@ -153,8 +153,7 @@ const ServicesPage = () => {
   return (
     <main className="min-h-screen bg-primary-950">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-primary-900 via-primary-950 to-accent-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh-gradient" />
+      <section className="py-24 pt-40 bg-hexagon-pattern relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
             AI-First Software
@@ -167,24 +166,27 @@ const ServicesPage = () => {
           
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
             <div className="flex items-center space-x-2">
+              <span className="text-lg">🇺🇸</span>
+              <span>US-Based</span>
+            </div>
+            <div className="flex items-center space-x-2">
               <Shield className="w-5 h-5 text-accent-400" />
               <span>Enterprise Grade</span>
             </div>
             <div className="flex items-center space-x-2">
               <Award className="w-5 h-5 text-creative-400" />
-              <span>10+ Years Experience</span>
+              <span>Georgia Tech</span>
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="w-5 h-5 text-primary-400" />
-              <span>Proven Methodologies</span>
+              <span>EST Timezone</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 bg-primary-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+      <section className="py-24 section-services relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service) => (
@@ -281,8 +283,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-gradient-to-br from-primary-900 to-accent-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots-pattern opacity-20" />
+      <section className="py-24 bg-gradient-radial relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -317,7 +318,7 @@ const ServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-primary-600 via-accent-500 to-creative-500">
+      <section className="py-24 bg-gradient-conic relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with AI?

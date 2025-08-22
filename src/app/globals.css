@@ -64,16 +64,34 @@ body {
 /* Enhanced background patterns for better section distinction */
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+    linear-gradient(rgba(99, 102, 241, 0.3) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.3) 2px, transparent 2px);
   background-size: 50px 50px;
-  background-color: rgba(67, 56, 202, 0.02);
+  background-color: #1a1a3e;
+  position: relative;
+}
+
+.bg-grid-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 15, 35, 0.8) 100%);
+  pointer-events: none;
 }
 
 .bg-dots-pattern {
-  background-image: radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.2) 1px, transparent 1px);
+  background-image: radial-gradient(circle at 2px 2px, rgba(6, 182, 212, 0.4) 2px, transparent 2px);
   background-size: 40px 40px;
-  background-color: rgba(6, 182, 212, 0.02);
+  background-color: #0a2540;
+  position: relative;
+}
+
+.bg-dots-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, transparent 0%, rgba(6, 182, 212, 0.05) 100%);
+  pointer-events: none;
 }
 
 .bg-diagonal-lines {
@@ -81,18 +99,73 @@ body {
     45deg,
     transparent,
     transparent 10px,
-    rgba(245, 158, 11, 0.05) 10px,
-    rgba(245, 158, 11, 0.05) 20px
+    rgba(245, 158, 11, 0.15) 10px,
+    rgba(245, 158, 11, 0.15) 20px
   );
-  background-color: rgba(245, 158, 11, 0.01);
+  background-color: #1f1a0a;
+  position: relative;
+}
+
+.bg-diagonal-lines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(245, 158, 11, 0.03) 100%);
+  pointer-events: none;
 }
 
 .bg-mesh-gradient {
   background-image: 
-    radial-gradient(at 40% 20%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, rgba(6, 182, 212, 0.1) 0px, transparent 50%),
-    radial-gradient(at 10% 50%, rgba(245, 158, 11, 0.08) 0px, transparent 50%);
-  background-color: rgba(15, 15, 35, 0.5);
+    radial-gradient(at 40% 20%, rgba(99, 102, 241, 0.25) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(6, 182, 212, 0.2) 0px, transparent 50%),
+    radial-gradient(at 10% 50%, rgba(245, 158, 11, 0.15) 0px, transparent 50%);
+  background-color: #0f0f23;
+}
+
+/* New distinct background patterns */
+.bg-circuit-board {
+  background-color: #1a0f2e;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(99, 102, 241, 0.3) 25%, rgba(99, 102, 241, 0.3) 26%, transparent 27%, transparent 74%, rgba(99, 102, 241, 0.3) 75%, rgba(99, 102, 241, 0.3) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(99, 102, 241, 0.3) 25%, rgba(99, 102, 241, 0.3) 26%, transparent 27%, transparent 74%, rgba(99, 102, 241, 0.3) 75%, rgba(99, 102, 241, 0.3) 76%, transparent 77%, transparent);
+  background-size: 75px 75px;
+}
+
+.bg-hexagon-pattern {
+  background-color: #0f2027;
+  background-image: 
+    linear-gradient(30deg, #06b6d4 12%, transparent 12.5%, transparent 87%, #06b6d4 87.5%, #06b6d4),
+    linear-gradient(150deg, #06b6d4 12%, transparent 12.5%, transparent 87%, #06b6d4 87.5%, #06b6d4),
+    linear-gradient(30deg, #06b6d4 12%, transparent 12.5%, transparent 87%, #06b6d4 87.5%, #06b6d4),
+    linear-gradient(150deg, #06b6d4 12%, transparent 12.5%, transparent 87%, #06b6d4 87.5%, #06b6d4),
+    linear-gradient(60deg, rgba(6, 182, 212, 0.1) 25%, transparent 25.5%, transparent 75%, rgba(6, 182, 212, 0.1) 75%, rgba(6, 182, 212, 0.1)),
+    linear-gradient(60deg, rgba(6, 182, 212, 0.1) 25%, transparent 25.5%, transparent 75%, rgba(6, 182, 212, 0.1) 75%, rgba(6, 182, 212, 0.1));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+.bg-wave-pattern {
+  background-color: #1a1a2e;
+  background-image: 
+    repeating-radial-gradient(circle at 0 0, transparent 0, #1a1a2e 40px),
+    repeating-linear-gradient(rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.2) 50px, rgba(245, 158, 11, 0.15) 100px);
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(ellipse at center top, #2a1a4e 0%, #0f0f23 50%, #0a0a1f 100%);
+}
+
+.bg-gradient-conic {
+  background: conic-gradient(from 180deg at 50% 50%, #0f0f23 0deg, #1a1a3e 60deg, #0a2540 120deg, #1f1a0a 180deg, #1a0f2e 240deg, #0f2027 300deg, #0f0f23 360deg);
+  position: relative;
+}
+
+.bg-gradient-conic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(15, 15, 35, 0.9) 100%);
+  pointer-events: none;
 }
 
 /* Subtle hover glow effect */
@@ -218,6 +291,52 @@ a:focus-visible {
 
 .skip-to-content:focus {
   top: 16px;
+}
+
+/* Section-specific backgrounds for maximum distinction */
+.section-hero {
+  background: linear-gradient(135deg, #1a0f2e 0%, #0f0f23 25%, #0a1929 50%, #0f0f23 75%, #1f1a0a 100%);
+  position: relative;
+}
+
+.section-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.section-about {
+  background: #1a1a2e;
+  background-image: 
+    linear-gradient(90deg, transparent 0%, rgba(99, 102, 241, 0.1) 50%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, rgba(99, 102, 241, 0.05) 50%, transparent 100%);
+}
+
+.section-services {
+  background: #0a2540;
+  background-image: 
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(6, 182, 212, 0.1) 2px, rgba(6, 182, 212, 0.1) 4px),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(6, 182, 212, 0.1) 2px, rgba(6, 182, 212, 0.1) 4px);
+  background-size: 100px 100px;
+}
+
+.section-portfolio {
+  background: linear-gradient(180deg, #1f1a0a 0%, #2a1f0f 50%, #1f1a0a 100%);
+  position: relative;
+}
+
+.section-portfolio::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-conic-gradient(from 0deg at 50% 50%, rgba(245, 158, 11, 0.05) 0deg, transparent 10deg, transparent 20deg, rgba(245, 158, 11, 0.05) 30deg);
+  pointer-events: none;
 }
 
 /* Stagger animations */

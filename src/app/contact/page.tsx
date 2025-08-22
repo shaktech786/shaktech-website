@@ -379,7 +379,8 @@ const ContactPage = () => {
                     <MapPin className="w-5 h-5 text-accent-400 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-gray-400">Atlanta Metropolitan Area</p>
+                      <p className="text-gray-400">Atlanta, Georgia, USA 🇺🇸</p>
+                      <p className="text-gray-500 text-sm">EST Timezone</p>
                     </div>
                   </div>
 
@@ -453,7 +454,8 @@ const ContactPage = () => {
                     Book a Discovery Call
                   </CardTitle>
                   <p className="text-gray-400 text-sm">
-                    Prefer a live conversation? Schedule a 30-minute discovery call to discuss your project.
+                    Prefer a live conversation? Schedule a 30-minute discovery call with a US-based expert – 
+                    no timezone confusion, just clear communication in Eastern Time.
                   </p>
                 </CardHeader>
                 <CardContent>

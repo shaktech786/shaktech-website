@@ -29,8 +29,7 @@ const AboutPage = () => {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-primary-950/20 via-primary-950/10 to-accent-950/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh-gradient" />
+      <section className="py-24 pt-40 bg-circuit-board relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid-jazz items-center">
             <div className="space-y-8">
@@ -47,9 +46,10 @@ const AboutPage = () => {
               </h1>
 
               <p className="text-xl text-gray-300 leading-relaxed">
-                My journey from <strong>TEDx stages</strong> to <strong>Thoughtworks consulting</strong> to 
+                My journey from <strong>Georgia Tech</strong> to <strong>Fortune 500 consulting</strong> to 
                 <strong> AI-first software delivery</strong> has taught me that the most powerful technology 
-                solutions come from understanding the <em>human story</em> behind every project.
+                solutions come from understanding the <em>human story</em> behind every project. As a 
+                <strong>US-based consultant</strong>, I bring clear communication and cultural alignment to every engagement.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -82,6 +82,7 @@ const AboutPage = () => {
                 <div className="text-center mt-6 space-y-1">
                   <p className="font-bold text-xl text-white">Shakeel Bhamani</p>
                   <p className="text-gray-400">AI-First Software Expert</p>
+                  <p className="text-gray-400">Atlanta, Georgia 🇺🇸</p>
                   <p className="text-gray-400">TEDx Speaker & Beatbox Champion</p>
                 </div>
               </div>
@@ -91,8 +92,7 @@ const AboutPage = () => {
       </section>
 
       {/* Journey Timeline */}
-      <section className="py-24 bg-primary-950/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots-pattern opacity-30" />
+      <section className="py-24 section-about relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">

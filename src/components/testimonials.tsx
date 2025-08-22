@@ -72,8 +72,8 @@ const Testimonials = () => {
   ]
 
   return (
-    <section className="py-24 bg-primary-950/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-gradient-radial relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             What <span className="text-gradient-primary">Clients Say</span>
@@ -100,10 +100,10 @@ const Testimonials = () => {
         <div className="mt-16 pt-16 border-t border-gray-200 dark:border-gray-700">
           <div className="text-center mb-8">
             <h3 className="text-lg font-semibold text-white mb-2">
-              Trusted Experience
+              Trusted US-Based Expert
             </h3>
             <p className="text-gray-400">
-              10+ years of enterprise-grade software development
+              10+ years of enterprise-grade software development from Atlanta, Georgia
             </p>
           </div>
           

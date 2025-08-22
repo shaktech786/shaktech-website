@@ -20,22 +20,22 @@ const HeroSection = () => {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Subtle gradient background with parallax effect */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-[#1a0f2e] via-[#0f0f23] to-[#0a1929]">
+      {/* Enhanced gradient background with parallax effect */}
       <div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-50"
         style={{
           transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
           transition: 'transform 0.5s ease-out'
         }}
       >
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-creative-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-500/30 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-creative-500/20 rounded-full blur-3xl" />
       </div>
       
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      {/* Strong grid pattern overlay */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8 animate-fade-in-up">
@@ -43,7 +43,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center space-x-2 bg-primary-900/30 px-4 py-2 rounded-full border border-primary-700">
             <Sparkles className="w-4 h-4 text-primary-400" />
             <span className="text-sm font-medium text-primary-300">
-              TEDx Speaker • AI-First Software Expert • Beatbox Champion
+              🇺🇸 US-Based • TEDx Speaker • AI-First Expert • Beatbox Champion
             </span>
           </div>
 
@@ -55,11 +55,11 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed">
-            Empathetic AI Software Delivery where <span className="text-primary-400 font-semibold">human creativity</span> meets 
-            <span className="text-accent-400 font-semibold"> AI acceleration</span>. 
-            From <span className="text-creative-400 font-semibold">enterprise consulting</span> to 
-            <span className="text-gradient-primary font-semibold"> beatboxing championships</span> – 
-            I bridge worlds to build yours.
+            Atlanta-based AI expert delivering <span className="text-primary-400 font-semibold">enterprise solutions</span> with 
+            <span className="text-accent-400 font-semibold"> clear communication</span>. 
+            From <span className="text-creative-400 font-semibold">Georgia Tech</span> to 
+            <span className="text-gradient-primary font-semibold"> Fortune 500 consulting</span> – 
+            I bring US-based expertise to your AI transformation.
           </p>
 
           {/* CTA Buttons */}
