@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Code } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const Navigation = () => {
@@ -42,9 +43,14 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-              <Code className="w-6 h-6 text-white" />
-            </div>
+            <Image 
+              src="/shaktech_logo.png" 
+              alt="ShakTech Logo" 
+              width={40} 
+              height={40} 
+              className="rounded-lg group-hover:scale-110 transition-transform duration-200"
+              priority
+            />
             <div className="hidden sm:block">
               <span className="text-xl font-bold text-gradient-primary">ShakTech</span>
               <div className="text-xs text-gray-500 -mt-1">AI-First Software Delivery</div>

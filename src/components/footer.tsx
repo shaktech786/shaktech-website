@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
-import { Github, Linkedin, Mail, ExternalLink, Code } from "lucide-react"
+import Image from "next/image"
+import { Github, Linkedin, Mail, ExternalLink } from "lucide-react"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -51,9 +52,13 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
-              </div>
+              <Image 
+                src="/shaktech_logo.png" 
+                alt="ShakTech Logo" 
+                width={40} 
+                height={40} 
+                className="rounded-lg"
+              />
               <div>
                 <span className="text-xl font-bold text-white">ShakTech</span>
                 <div className="text-xs text-gray-400 -mt-1">AI-First Software Delivery</div>

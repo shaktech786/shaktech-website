@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   keywords: ["US-Based AI Developer", "Atlanta Software Consultant", "AI-First Development", "Georgia Tech", "American Software Developer", "TEDx Speaker", "Shakeel Bhamani"],
   authors: [{ name: "Shakeel Bhamani" }],
   creator: "Shakeel Bhamani",
+  icons: {
+    icon: "/shaktech_logo.png",
+    shortcut: "/shaktech_logo.png",
+    apple: "/shaktech_logo.png",
+  },
   openGraph: {
     title: "ShakTech - US-Based AI-First Software Delivery",
     description: "US-based AI expert in Atlanta. Clear communication, EST timezone, enterprise experience.",
