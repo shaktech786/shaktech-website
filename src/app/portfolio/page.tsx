@@ -283,7 +283,7 @@ const PortfolioPage = () => {
 
                   <div className="flex items-center space-x-4">
                     {project.demoUrl && project.demoUrl !== "#" && (
-                      <Button variant="jazz" className="group" asChild>
+                      <Button variant="cta" className="group" asChild>
                         <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="w-4 h-4 mr-2" />
                           Live Demo

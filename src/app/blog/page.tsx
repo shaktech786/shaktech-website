@@ -174,7 +174,7 @@ const BlogPage = () => {
                     <div className="w-24 h-24 bg-gradient-to-br from-accent-500 to-creative-500 rounded-full flex items-center justify-center text-white">
                       {post.icon}
                     </div>
-                    <Button variant="jazz" className="group" asChild>
+                    <Button variant="cta" className="group" asChild>
                       <Link href={`/blog/${post.id}`}>
                         Read Article
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

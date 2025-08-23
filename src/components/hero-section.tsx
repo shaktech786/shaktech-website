@@ -20,7 +20,11 @@ const HeroSection = () => {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-[#1a0f2e] via-[#0f0f23] to-[#0a1929]">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-[#1a0f2e] via-[#0f0f23] to-[#0a1929]"
+      role="banner"
+      aria-label="Hero section"
+    >
       {/* Enhanced gradient background with parallax effect */}
       <div 
         className="absolute inset-0 opacity-50"
@@ -28,6 +32,7 @@ const HeroSection = () => {
           transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
           transition: 'transform 0.5s ease-out'
         }}
+        aria-hidden="true"
       >
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/30 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-500/30 rounded-full blur-3xl" />
@@ -35,7 +40,7 @@ const HeroSection = () => {
       </div>
       
       {/* Strong grid pattern overlay */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-20" aria-hidden="true" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8 animate-fade-in-up">
@@ -48,13 +53,13 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" id="main-heading">
             <span className="block text-white">I Turn Ideas Into</span>
             <span className="block text-gradient-creative mt-2 hover-glow">AI-Powered Reality</span>
           </h1>
 
           {/* Subheading */}
-          <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed">
+          <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed" aria-describedby="main-heading">
             Atlanta-based AI expert delivering <span className="text-primary-400 font-semibold">enterprise solutions</span> with 
             <span className="text-accent-400 font-semibold"> clear communication</span>. 
             From <span className="text-creative-400 font-semibold">Georgia Tech</span> to 
@@ -64,7 +69,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-            <Button variant="jazz" size="xl" className="group" asChild>
+            <Button variant="cta" size="xl" className="group" asChild>
               <Link href="/contact">
                 Start Your AI Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -81,31 +86,31 @@ const HeroSection = () => {
           {/* Key Stats/Features */}
           <div className="pt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 <Zap className="w-8 h-8 text-primary-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white">AI-First Development</h3>
-              <p className="text-gray-400 mt-2">
+              <h3 className="text-lg font-semibold text-white" id="feature-ai-first">AI-First Development</h3>
+              <p className="text-gray-400 mt-2" aria-describedby="feature-ai-first">
                 Building with AI from day one, not as an afterthought
               </p>
             </div>
             
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 <Code2 className="w-8 h-8 text-accent-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white">10+ Years Experience</h3>
-              <p className="text-gray-400 mt-2">
+              <h3 className="text-lg font-semibold text-white" id="feature-experience">10+ Years Experience</h3>
+              <p className="text-gray-400 mt-2" aria-describedby="feature-experience">
                 Enterprise-grade practices and proven methodologies
               </p>
             </div>
             
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-creative-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-creative-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 <Sparkles className="w-8 h-8 text-creative-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white">Creative Innovation</h3>
-              <p className="text-gray-400 mt-2">
+              <h3 className="text-lg font-semibold text-white" id="feature-creative">Creative Innovation</h3>
+              <p className="text-gray-400 mt-2" aria-describedby="feature-creative">
                 From beatbox champion to tech innovator
               </p>
             </div>

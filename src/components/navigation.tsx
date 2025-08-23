@@ -35,7 +35,10 @@ const Navigation = () => {
   ]
 
   return (
-    <nav className={cn(
+    <nav 
+      role="navigation"
+      aria-label="Main navigation"
+      className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300",
       scrolled 
         ? "bg-primary-950/95 backdrop-blur-md border-b border-gray-700 shadow-lg" 
@@ -44,7 +47,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link 
+            href="/" 
+            className="flex items-center space-x-2 group"
+            aria-label="ShakTech Home - AI-First Software Delivery"
+          >
             <Image 
               src="/shaktech_logo.png" 
               alt="ShakTech Logo" 
@@ -53,7 +60,7 @@ const Navigation = () => {
               className="rounded-lg group-hover:scale-110 transition-transform duration-200"
               priority
             />
-            <div className="hidden sm:block">
+            <div className="hidden sm:block" aria-hidden="true">
               <span className="text-xl font-bold text-gradient-primary">ShakTech</span>
               <div className="text-xs text-gray-500 -mt-1">AI-First Software Delivery</div>
             </div>
@@ -70,7 +77,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="jazz" size="sm" asChild>
+            <Button variant="cta" size="sm" asChild>
               <Link href="/contact">Get Started</Link>
             </Button>
           </div>
@@ -82,28 +89,36 @@ const Navigation = () => {
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-accent-400"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-primary-950/95 backdrop-blur-md border-t border-gray-700">
+          <div className="md:hidden" id="mobile-navigation">
+            <div 
+              className="px-2 pt-2 pb-3 space-y-1 bg-primary-950/95 backdrop-blur-md border-t border-gray-700"
+              role="menu"
+              aria-orientation="vertical"
+            >
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-2 text-gray-300 hover:text-accent-400 transition-colors duration-200 font-medium"
                   onClick={() => setIsOpen(false)}
+                  role="menuitem"
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="pt-4">
-                <Button variant="jazz" size="sm" className="w-full" asChild>
+                <Button variant="cta" size="sm" className="w-full" asChild>
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     Get Started
                   </Link>

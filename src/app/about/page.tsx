@@ -53,7 +53,7 @@ const AboutPage = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button variant="jazz" size="lg" asChild>
+                <Button variant="cta" size="lg" asChild>
                   <Link href="/contact">Work With Me</Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>

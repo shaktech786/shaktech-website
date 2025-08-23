@@ -267,7 +267,7 @@ const PricingPage = () => {
                   </ul>
 
                   <Button 
-                    variant={plan.highlighted ? "jazz" : "outline"}
+                    variant={plan.highlighted ? "cta" : "outline"}
                     size="lg"
                     className="w-full group"
                     asChild

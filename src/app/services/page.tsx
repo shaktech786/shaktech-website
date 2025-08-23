@@ -265,7 +265,7 @@ const ServicesPage = () => {
                   </div>
 
                   <Button 
-                    variant={service.featured ? "jazz" : "outline"} 
+                    variant={service.featured ? "cta" : "outline"} 
                     size="lg" 
                     className="w-full group"
                     asChild

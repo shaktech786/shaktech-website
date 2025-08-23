@@ -46,7 +46,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-primary-950 text-gray-300">
+    <footer className="bg-primary-950 text-gray-300" role="contentinfo" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Section */}
@@ -75,28 +75,31 @@ const Footer = () => {
               <span>Proudly serving clients from <strong>Atlanta, Georgia</strong></span>
             </p>
             
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4" role="group" aria-label="Social media links">
               <Link 
                 href="https://linkedin.com/in/shakeelbhamani"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-primary-950"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" aria-hidden="true" />
               </Link>
               <Link 
                 href="https://github.com/shakeelbhamani"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-primary-950"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub profile"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5" aria-hidden="true" />
               </Link>
               <Link 
                 href="/contact"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-primary-950"
+                aria-label="Contact us via email"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5" aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -104,8 +107,8 @@ const Footer = () => {
           {/* Footer Links */}
           {footerSections.map((section, index) => (
             <div key={index}>
-              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-3">
+              <h3 className="text-white font-semibold mb-4" id={`footer-${section.title.toLowerCase()}`}>{section.title}</h3>
+              <ul className="space-y-3" aria-labelledby={`footer-${section.title.toLowerCase()}`}>
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link

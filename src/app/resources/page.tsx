@@ -226,7 +226,7 @@ const ResourcesPage = () => {
                 </CardHeader>
                 <CardContent>
                   <Button 
-                    variant={tool.comingSoon ? "outline" : "jazz"}
+                    variant={tool.comingSoon ? "outline" : "cta"}
                     className="w-full"
                     disabled={tool.comingSoon}
                   >
@@ -284,7 +284,7 @@ const ResourcesPage = () => {
                     )}
                   </div>
                   <Button 
-                    variant={resource.featured ? "jazz" : "outline"}
+                    variant={resource.featured ? "cta" : "outline"}
                     size="sm"
                     className="w-full group"
                     disabled={resource.comingSoon}

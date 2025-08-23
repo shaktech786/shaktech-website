@@ -145,7 +145,7 @@ const ContactPage = () => {
             Thank you for reaching out. I&apos;ll review your message and get back to you within 24 hours 
             with next steps for our collaboration.
           </p>
-          <Button variant="jazz" size="lg" onClick={() => setSubmitted(false)}>
+          <Button variant="cta" size="lg" onClick={() => setSubmitted(false)}>
             Send Another Message
           </Button>
         </div>
@@ -333,7 +333,7 @@ const ContactPage = () => {
 
                     <Button 
                       type="submit" 
-                      variant="jazz" 
+                      variant="cta" 
                       size="lg" 
                       className="w-full group" 
                       disabled={isSubmitting}

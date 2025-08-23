@@ -148,7 +148,7 @@ const PortfolioPreview = () => {
         </div>
         
         <div className="text-center">
-          <Button variant="jazz" size="lg" className="group" asChild>
+          <Button variant="cta" size="lg" className="group" asChild>
             <Link href="/portfolio">
               View Complete Portfolio
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
