@@ -204,10 +204,10 @@ const AIChatWidget = () => {
                       {message.isUser ? (
                         <p className="text-sm leading-relaxed">{message.content}</p>
                       ) : (
-                        <ReactMarkdown 
-                          remarkPlugins={[remarkGfm]}
-                          className="text-sm leading-relaxed prose prose-invert prose-sm max-w-none"
-                          components={{
+                        <div className="text-sm leading-relaxed prose prose-invert prose-sm max-w-none">
+                          <ReactMarkdown 
+                            remarkPlugins={[remarkGfm]}
+                            components={{
                             p: ({children}) => <p className="mb-2 last:mb-0">{children}</p>,
                             ul: ({children}) => <ul className="list-disc list-inside mb-2 space-y-1">{children}</ul>,
                             ol: ({children}) => <ol className="list-decimal list-inside mb-2 space-y-1">{children}</ol>,
@@ -228,9 +228,10 @@ const AIChatWidget = () => {
                               <blockquote className="border-l-4 border-accent-500 pl-3 my-2 italic">{children}</blockquote>
                             ),
                           }}
-                        >
-                          {message.content}
-                        </ReactMarkdown>
+                          >
+                            {message.content}
+                          </ReactMarkdown>
+                        </div>
                       )}
                       <p className="text-xs opacity-70 mt-1">
                         {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}

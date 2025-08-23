@@ -69,14 +69,19 @@ export async function POST(request: Request) {
     }
 
     // Build messages array with conversation history for context
-    const messages: any[] = [
+    interface ChatMessage {
+      role: "system" | "user" | "assistant"
+      content: string
+    }
+    
+    const messages: ChatMessage[] = [
       { role: "system", content: SYSTEM_PROMPT }
     ]
     
     // Add conversation history if provided (last 10 messages for context)
     if (conversationHistory && Array.isArray(conversationHistory)) {
       const recentHistory = conversationHistory.slice(-10)
-      recentHistory.forEach((msg: any) => {
+      recentHistory.forEach((msg: { isUser: boolean; content: string }) => {
         messages.push({
           role: msg.isUser ? "user" : "assistant",
           content: msg.content
