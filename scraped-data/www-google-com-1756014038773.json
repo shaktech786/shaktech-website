@@ -1,0 +1,174 @@
+{
+  "url": "https://www.google.com/?zx=1756014035437&no_sw_cr=1",
+  "title": "Google",
+  "scrapedAt": "2025-08-24T05:40:38.772Z",
+  "meta": {},
+  "headings": {},
+  "text": "About\nStore\nGmailImages\nSign in\n \nAdvertising\nBusiness\nHow Search works\nApplying AI towards science and the environment\nPrivacy\nTerms\nSettings\nSign in to Google\nGet the most from your Google account\nStay signed out\nSign in",
+  "links": [
+    {
+      "text": "About",
+      "href": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+      "title": null
+    },
+    {
+      "text": "Store",
+      "href": "https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US",
+      "title": null
+    },
+    {
+      "text": "Gmail",
+      "href": "https://mail.google.com/mail/&ogbl",
+      "title": null
+    },
+    {
+      "text": "Images",
+      "href": "https://www.google.com/imghp?hl=en&ogbl",
+      "title": null
+    },
+    {
+      "text": "",
+      "href": "https://www.google.com/intl/en/about/products",
+      "title": null
+    },
+    {
+      "text": "Sign in",
+      "href": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+      "title": null
+    },
+    {
+      "text": "Advertising",
+      "href": "https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1",
+      "title": null
+    },
+    {
+      "text": "Business",
+      "href": "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1",
+      "title": null
+    },
+    {
+      "text": "How Search works",
+      "href": "https://google.com/search/howsearchworks/?fg=1",
+      "title": null
+    },
+    {
+      "text": "Applying AI towards science and the environment",
+      "href": "https://ai.google/societal-impact/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer",
+      "title": null
+    },
+    {
+      "text": "Privacy",
+      "href": "https://policies.google.com/privacy?hl=en&fg=1",
+      "title": null
+    },
+    {
+      "text": "Terms",
+      "href": "https://policies.google.com/terms?hl=en&fg=1",
+      "title": null
+    },
+    {
+      "text": "Search settings",
+      "href": "https://www.google.com/preferences?hl=en&fg=1",
+      "title": null
+    },
+    {
+      "text": "Advanced search",
+      "href": "https://www.google.com/advanced_search?hl=en&fg=1",
+      "title": null
+    },
+    {
+      "text": "Your data in Search",
+      "href": "https://www.google.com/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com",
+      "title": null
+    },
+    {
+      "text": "Search history",
+      "href": "https://www.google.com/history/optout?hl=en&fg=1",
+      "title": null
+    },
+    {
+      "text": "Search help",
+      "href": "https://support.google.com/websearch/?p=ws_results_help&hl=en&fg=1",
+      "title": null
+    }
+  ],
+  "images": [
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "",
+      "alt": null,
+      "title": null,
+      "width": 0,
+      "height": 0
+    },
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC",
+      "alt": null,
+      "title": null,
+      "width": 21,
+      "height": 24
+    },
+    {
+      "src": "data:image/png;base64,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",
+      "alt": null,
+      "title": null,
+      "width": 48,
+      "height": 48
+    }
+  ]
+}

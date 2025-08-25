@@ -154,6 +154,39 @@
   --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+/* Light Theme */
+.light {
+  /* Primary Colors */
+  --color-primary-50: #1e1b4b;
+  --color-primary-100: #312e81;
+  --color-primary-200: #3730a3;
+  --color-primary-300: #4338ca;
+  --color-primary-400: #4f46e5;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #818cf8;
+  --color-primary-700: #a5b4fc;
+  --color-primary-800: #c7d2fe;
+  --color-primary-900: #e0e7ff;
+  --color-primary-950: #eef2ff;
+  
+  /* Text Colors */
+  --text-primary: var(--color-gray-950);
+  --text-secondary: var(--color-gray-700);
+  --text-tertiary: var(--color-gray-600);
+  --text-inverse: var(--color-gray-50);
+  
+  /* Surface Colors */
+  --surface-primary: var(--color-gray-50);
+  --surface-secondary: var(--color-gray-100);
+  --surface-elevated: var(--color-base-white);
+  --surface-overlay: rgba(0, 0, 0, 0.1);
+  
+  /* Border Colors */
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-default: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.24);
+}
+
 /* Global Resets and Base Styles */
 * {
   box-sizing: border-box;

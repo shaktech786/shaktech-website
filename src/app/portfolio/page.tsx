@@ -49,7 +49,7 @@ const PortfolioPage = () => {
       ],
       demoUrl: "https://shakgpt.com",
       githubUrl: "#",
-      imageUrl: "/projects/shakgpt.jpg",
+      imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
       featured: true,
       icon: <Brain className="w-6 h-6" />,
       color: "from-primary-500 to-accent-500"
@@ -79,7 +79,7 @@ const PortfolioPage = () => {
       ],
       demoUrl: "#",
       githubUrl: "https://github.com/shakeelbhamani/tmux-orchestrator",
-      imageUrl: "/projects/tmux-orchestrator.jpg",
+      imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
       icon: <Zap className="w-6 h-6" />,
       color: "from-creative-500 to-accent-500"
     },
@@ -108,7 +108,7 @@ const PortfolioPage = () => {
       ],
       demoUrl: "https://ai-stock-researcher.com",
       githubUrl: "#",
-      imageUrl: "/projects/ai-stock-researcher.jpg",
+      imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
       icon: <TrendingUp className="w-6 h-6" />,
       color: "from-accent-500 to-creative-500"
     },
@@ -135,9 +135,9 @@ const PortfolioPage = () => {
         "Real-Time Collaboration",
         "Agile Team Optimization"
       ],
-      demoUrl: "https://estimaite.com",
-      githubUrl: "#",
-      imageUrl: "/projects/estimaite.jpg",
+      demoUrl: "https://estimaite.vercel.app",
+      githubUrl: "https://github.com/shakeelbhamani/estimaite",
+      imageUrl: "/portfolio-screenshots/estimaite-viewport.png",
       icon: <Users className="w-6 h-6" />,
       color: "from-primary-500 to-creative-500"
     }

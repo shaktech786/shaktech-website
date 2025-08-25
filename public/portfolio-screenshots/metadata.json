@@ -1,0 +1,35 @@
+[
+  {
+    "name": "shaktech-website",
+    "url": "https://www.shak-tech.com",
+    "description": "AI-First Software Delivery Platform",
+    "screenshots": {
+      "fullPage": "shaktech-website-full.png",
+      "viewport": "shaktech-website-viewport.png",
+      "mobile": "shaktech-website-mobile.png"
+    },
+    "capturedAt": "2025-08-24T05:26:07.336Z"
+  },
+  {
+    "name": "estimaite",
+    "url": "https://estimaite.vercel.app",
+    "description": "AI-Powered Project Estimation Tool",
+    "screenshots": {
+      "fullPage": "estimaite-full.png",
+      "viewport": "estimaite-viewport.png",
+      "mobile": "estimaite-mobile.png"
+    },
+    "capturedAt": "2025-08-24T05:43:28.000Z"
+  },
+  {
+    "name": "github-profile",
+    "url": "https://github.com/shaktech786",
+    "description": "Open Source Contributions",
+    "screenshots": {
+      "fullPage": "github-profile-full.png",
+      "viewport": "github-profile-viewport.png",
+      "mobile": "github-profile-mobile.png"
+    },
+    "capturedAt": "2025-08-24T05:26:24.916Z"
+  }
+]

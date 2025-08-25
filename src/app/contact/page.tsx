@@ -101,13 +101,62 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate all fields
+    const newErrors: Partial<FormData> = {}
+    if (!formData.name.trim()) newErrors.name = 'Name is required'
+    if (!formData.email.trim()) newErrors.email = 'Email is required'
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Please enter a valid email address'
+    if (!formData.message.trim()) newErrors.message = 'Message is required'
+    else if (formData.message.length < 10) newErrors.message = 'Message must be at least 10 characters'
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors)
+      setTouched({
+        name: true,
+        email: true,
+        message: true
+      })
+      return
+    }
+    
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setSubmitted(true)
-    setIsSubmitting(false)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      
+      const data = await response.json()
+      
+      if (response.ok) {
+        setSubmitted(true)
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          service: '',
+          budget: '',
+          timeline: '',
+          message: ''
+        })
+        setErrors({})
+        setTouched({})
+      } else {
+        console.error('Contact form error:', data.error)
+        // You could show an error message to the user here
+      }
+    } catch (error) {
+      console.error('Network error:', error)
+      // You could show an error message to the user here
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const services = [

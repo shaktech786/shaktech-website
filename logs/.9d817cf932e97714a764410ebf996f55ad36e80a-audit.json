@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/shakeelbhamani/projects/personal/shaktech-website/logs/.9d817cf932e97714a764410ebf996f55ad36e80a-audit.json",
+    "files": [
+        {
+            "date": 1756010969749,
+            "name": "/Users/shakeelbhamani/projects/personal/shaktech-website/logs/mcp-puppeteer-2025-08-24.log",
+            "hash": "3bd9f0885ecbe716707ae74a7516f3154faef1ebaf2246beb3b50d6d0c1e7155"
+        }
+    ],
+    "hashType": "sha256"
+}

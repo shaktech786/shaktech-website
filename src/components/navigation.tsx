@@ -6,6 +6,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -77,6 +78,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle />
             <Button variant="cta" size="sm" asChild>
               <Link href="/contact">Get Started</Link>
             </Button>
@@ -117,7 +119,10 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4">
+              <div className="pt-4 space-y-4">
+                <div className="flex justify-center">
+                  <ThemeToggle />
+                </div>
                 <Button variant="cta" size="sm" className="w-full" asChild>
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     Get Started
