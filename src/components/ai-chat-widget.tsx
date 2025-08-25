@@ -262,7 +262,7 @@ const AIChatWidget = () => {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-gray-700 bg-gray-900">
+            <div className="p-4 border-t border-gray-700 bg-gray-900 relative z-10">
               <div className="flex space-x-2">
                 <input
                   type="text"
@@ -270,8 +270,9 @@ const AIChatWidget = () => {
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about services, projects, or let's discuss AI..."
-                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200"
+                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200 pointer-events-auto"
                   disabled={isLoading}
+                  style={{ WebkitUserSelect: 'text', userSelect: 'text' }}
                 />
                 <Button
                   onClick={handleSendMessage}
