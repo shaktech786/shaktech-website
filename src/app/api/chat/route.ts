@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server"
 import OpenAI from "openai"
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-})
+// Initialize OpenAI only if API key is available
+const openai = process.env.OPENAI_API_KEY 
+  ? new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    })
+  : null
 
 const SYSTEM_PROMPT = `You are ShakBot, a friendly and knowledgeable AI assistant for ShakTech (shak-tech.com), owned by Shakeel Bhamani. You help visitors learn about Shakeel's AI-first software development services.
 
@@ -61,7 +64,7 @@ export async function POST(request: Request) {
   try {
     const { message, conversationHistory } = await request.json()
 
-    if (!process.env.OPENAI_API_KEY) {
+    if (!openai) {
       // Fallback to a helpful response if API key is not set
       return NextResponse.json({
         response: "I'm currently in demo mode. To enable full AI capabilities, please configure the OpenAI API key. Meanwhile, feel free to explore the website or contact Shakeel directly at hi@shak-tech.com for any questions!"
