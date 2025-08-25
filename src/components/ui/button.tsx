@@ -14,7 +14,7 @@ const buttonVariants = cva(
         secondary: "bg-gray-800/50 text-gray-100 hover:bg-gray-700/50 border border-gray-600/50 backdrop-blur-sm hover:border-gray-500/50",
         ghost: "hover:bg-white/5 hover:text-gray-100 hover:backdrop-blur-sm",
         link: "text-indigo-400 underline-offset-4 hover:underline hover:text-indigo-300 p-0 h-auto",
-        tertiary: "text-gray-300 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-indigo-400 after:to-cyan-400 after:transition-all after:duration-300 hover:after:w-full",
+        tertiary: "text-gray-300 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 hover:after:w-full after:bg-indigo-500",
         cta: "bg-gradient-to-r from-indigo-600 via-cyan-500 to-amber-500 text-white hover:from-indigo-700 hover:via-cyan-600 hover:to-amber-600 shadow-lg hover:shadow-xl hover:shadow-cyan-500/30 border border-white/10",
         glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30",
       },

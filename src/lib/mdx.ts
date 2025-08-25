@@ -122,7 +122,8 @@ export async function getRelatedPosts(currentSlug: string, limit: number = 3): P
     .slice(0, limit);
   
   // Extract just the PostMeta properties, removing relevance
-  const relatedPosts: PostMeta[] = postsWithRelevance.map(({ relevance: _, ...post }) => post);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const relatedPosts: PostMeta[] = postsWithRelevance.map(({ relevance, ...post }) => post);
 
   // If not enough related posts, fill with recent posts
   if (relatedPosts.length < limit) {

@@ -105,7 +105,7 @@ async function scrapeWebsite(url, options = {}) {
         try {
           const data = JSON.parse(script.textContent);
           result.structuredData.push(data);
-        } catch (e) {
+        } catch {
           // Invalid JSON, skip
         }
       });
