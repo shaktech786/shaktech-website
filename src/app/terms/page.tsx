@@ -12,14 +12,14 @@ const TermsPage = () => {
   const lastUpdated = "January 1, 2024"
 
   return (
-    <main className="min-h-screen bg-primary-950">
+    <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-primary-900 via-primary-950 to-accent-950 relative overflow-hidden">
+      <section className="py-24 pt-40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-cyan-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-mesh-gradient" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 bg-primary-900/30 px-4 py-2 rounded-full border border-primary-700 mb-8">
-            <Scale className="w-4 h-4 text-primary-400" />
-            <span className="text-sm font-medium text-primary-300">
+          <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700 mb-8">
+            <Scale className="w-4 h-4 text-indigo-400" />
+            <span className="text-sm font-medium text-indigo-300">
               Legal Agreement
             </span>
           </div>
@@ -37,7 +37,7 @@ const TermsPage = () => {
       </section>
 
       {/* Content Section */}
-      <section className="py-24 bg-primary-950/50 relative overflow-hidden">
+      <section className="py-24 bg-gray-900/50 relative overflow-hidden">
         <div className="absolute inset-0 bg-dots-pattern opacity-10" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="prose prose-invert max-w-none">
@@ -45,7 +45,7 @@ const TermsPage = () => {
             {/* Agreement to Terms */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <FileText className="w-6 h-6 text-primary-400 mr-3" />
+                <FileText className="w-6 h-6 text-indigo-400 mr-3" />
                 1. Agreement to Terms
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -225,9 +225,9 @@ const TermsPage = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="p-6 bg-primary-900/30 border border-primary-700 rounded-lg">
+            <div className="p-6 bg-indigo-900/30 border border-indigo-700 rounded-lg">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Shield className="w-6 h-6 text-primary-400 mr-3" />
+                <Shield className="w-6 h-6 text-indigo-400 mr-3" />
                 12. Contact Information
               </h2>
               <p className="text-gray-300 leading-relaxed">

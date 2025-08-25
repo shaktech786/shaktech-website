@@ -32,7 +32,7 @@ export const InteractiveCard = React.forwardRef<HTMLDivElement, InteractiveCardP
         className={cn(
           "relative rounded-xl p-6 transition-all duration-300",
           "bg-gray-900/50 backdrop-blur-sm border border-gray-700/50",
-          "hover:border-primary-500/50 hover:shadow-xl",
+          "hover:border-indigo-500/50 hover:shadow-xl",
           "transform hover:scale-[1.02]",
           "cursor-pointer overflow-hidden",
           className

@@ -18,7 +18,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen bg-primary-950 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
         {/* Error Icon */}
         <div className="mb-8 flex justify-center">
@@ -94,7 +94,7 @@ export default function Error({
           </p>
           <a
             href="mailto:hi@shak-tech.com"
-            className="text-accent-400 hover:text-accent-300 underline transition-colors"
+            className="text-cyan-400 hover:text-cyan-300 underline transition-colors"
           >
             hi@shak-tech.com
           </a>

@@ -116,7 +116,7 @@ function ToastItem({ toast, onClose }: ToastItemProps) {
         </div>
         <button
           onClick={onClose}
-          className="flex-shrink-0 ml-2 text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
+          className="flex-shrink-0 ml-2 text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded"
           aria-label="Close notification"
         >
           <X className="w-4 h-4" />

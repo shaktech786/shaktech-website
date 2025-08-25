@@ -34,7 +34,7 @@ const ServicesPage = () => {
       description: "Perfect for leaders who need strategic clarity on how AI can transform their business operations and competitive position.",
       pricing: "Starting at $2,500",
       icon: <Lightbulb className="w-8 h-8" />,
-      color: "from-primary-500 to-primary-700",
+      color: "from-indigo-500 to-indigo-700",
       features: [
         "AI Readiness Assessment",
         "Custom AI Strategy Roadmap",
@@ -65,7 +65,7 @@ const ServicesPage = () => {
       description: "End-to-end development of AI-powered applications with enterprise-grade practices and modern technology stacks.",
       pricing: "Starting at $15,000",
       icon: <Code className="w-8 h-8" />,
-      color: "from-accent-500 to-accent-700",
+      color: "from-cyan-500 to-cyan-700",
       featured: true,
       features: [
         "Full-Stack AI Application Development",
@@ -97,7 +97,7 @@ const ServicesPage = () => {
       description: "Comprehensive training programs to upskill your team in AI-first development practices and modern software methodologies.",
       pricing: "Starting at $5,000",
       icon: <Users className="w-8 h-8" />,
-      color: "from-creative-500 to-creative-700",
+      color: "from-amber-500 to-amber-700",
       features: [
         "AI-First Development Workshops",
         "Hands-on Coding Sessions",
@@ -151,7 +151,7 @@ const ServicesPage = () => {
   ]
 
   return (
-    <main className="min-h-screen bg-primary-950">
+    <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <section className="py-24 pt-40 bg-hexagon-pattern relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -170,15 +170,15 @@ const ServicesPage = () => {
               <span>US-Based</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Shield className="w-5 h-5 text-accent-400" />
+              <Shield className="w-5 h-5 text-cyan-400" />
               <span>Enterprise Grade</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Award className="w-5 h-5 text-creative-400" />
+              <Award className="w-5 h-5 text-amber-400" />
               <span>Georgia Tech</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Clock className="w-5 h-5 text-primary-400" />
+              <Clock className="w-5 h-5 text-indigo-400" />
               <span>EST Timezone</span>
             </div>
           </div>
@@ -195,7 +195,7 @@ const ServicesPage = () => {
                 className={`relative overflow-hidden hover:shadow-2xl transition-all duration-300 bg-gray-900 border-gray-700 ${service.featured ? 'ring-2 ring-accent-400 scale-105' : ''}`}
               >
                 {service.featured && (
-                  <div className="absolute top-0 right-0 bg-accent-500 text-white px-4 py-2 text-sm font-bold rounded-bl-lg">
+                  <div className="absolute top-0 right-0 bg-cyan-500 text-white px-4 py-2 text-sm font-bold rounded-bl-lg">
                     Most Popular
                   </div>
                 )}
@@ -207,13 +207,13 @@ const ServicesPage = () => {
                   <CardTitle className="text-2xl font-bold text-white mb-2">
                     {service.title}
                   </CardTitle>
-                  <p className="text-accent-400 font-medium text-lg">
+                  <p className="text-cyan-400 font-medium text-lg">
                     {service.subtitle}
                   </p>
                   <p className="text-gray-400 mt-3 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="text-3xl font-bold text-creative-400 mt-4">
+                  <div className="text-3xl font-bold text-amber-400 mt-4">
                     {service.pricing}
                   </div>
                 </CardHeader>
@@ -221,13 +221,13 @@ const ServicesPage = () => {
                 <CardContent className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-accent-400 mr-2" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-2" />
                       What&apos;s Included
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start space-x-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-accent-400 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
@@ -236,13 +236,13 @@ const ServicesPage = () => {
 
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                      <Zap className="w-5 h-5 text-creative-400 mr-2" />
+                      <Zap className="w-5 h-5 text-amber-400 mr-2" />
                       Deliverables
                     </h4>
                     <ul className="space-y-2">
                       {service.deliverables.map((deliverable, idx) => (
                         <li key={idx} className="flex items-start space-x-2 text-gray-300">
-                          <ArrowRight className="w-4 h-4 text-creative-400 mt-0.5 flex-shrink-0" />
+                          <ArrowRight className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm">{deliverable}</span>
                         </li>
                       ))}
@@ -251,13 +251,13 @@ const ServicesPage = () => {
 
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                      <Target className="w-5 h-5 text-primary-400 mr-2" />
+                      <Target className="w-5 h-5 text-indigo-400 mr-2" />
                       Ideal For
                     </h4>
                     <ul className="space-y-2">
                       {service.ideal_for.map((item, idx) => (
                         <li key={idx} className="flex items-start space-x-2 text-gray-300">
-                          <div className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2 flex-shrink-0" />
                           <span className="text-sm">{item}</span>
                         </li>
                       ))}
@@ -299,14 +299,14 @@ const ServicesPage = () => {
             {process_steps.map((step, index) => (
               <div key={index} className="text-center group">
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-creative-500 rounded-full flex items-center justify-center mx-auto text-white group-hover:scale-110 transition-transform duration-200">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center mx-auto text-white group-hover:scale-110 transition-transform duration-200">
                     {step.icon}
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
                   </div>
                   {index < process_steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-accent-500/50 to-creative-500/50" />
+                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-cyan-500/50 to-amber-500/50" />
                   )}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>

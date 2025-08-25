@@ -32,7 +32,7 @@ const PricingPage = () => {
       period: "/month",
       description: "Perfect for exploring AI opportunities",
       icon: <Rocket className="w-6 h-6" />,
-      color: "from-primary-500 to-primary-700",
+      color: "from-indigo-500 to-indigo-700",
       features: [
         { name: "2 hours AI consulting/month", included: true },
         { name: "Weekly AI trend reports", included: true },
@@ -53,7 +53,7 @@ const PricingPage = () => {
       period: "/month",
       description: "For teams ready to implement AI",
       icon: <Zap className="w-6 h-6" />,
-      color: "from-accent-500 to-accent-700",
+      color: "from-cyan-500 to-cyan-700",
       features: [
         { name: "8 hours consulting/development", included: true },
         { name: "Priority support (24hr response)", included: true },
@@ -75,7 +75,7 @@ const PricingPage = () => {
       period: "/month",
       description: "Full AI transformation partnership",
       icon: <Building2 className="w-6 h-6" />,
-      color: "from-creative-500 to-creative-700",
+      color: "from-amber-500 to-amber-700",
       features: [
         { name: "20 hours dedicated time/month", included: true },
         { name: "Same-day support response", included: true },
@@ -170,13 +170,13 @@ const PricingPage = () => {
   }
 
   return (
-    <main className="min-h-screen bg-primary-950">
+    <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <section className="py-24 pt-40 bg-gradient-radial relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 bg-accent-500/10 border border-accent-500/20 rounded-full px-4 py-2 mb-6">
-            <Sparkles className="w-4 h-4 text-accent-400" />
-            <span className="text-accent-400 text-sm font-medium">Transparent, Value-Based Pricing</span>
+          <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
+            <Sparkles className="w-4 h-4 text-cyan-400" />
+            <span className="text-cyan-400 text-sm font-medium">Transparent, Value-Based Pricing</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
@@ -228,7 +228,7 @@ const PricingPage = () => {
               >
                 {plan.badge && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-accent-500 text-white text-sm font-bold px-4 py-1 rounded-full">
+                    <span className="bg-cyan-500 text-white text-sm font-bold px-4 py-1 rounded-full">
                       {plan.badge}
                     </span>
                   </div>
@@ -283,12 +283,12 @@ const PricingPage = () => {
           </div>
 
           {/* Learning Subscription */}
-          <Card className="bg-gradient-to-r from-primary-900/50 to-accent-900/50 border-accent-500/50 max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-r from-indigo-900/50 to-cyan-900/50 border-cyan-500/50 max-w-4xl mx-auto">
             <CardContent className="p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent-500 to-creative-500 flex items-center justify-center text-white">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-amber-500 flex items-center justify-center text-white">
                       {learningSubscription.icon}
                     </div>
                     <div>
@@ -297,10 +297,10 @@ const PricingPage = () => {
                     </div>
                   </div>
                   <div className="flex items-baseline mb-6">
-                    <span className="text-4xl font-bold text-accent-400">{learningSubscription.price}</span>
+                    <span className="text-4xl font-bold text-cyan-400">{learningSubscription.price}</span>
                     <span className="text-gray-400 ml-1">{learningSubscription.period}</span>
                   </div>
-                  <Button size="lg" className="bg-accent-500 hover:bg-accent-600 text-white group" asChild>
+                  <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white group" asChild>
                     <Link href="/contact">
                       Join Learning Lab
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -341,7 +341,7 @@ const PricingPage = () => {
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-creative-500 to-accent-500 rounded-lg flex items-center justify-center text-white">
+                      <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
                         {service.icon}
                       </div>
                       <div>
@@ -349,7 +349,7 @@ const PricingPage = () => {
                         <p className="text-sm text-gray-400">{service.duration} delivery</p>
                       </div>
                     </div>
-                    <span className="text-2xl font-bold text-creative-400">{service.price}</span>
+                    <span className="text-2xl font-bold text-amber-400">{service.price}</span>
                   </div>
                   <CardDescription className="text-gray-300">
                     {service.description}

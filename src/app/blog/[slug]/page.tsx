@@ -56,14 +56,14 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   const relatedPosts = await getRelatedPosts(params.slug);
   
   return (
-    <main className="min-h-screen bg-primary-950">
+    <main className="min-h-screen bg-gray-900">
       {/* Article Header */}
       <article className="py-24 pt-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back to Blog */}
           <Link
             href="/blog"
-            className="inline-flex items-center text-gray-400 hover:text-accent-400 transition-colors mb-8"
+            className="inline-flex items-center text-gray-400 hover:text-cyan-400 transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
@@ -146,12 +146,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             <h2 className="text-3xl font-bold text-white mb-8">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
-                <Card key={relatedPost.slug} className="bg-gray-900 border-gray-700 hover:border-accent-600 transition-colors">
+                <Card key={relatedPost.slug} className="bg-gray-900 border-gray-700 hover:border-cyan-600 transition-colors">
                   <CardHeader>
                     <CardTitle className="text-xl">
                       <Link
                         href={`/blog/${relatedPost.slug}`}
-                        className="text-white hover:text-accent-400 transition-colors"
+                        className="text-white hover:text-cyan-400 transition-colors"
                       >
                         {relatedPost.title}
                       </Link>
@@ -180,7 +180,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       )}
 
       {/* Newsletter CTA */}
-      <section className="py-16 bg-gradient-to-r from-accent-900/20 to-creative-900/20">
+      <section className="py-16 bg-gradient-to-r from-cyan-900/20 to-amber-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Stay Updated on AI & Software Innovation
@@ -192,7 +192,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-500"
+              className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
             <Button variant="cta" size="lg">
               Subscribe

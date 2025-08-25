@@ -54,13 +54,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-primary-950 text-gray-100`}>
+    <html lang="en" className="dark">
+      <body className={`${inter.variable} font-sans antialiased min-h-screen`}>
         <StructuredData type="person" />
         <StructuredData type="organization" />
         <StructuredData type="website" />
         <Navigation />
-        {children}
+        <main className="pt-16">
+          {children}
+        </main>
         <ClientWidgets />
       </body>
     </html>

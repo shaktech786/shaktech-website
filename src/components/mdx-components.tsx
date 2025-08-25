@@ -71,7 +71,7 @@ export const mdxComponents = {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-accent-400 hover:text-accent-300 underline inline-flex items-center gap-1 transition-colors"
+          className="text-cyan-400 hover:text-cyan-300 underline inline-flex items-center gap-1 transition-colors"
           {...props}
         >
           {children}
@@ -83,7 +83,7 @@ export const mdxComponents = {
     return (
       <Link
         href={href || '#'}
-        className="text-accent-400 hover:text-accent-300 underline transition-colors"
+        className="text-cyan-400 hover:text-cyan-300 underline transition-colors"
         {...props}
       >
         {children}
@@ -94,14 +94,14 @@ export const mdxComponents = {
   // Code blocks
   pre: CodeBlock,
   code: ({ children, ...props }: MDXComponentProps) => (
-    <code className="bg-gray-800 text-accent-300 px-1.5 py-0.5 rounded text-sm" {...props}>
+    <code className="bg-gray-800 text-cyan-300 px-1.5 py-0.5 rounded text-sm" {...props}>
       {children}
     </code>
   ),
   
   // Blockquotes
   blockquote: ({ children, ...props }: MDXComponentProps) => (
-    <blockquote className="border-l-4 border-accent-500 pl-4 my-4 italic text-gray-400" {...props}>
+    <blockquote className="border-l-4 border-cyan-500 pl-4 my-4 italic text-gray-400" {...props}>
       {children}
     </blockquote>
   ),

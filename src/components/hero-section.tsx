@@ -21,7 +21,7 @@ const HeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-[#1a0f2e] via-[#0f0f23] to-[#0a1929]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black"
       role="banner"
       aria-label="Hero section"
     >
@@ -34,9 +34,9 @@ const HeroSection = () => {
         }}
         aria-hidden="true"
       >
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-500/30 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-creative-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
       </div>
       
       {/* Strong grid pattern overlay */}
@@ -45,9 +45,9 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8 animate-fade-in-up">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-primary-900/30 px-4 py-2 rounded-full border border-primary-700">
-            <Sparkles className="w-4 h-4 text-primary-400" />
-            <span className="text-sm font-medium text-primary-300">
+          <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700">
+            <Sparkles className="w-4 h-4 text-indigo-400" />
+            <span className="text-sm font-medium text-indigo-300">
               🇺🇸 US-Based • TEDx Speaker • AI-First Expert • Beatbox Champion
             </span>
           </div>
@@ -60,9 +60,9 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed" aria-describedby="main-heading">
-            Atlanta-based AI expert delivering <span className="text-primary-400 font-semibold">enterprise solutions</span> with 
-            <span className="text-accent-400 font-semibold"> clear communication</span>. 
-            From <span className="text-creative-400 font-semibold">Georgia Tech</span> to 
+            Atlanta-based AI expert delivering <span className="text-indigo-400 font-semibold">enterprise solutions</span> with 
+            <span className="text-cyan-400 font-semibold"> clear communication</span>. 
+            From <span className="text-amber-400 font-semibold">Georgia Tech</span> to 
             <span className="text-gradient-primary font-semibold"> Fortune 500 consulting</span> – 
             I bring US-based expertise to your AI transformation.
           </p>
@@ -86,8 +86,8 @@ const HeroSection = () => {
           {/* Key Stats/Features */}
           <div className="pt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
-                <Zap className="w-8 h-8 text-primary-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+                <Zap className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-lg font-semibold text-white" id="feature-ai-first">AI-First Development</h3>
               <p className="text-gray-400 mt-2" aria-describedby="feature-ai-first">
@@ -96,8 +96,8 @@ const HeroSection = () => {
             </div>
             
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
-                <Code2 className="w-8 h-8 text-accent-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+                <Code2 className="w-8 h-8 text-cyan-400" />
               </div>
               <h3 className="text-lg font-semibold text-white" id="feature-experience">10+ Years Experience</h3>
               <p className="text-gray-400 mt-2" aria-describedby="feature-experience">
@@ -106,8 +106,8 @@ const HeroSection = () => {
             </div>
             
             <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-creative-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
-                <Sparkles className="w-8 h-8 text-creative-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+                <Sparkles className="w-8 h-8 text-amber-400" />
               </div>
               <h3 className="text-lg font-semibold text-white" id="feature-creative">Creative Innovation</h3>
               <p className="text-gray-400 mt-2" aria-describedby="feature-creative">

@@ -162,13 +162,13 @@ const ResourcesPage = () => {
   ]
 
   return (
-    <main className="min-h-screen bg-primary-950">
+    <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <section className="py-24 pt-40 bg-hexagon-pattern relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 bg-accent-500/10 border border-accent-500/20 rounded-full px-4 py-2 mb-6">
-            <Sparkles className="w-4 h-4 text-accent-400" />
-            <span className="text-accent-400 text-sm font-medium">Free AI Development Resources</span>
+          <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
+            <Sparkles className="w-4 h-4 text-cyan-400" />
+            <span className="text-cyan-400 text-sm font-medium">Free AI Development Resources</span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
@@ -207,13 +207,13 @@ const ResourcesPage = () => {
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center text-white">
+                      <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
                         {tool.icon}
                       </div>
                       <div>
                         <CardTitle className="text-xl text-white">{tool.title}</CardTitle>
                         {tool.comingSoon && (
-                          <span className="text-xs bg-creative-500/20 text-creative-400 px-2 py-1 rounded-full">
+                          <span className="text-xs bg-amber-500/20 text-amber-400 px-2 py-1 rounded-full">
                             Coming Soon
                           </span>
                         )}
@@ -262,11 +262,11 @@ const ResourcesPage = () => {
               >
                 <CardHeader>
                   <div className="flex items-start justify-between mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-creative-500 rounded-lg flex items-center justify-center text-white">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-lg flex items-center justify-center text-white">
                       {resource.icon}
                     </div>
                     {resource.featured && (
-                      <span className="text-xs bg-accent-500/20 text-accent-400 px-2 py-1 rounded-full">
+                      <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full">
                         Featured
                       </span>
                     )}
@@ -317,11 +317,11 @@ const ResourcesPage = () => {
                   <Card key={idx} className="bg-gray-900 border-gray-700 hover:shadow-lg transition-all duration-300 cursor-pointer group">
                     <CardContent className="p-4">
                       <div className="flex items-start space-x-4">
-                        <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-accent-400 group-hover:bg-accent-500 group-hover:text-white transition-colors">
+                        <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
                           {guide.icon}
                         </div>
                         <div className="flex-1">
-                          <h4 className="text-white font-medium mb-1 group-hover:text-accent-400 transition-colors">
+                          <h4 className="text-white font-medium mb-1 group-hover:text-cyan-400 transition-colors">
                             {guide.title}
                           </h4>
                           <p className="text-sm text-gray-400 mb-2">{guide.description}</p>
@@ -339,7 +339,7 @@ const ResourcesPage = () => {
                             </span>
                           </div>
                         </div>
-                        <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-accent-400 group-hover:translate-x-1 transition-all" />
+                        <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
                       </div>
                     </CardContent>
                   </Card>
@@ -372,7 +372,7 @@ const ResourcesPage = () => {
                           {video.thumbnail}
                         </div>
                         <div className="flex-1">
-                          <h4 className="text-white font-medium mb-2 group-hover:text-accent-400 transition-colors">
+                          <h4 className="text-white font-medium mb-2 group-hover:text-cyan-400 transition-colors">
                             {video.title}
                           </h4>
                           <div className="flex items-center space-x-4 text-sm text-gray-400">
@@ -383,7 +383,7 @@ const ResourcesPage = () => {
                             <span>{video.views} views</span>
                           </div>
                         </div>
-                        <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-accent-500 transition-colors">
+                        <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-cyan-500 transition-colors">
                           <ExternalLink className="w-5 h-5 text-white" />
                         </div>
                       </div>

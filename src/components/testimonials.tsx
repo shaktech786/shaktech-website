@@ -23,12 +23,12 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
     <CardContent className="p-6">
       <div className="flex items-center mb-4">
         {[...Array(rating)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 text-creative-500 fill-current" />
+          <Star key={i} className="w-5 h-5 text-amber-500 fill-current" />
         ))}
       </div>
       
       <div className="relative mb-6">
-        <Quote className="absolute -top-2 -left-1 w-8 h-8 text-primary-400/30" />
+        <Quote className="absolute -top-2 -left-1 w-8 h-8 text-indigo-400/30" />
         <p className="text-gray-200 leading-relaxed pl-6 italic">
           &quot;{content}&quot;
         </p>
@@ -109,15 +109,15 @@ const Testimonials = () => {
           
           <div className="flex items-center justify-center space-x-8 opacity-70">
             <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600">10+</div>
+              <div className="text-2xl font-bold text-indigo-600">10+</div>
               <div className="text-sm text-gray-500">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-accent-600">50+</div>
+              <div className="text-2xl font-bold text-cyan-600">50+</div>
               <div className="text-sm text-gray-500">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-creative-600">4.9★</div>
+              <div className="text-2xl font-bold text-amber-600">4.9★</div>
               <div className="text-sm text-gray-500">Client Rating</div>
             </div>
           </div>

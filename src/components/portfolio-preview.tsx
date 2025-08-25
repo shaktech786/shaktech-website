@@ -31,22 +31,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <CardHeader className="pb-4">
       <div className="flex items-start justify-between">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center text-white">
+          <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
             {icon}
           </div>
           <div>
-            <span className="text-sm font-medium text-primary-600 bg-primary-50 px-2 py-1 rounded-full">
+            <span className="text-sm font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
               {category}
             </span>
             {featured && (
-              <span className="ml-2 text-xs font-medium text-creative-600 bg-creative-50 px-2 py-1 rounded-full">
+              <span className="ml-2 text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
                 Featured
               </span>
             )}
           </div>
         </div>
       </div>
-      <CardTitle className="text-xl group-hover:text-primary-600 transition-colors">
+      <CardTitle className="text-xl group-hover:text-indigo-600 transition-colors">
         {title}
       </CardTitle>
     </CardHeader>

@@ -52,7 +52,7 @@ const PortfolioPage = () => {
       imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
       featured: true,
       icon: <Brain className="w-6 h-6" />,
-      color: "from-primary-500 to-accent-500"
+      color: "from-indigo-500 to-cyan-500"
     },
     {
       id: "tmux-orchestrator",
@@ -81,7 +81,7 @@ const PortfolioPage = () => {
       githubUrl: "https://github.com/shakeelbhamani/tmux-orchestrator",
       imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
       icon: <Zap className="w-6 h-6" />,
-      color: "from-creative-500 to-accent-500"
+      color: "from-amber-500 to-cyan-500"
     },
     {
       id: "ai-stock-researcher",
@@ -110,7 +110,7 @@ const PortfolioPage = () => {
       githubUrl: "#",
       imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
       icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-accent-500 to-creative-500"
+      color: "from-cyan-500 to-amber-500"
     },
     {
       id: "estimaite",
@@ -139,7 +139,7 @@ const PortfolioPage = () => {
       githubUrl: "https://github.com/shakeelbhamani/estimaite",
       imageUrl: "/portfolio-screenshots/estimaite-viewport.png",
       icon: <Users className="w-6 h-6" />,
-      color: "from-primary-500 to-creative-500"
+      color: "from-indigo-500 to-amber-500"
     }
   ]
 
@@ -168,13 +168,13 @@ const PortfolioPage = () => {
   ]
 
   return (
-    <main className="min-h-screen bg-primary-950">
+    <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <section className="py-24 pt-40 section-portfolio relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 bg-primary-800/50 px-4 py-2 rounded-full border border-primary-700 mb-8">
-            <Sparkles className="w-4 h-4 text-accent-400" />
-            <span className="text-sm font-medium text-accent-300">
+          <div className="inline-flex items-center space-x-2 bg-indigo-800/50 px-4 py-2 rounded-full border border-indigo-700 mb-8">
+            <Sparkles className="w-4 h-4 text-cyan-400" />
+            <span className="text-sm font-medium text-cyan-300">
               AI-First Portfolio
             </span>
           </div>
@@ -190,15 +190,15 @@ const PortfolioPage = () => {
           
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
             <div className="flex items-center space-x-2">
-              <Code className="w-5 h-5 text-accent-400" />
+              <Code className="w-5 h-5 text-cyan-400" />
               <span>10+ Projects</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Users className="w-5 h-5 text-creative-400" />
+              <Users className="w-5 h-5 text-amber-400" />
               <span>1000+ Users</span>
             </div>
             <div className="flex items-center space-x-2">
-              <TrendingUp className="w-5 h-5 text-primary-400" />
+              <TrendingUp className="w-5 h-5 text-indigo-400" />
               <span>Enterprise Grade</span>
             </div>
           </div>
@@ -235,7 +235,7 @@ const PortfolioPage = () => {
                       </div>
                     </div>
                     {project.featured && (
-                      <div className="absolute -top-4 -right-4 bg-accent-500 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
+                      <div className="absolute -top-4 -right-4 bg-cyan-500 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
                         Featured Project
                       </div>
                     )}
@@ -249,7 +249,7 @@ const PortfolioPage = () => {
                       <div className={`w-10 h-10 bg-gradient-to-br ${project.color} rounded-lg flex items-center justify-center text-white`}>
                         {project.icon}
                       </div>
-                      <span className="bg-gray-800 text-accent-400 px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-gray-800 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
                         {project.category}
                       </span>
                     </div>
@@ -262,7 +262,7 @@ const PortfolioPage = () => {
                   <div className="grid grid-cols-2 gap-4">
                     {project.metrics.map((metric, idx) => (
                       <div key={idx} className="bg-gray-900/50 rounded-lg p-3 text-center border border-gray-800">
-                        <div className="text-accent-400 font-bold text-sm">{metric}</div>
+                        <div className="text-cyan-400 font-bold text-sm">{metric}</div>
                       </div>
                     ))}
                   </div>
@@ -273,7 +273,7 @@ const PortfolioPage = () => {
                       {project.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 bg-primary-800/50 text-primary-300 rounded-full text-sm font-medium border border-primary-700"
+                          className="px-3 py-1 bg-indigo-800/50 text-indigo-300 rounded-full text-sm font-medium border border-indigo-700"
                         >
                           {tech}
                         </span>
@@ -307,7 +307,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Client Work Section */}
-      <section className="py-24 bg-gradient-to-br from-primary-900 to-accent-950">
+      <section className="py-24 bg-gradient-to-br from-indigo-900 to-cyan-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -324,7 +324,7 @@ const PortfolioPage = () => {
               <Card key={index} className="bg-gray-900 border-gray-700 hover:shadow-2xl transition-all duration-300 group">
                 <CardHeader>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-creative-500 to-accent-500 rounded-lg flex items-center justify-center text-white">
+                    <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
                       <Globe className="w-5 h-5" />
                     </div>
                     <div>
@@ -349,7 +349,7 @@ const PortfolioPage = () => {
                     ))}
                   </div>
 
-                  <blockquote className="border-l-4 border-accent-500 pl-4 italic text-gray-400 text-sm">
+                  <blockquote className="border-l-4 border-cyan-500 pl-4 italic text-gray-400 text-sm">
                     &quot;{project.testimonial}&quot;
                   </blockquote>
                 </CardContent>
@@ -360,7 +360,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-primary-600 via-accent-500 to-creative-500">
+      <section className="py-24 bg-gradient-to-r from-indigo-600 via-cyan-500 to-amber-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Build Your Next AI Project?

@@ -111,7 +111,7 @@ const AICostCalculator = () => {
     <div className="w-full max-w-6xl mx-auto">
       <Card className="bg-gray-900 border-gray-700">
         <CardHeader className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-creative-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
             <Calculator className="w-8 h-8 text-white" />
           </div>
           <CardTitle className="text-3xl font-bold text-white">
@@ -136,7 +136,7 @@ const AICostCalculator = () => {
                   max="20"
                   value={inputs.developers}
                   onChange={(e) => setInputs({...inputs, developers: parseInt(e.target.value) || 1})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
               </div>
 
@@ -150,7 +150,7 @@ const AICostCalculator = () => {
                   max="500"
                   value={inputs.hourlyRate}
                   onChange={(e) => setInputs({...inputs, hourlyRate: parseInt(e.target.value) || 50})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
               </div>
 
@@ -164,7 +164,7 @@ const AICostCalculator = () => {
                   max="52"
                   value={inputs.projectWeeks}
                   onChange={(e) => setInputs({...inputs, projectWeeks: parseInt(e.target.value) || 1})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
               </div>
             </div>
@@ -177,7 +177,7 @@ const AICostCalculator = () => {
                 <select
                   value={inputs.aiIntegrationComplexity}
                   onChange={(e) => setInputs({...inputs, aiIntegrationComplexity: e.target.value as 'basic' | 'moderate' | 'advanced'})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 >
                   <option value="basic">Basic (Chatbots, Simple Automation)</option>
                   <option value="moderate">Moderate (Content Generation, Analytics)</option>
@@ -195,7 +195,7 @@ const AICostCalculator = () => {
                   max="10000"
                   value={inputs.currentToolCosts}
                   onChange={(e) => setInputs({...inputs, currentToolCosts: parseInt(e.target.value) || 0})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
               </div>
 
@@ -209,7 +209,7 @@ const AICostCalculator = () => {
                   max="1000000"
                   value={inputs.expectedUsers}
                   onChange={(e) => setInputs({...inputs, expectedUsers: parseInt(e.target.value) || 10})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 />
               </div>
             </div>
@@ -219,7 +219,7 @@ const AICostCalculator = () => {
             <Button 
               onClick={calculateCosts}
               size="lg"
-              className="bg-gradient-to-r from-accent-500 to-creative-500 hover:from-accent-600 hover:to-creative-600 text-white group"
+              className="bg-gradient-to-r from-cyan-500 to-amber-500 hover:from-cyan-600 hover:to-amber-600 text-white group"
             >
               Calculate ROI
               <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -257,13 +257,13 @@ const AICostCalculator = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gradient-to-br from-accent-900/20 to-creative-900/20 border-accent-700/50">
+                <Card className="bg-gradient-to-br from-cyan-900/20 to-amber-900/20 border-cyan-700/50">
                   <CardContent className="pt-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-gray-400">Total Savings</span>
-                      <TrendingUp className="w-5 h-5 text-accent-400" />
+                      <TrendingUp className="w-5 h-5 text-cyan-400" />
                     </div>
-                    <p className="text-3xl font-bold text-accent-400">{formatCurrency(breakdown.savings)}</p>
+                    <p className="text-3xl font-bold text-cyan-400">{formatCurrency(breakdown.savings)}</p>
                     <p className="text-sm text-gray-400 mt-2">{breakdown.savingsPercentage.toFixed(0)}% cost reduction</p>
                   </CardContent>
                 </Card>
@@ -275,17 +275,17 @@ const AICostCalculator = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                     <div>
                       <p className="text-gray-400 mb-2">ROI</p>
-                      <p className="text-4xl font-bold text-creative-400">{breakdown.roi.toFixed(0)}%</p>
+                      <p className="text-4xl font-bold text-amber-400">{breakdown.roi.toFixed(0)}%</p>
                     </div>
                     <div>
                       <p className="text-gray-400 mb-2">Time to Market</p>
-                      <p className="text-4xl font-bold text-accent-400">
+                      <p className="text-4xl font-bold text-cyan-400">
                         {Math.round(((breakdown.timeToMarket - breakdown.aiTimeToMarket) / breakdown.timeToMarket) * 100)}% Faster
                       </p>
                     </div>
                     <div>
                       <p className="text-gray-400 mb-2">Break-even Point</p>
-                      <p className="text-4xl font-bold text-primary-400">
+                      <p className="text-4xl font-bold text-indigo-400">
                         {Math.ceil(breakdown.aiEnhancedCost / (breakdown.savings / breakdown.timeToMarket))} weeks
                       </p>
                     </div>
@@ -340,7 +340,7 @@ const AICostCalculator = () => {
                     Download Report
                   </Button>
                   <Button 
-                    className="bg-gradient-to-r from-accent-500 to-creative-500 hover:from-accent-600 hover:to-creative-600 text-white"
+                    className="bg-gradient-to-r from-cyan-500 to-amber-500 hover:from-cyan-600 hover:to-amber-600 text-white"
                   >
                     Schedule Consultation
                   </Button>
@@ -369,7 +369,7 @@ const AICostCalculator = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                             placeholder="you@company.com"
-                            className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
+                            className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                           />
                         </div>
                         <div className="flex items-center space-x-2 text-sm text-gray-400">
@@ -377,7 +377,7 @@ const AICostCalculator = () => {
                           <span>We&apos;ll also send you AI development tips</span>
                         </div>
                         <div className="flex space-x-3">
-                          <Button type="submit" className="flex-1 bg-accent-500 hover:bg-accent-600 text-white">
+                          <Button type="submit" className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white">
                             <Mail className="w-4 h-4 mr-2" />
                             Send Report
                           </Button>

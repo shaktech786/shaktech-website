@@ -33,9 +33,9 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid-jazz items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center space-x-2 bg-primary-900/30 px-4 py-2 rounded-full border border-primary-700">
-                <Sparkles className="w-4 h-4 text-primary-400" />
-                <span className="text-sm font-medium text-primary-300">
+              <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700">
+                <Sparkles className="w-4 h-4 text-indigo-400" />
+                <span className="text-sm font-medium text-indigo-300">
                   About Shakeel Bhamani
                 </span>
               </div>
@@ -67,8 +67,8 @@ const AboutPage = () => {
 
             <div className="relative">
               <div className="w-full max-w-md mx-auto">
-                <div className="aspect-square bg-gradient-to-br from-primary-500 via-accent-500 to-creative-500 rounded-2xl p-1">
-                  <div className="w-full h-full bg-primary-950 rounded-xl overflow-hidden">
+                <div className="aspect-square bg-gradient-to-br from-indigo-500 via-cyan-500 to-amber-500 rounded-2xl p-1">
+                  <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden">
                     <Image
                       src="/shakeel_linkedin.jpeg"
                       alt="Shakeel Bhamani - Lead Software Consultant"
@@ -111,8 +111,8 @@ const AboutPage = () => {
                 <Card className="p-6 border-l-4 border-l-primary-500">
                   <CardContent className="p-0">
                     <div className="flex items-center space-x-3 mb-4">
-                      <Building className="w-6 h-6 text-primary-600" />
-                      <span className="text-sm font-medium text-primary-600 bg-primary-50 px-2 py-1 rounded-full">
+                      <Building className="w-6 h-6 text-indigo-600" />
+                      <span className="text-sm font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
                         Present
                       </span>
                     </div>
@@ -128,7 +128,7 @@ const AboutPage = () => {
                 </Card>
               </div>
               <div className="flex justify-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center">
                   <Code className="w-8 h-8 text-white" />
                 </div>
               </div>
@@ -137,7 +137,7 @@ const AboutPage = () => {
             {/* Georgia Tech */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
               <div className="flex justify-center lg:order-first">
-                <div className="w-16 h-16 bg-gradient-to-br from-creative-500 to-accent-500 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-cyan-500 rounded-full flex items-center justify-center">
                   <GraduationCap className="w-8 h-8 text-white" />
                 </div>
               </div>
@@ -145,8 +145,8 @@ const AboutPage = () => {
                 <Card className="p-6 border-l-4 border-l-creative-500">
                   <CardContent className="p-0">
                     <div className="flex items-center space-x-3 mb-4">
-                      <GraduationCap className="w-6 h-6 text-creative-600" />
-                      <span className="text-sm font-medium text-creative-600 bg-creative-50 px-2 py-1 rounded-full">
+                      <GraduationCap className="w-6 h-6 text-amber-600" />
+                      <span className="text-sm font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
                         2012-2016
                       </span>
                     </div>
@@ -168,8 +168,8 @@ const AboutPage = () => {
                 <Card className="p-6 border-l-4 border-l-accent-500">
                   <CardContent className="p-0">
                     <div className="flex items-center space-x-3 mb-4">
-                      <Mic className="w-6 h-6 text-accent-600" />
-                      <span className="text-sm font-medium text-accent-600 bg-accent-50 px-2 py-1 rounded-full">
+                      <Mic className="w-6 h-6 text-cyan-600" />
+                      <span className="text-sm font-medium text-cyan-600 bg-cyan-50 px-2 py-1 rounded-full">
                         2017
                       </span>
                     </div>
@@ -185,7 +185,7 @@ const AboutPage = () => {
                 </Card>
               </div>
               <div className="flex justify-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-creative-500 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center">
                   <Award className="w-8 h-8 text-white" />
                 </div>
               </div>
@@ -195,7 +195,7 @@ const AboutPage = () => {
       </section>
 
       {/* Philosophy & Approach */}
-      <section className="py-24 bg-primary-950/20 relative overflow-hidden">
+      <section className="py-24 bg-gray-900/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-diagonal-lines" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
@@ -210,7 +210,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center p-8 hover:shadow-lg transition-all duration-300 group">
               <CardContent className="p-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Empathy First</h3>
@@ -223,7 +223,7 @@ const AboutPage = () => {
 
             <Card className="text-center p-8 hover:shadow-lg transition-all duration-300 group">
               <CardContent className="p-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-creative-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Lightbulb className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Creative Innovation</h3>
@@ -236,7 +236,7 @@ const AboutPage = () => {
 
             <Card className="text-center p-8 hover:shadow-lg transition-all duration-300 group">
               <CardContent className="p-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-primary-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Pragmatic Excellence</h3>
@@ -251,7 +251,7 @@ const AboutPage = () => {
       </section>
 
       {/* Skills & Expertise */}
-      <section className="py-24 bg-primary-950/10 relative overflow-hidden">
+      <section className="py-24 bg-gray-900/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-dots-pattern opacity-30" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
@@ -264,7 +264,7 @@ const AboutPage = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Code className="w-6 h-6 text-primary-600 mr-3" />
+                  <Code className="w-6 h-6 text-indigo-600 mr-3" />
                   Technical Skills
                 </h3>
                 <div className="flex flex-wrap gap-3">
@@ -274,7 +274,7 @@ const AboutPage = () => {
                   ].map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium"
                     >
                       {skill}
                     </span>
@@ -284,7 +284,7 @@ const AboutPage = () => {
 
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Lightbulb className="w-6 h-6 text-creative-600 mr-3" />
+                  <Lightbulb className="w-6 h-6 text-amber-600 mr-3" />
                   AI & Machine Learning
                 </h3>
                 <div className="flex flex-wrap gap-3">
@@ -294,7 +294,7 @@ const AboutPage = () => {
                   ].map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-creative-100 dark:bg-creative-900/30 text-creative-700 dark:text-creative-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium"
                     >
                       {skill}
                     </span>
@@ -304,7 +304,7 @@ const AboutPage = () => {
 
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Users className="w-6 h-6 text-accent-600 mr-3" />
+                  <Users className="w-6 h-6 text-cyan-600 mr-3" />
                   Leadership & Consulting
                 </h3>
                 <div className="flex flex-wrap gap-3">
@@ -314,7 +314,7 @@ const AboutPage = () => {
                   ].map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full text-sm font-medium"
                     >
                       {skill}
                     </span>
@@ -324,7 +324,7 @@ const AboutPage = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20 p-6 rounded-xl">
+              <div className="bg-gradient-to-br from-indigo-50 to-cyan-50 dark:from-indigo-900/20 dark:to-cyan-900/20 p-6 rounded-xl">
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   🏆 Key Achievements
                 </h4>
@@ -337,7 +337,7 @@ const AboutPage = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-creative-50 to-accent-50 dark:from-creative-900/20 dark:to-accent-900/20 p-6 rounded-xl">
+              <div className="bg-gradient-to-br from-amber-50 to-cyan-50 dark:from-amber-900/20 dark:to-cyan-900/20 p-6 rounded-xl">
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   🎯 What Drives Me
                 </h4>
@@ -353,7 +353,7 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-primary-600 via-accent-500 to-creative-500">
+      <section className="py-24 bg-gradient-to-r from-indigo-600 via-cyan-500 to-amber-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Build Something Amazing Together?
