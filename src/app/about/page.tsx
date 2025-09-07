@@ -31,7 +31,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="py-24 pt-40 bg-circuit-board relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid-jazz items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700">
                 <Sparkles className="w-4 h-4 text-indigo-400" />
@@ -112,7 +112,7 @@ const AboutPage = () => {
                   <CardContent className="p-0">
                     <div className="flex items-center space-x-3 mb-4">
                       <Building className="w-6 h-6 text-indigo-600" />
-                      <span className="text-sm font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
+                      <span className="text-sm font-medium text-indigo-300 bg-indigo-900/30 px-2 py-1 rounded-full border border-indigo-700/50">
                         Present
                       </span>
                     </div>
@@ -146,7 +146,7 @@ const AboutPage = () => {
                   <CardContent className="p-0">
                     <div className="flex items-center space-x-3 mb-4">
                       <GraduationCap className="w-6 h-6 text-amber-600" />
-                      <span className="text-sm font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
+                      <span className="text-sm font-medium text-amber-300 bg-amber-900/30 px-2 py-1 rounded-full border border-amber-700/50">
                         2012-2016
                       </span>
                     </div>
@@ -169,7 +169,7 @@ const AboutPage = () => {
                   <CardContent className="p-0">
                     <div className="flex items-center space-x-3 mb-4">
                       <Mic className="w-6 h-6 text-cyan-600" />
-                      <span className="text-sm font-medium text-cyan-600 bg-cyan-50 px-2 py-1 rounded-full">
+                      <span className="text-sm font-medium text-cyan-300 bg-cyan-900/30 px-2 py-1 rounded-full border border-cyan-700/50">
                         2017
                       </span>
                     </div>
@@ -274,7 +274,7 @@ const AboutPage = () => {
                   ].map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-indigo-900/30 text-indigo-300 rounded-full text-sm font-medium border border-indigo-700/50"
                     >
                       {skill}
                     </span>
@@ -294,7 +294,7 @@ const AboutPage = () => {
                   ].map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-amber-900/30 text-amber-300 rounded-full text-sm font-medium border border-amber-700/50"
                     >
                       {skill}
                     </span>
@@ -314,7 +314,7 @@ const AboutPage = () => {
                   ].map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded-full text-sm font-medium border border-cyan-700/50"
                     >
                       {skill}
                     </span>

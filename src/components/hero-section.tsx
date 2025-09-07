@@ -48,7 +48,7 @@ const HeroSection = () => {
           <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700">
             <Sparkles className="w-4 h-4 text-indigo-400" />
             <span className="text-sm font-medium text-indigo-300">
-              🇺🇸 US-Based • TEDx Speaker • AI-First Expert • Beatbox Champion
+              🇺🇸 ThoughtWorks Lead Consultant • 2017 Beatbox Vice Champion • TEDx Speaker
             </span>
           </div>
 
@@ -60,11 +60,12 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed" aria-describedby="main-heading">
-            Atlanta-based AI expert delivering <span className="text-indigo-400 font-semibold">enterprise solutions</span> with 
-            <span className="text-cyan-400 font-semibold"> clear communication</span>. 
-            From <span className="text-amber-400 font-semibold">Georgia Tech</span> to 
-            <span className="text-gradient-primary font-semibold"> Fortune 500 consulting</span> – 
-            I bring US-based expertise to your AI transformation.
+            From intern to <span className="text-indigo-400 font-semibold">ThoughtWorks Lead Consultant</span> in 9+ years. 
+            I&apos;ve coached <span className="text-cyan-400 font-semibold">11 diverse developers to full-time success</span> and 
+            built AI solutions for <span className="text-amber-400 font-semibold">Fortune 500 clients</span>. 
+            My superpower? Combining cutting-edge technology with 
+            <span className="text-gradient-primary font-semibold"> team psychology</span> – 
+            because great AI needs great people.
           </p>
 
           {/* CTA Buttons */}
@@ -83,15 +84,15 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Key Stats/Features */}
+          {/* Key Value Props */}
           <div className="pt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 <Zap className="w-8 h-8 text-indigo-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white" id="feature-ai-first">AI-First Development</h3>
-              <p className="text-gray-400 mt-2" aria-describedby="feature-ai-first">
-                Building with AI from day one, not as an afterthought
+              <h3 className="text-lg font-semibold text-white" id="feature-team-psychology">Team Psychology Expert</h3>
+              <p className="text-gray-400 mt-2" aria-describedby="feature-team-psychology">
+                100% success rate coaching diverse developers
               </p>
             </div>
             
@@ -99,9 +100,9 @@ const HeroSection = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 <Code2 className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white" id="feature-experience">10+ Years Experience</h3>
-              <p className="text-gray-400 mt-2" aria-describedby="feature-experience">
-                Enterprise-grade practices and proven methodologies
+              <h3 className="text-lg font-semibold text-white" id="feature-social-impact">Social Impact Focus</h3>
+              <p className="text-gray-400 mt-2" aria-describedby="feature-social-impact">
+                Technology that makes a real difference
               </p>
             </div>
             
@@ -109,9 +110,9 @@ const HeroSection = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 <Sparkles className="w-8 h-8 text-amber-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white" id="feature-creative">Creative Innovation</h3>
-              <p className="text-gray-400 mt-2" aria-describedby="feature-creative">
-                From beatbox champion to tech innovator
+              <h3 className="text-lg font-semibold text-white" id="feature-journey">Full Career Journey</h3>
+              <p className="text-gray-400 mt-2" aria-describedby="feature-journey">
+                From intern to Lead - I&apos;ve been where you are
               </p>
             </div>
           </div>

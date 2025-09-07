@@ -79,8 +79,9 @@ const Testimonials = () => {
             What <span className="text-gradient-primary">Clients Say</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            From empathetic consulting to cutting-edge AI solutions – 
-            see why clients trust ShakTech for their most important projects.
+            From startup founders to Fortune 500 teams – 
+            see why clients trust a ThoughtWorks Lead Consultant who combines 
+            technical expertise with genuine care for people and outcomes.
           </p>
         </div>
         
@@ -100,25 +101,25 @@ const Testimonials = () => {
         <div className="mt-16 pt-16 border-t border-gray-200 dark:border-gray-700">
           <div className="text-center mb-8">
             <h3 className="text-lg font-semibold text-white mb-2">
-              Trusted US-Based Expert
+              ThoughtWorks Lead Consultant & Team Psychology Expert
             </h3>
             <p className="text-gray-400">
-              10+ years of enterprise-grade software development from Atlanta, Georgia
+              From intern to Lead Consultant in 9+ years. Based in Atlanta, serving clients nationwide.
             </p>
           </div>
           
           <div className="flex items-center justify-center space-x-8 opacity-70">
             <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">10+</div>
-              <div className="text-sm text-gray-500">Years Experience</div>
+              <div className="text-2xl font-bold text-indigo-600">100%</div>
+              <div className="text-sm text-gray-500">Coaching Success Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-cyan-600">50+</div>
-              <div className="text-sm text-gray-500">Projects Delivered</div>
+              <div className="text-2xl font-bold text-cyan-600">4+ Years</div>
+              <div className="text-sm text-gray-500">at ThoughtWorks</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-amber-600">4.9★</div>
-              <div className="text-sm text-gray-500">Client Rating</div>
+              <div className="text-2xl font-bold text-amber-600">2017</div>
+              <div className="text-sm text-gray-500">Beatbox Vice Champion</div>
             </div>
           </div>
         </div>

@@ -8,13 +8,11 @@ export function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
-    // Check for saved theme preference or default to 'dark'
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    // Force dark theme to match layout.tsx
+    const initialTheme = 'dark';
     setTheme(initialTheme);
     applyTheme(initialTheme);
+    localStorage.setItem('theme', 'dark');
   }, []);
 
   const applyTheme = (newTheme: 'light' | 'dark') => {

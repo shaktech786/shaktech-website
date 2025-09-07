@@ -35,11 +35,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {icon}
           </div>
           <div>
-            <span className="text-sm font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
+            <span className="text-sm font-medium text-indigo-300 bg-indigo-900/30 px-2 py-1 rounded-full border border-indigo-700/50">
               {category}
             </span>
             {featured && (
-              <span className="ml-2 text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
+              <span className="ml-2 text-xs font-medium text-amber-300 bg-amber-900/30 px-2 py-1 rounded-full border border-amber-700/50">
                 Featured
               </span>
             )}
@@ -59,7 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {techStack.map((tech) => (
           <span
             key={tech}
-            className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md"
+            className="text-xs px-2 py-1 bg-gray-800/50 text-gray-300 rounded-md border border-gray-700/50"
           >
             {tech}
           </span>

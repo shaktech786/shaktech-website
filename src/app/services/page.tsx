@@ -21,105 +21,148 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "AI-First Software Services - Strategy, Development & Training",
-  description: "From AI strategy consulting to hands-on development and team training. Shakeel offers three comprehensive tiers to transform your business with AI-first software delivery.",
+  title: "AI-First Team & Technology Services | ThoughtWorks Lead Consultant",
+  description: "Team transformation, full-stack AI development, leadership coaching, and social impact consulting. Proven track record from intern to ThoughtWorks Lead Consultant with 100% coaching success rate.",
 }
 
 const ServicesPage = () => {
   const services = [
     {
-      tier: "strategy",
-      title: "AI Strategy Consulting",
-      subtitle: "Chart Your AI Journey",
-      description: "Perfect for leaders who need strategic clarity on how AI can transform their business operations and competitive position.",
-      pricing: "Starting at $2,500",
-      icon: <Lightbulb className="w-8 h-8" />,
+      tier: "team-transformation",
+      title: "AI-First Team Transformation",
+      subtitle: "Teams That Actually Succeed with AI",
+      description: "Transform your existing development team from traditional practices to AI-assisted delivery. Based on my proven track record coaching 11 diverse developers to 100% full-time success at ThoughtWorks.",
+      pricing: "$10,000 - $25,000",
+      duration: "6-8 weeks",
+      icon: <Users className="w-8 h-8" />,
       color: "from-indigo-500 to-indigo-700",
       features: [
-        "AI Readiness Assessment",
-        "Custom AI Strategy Roadmap",
-        "Technology Stack Recommendations",
-        "ROI Projections & Business Case",
-        "Risk Assessment & Mitigation",
-        "Implementation Timeline",
-        "Team Skill Gap Analysis",
-        "Vendor Evaluation & Selection"
+        "Team psychological safety assessment & improvement",
+        "AI tool integration (GitHub Copilot, ChatGPT, etc.)",
+        "Pair programming with AI best practices",
+        "Test-driven development with AI assistance",
+        "Code review processes that leverage AI",
+        "Team retrospectives focused on AI adoption",
+        "Individual mentoring for each team member",
+        "Leadership coaching for technical managers"
       ],
       deliverables: [
-        "Comprehensive AI Strategy Document",
-        "Executive Presentation",
-        "Technical Architecture Recommendations",
-        "3-Month Implementation Plan"
+        "Team AI Readiness Assessment Report",
+        "Custom AI-First Development Playbook",
+        "Individual Development Plans for each team member",
+        "AI Tool Integration Guide",
+        "3-month follow-up coaching sessions"
       ],
       ideal_for: [
-        "CEOs and CTOs planning AI transformation",
-        "Companies exploring AI opportunities",
-        "Organizations needing AI roadmaps",
-        "Teams requiring strategic direction"
-      ]
+        "Development teams struggling with AI adoption",
+        "CTOs wanting to upskill existing developers",
+        "Teams experiencing low morale or productivity",
+        "Organizations prioritizing psychological safety"
+      ],
+      outcome: "Teams see 40% faster delivery with AI tools + improved team health metrics"
     },
     {
       tier: "development",
-      title: "AI-First Development",
-      subtitle: "Build Your AI Solution",
-      description: "End-to-end development of AI-powered applications with enterprise-grade practices and modern technology stacks.",
-      pricing: "Starting at $15,000",
+      title: "Full-Stack AI Application Development",
+      subtitle: "Technology That Makes a Real Difference",
+      description: "End-to-end development of AI-powered applications with enterprise-grade practices. From social impact projects like prison oversight systems to Fortune 500 enterprise solutions.",
+      pricing: "$25,000 - $75,000",
+      duration: "3-4 months",
       icon: <Code className="w-8 h-8" />,
       color: "from-cyan-500 to-cyan-700",
       featured: true,
       features: [
-        "Full-Stack AI Application Development",
-        "API Design & Integration",
-        "Database Design & Optimization",
-        "User Experience (UX) Design",
-        "Security & Compliance Implementation",
-        "Performance Optimization",
-        "Testing & Quality Assurance",
-        "Deployment & DevOps Setup"
+        "Next.js/React + AI integration (LLMs, RAG, fine-tuning)",
+        "Enterprise-grade security & compliance",
+        "PostgreSQL database design & optimization",
+        "Comprehensive testing (Jest, Cypress, Pact)",
+        "CI/CD deployment pipeline (CircleCI/GitHub Actions)",
+        "Team training on AI-first development practices",
+        "Code review and mentoring throughout project",
+        "Social impact and accessibility considerations"
       ],
       deliverables: [
-        "Production-Ready AI Application",
-        "Complete Source Code",
-        "Documentation & Guides",
-        "Deployment Infrastructure"
+        "Production-ready AI application",
+        "Complete documented source code",
+        "Deployment infrastructure & CI/CD pipeline",
+        "Team training materials & knowledge transfer",
+        "3-month post-launch maintenance included"
       ],
       ideal_for: [
         "Startups building AI-first products",
-        "Companies needing custom AI solutions",
-        "Teams requiring hands-on development",
-        "Organizations modernizing with AI"
-      ]
+        "Social impact organizations needing custom solutions",
+        "Companies requiring enterprise-grade AI applications",
+        "Teams wanting to learn while building"
+      ],
+      outcome: "Production-ready AI applications with measurable business impact & team upskilling"
     },
     {
-      tier: "training",
-      title: "Team Training & Enablement", 
-      subtitle: "Empower Your Team",
-      description: "Comprehensive training programs to upskill your team in AI-first development practices and modern software methodologies.",
-      pricing: "Starting at $5,000",
-      icon: <Users className="w-8 h-8" />,
+      tier: "leadership",
+      title: "Leadership Coaching for AI Adoption",
+      subtitle: "From Intern to Lead - I&apos;ve Been Where You Are",
+      description: "1:1 executive coaching for technical leaders navigating AI transformation. Drawing from my journey from intern to ThoughtWorks Lead Consultant and expertise in team psychology.",
+      pricing: "$5,000 - $15,000",
+      duration: "3-6 months",
+      icon: <Target className="w-8 h-8" />,
       color: "from-amber-500 to-amber-700",
       features: [
-        "AI-First Development Workshops",
-        "Hands-on Coding Sessions",
-        "Agile & DevOps Best Practices",
-        "Code Review & Mentoring",
-        "Team Collaboration Training",
-        "Technical Leadership Coaching",
-        "Custom Curriculum Development",
-        "Progress Tracking & Assessment"
+        "Monthly 1:1 coaching sessions with ThoughtWorks Lead",
+        "Team psychology and psychological safety frameworks",
+        "AI strategy development and communication",
+        "Change management for AI tool adoption",
+        "Technical leadership skills development",
+        "Conflict resolution and team dynamics",
+        "Performance review and feedback techniques",
+        "Career progression planning and mentorship"
       ],
       deliverables: [
-        "Custom Training Program",
-        "Workshop Materials & Resources",
-        "Skills Assessment Reports",
-        "Ongoing Mentorship Access"
+        "Personalized leadership development plan",
+        "AI adoption strategy for your team",
+        "Team health assessment & improvement roadmap",
+        "Monthly progress check-ins and adjustments",
+        "Access to ThoughtWorks leadership frameworks"
       ],
       ideal_for: [
-        "Development teams adopting AI",
-        "Companies upskilling developers",
-        "Organizations improving practices",
-        "Teams needing technical mentorship"
-      ]
+        "New technical managers and team leads",
+        "Senior developers transitioning to leadership",
+        "CTOs implementing AI transformation",
+        "Leaders struggling with team dynamics"
+      ],
+      outcome: "Leaders who can effectively guide AI transformation while maintaining team health"
+    },
+    {
+      tier: "social-impact",
+      title: "Social Impact Tech Consulting",
+      subtitle: "Technology for Positive Change",
+      description: "Specialized consulting for nonprofits and social impact organizations. Based on my experience building prison oversight systems and commitment to diversity, equity, and inclusion in tech.",
+      pricing: "$5,000 - $20,000",
+      duration: "Flexible based on impact",
+      icon: <Lightbulb className="w-8 h-8" />,
+      color: "from-green-500 to-green-700",
+      features: [
+        "Pro-bono and reduced-rate options for qualifying organizations",
+        "Open-source development when possible",
+        "Accessibility and inclusive design focus",
+        "Community-driven development practices",
+        "Volunteer developer coordination and training",
+        "Grant writing and funding strategy support",
+        "Long-term sustainability planning",
+        "Impact measurement and reporting"
+      ],
+      deliverables: [
+        "Custom social impact application",
+        "Open-source codebase (when appropriate)",
+        "Volunteer developer training materials",
+        "Sustainability and maintenance plan",
+        "Impact measurement dashboard"
+      ],
+      ideal_for: [
+        "Nonprofits needing custom technology solutions",
+        "Social justice organizations with limited budgets",
+        "Community groups wanting to build internal capacity",
+        "Organizations focused on equitable technology"
+      ],
+      outcome: "Technology that creates measurable positive social change"
     }
   ]
 
@@ -156,12 +199,13 @@ const ServicesPage = () => {
       <section className="py-24 pt-40 bg-hexagon-pattern relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-            AI-First Software
+            AI-First Team & Technology
             <span className="block text-gradient-creative">Services</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            From strategic AI consulting to hands-on development and team training. 
-            Choose the perfect engagement level for your AI transformation journey.
+            From intern to ThoughtWorks Lead Consultant, I&apos;ve lived every stage of the developer journey. 
+            Whether you need team transformation, full-stack AI development, or leadership coaching - 
+            I combine technical expertise with proven team psychology.
           </p>
           
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
@@ -216,6 +260,9 @@ const ServicesPage = () => {
                   <div className="text-3xl font-bold text-amber-400 mt-4">
                     {service.pricing}
                   </div>
+                  <div className="text-sm text-cyan-400 mt-2">
+                    {service.duration}
+                  </div>
                 </CardHeader>
 
                 <CardContent className="space-y-6">
@@ -263,6 +310,16 @@ const ServicesPage = () => {
                       ))}
                     </ul>
                   </div>
+
+                  {service.outcome && (
+                    <div className="bg-green-900/20 p-4 rounded-lg border border-green-700/30">
+                      <h4 className="text-lg font-semibold text-green-400 mb-2 flex items-center">
+                        <TrendingUp className="w-5 h-5 mr-2" />
+                        Expected Outcome
+                      </h4>
+                      <p className="text-sm text-green-300">{service.outcome}</p>
+                    </div>
+                  )}
 
                   <Button 
                     variant={service.featured ? "cta" : "outline"} 
