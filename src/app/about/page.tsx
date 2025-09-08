@@ -16,7 +16,11 @@ import {
   Target,
   ArrowRight,
   Music,
-  Sparkles
+  Sparkles,
+  CheckCircle,
+  TrendingUp,
+  Calendar,
+  MapPin
 } from "lucide-react"
 import Image from "next/image"
 
@@ -26,37 +30,116 @@ export const metadata: Metadata = {
 }
 
 const AboutPage = () => {
+  const journeyMilestones = [
+    {
+      year: "Present",
+      title: "ThoughtWorks Lead Consultant",
+      description: "Leading AI-first software delivery initiatives and mentoring diverse engineering teams. Achieved 100% full-time offer rate for 11 coached interns.",
+      icon: <Building className="w-6 h-6" />,
+      color: "from-indigo-500 to-cyan-500",
+      badge: "Present",
+      badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
+    },
+    {
+      year: "2017",
+      title: "American Beatbox Vice Champion & TEDx Speaker",
+      description: "Achieved national recognition in creative performance while developing public speaking expertise that enhances client presentations.",
+      icon: <Award className="w-6 h-6" />,
+      color: "from-amber-500 to-cyan-500",
+      badge: "2017",
+      badgeColor: "bg-amber-900/30 text-amber-300 border-amber-700/50"
+    },
+    {
+      year: "2012-2016",
+      title: "Georgia Institute of Technology",
+      description: "B.S. in Computer Science with Dean's List honors. Peer Leader mentoring 30+ students while building foundation for technical leadership.",
+      icon: <GraduationCap className="w-6 h-6" />,
+      color: "from-green-500 to-cyan-500",
+      badge: "2012-2016",
+      badgeColor: "bg-green-900/30 text-green-300 border-green-700/50"
+    }
+  ]
+
+  const coreValues = [
+    {
+      title: "Empathy-Driven Development",
+      description: "Every technical solution starts with understanding the human story. I listen first, then build technology that truly serves people's needs.",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500"
+    },
+    {
+      title: "Creative Problem Solving", 
+      description: "My beatboxing background taught me that innovation comes from combining existing elements in new ways. I apply this creative thinking to AI solutions.",
+      icon: <Lightbulb className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500"
+    },
+    {
+      title: "Enterprise Excellence",
+      description: "ThoughtWorks trained me in world-class practices: test-driven development, continuous integration, and agile methodologies that deliver results.",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500"
+    }
+  ]
+
+  const skillCategories = [
+    {
+      category: "AI & Machine Learning",
+      icon: <Sparkles className="w-5 h-5" />,
+      color: "text-purple-400",
+      skills: ["OpenAI API", "Claude API", "LangChain", "Vector Databases", "RAG Systems", "AI Agents", "Prompt Engineering", "ML Operations"]
+    },
+    {
+      category: "Full-Stack Development",
+      icon: <Code className="w-5 h-5" />,
+      color: "text-blue-400", 
+      skills: ["React & Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL", "AWS & Azure", "Docker", "GraphQL"]
+    },
+    {
+      category: "Leadership & Strategy",
+      icon: <Users className="w-5 h-5" />,
+      color: "text-emerald-400",
+      skills: ["Team Psychology", "Agile Coaching", "Technical Training", "Client Consulting", "Public Speaking", "Change Management"]
+    }
+  ]
+
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-24 pt-40 bg-circuit-board relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700">
+    <main className="min-h-screen bg-gray-900">
+      {/* Hero Section - Enhanced */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+          <div className="absolute inset-0 bg-circuit-board opacity-20" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Content */}
+            <div className="space-y-8 text-center lg:text-left">
+              <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700/50">
                 <Sparkles className="w-4 h-4 text-indigo-400" />
-                <span className="text-sm font-medium text-indigo-300">
-                  About Shakeel Bhamani
-                </span>
+                <span className="text-sm font-medium text-indigo-300">ThoughtWorks Lead Consultant</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
-                From Beatbox Champion to
-                <span className="block text-gradient-creative">AI Pioneer</span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                <span className="text-white">From Beatbox Champion to</span>
+                <span className="block text-gradient-creative mt-2">AI Pioneer</span>
               </h1>
 
-              <p className="text-xl text-gray-300 leading-relaxed">
-                My journey from <strong>Georgia Tech</strong> to <strong>Fortune 500 consulting</strong> to 
-                <strong> AI-first software delivery</strong> has taught me that the most powerful technology 
-                solutions come from understanding the <em>human story</em> behind every project. As a 
-                <strong>US-based consultant</strong>, I bring clear communication and cultural alignment to every engagement.
+              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
+                My journey from <strong className="text-indigo-400">Georgia Tech</strong> to <strong className="text-cyan-400">ThoughtWorks Lead Consultant</strong> 
+                has taught me that the most powerful technology solutions come from understanding the <em className="text-amber-400">human story</em> behind every project.
               </p>
 
-              <div className="flex flex-wrap gap-4">
-                <Button variant="cta" size="lg" asChild>
-                  <Link href="/contact">Work With Me</Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button variant="cta" size="xl" className="group" asChild>
+                  <Link href="/contact">
+                    Start a Conversation
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
-                <Button variant="outline" size="lg" asChild>
+                <Button variant="outline" size="xl" className="group" asChild>
                   <Link href="https://linktr.ee/shakbbx" target="_blank" rel="noopener noreferrer">
                     <Music className="w-5 h-5 mr-2" />
                     Watch TEDx Talk
@@ -65,13 +148,14 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="w-full max-w-md mx-auto">
-                <div className="aspect-square bg-gradient-to-br from-indigo-500 via-cyan-500 to-amber-500 rounded-2xl p-1">
+            {/* Photo & Info Card */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="space-y-6">
+                <div className="w-80 h-80 bg-gradient-to-br from-indigo-500 via-cyan-500 to-amber-500 rounded-2xl p-1 shadow-2xl mx-auto">
                   <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden">
                     <Image
                       src="/shakeel_linkedin.jpeg"
-                      alt="Shakeel Bhamani - Lead Software Consultant"
+                      alt="Shakeel Bhamani - ThoughtWorks Lead Consultant"
                       width={400}
                       height={400}
                       className="w-full h-full object-cover"
@@ -79,299 +163,300 @@ const AboutPage = () => {
                     />
                   </div>
                 </div>
-                <div className="text-center mt-6 space-y-1">
-                  <p className="font-bold text-xl text-white">Shakeel Bhamani</p>
-                  <p className="text-gray-400">AI-First Software Expert</p>
-                  <p className="text-gray-400">Atlanta, Georgia 🇺🇸</p>
-                  <p className="text-gray-400">TEDx Speaker & Beatbox Champion</p>
-                </div>
+                
+                {/* Info Card - Positioned below photo */}
+                <Card className="bg-gray-900/95 border-gray-700 backdrop-blur-sm">
+                  <CardContent className="p-4 text-center">
+                    <h3 className="font-bold text-white text-lg">Shakeel Bhamani</h3>
+                    <p className="text-cyan-400 text-sm font-medium">AI-First Software Expert</p>
+                    <div className="flex items-center justify-center space-x-2 mt-2 text-sm text-gray-400">
+                      <MapPin className="w-4 h-4" />
+                      <span>Atlanta, Georgia 🇺🇸</span>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Journey Timeline */}
-      <section className="py-24 section-about relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+      {/* Journey Timeline - Redesigned */}
+      <section className="py-24 bg-gradient-to-b from-gray-900 to-gray-950 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               My <span className="text-gradient-primary">Journey</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A unique path that combines technical excellence, creative expression, 
-              and empathetic leadership to deliver AI-first solutions.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              A unique path combining technical excellence, creative expression, and empathetic leadership 
+              to deliver AI-first solutions that make a real difference.
             </p>
           </div>
 
-          <div className="space-y-12">
-            {/* Current Role */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-              <div className="lg:col-span-2">
-                <Card className="p-6 border-l-4 border-l-primary-500">
-                  <CardContent className="p-0">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <Building className="w-6 h-6 text-indigo-600" />
-                      <span className="text-sm font-medium text-indigo-300 bg-indigo-900/30 px-2 py-1 rounded-full border border-indigo-700/50">
-                        Present
-                      </span>
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-indigo-500 via-cyan-500 to-green-500 opacity-30 hidden lg:block" />
+            
+            <div className="space-y-16">
+              {journeyMilestones.map((milestone, index) => (
+                <div key={index} className="relative">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    {/* Left Content (odd indexes) or Empty (even indexes) */}
+                    <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-1'}`}>
+                      {index % 2 !== 0 ? (
+                        <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-all duration-300">
+                          <CardContent className="p-8">
+                            <div className="flex items-center space-x-3 mb-4">
+                              <div className={`p-2 rounded-lg bg-gradient-to-br ${milestone.color}`}>
+                                <div className="text-white">{milestone.icon}</div>
+                              </div>
+                              <span className={`text-xs font-medium px-3 py-1 rounded-full border ${milestone.badgeColor}`}>
+                                {milestone.badge}
+                              </span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-3">{milestone.title}</h3>
+                            <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
+                          </CardContent>
+                        </Card>
+                      ) : (
+                        <div className="hidden lg:block" />
+                      )}
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      Lead Software Consultant at Thoughtworks
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Leading AI-first software delivery initiatives, building digital accelerator programs, 
-                      and mentoring diverse engineering teams. Received commendation from Thoughtworks North America CEO 
-                      for successfully training 11 diverse interns who all received full-time offers.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="flex justify-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center">
-                  <Code className="w-8 h-8 text-white" />
-                </div>
-              </div>
-            </div>
 
-            {/* Georgia Tech */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-              <div className="flex justify-center lg:order-first">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-cyan-500 rounded-full flex items-center justify-center">
-                  <GraduationCap className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <div className="lg:col-span-2">
-                <Card className="p-6 border-l-4 border-l-creative-500">
-                  <CardContent className="p-0">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <GraduationCap className="w-6 h-6 text-amber-600" />
-                      <span className="text-sm font-medium text-amber-300 bg-amber-900/30 px-2 py-1 rounded-full border border-amber-700/50">
-                        2012-2016
-                      </span>
+                    {/* Center Timeline Node */}
+                    <div className="flex justify-center lg:order-2">
+                      <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${milestone.color} flex items-center justify-center shadow-lg border-4 border-gray-900 relative z-10`}>
+                        <div className="text-white">{milestone.icon}</div>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      Georgia Institute of Technology
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      B.S. in Computer Science with Dean&apos;s List honors. Served as Peer Leader mentoring 30 students, 
-                      while simultaneously developing my beatboxing skills that would later lead to championship performances.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
 
-            {/* Beatboxing Achievement */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-              <div className="lg:col-span-2">
-                <Card className="p-6 border-l-4 border-l-accent-500">
-                  <CardContent className="p-0">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <Mic className="w-6 h-6 text-cyan-600" />
-                      <span className="text-sm font-medium text-cyan-300 bg-cyan-900/30 px-2 py-1 rounded-full border border-cyan-700/50">
-                        2017
-                      </span>
+                    {/* Right Content (even indexes) or Empty (odd indexes) */}
+                    <div className={`${index % 2 === 0 ? 'lg:order-3' : 'lg:order-3'}`}>
+                      {index % 2 === 0 ? (
+                        <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-all duration-300">
+                          <CardContent className="p-8">
+                            <div className="flex items-center space-x-3 mb-4">
+                              <div className={`p-2 rounded-lg bg-gradient-to-br ${milestone.color}`}>
+                                <div className="text-white">{milestone.icon}</div>
+                              </div>
+                              <span className={`text-xs font-medium px-3 py-1 rounded-full border ${milestone.badgeColor}`}>
+                                {milestone.badge}
+                              </span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-3">{milestone.title}</h3>
+                            <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
+                          </CardContent>
+                        </Card>
+                      ) : (
+                        <div className="hidden lg:block" />
+                      )}
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      Loopstation Vice Champion & TEDx Speaker
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Achieved vice champion status at the American Beatbox Championships and delivered a TEDx talk. 
-                      This experience taught me the power of creative expression and performing under pressure - 
-                      skills I now apply to technical presentations and client engagements.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="flex justify-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center">
-                  <Award className="w-8 h-8 text-white" />
+                  </div>
+
+                  {/* Mobile Layout - Show card below timeline node */}
+                  <div className="lg:hidden mt-6">
+                    <Card className="bg-gray-800/50 border-gray-700">
+                      <CardContent className="p-6">
+                        <div className="flex items-center space-x-3 mb-4">
+                          <div className={`p-2 rounded-lg bg-gradient-to-br ${milestone.color}`}>
+                            <div className="text-white">{milestone.icon}</div>
+                          </div>
+                          <span className={`text-xs font-medium px-3 py-1 rounded-full border ${milestone.badgeColor}`}>
+                            {milestone.badge}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-3">{milestone.title}</h3>
+                        <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy & Approach */}
-      <section className="py-24 bg-gray-900/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-diagonal-lines" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              My <span className="text-gradient-creative">Philosophy</span>
+      {/* Core Values - Reimagined */}
+      <section className="py-24 bg-gradient-radial relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              Core <span className="text-gradient-creative">Values</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The intersection of empathy, creativity, and technical excellence drives everything I do.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              The principles that guide every project, every interaction, and every line of code I write.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 hover:shadow-lg transition-all duration-300 group">
-              <CardContent className="p-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Heart className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Empathy First</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Every project starts with understanding the human story. Whether it&apos;s a founder&apos;s vision 
-                  or a team&apos;s challenges, I listen first and build solutions that truly serve people.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-lg transition-all duration-300 group">
-              <CardContent className="p-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Lightbulb className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Creative Innovation</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  My beatboxing background taught me that the most powerful expressions come from 
-                  combining existing elements in new ways. I bring this creative thinking to AI solutions.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center p-8 hover:shadow-lg transition-all duration-300 group">
-              <CardContent className="p-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Pragmatic Excellence</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Thoughtworks trained me in enterprise-grade practices: test-driven development, 
-                  continuous integration, and agile methodologies. I combine rigor with innovation.
-                </p>
-              </CardContent>
-            </Card>
+            {coreValues.map((value, index) => (
+              <Card key={index} className="group bg-gray-800/30 border-gray-700 hover:bg-gray-800/50 transition-all duration-500 hover:scale-105">
+                <CardContent className="p-8 text-center">
+                  <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${value.color} flex items-center justify-center group-hover:rotate-12 transition-transform duration-300`}>
+                    <div className="text-white">{value.icon}</div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{value.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Skills & Expertise */}
-      <section className="py-24 bg-gray-900/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots-pattern opacity-30" />
+      {/* Skills & Expertise - Enhanced Layout */}
+      <section className="py-24 bg-gray-950 relative">
+        <div className="absolute inset-0 bg-dots-pattern opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Core <span className="text-gradient-primary">Expertise</span>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              Technical <span className="text-gradient-primary">Expertise</span>
             </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              A comprehensive toolkit built through years of hands-on experience and continuous learning.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Code className="w-6 h-6 text-indigo-600 mr-3" />
-                  Technical Skills
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    "React & Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL",
-                    "AWS & Azure", "Docker", "Kubernetes", "GraphQL", "REST APIs"
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-indigo-900/30 text-indigo-300 rounded-full text-sm font-medium border border-indigo-700/50"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Skills Categories */}
+            <div className="space-y-12">
+              {skillCategories.map((category, index) => (
+                <div key={index} className="group">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <div className={`p-2 rounded-lg bg-gray-800 ${category.color}`}>
+                      {category.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">{category.category}</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    {category.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="px-4 py-2 bg-gray-800/50 border border-gray-700 text-gray-300 rounded-full text-sm font-medium hover:bg-gray-700/50 transition-colors duration-200"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Lightbulb className="w-6 h-6 text-amber-600 mr-3" />
-                  AI & Machine Learning
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    "OpenAI API", "Claude API", "LangChain", "Vector Databases",
-                    "RAG Systems", "AI Agents", "Prompt Engineering", "ML Operations"
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-amber-900/30 text-amber-300 rounded-full text-sm font-medium border border-amber-700/50"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <Users className="w-6 h-6 text-cyan-600 mr-3" />
-                  Leadership & Consulting
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    "Agile Coaching", "Technical Training", "Team Leadership",
-                    "Client Consulting", "Stakeholder Management", "Public Speaking"
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded-full text-sm font-medium border border-cyan-700/50"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-indigo-50 to-cyan-50 dark:from-indigo-900/20 dark:to-cyan-900/20 p-6 rounded-xl">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                  🏆 Key Achievements
-                </h4>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Led 11 diverse interns to 100% full-time offer rate</li>
-                  <li>• TEDx Speaker on creativity and technology</li>
-                  <li>• Beatbox Loopstation Vice Champion 2017</li>
-                  <li>• Built AI platforms serving 1000+ users</li>
-                  <li>• 10+ years of enterprise software experience</li>
-                </ul>
-              </div>
+            {/* Achievements & Stats */}
+            <div className="space-y-8">
+              <Card className="bg-gradient-to-br from-indigo-900/30 to-cyan-900/30 border-indigo-700/50">
+                <CardContent className="p-8">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <TrendingUp className="w-6 h-6 text-indigo-400" />
+                    <h3 className="text-2xl font-bold text-white">Key Achievements</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">100% success rate coaching 11 diverse developers at ThoughtWorks</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">TEDx Speaker on creativity and technology intersection</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">American Beatbox Loopstation Vice Champion 2017</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Built AI platforms serving 1000+ active users</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">9+ years enterprise software development experience</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-              <div className="bg-gradient-to-br from-amber-50 to-cyan-50 dark:from-amber-900/20 dark:to-cyan-900/20 p-6 rounded-xl">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                  🎯 What Drives Me
-                </h4>
-                <p className="text-gray-300 leading-relaxed">
-                  I believe the future belongs to those who can bridge the gap between human creativity 
-                  and artificial intelligence. Every project is an opportunity to create something 
-                  that makes people&apos;s lives better, easier, or more meaningful.
-                </p>
+              <Card className="bg-gradient-to-br from-amber-900/30 to-orange-900/30 border-amber-700/50">
+                <CardContent className="p-8">
+                  <div className="flex items-center space-x-3 mb-6">
+                    <Heart className="w-6 h-6 text-amber-400" />
+                    <h3 className="text-2xl font-bold text-white">What Drives Me</h3>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed text-lg mb-6">
+                    I believe the future belongs to those who can bridge the gap between human creativity 
+                    and artificial intelligence. Every project is an opportunity to create technology 
+                    that makes people's lives better, easier, and more meaningful.
+                  </p>
+                  <div className="bg-green-900/20 p-4 rounded-lg border border-green-700/30">
+                    <p className="text-green-300 text-sm leading-relaxed">
+                      <strong>💚 Social Impact Commitment:</strong> I offer free 30-minute consultations 
+                      to qualifying non-profits and social justice organizations to explore how AI can 
+                      advance their mission.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Contact Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <Card className="bg-gray-800/50 border-gray-700 text-center">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">9+</div>
+                    <div className="text-sm text-gray-400">Years Experience</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gray-800/50 border-gray-700 text-center">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
+                    <div className="text-sm text-gray-400">Success Rate</div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-indigo-600 via-cyan-500 to-amber-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Build Something Amazing Together?
+      {/* Enhanced CTA Section */}
+      <section className="py-24 bg-gradient-conic relative">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Whether you&apos;re a startup with a bold vision or an established company ready to embrace AI, 
-            I&apos;d love to hear your story and explore how we can bring your ideas to life.
+          <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Whether you're a startup with a bold vision or an established company ready to embrace AI, 
+            I'd love to hear your story and explore how we can bring your ideas to life together.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="xl" className="bg-white text-gray-900 hover:bg-gray-100 group" asChild>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Button size="xl" className="bg-white text-gray-900 hover:bg-gray-100 group shadow-lg" asChild>
               <Link href="/contact">
                 Start a Conversation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-gray-900" asChild>
-              <Link href="/portfolio">View My Work</Link>
+            <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-gray-900 group" asChild>
+              <Link href="/portfolio">
+                <Code className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                View My Work
+              </Link>
             </Button>
+          </div>
+
+          <div className="mt-12 flex items-center justify-center space-x-8 text-white/70">
+            <div className="flex items-center space-x-2">
+              <Calendar className="w-5 h-5" />
+              <span>Free Consultation</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5" />
+              <span>US-Based</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Sparkles className="w-5 h-5" />
+              <span>ThoughtWorks Trained</span>
+            </div>
           </div>
         </div>
       </section>
