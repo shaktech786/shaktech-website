@@ -8,7 +8,6 @@ import {
   Code, 
   Users, 
   Award, 
-  Mic, 
   GraduationCap, 
   Building, 
   Heart,
@@ -386,7 +385,7 @@ const AboutPage = () => {
                   <p className="text-gray-300 leading-relaxed text-lg mb-6">
                     I believe the future belongs to those who can bridge the gap between human creativity 
                     and artificial intelligence. Every project is an opportunity to create technology 
-                    that makes people's lives better, easier, and more meaningful.
+                    that makes people&apos;s lives better, easier, and more meaningful.
                   </p>
                   <div className="bg-green-900/20 p-4 rounded-lg border border-green-700/30">
                     <p className="text-green-300 text-sm leading-relaxed">
@@ -425,8 +424,8 @@ const AboutPage = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Whether you're a startup with a bold vision or an established company ready to embrace AI, 
-            I'd love to hear your story and explore how we can bring your ideas to life together.
+            Whether you&apos;re a startup with a bold vision or an established company ready to embrace AI, 
+            I&apos;d love to hear your story and explore how we can bring your ideas to life together.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

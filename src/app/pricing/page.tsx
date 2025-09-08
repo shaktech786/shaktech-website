@@ -11,7 +11,6 @@ import {
   Target,
   Lightbulb,
   CheckCircle,
-  Zap,
   TrendingUp
 } from "lucide-react"
 
@@ -66,7 +65,7 @@ const PricingPage = () => {
     {
       tier: "leadership",
       title: "Leadership Coaching for AI Adoption",
-      subtitle: "From Intern to Lead - I've Been Where You Are",
+      subtitle: "From Intern to Lead - I&apos;ve Been Where You Are",
       description: "1:1 executive coaching for technical leaders navigating AI transformation. Drawing from my journey from intern to ThoughtWorks Lead Consultant and expertise in team psychology.",
       pricing: "$5,000 - $15,000",
       duration: "3-6 months",
@@ -187,7 +186,7 @@ const PricingPage = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-2" />
-                      What's Included
+                      What&apos;s Included
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
@@ -281,7 +280,7 @@ const PricingPage = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss which service aligns with your goals and timeline. 
+            Let&apos;s discuss which service aligns with your goals and timeline. 
             Every engagement starts with a free consultation to understand your unique needs.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
