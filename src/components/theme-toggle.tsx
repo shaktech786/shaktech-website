@@ -6,14 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-
-  useEffect(() => {
-    // Force dark theme to match layout.tsx
-    const initialTheme = 'dark';
-    setTheme(initialTheme);
-    applyTheme(initialTheme);
-    localStorage.setItem('theme', 'dark');
-  }, []);
+  const [mounted, setMounted] = useState(false);
 
   const applyTheme = (newTheme: 'light' | 'dark') => {
     const root = document.documentElement;
@@ -26,6 +19,22 @@ export function ThemeToggle() {
       root.classList.remove('light');
     }
   };
+
+  useEffect(() => {
+    setMounted(true);
+    // Force dark theme to match layout.tsx
+    const initialTheme = 'dark';
+    setTheme(initialTheme);
+    applyTheme(initialTheme);
+    localStorage.setItem('theme', 'dark');
+  }, []);
+
+  // Prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 rounded-full bg-gray-800 border border-gray-700" />
+    );
+  }
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';

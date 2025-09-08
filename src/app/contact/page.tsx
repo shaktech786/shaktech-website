@@ -191,7 +191,7 @@ const ContactPage = () => {
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">Message Sent Successfully!</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Thank you for reaching out. I&apos;ll review your message and get back to you within 24 hours 
+            Thank you for reaching out. I&apos;ll review your message and get back to you within 2 business days 
             with next steps for our collaboration.
           </p>
           <Button variant="cta" size="lg" onClick={() => setSubmitted(false)}>
@@ -238,7 +238,7 @@ const ContactPage = () => {
                     Tell Me About Your Project
                   </CardTitle>
                   <p className="text-gray-400">
-                    Fill out this form and I&apos;ll get back to you within 24 hours with next steps.
+                    Fill out this form and I&apos;ll get back to you within 2 business days with next steps.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -437,7 +437,7 @@ const ContactPage = () => {
                     <Clock className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Response Time</p>
-                      <p className="text-gray-400">Within 24 hours</p>
+                      <p className="text-gray-400">Within 2 business days</p>
                     </div>
                   </div>
                 </CardContent>
