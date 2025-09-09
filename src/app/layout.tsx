@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/navigation";
 import StructuredData from "@/components/structured-data";
 import ClientWidgets from "@/components/client-widgets";
+import ErrorBoundary from "@/components/error-boundary";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -73,9 +74,11 @@ export default function RootLayout({
         <StructuredData type="organization" />
         <StructuredData type="website" />
         <Navigation />
-        <main className="pt-16">
-          {children}
-        </main>
+        <ErrorBoundary>
+          <main className="pt-16">
+            {children}
+          </main>
+        </ErrorBoundary>
         <ClientWidgets />
       </body>
     </html>
