@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { withRateLimit } from '@/lib/rate-limiter';
 
 interface ContactFormData {
   name: string;
@@ -10,7 +11,7 @@ interface ContactFormData {
   timeline?: string;
 }
 
-export async function POST(request: NextRequest) {
+async function handleContactForm(request: NextRequest) {
   try {
     const data: ContactFormData = await request.json();
 
@@ -75,4 +76,8 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+export async function POST(request: NextRequest) {
+  return withRateLimit(request, () => handleContactForm(request));
 }

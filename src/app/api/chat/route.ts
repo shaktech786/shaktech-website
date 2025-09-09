@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import OpenAI from "openai"
+import { withRateLimit } from '@/lib/rate-limiter'
 
 // Initialize OpenAI only if API key is available
 const openai = process.env.OPENAI_API_KEY 
@@ -60,7 +61,7 @@ Conversation Guidelines:
 - Use questions to engage: "What kind of challenges are you facing?" or "Tell me more about your project!"
 - Remember context from the conversation to make it feel more natural`
 
-export async function POST(request: Request) {
+async function handleChatRequest(request: Request) {
   try {
     const { message, conversationHistory } = await request.json()
 
@@ -113,4 +114,8 @@ export async function POST(request: Request) {
       response: "I encountered an error while processing your request. Please try again or contact us directly at hi@shak-tech.com"
     }, { status: 500 })
   }
+}
+
+export async function POST(request: Request) {
+  return withRateLimit(request, () => handleChatRequest(request));
 }
