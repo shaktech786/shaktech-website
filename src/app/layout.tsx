@@ -5,6 +5,8 @@ import Navigation from "@/components/navigation";
 import StructuredData from "@/components/structured-data";
 import ClientWidgets from "@/components/client-widgets";
 import ErrorBoundary from "@/components/error-boundary";
+import WebVitals from "@/components/web-vitals";
+import PerformanceOptimizer from "@/components/performance-optimizer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -80,6 +82,8 @@ export default function RootLayout({
           </main>
         </ErrorBoundary>
         <ClientWidgets />
+        <WebVitals />
+        <PerformanceOptimizer />
       </body>
     </html>
   );
