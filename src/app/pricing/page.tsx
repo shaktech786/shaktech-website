@@ -15,8 +15,8 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Services & Investment | ThoughtWorks Lead Consultant",
-  description: "Simple, transparent pricing for AI-first team transformation, full-stack development, leadership coaching, and social impact consulting. Based on proven ThoughtWorks experience.",
+  title: "Services & Investment | ThoughtWorks Consultant",
+  description: "Transparent pricing for AI-first team transformation, full-stack development, leadership coaching, and social impact consulting. Based on real-world ThoughtWorks experience.",
 }
 
 const PricingPage = () => {
@@ -25,7 +25,7 @@ const PricingPage = () => {
       tier: "team-transformation",
       title: "AI-First Team Transformation",
       subtitle: "Teams That Actually Succeed with AI",
-      description: "Transform your existing development team from traditional practices to AI-assisted delivery. Based on my proven track record coaching 11 diverse developers to 100% full-time success at ThoughtWorks.",
+      description: "Transform your existing development team from traditional practices to AI-assisted delivery. Based on my experience mentoring developers and fostering team growth at ThoughtWorks.",
       pricing: "$10,000 - $25,000",
       duration: "6-8 weeks",
       icon: <Users className="w-8 h-8" />,
@@ -39,13 +39,13 @@ const PricingPage = () => {
         "Individual mentoring for each team member",
         "3-month follow-up coaching sessions"
       ],
-      outcome: "Teams see 40% faster delivery with AI tools + improved team health metrics"
+      outcome: "Teams improve their velocity with AI tools while building healthier collaboration patterns"
     },
     {
       tier: "development",
       title: "Full-Stack AI Application Development",
       subtitle: "Technology That Makes a Real Difference",
-      description: "End-to-end development of AI-powered applications with enterprise-grade practices. From social impact projects like prison oversight systems to Fortune 500 enterprise solutions.",
+      description: "End-to-end development of AI-powered applications with modern development practices. From social impact projects to business applications that solve real problems.",
       pricing: "$25,000 - $75,000",
       duration: "3-4 months",
       icon: <Code className="w-8 h-8" />,
@@ -66,7 +66,7 @@ const PricingPage = () => {
       tier: "leadership",
       title: "Leadership Coaching for AI Adoption",
       subtitle: "From Intern to Lead - I&apos;ve Been Where You Are",
-      description: "1:1 executive coaching for technical leaders navigating AI transformation. Drawing from my journey from intern to ThoughtWorks Lead Consultant and expertise in team psychology.",
+      description: "1:1 coaching for technical leaders navigating AI transformation. Drawing from my development experience at ThoughtWorks and focus on team collaboration.",
       pricing: "$5,000 - $15,000",
       duration: "3-6 months",
       icon: <Target className="w-8 h-8" />,
@@ -126,7 +126,7 @@ const PricingPage = () => {
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-green-400" />
-              <span>100% Success Rate</span>
+              <span>Professional Experience</span>
             </div>
             <div className="flex items-center space-x-2">
               <Target className="w-5 h-5 text-amber-400" />

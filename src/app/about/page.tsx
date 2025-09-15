@@ -24,16 +24,16 @@ import {
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "About Shakeel Bhamani - AI Expert & TEDx Speaker",
-  description: "From enterprise consulting to beatboxing championships - learn about Shakeel's unique journey in AI-first software delivery, empathetic leadership, and creative innovation.",
+  title: "About Shakeel Bhamani - Software Developer & Creative Technologist",
+  description: "Atlanta-based software developer with a unique background in technology and creative arts. Learn about my journey in software development, team collaboration, and building solutions that matter.",
 }
 
 const AboutPage = () => {
   const journeyMilestones = [
     {
       year: "Present",
-      title: "ThoughtWorks Lead Consultant",
-      description: "Leading AI-first software delivery initiatives and mentoring diverse engineering teams. Achieved 100% full-time offer rate for 11 coached interns.",
+      title: "ThoughtWorks Consultant",
+      description: "Building software solutions with modern development practices and mentoring fellow developers. Contributing to diverse engineering teams and fostering inclusive tech environments.",
       icon: <Building className="w-6 h-6" />,
       color: "from-indigo-500 to-cyan-500",
       badge: "Present",
@@ -41,8 +41,8 @@ const AboutPage = () => {
     },
     {
       year: "2017",
-      title: "American Beatbox Vice Champion & TEDx Speaker",
-      description: "Achieved national recognition in creative performance while developing public speaking expertise that enhances client presentations.",
+      title: "Creative Performer & Public Speaker",
+      description: "Developed strong communication and performance skills through creative arts, including competitive beatboxing and public speaking engagements.",
       icon: <Award className="w-6 h-6" />,
       color: "from-amber-500 to-cyan-500",
       badge: "2017",
@@ -51,7 +51,7 @@ const AboutPage = () => {
     {
       year: "2012-2016",
       title: "Georgia Institute of Technology",
-      description: "B.S. in Computer Science with Dean's List honors. Peer Leader mentoring 30+ students while building foundation for technical leadership.",
+      description: "B.S. in Computer Science with academic honors. Served as Peer Leader mentoring fellow students while building a strong foundation in software engineering.",
       icon: <GraduationCap className="w-6 h-6" />,
       color: "from-green-500 to-cyan-500",
       badge: "2012-2016",
@@ -74,7 +74,7 @@ const AboutPage = () => {
     },
     {
       title: "Enterprise Excellence",
-      description: "ThoughtWorks trained me in world-class practices: test-driven development, continuous integration, and agile methodologies that deliver results.",
+      description: "Trained in industry-standard practices: test-driven development, continuous integration, and agile methodologies that deliver reliable software.",
       icon: <Target className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     }
@@ -118,30 +118,30 @@ const AboutPage = () => {
             <div className="space-y-8 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700/50">
                 <Sparkles className="w-4 h-4 text-indigo-400" />
-                <span className="text-sm font-medium text-indigo-300">ThoughtWorks Lead Consultant</span>
+                <span className="text-sm font-medium text-indigo-300">ThoughtWorks Consultant</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span className="text-white">From Beatbox Champion to</span>
-                <span className="block text-gradient-creative mt-2">AI Pioneer</span>
+                <span className="text-white">Software Developer with a</span>
+                <span className="block text-gradient-creative mt-2">Creative Edge</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                My journey from <strong className="text-indigo-400">Georgia Tech</strong> to <strong className="text-cyan-400">ThoughtWorks Lead Consultant</strong> 
-                has taught me that the most powerful technology solutions come from understanding the <em className="text-amber-400">human story</em> behind every project.
+                My journey from <strong className="text-indigo-400">Georgia Tech</strong> to <strong className="text-cyan-400">ThoughtWorks</strong> 
+                has taught me that the best technology solutions come from understanding the <em className="text-amber-400">people</em> who will use them.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button variant="cta" size="xl" className="group" asChild>
                   <Link href="/contact">
-                    Start a Conversation
+                    Let&apos;s Connect
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="xl" className="group" asChild>
                   <Link href="https://linktr.ee/shakbbx" target="_blank" rel="noopener noreferrer">
                     <Music className="w-5 h-5 mr-2" />
-                    Watch TEDx Talk
+                    Creative Work
                   </Link>
                 </Button>
               </div>
@@ -183,13 +183,13 @@ const AboutPage = () => {
       {/* Journey Timeline - Redesigned */}
       <section className="py-24 bg-gradient-to-b from-gray-900 to-gray-950 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               My <span className="text-gradient-primary">Journey</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              A unique path combining technical excellence, creative expression, and empathetic leadership 
-              to deliver AI-first solutions that make a real difference.
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              Combining technical skills, creative thinking, and collaborative leadership 
+              to build software solutions that make a real difference.
             </p>
           </div>
 
@@ -200,21 +200,21 @@ const AboutPage = () => {
             <div className="space-y-16">
               {journeyMilestones.map((milestone, index) => (
                 <div key={index} className="relative">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
                     {/* Left Content (odd indexes) or Empty (even indexes) */}
                     <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-1'}`}>
                       {index % 2 !== 0 ? (
-                        <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-all duration-300">
-                          <CardContent className="p-8">
-                            <div className="flex items-center space-x-3 mb-4">
+                        <Card className="bg-gray-800/30 border-gray-700 hover:bg-gray-800/50 transition-all duration-300">
+                          <CardContent className="p-6">
+                            <div className="flex items-center space-x-3 mb-3">
                               <div className={`p-2 rounded-lg bg-gradient-to-br ${milestone.color}`}>
                                 <div className="text-white">{milestone.icon}</div>
                               </div>
-                              <span className={`text-xs font-medium px-3 py-1 rounded-full border ${milestone.badgeColor}`}>
+                              <span className={`text-xs font-medium px-2 py-1 rounded-full border ${milestone.badgeColor}`}>
                                 {milestone.badge}
                               </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-3">{milestone.title}</h3>
+                            <h3 className="text-xl font-bold text-white mb-2">{milestone.title}</h3>
                             <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
                           </CardContent>
                         </Card>
@@ -233,17 +233,17 @@ const AboutPage = () => {
                     {/* Right Content (even indexes) or Empty (odd indexes) */}
                     <div className={`${index % 2 === 0 ? 'lg:order-3' : 'lg:order-3'}`}>
                       {index % 2 === 0 ? (
-                        <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-all duration-300">
-                          <CardContent className="p-8">
-                            <div className="flex items-center space-x-3 mb-4">
+                        <Card className="bg-gray-800/30 border-gray-700 hover:bg-gray-800/50 transition-all duration-300">
+                          <CardContent className="p-6">
+                            <div className="flex items-center space-x-3 mb-3">
                               <div className={`p-2 rounded-lg bg-gradient-to-br ${milestone.color}`}>
                                 <div className="text-white">{milestone.icon}</div>
                               </div>
-                              <span className={`text-xs font-medium px-3 py-1 rounded-full border ${milestone.badgeColor}`}>
+                              <span className={`text-xs font-medium px-2 py-1 rounded-full border ${milestone.badgeColor}`}>
                                 {milestone.badge}
                               </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-3">{milestone.title}</h3>
+                            <h3 className="text-xl font-bold text-white mb-2">{milestone.title}</h3>
                             <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
                           </CardContent>
                         </Card>
@@ -257,11 +257,11 @@ const AboutPage = () => {
                   <div className="lg:hidden mt-6">
                     <Card className="bg-gray-800/50 border-gray-700">
                       <CardContent className="p-6">
-                        <div className="flex items-center space-x-3 mb-4">
+                        <div className="flex items-center space-x-3 mb-3">
                           <div className={`p-2 rounded-lg bg-gradient-to-br ${milestone.color}`}>
                             <div className="text-white">{milestone.icon}</div>
                           </div>
-                          <span className={`text-xs font-medium px-3 py-1 rounded-full border ${milestone.badgeColor}`}>
+                          <span className={`text-xs font-medium px-2 py-1 rounded-full border ${milestone.badgeColor}`}>
                             {milestone.badge}
                           </span>
                         </div>
@@ -280,24 +280,24 @@ const AboutPage = () => {
       {/* Core Values - Reimagined */}
       <section className="py-24 bg-gradient-radial relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Core <span className="text-gradient-creative">Values</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              The principles that guide every project, every interaction, and every line of code I write.
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              The principles that guide my approach to software development and collaboration.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {coreValues.map((value, index) => (
-              <Card key={index} className="group bg-gray-800/30 border-gray-700 hover:bg-gray-800/50 transition-all duration-500 hover:scale-105">
-                <CardContent className="p-8 text-center">
-                  <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${value.color} flex items-center justify-center group-hover:rotate-12 transition-transform duration-300`}>
+              <Card key={index} className="group bg-gray-800/20 border-gray-700 hover:bg-gray-800/40 transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center`}>
                     <div className="text-white">{value.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{value.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>
+                  <p className="text-gray-300 leading-relaxed text-sm">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -309,12 +309,12 @@ const AboutPage = () => {
       <section className="py-24 bg-gray-950 relative">
         <div className="absolute inset-0 bg-dots-pattern opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Technical <span className="text-gradient-primary">Expertise</span>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Technical <span className="text-gradient-primary">Skills</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A comprehensive toolkit built through years of hands-on experience and continuous learning.
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Tools and technologies I work with regularly.
             </p>
           </div>
 
@@ -345,53 +345,51 @@ const AboutPage = () => {
 
             {/* Achievements & Stats */}
             <div className="space-y-8">
-              <Card className="bg-gradient-to-br from-indigo-900/30 to-cyan-900/30 border-indigo-700/50">
-                <CardContent className="p-8">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <TrendingUp className="w-6 h-6 text-indigo-400" />
-                    <h3 className="text-2xl font-bold text-white">Key Achievements</h3>
+              <Card className="bg-gray-800/20 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <TrendingUp className="w-5 h-5 text-indigo-400" />
+                    <h3 className="text-lg font-bold text-white">Experience Highlights</h3>
                   </div>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">100% success rate coaching 11 diverse developers at ThoughtWorks</span>
+                      <span className="text-gray-300">Experienced in mentoring junior developers and fostering team growth</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">TEDx Speaker on creativity and technology intersection</span>
+                      <span className="text-gray-300">Public speaker with experience in creative technology topics</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">American Beatbox Loopstation Vice Champion 2017</span>
+                      <span className="text-gray-300">Competitive beatboxer with national-level performance experience</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Built AI platforms serving 1000+ active users</span>
+                      <span className="text-gray-300">Built modern web applications with focus on user experience</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">9+ years enterprise software development experience</span>
+                      <span className="text-gray-300">7+ years professional software development experience</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-amber-900/30 to-orange-900/30 border-amber-700/50">
-                <CardContent className="p-8">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <Heart className="w-6 h-6 text-amber-400" />
-                    <h3 className="text-2xl font-bold text-white">What Drives Me</h3>
+              <Card className="bg-gray-800/20 border-gray-700">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Heart className="w-5 h-5 text-amber-400" />
+                    <h3 className="text-lg font-bold text-white">My Approach</h3>
                   </div>
-                  <p className="text-gray-300 leading-relaxed text-lg mb-6">
-                    I believe the future belongs to those who can bridge the gap between human creativity 
-                    and artificial intelligence. Every project is an opportunity to create technology 
-                    that makes people&apos;s lives better, easier, and more meaningful.
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    I believe the best technology solutions come from understanding the people who will use them. 
+                    Every project is an opportunity to create something that makes a real difference.
                   </p>
-                  <div className="bg-green-900/20 p-4 rounded-lg border border-green-700/30">
-                    <p className="text-green-300 text-sm leading-relaxed">
-                      <strong>💚 Social Impact Commitment:</strong> I offer free 30-minute consultations 
-                      to qualifying non-profits and social justice organizations to explore how AI can 
-                      advance their mission.
+                  <div className="bg-green-900/20 p-3 rounded-lg border border-green-700/30">
+                    <p className="text-green-300 text-sm">
+                      <strong>Social Impact:</strong> I offer discounted rates for non-profits 
+                      and organizations working on social good initiatives.
                     </p>
                   </div>
                 </CardContent>
@@ -401,14 +399,14 @@ const AboutPage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <Card className="bg-gray-800/50 border-gray-700 text-center">
                   <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">9+</div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">7+</div>
                     <div className="text-sm text-gray-400">Years Experience</div>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800/50 border-gray-700 text-center">
                   <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-green-400 mb-2">100%</div>
-                    <div className="text-sm text-gray-400">Success Rate</div>
+                    <div className="text-3xl font-bold text-green-400 mb-2">GA</div>
+                    <div className="text-sm text-gray-400">Georgia Tech</div>
                   </CardContent>
                 </Card>
               </div>
@@ -421,17 +419,17 @@ const AboutPage = () => {
       <section className="py-24 bg-gradient-conic relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business with AI?
+            Ready to Build Something Great Together?
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Whether you&apos;re a startup with a bold vision or an established company ready to embrace AI, 
-            I&apos;d love to hear your story and explore how we can bring your ideas to life together.
+            Whether you&apos;re building something new or improving what exists, 
+            I&apos;d love to hear your story and explore how we can create solutions that make a real difference.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Button size="xl" className="bg-white text-gray-900 hover:bg-gray-100 group shadow-lg" asChild>
               <Link href="/contact">
-                Start a Conversation
+                Let&apos;s Talk
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -454,7 +452,7 @@ const AboutPage = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Sparkles className="w-5 h-5" />
-              <span>ThoughtWorks Trained</span>
+              <span>Atlanta-Based</span>
             </div>
           </div>
         </div>

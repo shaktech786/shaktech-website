@@ -48,31 +48,31 @@ const HeroSection = () => {
           <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700">
             <Sparkles className="w-4 h-4 text-indigo-400" />
             <span className="text-sm font-medium text-indigo-300">
-              🇺🇸 ThoughtWorks Lead Consultant • 2017 Beatbox Vice Champion • TEDx Speaker
+              🇺🇸 ThoughtWorks Consultant • Creative Technologist • Atlanta-Based
             </span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" id="main-heading">
-            <span className="block text-white">I Turn Ideas Into</span>
-            <span className="block text-gradient-creative mt-2 hover-glow">AI-Powered Reality</span>
+            <span className="block text-white">Building AI Solutions</span>
+            <span className="block text-gradient-creative mt-2 hover-glow">That Actually Work</span>
           </h1>
 
           {/* Subheading */}
           <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed" aria-describedby="main-heading">
-            From intern to <span className="text-indigo-400 font-semibold">ThoughtWorks Lead Consultant</span> in 9+ years. 
-            I&apos;ve coached <span className="text-cyan-400 font-semibold">11 diverse developers to full-time success</span> and 
-            built AI solutions for <span className="text-amber-400 font-semibold">Fortune 500 clients</span>. 
-            My superpower? Combining cutting-edge technology with 
-            <span className="text-gradient-primary font-semibold"> team psychology</span> – 
-            because great AI needs great people.
+            <span className="text-indigo-400 font-semibold">ThoughtWorks-trained consultant</span> with 7+ years building software that matters. 
+            I specialize in <span className="text-cyan-400 font-semibold">AI-first development</span> and 
+            <span className="text-amber-400 font-semibold">team leadership</span>. 
+            My approach? Technology is only as good as the 
+            <span className="text-gradient-primary font-semibold">people who build it</span> – 
+            I focus on both the code and the humans behind it.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <Button variant="cta" size="xl" className="group" asChild>
               <Link href="/contact">
-                Start Your AI Journey
+                Let&apos;s Build Something
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -90,9 +90,9 @@ const HeroSection = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 <Zap className="w-8 h-8 text-indigo-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white" id="feature-team-psychology">Team Psychology Expert</h3>
+              <h3 className="text-lg font-semibold text-white" id="feature-team-psychology">People-First Development</h3>
               <p className="text-gray-400 mt-2" aria-describedby="feature-team-psychology">
-                100% success rate coaching diverse developers
+                Technical solutions with human understanding
               </p>
             </div>
             
@@ -110,9 +110,9 @@ const HeroSection = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                 <Sparkles className="w-8 h-8 text-amber-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white" id="feature-journey">Full Career Journey</h3>
+              <h3 className="text-lg font-semibold text-white" id="feature-journey">Proven Experience</h3>
               <p className="text-gray-400 mt-2" aria-describedby="feature-journey">
-                From intern to Lead - I&apos;ve been where you are
+                7+ years of real-world software development
               </p>
             </div>
           </div>

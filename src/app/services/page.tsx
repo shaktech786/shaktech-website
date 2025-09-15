@@ -21,8 +21,8 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "AI-First Team & Technology Services | ThoughtWorks Lead Consultant",
-  description: "Team transformation, full-stack AI development, leadership coaching, and social impact consulting. Proven track record from intern to ThoughtWorks Lead Consultant with 100% coaching success rate.",
+  title: "AI-First Team & Technology Services | ThoughtWorks Consultant",
+  description: "Team transformation, full-stack AI development, leadership coaching, and social impact consulting. Experienced ThoughtWorks consultant focused on building both great software and strong teams.",
 }
 
 const ServicesPage = () => {
@@ -31,7 +31,7 @@ const ServicesPage = () => {
       tier: "team-transformation",
       title: "AI-First Team Transformation",
       subtitle: "Teams That Actually Succeed with AI",
-      description: "Transform your existing development team from traditional practices to AI-assisted delivery. Based on my proven track record coaching 11 diverse developers to 100% full-time success at ThoughtWorks.",
+      description: "Transform your existing development team from traditional practices to AI-assisted delivery. Based on my experience mentoring developers and fostering team growth at ThoughtWorks.",
       pricing: "$10,000 - $25,000",
       duration: "6-8 weeks",
       icon: <Users className="w-8 h-8" />,
@@ -59,13 +59,13 @@ const ServicesPage = () => {
         "Teams experiencing low morale or productivity",
         "Organizations prioritizing psychological safety"
       ],
-      outcome: "Teams see 40% faster delivery with AI tools + improved team health metrics"
+      outcome: "Teams improve their velocity with AI tools while building healthier collaboration patterns"
     },
     {
       tier: "development",
       title: "Full-Stack AI Application Development",
       subtitle: "Technology That Makes a Real Difference",
-      description: "End-to-end development of AI-powered applications with enterprise-grade practices. From social impact projects like prison oversight systems to Fortune 500 enterprise solutions.",
+      description: "End-to-end development of AI-powered applications with modern development practices. From social impact projects to business applications that solve real problems.",
       pricing: "$25,000 - $75,000",
       duration: "3-4 months",
       icon: <Code className="w-8 h-8" />,
@@ -99,14 +99,14 @@ const ServicesPage = () => {
     {
       tier: "leadership",
       title: "Leadership Coaching for AI Adoption",
-      subtitle: "From Intern to Lead - I&apos;ve Been Where You Are",
-      description: "1:1 executive coaching for technical leaders navigating AI transformation. Drawing from my journey from intern to ThoughtWorks Lead Consultant and expertise in team psychology.",
+      subtitle: "Guidance from Real Development Experience",
+      description: "1:1 coaching for technical leaders navigating AI transformation. Drawing from my development experience at ThoughtWorks and focus on team collaboration.",
       pricing: "$5,000 - $15,000",
       duration: "3-6 months",
       icon: <Target className="w-8 h-8" />,
       color: "from-amber-500 to-amber-700",
       features: [
-        "Monthly 1:1 coaching sessions with ThoughtWorks Lead",
+        "Monthly 1:1 coaching sessions with experienced consultant",
         "Team psychology and psychological safety frameworks",
         "AI strategy development and communication",
         "Change management for AI tool adoption",
@@ -120,7 +120,7 @@ const ServicesPage = () => {
         "AI adoption strategy for your team",
         "Team health assessment & improvement roadmap",
         "Monthly progress check-ins and adjustments",
-        "Access to ThoughtWorks leadership frameworks"
+        "Access to proven leadership frameworks"
       ],
       ideal_for: [
         "New technical managers and team leads",
@@ -203,9 +203,9 @@ const ServicesPage = () => {
             <span className="block text-gradient-creative">Services</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            From intern to ThoughtWorks Lead Consultant, I&apos;ve lived every stage of the developer journey. 
+            ThoughtWorks-trained consultant with 7+ years of development experience. 
             Whether you need team transformation, full-stack AI development, or leadership coaching - 
-            I combine technical expertise with proven team psychology.
+            I combine technical skills with collaborative leadership.
           </p>
           
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
@@ -347,8 +347,8 @@ const ServicesPage = () => {
               My <span className="text-gradient-creative">Process</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology refined through 10+ years of enterprise consulting 
-              and AI-first software delivery.
+              A practical methodology refined through 7+ years of software development 
+              and team collaboration.
             </p>
           </div>
 
@@ -378,11 +378,11 @@ const ServicesPage = () => {
       <section className="py-24 bg-gradient-conic relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business with AI?
+            Ready to Build Something Great Together?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss which service tier aligns with your goals and timeline. 
-            Every engagement starts with a free consultation to understand your unique needs.
+            Let&apos;s discuss how we can work together to achieve your goals. 
+            Every engagement starts with a conversation to understand your unique needs.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="xl" className="bg-white text-gray-900 hover:bg-gray-100 group" asChild>

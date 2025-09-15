@@ -15,8 +15,8 @@ export default function StructuredData({ type }: StructuredDataProps) {
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Shakeel Bhamani",
-          "jobTitle": "Lead Software Consultant",
-          "description": "Lead Software Consultant at Thoughtworks, TEDx Speaker, and AI-First Software Delivery expert",
+          "jobTitle": "Software Consultant",
+          "description": "Software Consultant at Thoughtworks with experience in AI-First Software Development and team collaboration",
           "url": baseUrl,
           "image": `${baseUrl}/shakeel-profile.jpg`,
           "sameAs": [
