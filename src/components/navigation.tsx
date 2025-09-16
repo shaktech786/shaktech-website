@@ -45,8 +45,8 @@ const Navigation = () => {
         ? "bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg" 
         : "bg-gray-900/80 backdrop-blur-sm"
     )}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center h-16 sm:h-18">
           {/* Logo */}
           <Link 
             href="/" 
@@ -68,7 +68,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -85,7 +85,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden flex items-center space-x-2">
             <Button
               variant="ghost"
               size="icon"
@@ -102,7 +102,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden" id="mobile-navigation">
+          <div className="lg:hidden" id="mobile-navigation">
             <div 
               className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-md border-t border-gray-800"
               role="menu"
@@ -119,7 +119,7 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-4">
+              <div className="pt-4 space-y-4 px-1">
                 <div className="flex justify-center">
                   <ThemeToggle />
                 </div>

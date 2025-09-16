@@ -27,9 +27,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   featured = false,
   icon
 }) => (
-  <Card className={`group hover:shadow-lg transition-all duration-300 ${featured ? 'ring-2 ring-primary-200' : ''}`}>
-    <CardHeader className="pb-4">
-      <div className="flex items-start justify-between">
+  <Card className={`group hover:shadow-lg transition-all duration-300 h-full ${featured ? 'ring-2 ring-primary-200' : ''}`}>
+    <CardHeader className="pb-4 space-y-3">
+      <div className="flex items-start justify-between mb-2">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
             {icon}
@@ -50,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {title}
       </CardTitle>
     </CardHeader>
-    <CardContent>
+    <CardContent className="flex flex-col flex-grow">
       <p className="text-gray-300 mb-4 leading-relaxed">
         {description}
       </p>
@@ -66,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         ))}
       </div>
       
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-3 mt-auto pt-4">
         {demoUrl && (
           <Button variant="outline" size="sm" className="group" asChild>
             <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
@@ -129,19 +129,19 @@ const PortfolioPreview = () => {
   ]
 
   return (
-    <section className="py-24 bg-wave-pattern relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+    <section className="py-16 sm:py-20 lg:py-24 bg-wave-pattern relative">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
             AI-Powered <span className="text-gradient-primary">Portfolio</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From autonomous AI agents to intelligent platforms – see how I&apos;m pushing the boundaries 
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+            From autonomous AI agents to intelligent platforms – see how I&apos;m pushing the boundaries
             of what&apos;s possible when human creativity meets artificial intelligence.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 sm:mb-16">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}

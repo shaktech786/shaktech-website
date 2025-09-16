@@ -42,7 +42,7 @@ const HeroSection = () => {
       {/* Strong grid pattern overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-20" aria-hidden="true" />
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <div className="space-y-8 animate-fade-in-up">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700">
@@ -69,7 +69,7 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6 pt-8 max-w-md sm:max-w-none mx-auto">
             <Button variant="cta" size="xl" className="group" asChild>
               <Link href="/contact">
                 Let&apos;s Build Something
@@ -85,33 +85,33 @@ const HeroSection = () => {
           </div>
 
           {/* Key Value Props */}
-          <div className="pt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+          <div className="pt-16 sm:pt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4 sm:px-0">
+            <div className="text-center group px-4 sm:px-0">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
                 <Zap className="w-8 h-8 text-indigo-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white" id="feature-team-psychology">People-First Development</h3>
-              <p className="text-gray-400 mt-2" aria-describedby="feature-team-psychology">
+              <h3 className="text-lg font-semibold text-white mb-2" id="feature-team-psychology">People-First Development</h3>
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-team-psychology">
                 Technical solutions with human understanding
               </p>
             </div>
             
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+            <div className="text-center group px-4 sm:px-0">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
                 <Code2 className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white" id="feature-social-impact">Social Impact Focus</h3>
-              <p className="text-gray-400 mt-2" aria-describedby="feature-social-impact">
+              <h3 className="text-lg font-semibold text-white mb-2" id="feature-social-impact">Social Impact Focus</h3>
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-social-impact">
                 Technology that makes a real difference
               </p>
             </div>
             
-            <div className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
+            <div className="text-center group px-4 sm:px-0">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
                 <Sparkles className="w-8 h-8 text-amber-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white" id="feature-journey">Proven Experience</h3>
-              <p className="text-gray-400 mt-2" aria-describedby="feature-journey">
+              <h3 className="text-lg font-semibold text-white mb-2" id="feature-journey">Proven Experience</h3>
+              <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-journey">
                 7+ years of real-world software development
               </p>
             </div>

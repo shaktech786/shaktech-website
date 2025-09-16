@@ -77,7 +77,7 @@ export default function RootLayout({
         <StructuredData type="website" />
         <Navigation />
         <ErrorBoundary>
-          <main className="pt-16">
+          <main className="pt-16 md:pt-16 lg:pt-16">
             {children}
           </main>
         </ErrorBoundary>

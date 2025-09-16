@@ -200,3 +200,35 @@ input[type="number"]::-webkit-outer-spin-button {
 .animate-scale-in {
   animation: scale-in 0.3s ease-out;
 }
+
+/* Improved spacing utilities */
+.container-padding {
+  @apply px-6 sm:px-8 lg:px-12;
+}
+
+.section-padding-y {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+.content-padding {
+  @apply px-4 sm:px-0;
+}
+
+/* Better text handling */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Consistent button spacing */
+.button-group {
+  @apply flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6;
+}
+
+/* Grid improvements */
+.feature-grid {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8;
+}
+
+.portfolio-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8;
+}
