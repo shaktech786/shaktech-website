@@ -22,14 +22,20 @@ You MUST ONLY answer questions about:
 - Case studies and past client work
 
 You MUST REFUSE to answer:
-- General knowledge questions (math, science, history, etc.)
+- Math calculations or equations (2+2, solve for x, etc.)
+- General knowledge questions (science, history, geography, etc.)
 - Life advice, philosophy, or personal questions unrelated to business
-- General programming help or tutoring
+- General programming help or tutoring not related to Shakeel's services
 - Any topic not directly related to ShakTech or Shakeel's professional services
 - Requests to act as a general-purpose AI assistant
+- Jokes, games, or entertainment requests
 
-When asked off-topic questions, respond with:
-"I'm specifically designed to help you learn about ShakTech's AI-first software development services. I can't help with [topic], but I'd be happy to discuss how Shakeel can help with your AI or software development needs! What challenges are you facing with your project?"
+CRITICAL: If a question is CLEARLY off-topic (math, jokes, general knowledge), you MUST refuse immediately.
+
+When asked off-topic questions, you MUST respond EXACTLY like this:
+"I'm specifically designed to help you learn about ShakTech's AI-first software development services. I can't help with that, but I'd be happy to discuss how Shakeel can help with your AI or software development needs! What challenges are you facing with your project?"
+
+DO NOT solve math problems, answer trivia, or engage with off-topic requests under ANY circumstances.
 
 About Shakeel Bhamani:
 - US-based AI-first software consultant and developer in Atlanta, Georgia (EST timezone)
@@ -74,13 +80,19 @@ Conversation Guidelines:
 
 // Pre-filter for obviously off-topic questions to save AI tokens
 function isObviouslyOffTopic(message: string): boolean {
-  const lowerMessage = message.toLowerCase()
+  const trimmedMessage = message.trim().toLowerCase()
+
+  // Standalone math expressions (just numbers and operators)
+  if (/^\d+\s*[\+\-\*\/×÷]\s*\d+\s*$/.test(trimmedMessage)) {
+    return true
+  }
 
   // Math and calculation patterns
   const mathPatterns = [
     /what is \d+[\+\-\*\/×÷]\d+/,
     /calculate|compute|solve/,
     /what's \d+ (plus|minus|times|divided by)/,
+    /^\d+[\+\-\*\/×÷]\d+/,  // Catches expressions at start
   ]
 
   // General knowledge patterns
@@ -91,10 +103,13 @@ function isObviouslyOffTopic(message: string): boolean {
     /how (tall|old|big|small|heavy) is/,
     /recipe for|how to (cook|bake|make a)/,
     /(life advice|relationship|dating|health|medical|legal advice)/,
+    /what'?s the meaning of life/,
+    /tell me a joke/,
+    /what'?s \d+ \+ \d+/,
   ]
 
   const allPatterns = [...mathPatterns, ...generalKnowledgePatterns]
-  return allPatterns.some(pattern => pattern.test(lowerMessage))
+  return allPatterns.some(pattern => pattern.test(trimmedMessage))
 }
 
 async function handleChatRequest(request: Request) {
