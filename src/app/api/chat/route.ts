@@ -106,7 +106,7 @@ async function handleChatRequest(request: Request) {
     const completion = await openai.chat.completions.create({
       messages,
       model: "gpt-4o-mini",
-      temperature: 0.3, // Lower temperature for more focused, deterministic responses
+      temperature: 0.1, // Very low temperature for strict adherence to system prompt
       max_tokens: 300, // Reduced token limit to keep responses concise and save costs
       presence_penalty: 0.6,
       frequency_penalty: 0.3,

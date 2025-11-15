@@ -43,6 +43,7 @@ const AIChatWidget = () => {
   const [inputMessage, setInputMessage] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -51,6 +52,13 @@ const AIChatWidget = () => {
   useEffect(() => {
     scrollToBottom()
   }, [messages])
+
+  // Auto-focus input when chatbot opens
+  useEffect(() => {
+    if (isOpen && !isMinimized) {
+      inputRef.current?.focus()
+    }
+  }, [isOpen, isMinimized])
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -147,7 +155,7 @@ const AIChatWidget = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50">
       <Card className={`w-96 bg-gray-900 border-gray-700 shadow-2xl transition-all duration-300 ${isMinimized ? 'h-16' : 'h-[600px]'}`}>
-        <CardHeader className="flex flex-row items-center justify-between pb-3 border-b border-gray-700 bg-gradient-to-r from-gray-800 to-gray-900">
+        <CardHeader className={`flex flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 ${isMinimized ? 'pb-0 border-0 h-16' : 'pb-3 border-b border-gray-700'}`}>
           <CardTitle className="text-lg font-bold text-white flex items-center">
             <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center mr-3 animate-pulse">
               <Bot className="w-5 h-5 text-white" />
@@ -265,6 +273,7 @@ const AIChatWidget = () => {
             <div className="p-4 border-t border-gray-700 bg-gray-900 relative z-10">
               <div className="flex space-x-2">
                 <input
+                  ref={inputRef}
                   type="text"
                   value={inputMessage}
                   onChange={(e) => setInputMessage(e.target.value)}
