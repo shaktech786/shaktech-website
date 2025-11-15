@@ -42,6 +42,15 @@ class EnvironmentValidator {
   }
 
   private validateOptionalServices() {
+    // Skip validation during build time (Vercel sets NEXT_PHASE during builds)
+    const isBuildTime = process.env.NEXT_PHASE === 'phase-production-build' ||
+                        process.env.VERCEL_ENV === undefined
+
+    // Only show warnings at runtime, not during build
+    if (isBuildTime) {
+      return
+    }
+
     if (!this.config.OPENAI_API_KEY) {
       this.warnings.push('OPENAI_API_KEY not set - AI chat will run in demo mode')
     }
@@ -81,6 +90,14 @@ class EnvironmentValidator {
   }
 
   private logValidationResults() {
+    // Skip logging during build time to avoid confusing build logs
+    const isBuildTime = process.env.NEXT_PHASE === 'phase-production-build' ||
+                        process.env.VERCEL_ENV === undefined
+
+    if (isBuildTime) {
+      return
+    }
+
     if (this.errors.length > 0) {
       console.error('🚨 Environment Configuration Errors:')
       this.errors.forEach(error => console.error(`  ❌ ${error}`))
