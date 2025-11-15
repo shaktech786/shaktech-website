@@ -78,7 +78,7 @@ const PortfolioPage = () => {
         "Multi-Team Scaling"
       ],
       demoUrl: "#",
-      githubUrl: "https://github.com/shakeelbhamani/tmux-orchestrator",
+      githubUrl: "https://github.com/shaktech786/tmux-orchestrator",
       imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
       icon: <Zap className="w-6 h-6" />,
       color: "from-amber-500 to-cyan-500"
@@ -136,7 +136,7 @@ const PortfolioPage = () => {
         "Agile Team Optimization"
       ],
       demoUrl: "https://estimaite.vercel.app",
-      githubUrl: "https://github.com/shakeelbhamani/estimaite",
+      githubUrl: "https://github.com/shaktech786/estimaite",
       imageUrl: "/portfolio-screenshots/estimaite-viewport.png",
       icon: <Users className="w-6 h-6" />,
       color: "from-indigo-500 to-amber-500"

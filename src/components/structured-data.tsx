@@ -21,7 +21,7 @@ export default function StructuredData({ type }: StructuredDataProps) {
           "image": `${baseUrl}/shakeel-profile.jpg`,
           "sameAs": [
             "https://linkedin.com/in/shakeelbhamani",
-            "https://github.com/shakeelbhamani",
+            "https://github.com/shaktech786",
             "https://linktr.ee/shakbbx"
           ],
           "knowsAbout": [

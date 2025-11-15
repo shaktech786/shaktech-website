@@ -31,14 +31,14 @@ const Footer = () => {
         { name: "Blog & Insights", href: "/blog" },
         { name: "AIFSD Methodology", href: "/blog/aifsd-methodology" },
         { name: "Speaking & Events", href: "/about#speaking" },
-        { name: "Open Source", href: "https://github.com/shakeelbhamani", external: true }
+        { name: "Open Source", href: "https://github.com/shaktech786", external: true }
       ]
     },
     {
       title: "Connect",
       links: [
         { name: "LinkedIn", href: "https://linkedin.com/in/shakeelbhamani", external: true },
-        { name: "GitHub", href: "https://github.com/shakeelbhamani", external: true },
+        { name: "GitHub", href: "https://github.com/shaktech786", external: true },
         { name: "TEDx Talk", href: "https://linktr.ee/shakbbx", external: true },
         { name: "Contact", href: "/contact" }
       ]
@@ -85,8 +85,8 @@ const Footer = () => {
               >
                 <Linkedin className="w-5 h-5" aria-hidden="true" />
               </Link>
-              <Link 
-                href="https://github.com/shakeelbhamani"
+              <Link
+                href="https://github.com/shaktech786"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-primary-950"
                 target="_blank"
                 rel="noopener noreferrer"

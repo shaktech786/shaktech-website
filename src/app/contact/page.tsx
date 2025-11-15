@@ -466,7 +466,7 @@ const ContactPage = () => {
                   </a>
                   
                   <a
-                    href="https://github.com/shakeelbhamani"
+                    href="https://github.com/shaktech786"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors group"
