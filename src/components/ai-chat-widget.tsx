@@ -153,7 +153,7 @@ const AIChatWidget = () => {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50" onWheel={(e) => e.stopPropagation()}>
       <Card className={`w-96 bg-gray-900 border-gray-700 shadow-2xl transition-all duration-300 overflow-hidden ${isMinimized ? 'h-16' : 'h-[600px]'}`}>
         <CardHeader className={`flex flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 ${isMinimized ? 'pb-0 border-0 h-16' : 'pb-3 border-b border-gray-700'}`}>
           <CardTitle className="text-lg font-bold text-white flex items-center">
