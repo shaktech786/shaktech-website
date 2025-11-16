@@ -154,7 +154,7 @@ const AIChatWidget = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <Card className={`w-96 bg-gray-900 border-gray-700 shadow-2xl transition-all duration-300 ${isMinimized ? 'h-16' : 'h-[600px]'}`}>
+      <Card className={`w-96 bg-gray-900 border-gray-700 shadow-2xl transition-all duration-300 overflow-hidden ${isMinimized ? 'h-16' : 'h-[600px]'}`}>
         <CardHeader className={`flex flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 ${isMinimized ? 'pb-0 border-0 h-16' : 'pb-3 border-b border-gray-700'}`}>
           <CardTitle className="text-lg font-bold text-white flex items-center">
             <div className="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center mr-3 animate-pulse">
@@ -195,7 +195,7 @@ const AIChatWidget = () => {
         {!isMinimized && (
           <CardContent className="flex flex-col h-[520px] p-0">
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gradient-to-b from-gray-900 to-gray-950 overscroll-contain">
+            <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 bg-gradient-to-b from-gray-900 to-gray-950 overscroll-contain scroll-smooth">
               {messages.map((message) => (
                 <div
                   key={message.id}
