@@ -61,6 +61,25 @@ const AIChatWidget = () => {
   }, [isOpen, isMinimized])
 
   const [isLoading, setIsLoading] = useState(false)
+  const messagesContainerRef = useRef<HTMLDivElement>(null)
+
+  // Prevent scroll propagation to main page
+  const handleWheel = (e: React.WheelEvent) => {
+    const container = messagesContainerRef.current
+    if (!container) return
+
+    const { scrollTop, scrollHeight, clientHeight } = container
+    const isScrollingDown = e.deltaY > 0
+    const isScrollingUp = e.deltaY < 0
+
+    // Prevent propagation if we're scrolling within bounds
+    if (
+      (isScrollingDown && scrollTop + clientHeight < scrollHeight) ||
+      (isScrollingUp && scrollTop > 0)
+    ) {
+      e.stopPropagation()
+    }
+  }
 
   const handleSendMessage = async () => {
     if (!inputMessage.trim() || isLoading) return
@@ -153,7 +172,7 @@ const AIChatWidget = () => {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50" onWheel={(e) => e.stopPropagation()}>
+    <div className="fixed bottom-6 right-6 z-50" onWheel={handleWheel}>
       <Card className={`w-96 bg-gray-900 border-gray-700 shadow-2xl transition-all duration-300 overflow-hidden ${isMinimized ? 'h-16' : 'h-[600px]'}`}>
         <CardHeader className={`flex flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 ${isMinimized ? 'pb-0 border-0 h-16' : 'pb-3 border-b border-gray-700'}`}>
           <CardTitle className="text-lg font-bold text-white flex items-center">
@@ -195,7 +214,7 @@ const AIChatWidget = () => {
         {!isMinimized && (
           <CardContent className="flex flex-col h-[520px] p-0 overflow-hidden">
             {/* Messages */}
-            <div className="flex-1 overflow-y-scroll overflow-x-hidden p-4 space-y-4 bg-gradient-to-b from-gray-900 to-gray-950 overscroll-contain scroll-smooth">
+            <div ref={messagesContainerRef} className="flex-1 overflow-y-scroll overflow-x-hidden p-4 space-y-4 bg-gradient-to-b from-gray-900 to-gray-950 overscroll-contain scroll-smooth">
               {messages.map((message) => (
                 <div
                   key={message.id}
