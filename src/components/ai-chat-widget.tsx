@@ -193,9 +193,9 @@ const AIChatWidget = () => {
         </CardHeader>
 
         {!isMinimized && (
-          <CardContent className="flex flex-col h-[520px] p-0">
+          <CardContent className="flex flex-col h-[520px] p-0 overflow-hidden">
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 bg-gradient-to-b from-gray-900 to-gray-950 overscroll-contain scroll-smooth">
+            <div className="flex-1 overflow-y-scroll overflow-x-hidden p-4 space-y-4 bg-gradient-to-b from-gray-900 to-gray-950 overscroll-contain scroll-smooth">
               {messages.map((message) => (
                 <div
                   key={message.id}
@@ -270,7 +270,7 @@ const AIChatWidget = () => {
             </div>
 
             {/* Input */}
-            <div className="p-4 border-t border-gray-700 bg-gray-900 relative z-10">
+            <div className="p-4 border-t border-gray-700 bg-gray-900 relative z-10 flex-shrink-0">
               <div className="flex space-x-2">
                 <input
                   ref={inputRef}
