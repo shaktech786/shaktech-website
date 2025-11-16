@@ -14,7 +14,7 @@ const PrivacyPage = () => {
   return (
     <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-cyan-950 relative overflow-hidden">
+      <section className="py-24 pt-40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-indigo-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-diagonal-lines" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700 mb-8">
@@ -58,7 +58,7 @@ const PrivacyPage = () => {
             {/* Information We Collect */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Database className="w-6 h-6 text-cyan-400 mr-3" />
+                <Database className="w-6 h-6 text-indigo-400 mr-3" />
                 1. Information We Collect
               </h2>
               
@@ -97,7 +97,7 @@ const PrivacyPage = () => {
             {/* How We Use Information */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Eye className="w-6 h-6 text-amber-400 mr-3" />
+                <Eye className="w-6 h-6 text-indigo-400 mr-3" />
                 2. How We Use Your Information
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -150,9 +150,9 @@ const PrivacyPage = () => {
             </div>
 
             {/* Data Security */}
-            <div className="mb-12 p-6 bg-cyan-950/20 border border-cyan-900/50 rounded-lg">
+            <div className="mb-12 p-6 bg-indigo-950/20 border border-indigo-900/50 rounded-lg">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Lock className="w-6 h-6 text-cyan-400 mr-3" />
+                <Lock className="w-6 h-6 text-indigo-400 mr-3" />
                 4. Data Security
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -209,7 +209,7 @@ const PrivacyPage = () => {
             {/* International Transfers */}
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Globe className="w-6 h-6 text-amber-400 mr-3" />
+                <Globe className="w-6 h-6 text-indigo-400 mr-3" />
                 7. International Data Transfers
               </h2>
               <p className="text-gray-300 leading-relaxed">

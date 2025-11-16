@@ -27,11 +27,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   featured = false,
   icon
 }) => (
-  <Card className={`group hover:shadow-lg transition-all duration-300 h-full ${featured ? 'ring-2 ring-primary-200' : ''}`}>
+  <Card className={`group hover:shadow-lg transition-all duration-300 h-full ${featured ? 'ring-2 ring-indigo-200 dark:ring-indigo-800' : ''}`}>
     <CardHeader className="pb-4 space-y-3">
       <div className="flex items-start justify-between mb-2">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
+          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white">
             {icon}
           </div>
           <div>
@@ -39,33 +39,33 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               {category}
             </span>
             {featured && (
-              <span className="ml-2 text-xs font-medium text-amber-300 bg-amber-900/30 px-2 py-1 rounded-full border border-amber-700/50">
+              <span className="ml-2 text-xs font-medium text-indigo-300 bg-indigo-900/30 px-2 py-1 rounded-full border border-indigo-700/50">
                 Featured
               </span>
             )}
           </div>
         </div>
       </div>
-      <CardTitle className="text-xl group-hover:text-indigo-600 transition-colors">
+      <CardTitle className="text-xl group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
         {title}
       </CardTitle>
     </CardHeader>
     <CardContent className="flex flex-col flex-grow">
-      <p className="text-gray-300 mb-4 leading-relaxed">
+      <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
         {description}
       </p>
-      
+
       <div className="flex flex-wrap gap-2 mb-4">
         {techStack.map((tech) => (
           <span
             key={tech}
-            className="text-xs px-2 py-1 bg-gray-800/50 text-gray-300 rounded-md border border-gray-700/50"
+            className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 rounded-md border border-gray-300 dark:border-gray-700/50"
           >
             {tech}
           </span>
         ))}
       </div>
-      
+
       <div className="flex items-center space-x-3 mt-auto pt-4">
         {demoUrl && (
           <Button variant="outline" size="sm" className="group" asChild>
@@ -129,7 +129,7 @@ const PortfolioPreview = () => {
   ]
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-wave-pattern relative">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gray-900 relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
@@ -140,13 +140,13 @@ const PortfolioPreview = () => {
             of what&apos;s possible when human creativity meets artificial intelligence.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12 sm:mb-16">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
-        
+
         <div className="text-center">
           <Button variant="cta" size="lg" className="group" asChild>
             <Link href="/portfolio">

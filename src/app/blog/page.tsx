@@ -89,8 +89,8 @@ const BlogPage = () => {
   const getTagColor = (tag: string) => {
     const colors = {
       "AI": "bg-indigo-900/30 text-indigo-300 border-indigo-700",
-      "Methodology": "bg-cyan-900/30 text-cyan-300 border-cyan-700",
-      "Leadership": "bg-amber-900/30 text-amber-300 border-amber-700",
+      "Methodology": "bg-indigo-900/30 text-indigo-300 border-indigo-700",
+      "Leadership": "bg-indigo-900/30 text-indigo-300 border-indigo-700",
       "Technical": "bg-gray-700 text-gray-300 border-gray-600",
       "Career": "bg-purple-900/30 text-purple-300 border-purple-700",
       "Innovation": "bg-pink-900/30 text-pink-300 border-pink-700"
@@ -101,11 +101,11 @@ const BlogPage = () => {
   return (
     <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-cyan-950">
+      <section className="py-24 pt-40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-indigo-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center space-x-2 bg-indigo-800/50 px-4 py-2 rounded-full border border-indigo-700 mb-8">
-            <BookOpen className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-medium text-cyan-300">
+            <BookOpen className="w-4 h-4 text-indigo-400" />
+            <span className="text-sm font-medium text-indigo-300">
               Insights & Perspectives
             </span>
           </div>
@@ -126,12 +126,12 @@ const BlogPage = () => {
         <section key={post.id} className="py-12 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-8">
-              <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                 Featured Post
               </span>
             </div>
-            
-            <Card className="bg-gradient-to-r from-indigo-900 to-cyan-900 border-cyan-700 hover:shadow-2xl transition-all duration-300">
+
+            <Card className="bg-gradient-to-r from-indigo-900 to-indigo-800 border-indigo-700 hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                   <div className="lg:col-span-2 space-y-4">
@@ -149,8 +149,8 @@ const BlogPage = () => {
                         <span>Shakeel Bhamani</span>
                       </div>
                     </div>
-                    
-                    <h2 className="text-3xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+
+                    <h2 className="text-3xl font-bold text-white group-hover:text-indigo-400 transition-colors">
                       {post.title}
                     </h2>
                     
@@ -169,9 +169,9 @@ const BlogPage = () => {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-col items-center justify-center space-y-4">
-                    <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center text-white">
+                    <div className="w-24 h-24 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center text-white">
                       {post.icon}
                     </div>
                     <Button variant="cta" className="group" asChild>
@@ -203,17 +203,17 @@ const BlogPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.filter(post => !post.featured).map((post) => (
-              <Card key={post.id} className="bg-gray-900 border-gray-700 hover:shadow-2xl hover:border-cyan-500/50 transition-all duration-300 group">
+              <Card key={post.id} className="bg-gray-900 border-gray-700 hover:shadow-2xl hover:border-indigo-500/50 transition-all duration-300 group">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center text-white">
+                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-lg flex items-center justify-center text-white">
                       {post.icon}
                     </div>
                     <div className="text-gray-500 text-sm">
                       {formatDate(post.publishedAt)}
                     </div>
                   </div>
-                  <CardTitle className="text-xl text-white group-hover:text-cyan-400 transition-colors line-clamp-2">
+                  <CardTitle className="text-xl text-white group-hover:text-indigo-400 transition-colors line-clamp-2">
                     {post.title}
                   </CardTitle>
                 </CardHeader>
@@ -243,8 +243,8 @@ const BlogPage = () => {
                       </span>
                     ))}
                   </div>
-                  
-                  <Button variant="outline" className="w-full group mt-4 border-gray-600 text-gray-300 hover:border-cyan-500 hover:text-cyan-400" asChild>
+
+                  <Button variant="outline" className="w-full group mt-4 border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400" asChild>
                     <Link href={`/blog/${post.id}`}>
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -258,7 +258,7 @@ const BlogPage = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-24 bg-gradient-to-r from-indigo-600 via-cyan-500 to-amber-500">
+      <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Stay Updated on AI-First Development

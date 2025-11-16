@@ -46,17 +46,17 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-gray-300" role="contentinfo" aria-label="Site footer">
+    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800" role="contentinfo" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <Image 
-                src="/shaktech_logo.png" 
-                alt="ShakTech Logo" 
-                width={40} 
-                height={40} 
+              <Image
+                src="/shaktech_logo.png"
+                alt="ShakTech Logo"
+                width={40}
+                height={40}
                 className="rounded-lg"
               />
               <div>
@@ -64,21 +64,21 @@ const Footer = () => {
                 <div className="text-xs text-gray-400 -mt-1">AI-First Software Delivery</div>
               </div>
             </Link>
-            
+
             <p className="text-gray-400 leading-relaxed mb-4 max-w-md">
-              Empathetic AI Software Delivery where human creativity meets AI acceleration. 
+              Empathetic AI Software Delivery where human creativity meets AI acceleration.
               Building the future with enterprise expertise and creative innovation.
             </p>
-            
+
             <p className="text-sm text-gray-300 mb-6 flex items-center">
               <span className="mr-2">🇺🇸</span>
               <span>Proudly serving clients from <strong>Atlanta, Georgia</strong></span>
             </p>
-            
+
             <div className="flex items-center space-x-4" role="group" aria-label="Social media links">
-              <Link 
+              <Link
                 href="https://linkedin.com/in/shakeelbhamani"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-primary-950"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn profile"
@@ -87,16 +87,16 @@ const Footer = () => {
               </Link>
               <Link
                 href="https://github.com/shaktech786"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-primary-950"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub profile"
               >
                 <Github className="w-5 h-5" aria-hidden="true" />
               </Link>
-              <Link 
+              <Link
                 href="/contact"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-primary-950"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900"
                 aria-label="Contact us via email"
               >
                 <Mail className="w-5 h-5" aria-hidden="true" />
@@ -133,7 +133,7 @@ const Footer = () => {
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
             © {currentYear} ShakTech. All rights reserved. Made with ❤️ and AI in the USA.
           </div>
-          
+
           <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-400">
             <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy Policy

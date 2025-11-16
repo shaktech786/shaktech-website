@@ -44,12 +44,12 @@ const NewsletterSignup = () => {
   ]
 
   return (
-    <Card className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-cyan-500/50 overflow-hidden relative">
+    <Card className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border-indigo-500/50 overflow-hidden relative">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-amber-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-indigo-600/5" />
       
       <CardHeader className="text-center relative z-10">
-        <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+        <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
           <Mail className="w-8 h-8 text-white" />
         </div>
         <CardTitle className="text-3xl font-bold text-white mb-2">
@@ -72,10 +72,10 @@ const NewsletterSignup = () => {
         </div>
 
         {/* Lead Magnet Highlight */}
-        <div className="bg-gradient-to-r from-cyan-900/30 to-amber-900/30 border border-cyan-500/30 rounded-lg p-4">
+        <div className="bg-gradient-to-r from-indigo-900/30 to-indigo-800/30 border border-indigo-500/30 rounded-lg p-4">
           <div className="flex items-start space-x-3">
-            <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <Gift className="w-5 h-5 text-cyan-400" />
+            <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Gift className="w-5 h-5 text-indigo-400" />
             </div>
             <div>
               <h4 className="text-white font-semibold mb-1">Free Bonus!</h4>
@@ -97,7 +97,7 @@ const NewsletterSignup = () => {
               placeholder="Enter your email address"
               required
               disabled={status === "loading" || status === "success"}
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200 disabled:opacity-50"
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200 disabled:opacity-50"
             />
             <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
               {status === "success" && (
@@ -106,11 +106,11 @@ const NewsletterSignup = () => {
             </div>
           </div>
 
-          <Button 
+          <Button
             type="submit"
             size="lg"
             disabled={status === "loading" || status === "success"}
-            className="w-full bg-gradient-to-r from-cyan-500 to-amber-500 hover:from-cyan-600 hover:to-amber-600 text-white font-semibold group transition-all duration-200"
+            className="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white font-semibold group transition-all duration-200"
           >
             {status === "loading" ? (
               <span className="flex items-center justify-center">
@@ -156,7 +156,7 @@ const NewsletterSignup = () => {
               <span>2,847 developers subscribed</span>
             </div>
             <div className="flex items-center space-x-1">
-              <Sparkles className="w-4 h-4 text-cyan-400" />
+              <Sparkles className="w-4 h-4 text-indigo-400" />
               <span>4.9/5 rating</span>
             </div>
           </div>

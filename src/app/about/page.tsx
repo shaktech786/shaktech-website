@@ -35,7 +35,7 @@ const AboutPage = () => {
       title: "ThoughtWorks Consultant",
       description: "Building software solutions with modern development practices and mentoring fellow developers. Contributing to diverse engineering teams and fostering inclusive tech environments.",
       icon: <Building className="w-6 h-6" />,
-      color: "from-indigo-500 to-cyan-500",
+      color: "from-indigo-600 to-indigo-500",
       badge: "Present",
       badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
     },
@@ -44,18 +44,18 @@ const AboutPage = () => {
       title: "Creative Performer & Public Speaker",
       description: "Developed strong communication and performance skills through creative arts, including competitive beatboxing and public speaking engagements.",
       icon: <Award className="w-6 h-6" />,
-      color: "from-amber-500 to-cyan-500",
+      color: "from-indigo-600 to-indigo-500",
       badge: "2017",
-      badgeColor: "bg-amber-900/30 text-amber-300 border-amber-700/50"
+      badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
     },
     {
       year: "2012-2016",
       title: "Georgia Institute of Technology",
       description: "B.S. in Computer Science with academic honors. Served as Peer Leader mentoring fellow students while building a strong foundation in software engineering.",
       icon: <GraduationCap className="w-6 h-6" />,
-      color: "from-green-500 to-cyan-500",
+      color: "from-indigo-600 to-indigo-500",
       badge: "2012-2016",
-      badgeColor: "bg-green-900/30 text-green-300 border-green-700/50"
+      badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
     }
   ]
 
@@ -64,19 +64,19 @@ const AboutPage = () => {
       title: "Empathy-Driven Development",
       description: "Every technical solution starts with understanding the human story. I listen first, then build technology that truly serves people's needs.",
       icon: <Heart className="w-8 h-8" />,
-      color: "from-rose-500 to-pink-500"
+      color: "from-indigo-600 to-indigo-500"
     },
     {
-      title: "Creative Problem Solving", 
+      title: "Creative Problem Solving",
       description: "My beatboxing background taught me that innovation comes from combining existing elements in new ways. I apply this creative thinking to AI solutions.",
       icon: <Lightbulb className="w-8 h-8" />,
-      color: "from-amber-500 to-orange-500"
+      color: "from-indigo-600 to-indigo-500"
     },
     {
       title: "Enterprise Excellence",
       description: "Trained in industry-standard practices: test-driven development, continuous integration, and agile methodologies that deliver reliable software.",
       icon: <Target className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
+      color: "from-indigo-600 to-indigo-500"
     }
   ]
 
@@ -109,7 +109,7 @@ const AboutPage = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
           <div className="absolute inset-0 bg-circuit-board opacity-20" />
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -127,8 +127,8 @@ const AboutPage = () => {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                My journey from <strong className="text-indigo-400">Georgia Tech</strong> to <strong className="text-cyan-400">ThoughtWorks</strong> 
-                has taught me that the best technology solutions come from understanding the <em className="text-amber-400">people</em> who will use them.
+                My journey from <strong className="text-indigo-400">Georgia Tech</strong> to <strong className="text-indigo-400">ThoughtWorks</strong>
+                has taught me that the best technology solutions come from understanding the <em className="text-indigo-400">people</em> who will use them.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -150,7 +150,7 @@ const AboutPage = () => {
             {/* Photo & Info Card */}
             <div className="flex justify-center lg:justify-end">
               <div className="space-y-6">
-                <div className="w-80 h-80 bg-gradient-to-br from-indigo-500 via-cyan-500 to-amber-500 rounded-2xl p-1 shadow-2xl mx-auto">
+                <div className="w-80 h-80 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-2xl p-1 shadow-2xl mx-auto">
                   <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden">
                     <Image
                       src="/shakeel_linkedin.jpeg"
@@ -167,7 +167,7 @@ const AboutPage = () => {
                 <Card className="bg-gray-900/95 border-gray-700 backdrop-blur-sm">
                   <CardContent className="p-4 text-center">
                     <h3 className="font-bold text-white text-lg">Shakeel Bhamani</h3>
-                    <p className="text-cyan-400 text-sm font-medium">AI-First Software Expert</p>
+                    <p className="text-indigo-400 text-sm font-medium">AI-First Software Expert</p>
                     <div className="flex items-center justify-center space-x-2 mt-2 text-sm text-gray-400">
                       <MapPin className="w-4 h-4" />
                       <span>Atlanta, Georgia 🇺🇸</span>
@@ -195,7 +195,7 @@ const AboutPage = () => {
 
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-indigo-500 via-cyan-500 to-green-500 opacity-30 hidden lg:block" />
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-indigo-600 to-indigo-500 opacity-30 hidden lg:block" />
             
             <div className="space-y-16">
               {journeyMilestones.map((milestone, index) => (
@@ -379,16 +379,16 @@ const AboutPage = () => {
               <Card className="bg-gray-800/20 border-gray-700">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <Heart className="w-5 h-5 text-amber-400" />
+                    <Heart className="w-5 h-5 text-indigo-400" />
                     <h3 className="text-lg font-bold text-white">My Approach</h3>
                   </div>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     I believe the best technology solutions come from understanding the people who will use them. 
                     Every project is an opportunity to create something that makes a real difference.
                   </p>
-                  <div className="bg-green-900/20 p-3 rounded-lg border border-green-700/30">
-                    <p className="text-green-300 text-sm">
-                      <strong>Social Impact:</strong> I offer discounted rates for non-profits 
+                  <div className="bg-indigo-900/20 p-3 rounded-lg border border-indigo-700/30">
+                    <p className="text-indigo-300 text-sm">
+                      <strong>Social Impact:</strong> I offer discounted rates for non-profits
                       and organizations working on social good initiatives.
                     </p>
                   </div>
@@ -399,13 +399,13 @@ const AboutPage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <Card className="bg-gray-800/50 border-gray-700 text-center">
                   <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">7+</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">7+</div>
                     <div className="text-sm text-gray-400">Years Experience</div>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-800/50 border-gray-700 text-center">
                   <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-green-400 mb-2">GA</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">GA</div>
                     <div className="text-sm text-gray-400">Georgia Tech</div>
                   </CardContent>
                 </Card>

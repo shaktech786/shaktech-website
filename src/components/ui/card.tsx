@@ -9,7 +9,7 @@ const Card = React.forwardRef<
 >(({ className, variant = "default", ...props }, ref) => {
   const variants = {
     default: "border border-gray-700/50 bg-gray-900/95 backdrop-blur-sm",
-    glass: "bg-white/5 backdrop-blur-md border border-white/10 shadow-glass",
+    glass: "bg-gray-900/50 backdrop-blur-md border border-gray-700/30 shadow-glass",
     gradient: "bg-gradient-to-br from-gray-900/95 to-gray-800/95 border border-indigo-500/20 backdrop-blur-sm",
     elevated: "bg-gray-900 border border-gray-700/30 shadow-xl shadow-black/20"
   }
@@ -20,8 +20,8 @@ const Card = React.forwardRef<
       className={cn(
         "rounded-xl text-gray-50 transition-all duration-300 relative overflow-hidden group",
         "hover:shadow-xl hover:shadow-indigo-500/10 hover:border-indigo-500/30",
-        "before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/0 before:to-cyan-500/0",
-        "hover:before:from-indigo-500/5 hover:before:to-cyan-500/5 before:transition-all before:duration-500",
+        "before:absolute before:inset-0 before:bg-gradient-to-br before:from-indigo-500/0 before:to-indigo-600/0",
+        "hover:before:from-indigo-500/5 hover:before:to-indigo-600/5 before:transition-all before:duration-500",
         variants[variant],
         className
       )}

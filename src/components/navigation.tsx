@@ -6,7 +6,6 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,20 +28,20 @@ const Navigation = () => {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Resources", href: "/resources" },
+    // { name: "Resources", href: "/resources" }, // WIP - Hidden
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Blog", href: "/blog" },
+    // { name: "Blog", href: "/blog" }, // WIP - Hidden
     { name: "Contact", href: "/contact" },
   ]
 
   return (
-    <nav 
+    <nav
       role="navigation"
       aria-label="Main navigation"
       className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300",
-      scrolled 
-        ? "bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg" 
+      scrolled
+        ? "bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg"
         : "bg-gray-900/80 backdrop-blur-sm"
     )}>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -63,7 +62,7 @@ const Navigation = () => {
             />
             <div className="hidden sm:block" aria-hidden="true">
               <span className="text-xl font-bold text-gradient-primary">ShakTech</span>
-              <div className="text-xs text-gray-500 -mt-1">AI-First Software Delivery</div>
+              <div className="text-xs text-gray-400 -mt-1">AI-First Software Delivery</div>
             </div>
           </Link>
 
@@ -73,12 +72,11 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-cyan-400 focus:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1 transition-all duration-200 font-medium"
+                className="text-gray-300 hover:text-indigo-400 focus:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-2 py-1 transition-all duration-200 font-medium"
               >
                 {item.name}
               </Link>
             ))}
-            <ThemeToggle />
             <Button variant="cta" size="sm" asChild>
               <Link href="/contact">Get Started</Link>
             </Button>
@@ -90,7 +88,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-cyan-400"
+              className="text-gray-300 hover:text-indigo-400"
               aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={isOpen}
               aria-controls="mobile-navigation"
@@ -103,7 +101,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden" id="mobile-navigation">
-            <div 
+            <div
               className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-md border-t border-gray-800"
               role="menu"
               aria-orientation="vertical"
@@ -112,17 +110,14 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                  className="block px-3 py-2 text-gray-300 hover:text-indigo-400 transition-colors duration-200 font-medium"
                   onClick={() => setIsOpen(false)}
                   role="menuitem"
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-4 px-1">
-                <div className="flex justify-center">
-                  <ThemeToggle />
-                </div>
+              <div className="pt-4 px-1">
                 <Button variant="cta" size="sm" className="w-full" asChild>
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     Get Started

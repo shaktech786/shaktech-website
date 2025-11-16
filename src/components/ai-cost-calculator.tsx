@@ -56,35 +56,54 @@ const AICostCalculator = () => {
   }
 
   const calculateCosts = () => {
-    const hoursPerWeek = 40
-    const totalHours = inputs.developers * hoursPerWeek * inputs.projectWeeks
-    const traditionalCost = totalHours * inputs.hourlyRate
+    try {
+      // Validate inputs
+      if (!inputs.developers || inputs.developers < 1) {
+        alert('Please enter a valid number of developers (minimum 1)')
+        return
+      }
+      if (!inputs.hourlyRate || inputs.hourlyRate < 50) {
+        alert('Please enter a valid hourly rate (minimum $50)')
+        return
+      }
+      if (!inputs.projectWeeks || inputs.projectWeeks < 1) {
+        alert('Please enter a valid project duration (minimum 1 week)')
+        return
+      }
 
-    const multiplier = complexityMultipliers[inputs.aiIntegrationComplexity]
-    const aiEnhancedCost = traditionalCost * multiplier.cost + 15000 // Base AI implementation cost
-    const savings = traditionalCost - aiEnhancedCost
-    const savingsPercentage = (savings / traditionalCost) * 100
+      const hoursPerWeek = 40
+      const totalHours = inputs.developers * hoursPerWeek * inputs.projectWeeks
+      const traditionalCost = totalHours * inputs.hourlyRate
 
-    const timeToMarket = inputs.projectWeeks
-    const aiTimeToMarket = Math.ceil(inputs.projectWeeks * multiplier.time)
+      const multiplier = complexityMultipliers[inputs.aiIntegrationComplexity]
+      const aiEnhancedCost = traditionalCost * multiplier.cost + 15000 // Base AI implementation cost
+      const savings = traditionalCost - aiEnhancedCost
+      const savingsPercentage = (savings / traditionalCost) * 100
 
-    // ROI calculation based on time saved and efficiency gains
-    const monthlyRevenue = inputs.expectedUsers * 50 // Assumed $50 per user
-    const monthsSaved = (timeToMarket - aiTimeToMarket) / 4
-    const additionalRevenue = monthlyRevenue * monthsSaved
-    const efficiencyGains = traditionalCost * (multiplier.efficiency - 1) * 0.3
-    const roi = ((additionalRevenue + efficiencyGains + savings) / aiEnhancedCost) * 100
+      const timeToMarket = inputs.projectWeeks
+      const aiTimeToMarket = Math.ceil(inputs.projectWeeks * multiplier.time)
 
-    setBreakdown({
-      traditionalCost,
-      aiEnhancedCost,
-      savings,
-      savingsPercentage,
-      timeToMarket,
-      aiTimeToMarket,
-      roi,
-    })
-    setShowResults(true)
+      // ROI calculation based on time saved and efficiency gains
+      const monthlyRevenue = inputs.expectedUsers * 50 // Assumed $50 per user
+      const monthsSaved = (timeToMarket - aiTimeToMarket) / 4
+      const additionalRevenue = monthlyRevenue * monthsSaved
+      const efficiencyGains = traditionalCost * (multiplier.efficiency - 1) * 0.3
+      const roi = ((additionalRevenue + efficiencyGains + savings) / aiEnhancedCost) * 100
+
+      setBreakdown({
+        traditionalCost,
+        aiEnhancedCost,
+        savings,
+        savingsPercentage,
+        timeToMarket,
+        aiTimeToMarket,
+        roi,
+      })
+      setShowResults(true)
+    } catch (error) {
+      console.error('Calculator error:', error)
+      alert('An error occurred while calculating. Please check your inputs and try again.')
+    }
   }
 
   const formatCurrency = (amount: number) => {
@@ -111,7 +130,7 @@ const AICostCalculator = () => {
     <div className="w-full max-w-6xl mx-auto">
       <Card className="bg-gray-900 border-gray-700">
         <CardHeader className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <Calculator className="w-8 h-8 text-white" />
           </div>
           <CardTitle className="text-3xl font-bold text-white">
@@ -136,7 +155,7 @@ const AICostCalculator = () => {
                   max="20"
                   value={inputs.developers}
                   onChange={(e) => setInputs({...inputs, developers: parseInt(e.target.value) || 1})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
 
@@ -150,7 +169,7 @@ const AICostCalculator = () => {
                   max="500"
                   value={inputs.hourlyRate}
                   onChange={(e) => setInputs({...inputs, hourlyRate: parseInt(e.target.value) || 50})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
 
@@ -164,7 +183,7 @@ const AICostCalculator = () => {
                   max="52"
                   value={inputs.projectWeeks}
                   onChange={(e) => setInputs({...inputs, projectWeeks: parseInt(e.target.value) || 1})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
             </div>
@@ -177,7 +196,7 @@ const AICostCalculator = () => {
                 <select
                   value={inputs.aiIntegrationComplexity}
                   onChange={(e) => setInputs({...inputs, aiIntegrationComplexity: e.target.value as 'basic' | 'moderate' | 'advanced'})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 >
                   <option value="basic">Basic (Chatbots, Simple Automation)</option>
                   <option value="moderate">Moderate (Content Generation, Analytics)</option>
@@ -195,7 +214,7 @@ const AICostCalculator = () => {
                   max="10000"
                   value={inputs.currentToolCosts}
                   onChange={(e) => setInputs({...inputs, currentToolCosts: parseInt(e.target.value) || 0})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
 
@@ -209,17 +228,17 @@ const AICostCalculator = () => {
                   max="1000000"
                   value={inputs.expectedUsers}
                   onChange={(e) => setInputs({...inputs, expectedUsers: parseInt(e.target.value) || 10})}
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
             </div>
           </div>
 
           <div className="flex justify-center">
-            <Button 
+            <Button
               onClick={calculateCosts}
               size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-amber-500 hover:from-cyan-600 hover:to-amber-600 text-white group"
+              className="bg-indigo-600 hover:bg-indigo-500 shadow-lg hover:shadow-indigo-500/30 text-white group"
             >
               Calculate ROI
               <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -257,13 +276,13 @@ const AICostCalculator = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gradient-to-br from-cyan-900/20 to-amber-900/20 border-cyan-700/50">
+                <Card className="bg-gradient-to-br from-indigo-900/20 to-indigo-800/20 border-indigo-700/50">
                   <CardContent className="pt-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-gray-400">Total Savings</span>
-                      <TrendingUp className="w-5 h-5 text-cyan-400" />
+                      <TrendingUp className="w-5 h-5 text-indigo-400" />
                     </div>
-                    <p className="text-3xl font-bold text-cyan-400">{formatCurrency(breakdown.savings)}</p>
+                    <p className="text-3xl font-bold text-indigo-400">{formatCurrency(breakdown.savings)}</p>
                     <p className="text-sm text-gray-400 mt-2">{breakdown.savingsPercentage.toFixed(0)}% cost reduction</p>
                   </CardContent>
                 </Card>
@@ -275,11 +294,11 @@ const AICostCalculator = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                     <div>
                       <p className="text-gray-400 mb-2">ROI</p>
-                      <p className="text-4xl font-bold text-amber-400">{breakdown.roi.toFixed(0)}%</p>
+                      <p className="text-4xl font-bold text-indigo-400">{breakdown.roi.toFixed(0)}%</p>
                     </div>
                     <div>
                       <p className="text-gray-400 mb-2">Time to Market</p>
-                      <p className="text-4xl font-bold text-cyan-400">
+                      <p className="text-4xl font-bold text-indigo-400">
                         {Math.round(((breakdown.timeToMarket - breakdown.aiTimeToMarket) / breakdown.timeToMarket) * 100)}% Faster
                       </p>
                     </div>
@@ -339,8 +358,8 @@ const AICostCalculator = () => {
                     <Download className="w-4 h-4 mr-2" />
                     Download Report
                   </Button>
-                  <Button 
-                    className="bg-gradient-to-r from-cyan-500 to-amber-500 hover:from-cyan-600 hover:to-amber-600 text-white"
+                  <Button
+                    className="bg-indigo-600 hover:bg-indigo-500 shadow-lg hover:shadow-indigo-500/30 text-white"
                   >
                     Schedule Consultation
                   </Button>
@@ -369,7 +388,7 @@ const AICostCalculator = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                             placeholder="you@company.com"
-                            className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                            className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                           />
                         </div>
                         <div className="flex items-center space-x-2 text-sm text-gray-400">
@@ -377,7 +396,7 @@ const AICostCalculator = () => {
                           <span>We&apos;ll also send you AI development tips</span>
                         </div>
                         <div className="flex space-x-3">
-                          <Button type="submit" className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white">
+                          <Button type="submit" className="flex-1 bg-indigo-600 hover:bg-indigo-500 shadow-lg hover:shadow-indigo-500/30 text-white">
                             <Mail className="w-4 h-4 mr-2" />
                             Send Report
                           </Button>

@@ -10,8 +10,8 @@ export default function NotFound() {
       <div className="max-w-2xl w-full text-center">
         {/* 404 Icon */}
         <div className="mb-8 flex justify-center">
-          <div className="w-24 h-24 bg-cyan-900/20 rounded-full flex items-center justify-center">
-            <FileQuestion className="w-12 h-12 text-cyan-400" />
+          <div className="w-24 h-24 bg-indigo-900/20 rounded-full flex items-center justify-center">
+            <FileQuestion className="w-12 h-12 text-indigo-400" />
           </div>
         </div>
 
@@ -75,49 +75,49 @@ export default function NotFound() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <Link
               href="/"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-gray-400 hover:text-indigo-400 transition-colors"
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-gray-400 hover:text-indigo-400 transition-colors"
             >
               About
             </Link>
             <Link
               href="/services"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-gray-400 hover:text-indigo-400 transition-colors"
             >
               Services
             </Link>
             <Link
               href="/portfolio"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-gray-400 hover:text-indigo-400 transition-colors"
             >
               Portfolio
             </Link>
             <Link
               href="/blog"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-gray-400 hover:text-indigo-400 transition-colors"
             >
               Blog
             </Link>
             <Link
               href="/contact"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-gray-400 hover:text-indigo-400 transition-colors"
             >
               Contact
             </Link>
             <Link
               href="/pricing"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-gray-400 hover:text-indigo-400 transition-colors"
             >
               Pricing
             </Link>
             <Link
               href="/resources"
-              className="text-gray-400 hover:text-cyan-400 transition-colors"
+              className="text-gray-400 hover:text-indigo-400 transition-colors"
             >
               Resources
             </Link>
@@ -130,7 +130,7 @@ export default function NotFound() {
             Still can&apos;t find what you&apos;re looking for?{' '}
             <Link
               href="/contact"
-              className="text-cyan-400 hover:text-cyan-300 underline transition-colors"
+              className="text-indigo-400 hover:text-indigo-300 underline transition-colors"
             >
               Contact us
             </Link>

@@ -7,6 +7,8 @@ import ClientWidgets from "@/components/client-widgets";
 import ErrorBoundary from "@/components/error-boundary";
 import WebVitals from "@/components/web-vitals";
 import PerformanceOptimizer from "@/components/performance-optimizer";
+import { ThemeProvider } from "@/components/theme-provider";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -68,9 +70,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body 
-        className={`${inter.variable} font-sans antialiased min-h-screen`}
-        suppressHydrationWarning={true}
+      <body
+        className={`${inter.variable} font-sans antialiased min-h-screen bg-gray-950 text-gray-100`}
       >
         <StructuredData type="person" />
         <StructuredData type="organization" />

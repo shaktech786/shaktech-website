@@ -186,7 +186,7 @@ const ContactPage = () => {
     return (
       <main className="min-h-screen pt-16 bg-gray-900 flex items-center justify-center">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-8">
+          <div className="w-20 h-20 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-8">
             <CheckCircle className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">Message Sent Successfully!</h1>
@@ -205,11 +205,11 @@ const ContactPage = () => {
   return (
     <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-cyan-950">
+      <section className="py-24 pt-40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-indigo-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center space-x-2 bg-indigo-800/50 px-4 py-2 rounded-full border border-indigo-700 mb-8">
-            <Sparkles className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-medium text-cyan-300">
+            <Sparkles className="w-4 h-4 text-indigo-400" />
+            <span className="text-sm font-medium text-indigo-300">
               Let&apos;s Work Together
             </span>
           </div>
@@ -234,7 +234,7 @@ const ContactPage = () => {
               <Card className="bg-gray-900 border-gray-700">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold text-white flex items-center">
-                    <MessageSquare className="w-6 h-6 mr-3 text-cyan-400" />
+                    <MessageSquare className="w-6 h-6 mr-3 text-indigo-400" />
                     Tell Me About Your Project
                   </CardTitle>
                   <p className="text-gray-400">
@@ -257,7 +257,7 @@ const ContactPage = () => {
                           value={formData.name}
                           onChange={handleInputChange}
                           onBlur={handleBlur}
-                          className={`w-full px-4 py-3 bg-gray-800 border ${errors.name ? 'border-red-500' : 'border-gray-600'} rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors`}
+                          className={`w-full px-4 py-3 bg-gray-800 border ${errors.name ? 'border-red-500' : 'border-gray-600'} rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors`}
                           placeholder="Your full name"
                         />
                         {errors.name && touched.name && (
@@ -277,7 +277,7 @@ const ContactPage = () => {
                           required
                           value={formData.email}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                           placeholder="your@email.com"
                         />
                       </div>
@@ -294,7 +294,7 @@ const ContactPage = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
                     </div>
@@ -309,7 +309,7 @@ const ContactPage = () => {
                           name="service"
                           value={formData.service}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="">Select a service</option>
                           {services.map((service) => (
@@ -330,7 +330,7 @@ const ContactPage = () => {
                           name="budget"
                           value={formData.budget}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="">Select budget</option>
                           {budgets.map((budget) => (
@@ -351,7 +351,7 @@ const ContactPage = () => {
                           name="timeline"
                           value={formData.timeline}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="">Select timeline</option>
                           {timelines.map((timeline) => (
@@ -375,7 +375,7 @@ const ContactPage = () => {
                         required
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-vertical"
+                        className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-vertical"
                         placeholder="Tell me about your project, goals, challenges, and what you're hoping to achieve. The more details you provide, the better I can help you."
                       />
                     </div>
@@ -415,17 +415,17 @@ const ContactPage = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-3 text-gray-300">
-                    <Mail className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <Mail className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <a href="mailto:hi@shak-tech.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      <a href="mailto:hi@shak-tech.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">
                         hi@shak-tech.com
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Location</p>
                       <p className="text-gray-400">Atlanta, Georgia, USA 🇺🇸</p>
@@ -434,7 +434,7 @@ const ContactPage = () => {
                   </div>
 
                   <div className="flex items-center space-x-3 text-gray-300">
-                    <Clock className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <Clock className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Response Time</p>
                       <p className="text-gray-400">Within 2 business days</p>
@@ -455,7 +455,7 @@ const ContactPage = () => {
                     href="https://linkedin.com/in/shakeelbhamani"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors group"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-indigo-400 transition-colors group"
                   >
                     <Linkedin className="w-5 h-5 text-blue-400 flex-shrink-0" />
                     <div className="flex-1">
@@ -469,7 +469,7 @@ const ContactPage = () => {
                     href="https://github.com/shaktech786"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors group"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-indigo-400 transition-colors group"
                   >
                     <Github className="w-5 h-5 text-gray-400 flex-shrink-0" />
                     <div className="flex-1">
@@ -483,9 +483,9 @@ const ContactPage = () => {
                     href="https://linktr.ee/shakbbx"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors group"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-indigo-400 transition-colors group"
                   >
-                    <ExternalLink className="w-5 h-5 text-amber-400 flex-shrink-0" />
+                    <ExternalLink className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                     <div className="flex-1">
                       <p className="font-medium">TEDx & Music</p>
                       <p className="text-gray-500 text-sm">Beatboxing & speaking</p>
@@ -496,10 +496,10 @@ const ContactPage = () => {
               </Card>
 
               {/* Calendar Booking */}
-              <Card className="bg-gradient-to-br from-cyan-900/20 to-amber-900/20 border-cyan-700">
+              <Card className="bg-gradient-to-br from-indigo-900/20 to-indigo-800/20 border-indigo-700">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold text-white flex items-center">
-                    <Calendar className="w-5 h-5 mr-2 text-cyan-400" />
+                    <Calendar className="w-5 h-5 mr-2 text-indigo-400" />
                     Book a Discovery Call
                   </CardTitle>
                   <p className="text-gray-400 text-sm">
@@ -508,7 +508,7 @@ const ContactPage = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <Button variant="outline" className="w-full border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white" asChild>
+                  <Button variant="outline" className="w-full border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white" asChild>
                     <a href="https://calendly.com/shakeel-bhamani" target="_blank" rel="noopener noreferrer">
                       <Calendar className="w-4 h-4 mr-2" />
                       Schedule Call

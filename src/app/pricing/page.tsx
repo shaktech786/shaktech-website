@@ -49,7 +49,7 @@ const PricingPage = () => {
       pricing: "$25,000 - $75,000",
       duration: "3-4 months",
       icon: <Code className="w-8 h-8" />,
-      color: "from-cyan-500 to-cyan-700",
+      color: "from-indigo-500 to-indigo-700",
       featured: true,
       features: [
         "Next.js/React + AI integration (LLMs, RAG, fine-tuning)",
@@ -70,7 +70,7 @@ const PricingPage = () => {
       pricing: "$5,000 - $15,000",
       duration: "3-6 months",
       icon: <Target className="w-8 h-8" />,
-      color: "from-amber-500 to-amber-700",
+      color: "from-indigo-500 to-indigo-700",
       features: [
         "Monthly 1:1 coaching sessions with ThoughtWorks Lead",
         "Team psychology and psychological safety frameworks",
@@ -125,11 +125,11 @@ const PricingPage = () => {
               <span>US-Based</span>
             </div>
             <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5 text-green-400" />
+              <CheckCircle className="w-5 h-5 text-indigo-400" />
               <span>Professional Experience</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Target className="w-5 h-5 text-amber-400" />
+              <Target className="w-5 h-5 text-indigo-400" />
               <span>ThoughtWorks Lead</span>
             </div>
           </div>
@@ -153,10 +153,10 @@ const PricingPage = () => {
             {services.map((service) => (
               <Card 
                 key={service.tier} 
-                className={`relative overflow-hidden hover:shadow-2xl transition-all duration-300 bg-gray-900 border-gray-700 ${service.featured ? 'ring-2 ring-cyan-400 scale-105' : ''}`}
+                className={`relative overflow-hidden hover:shadow-2xl transition-all duration-300 bg-gray-900 border-gray-700 ${service.featured ? 'ring-2 ring-indigo-400 scale-105' : ''}`}
               >
                 {service.featured && (
-                  <div className="absolute top-0 right-0 bg-cyan-500 text-white px-4 py-2 text-sm font-bold rounded-bl-lg">
+                  <div className="absolute top-0 right-0 bg-indigo-500 text-white px-4 py-2 text-sm font-bold rounded-bl-lg">
                     Most Popular
                   </div>
                 )}
@@ -168,16 +168,16 @@ const PricingPage = () => {
                   <CardTitle className="text-2xl font-bold text-white mb-2">
                     {service.title}
                   </CardTitle>
-                  <p className="text-cyan-400 font-medium text-lg">
+                  <p className="text-indigo-400 font-medium text-lg">
                     {service.subtitle}
                   </p>
                   <p className="text-gray-400 mt-3 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="text-3xl font-bold text-amber-400 mt-4">
+                  <div className="text-3xl font-bold text-indigo-400 mt-4">
                     {service.pricing}
                   </div>
-                  <div className="text-sm text-cyan-400 mt-2">
+                  <div className="text-sm text-indigo-400 mt-2">
                     {service.duration}
                   </div>
                 </CardHeader>
@@ -185,13 +185,13 @@ const PricingPage = () => {
                 <CardContent className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-2" />
+                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-2" />
                       What&apos;s Included
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start space-x-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-indigo-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
@@ -199,12 +199,12 @@ const PricingPage = () => {
                   </div>
 
                   {service.outcome && (
-                    <div className="bg-green-900/20 p-4 rounded-lg border border-green-700/30">
-                      <h4 className="text-lg font-semibold text-green-400 mb-2 flex items-center">
+                    <div className="bg-indigo-900/20 p-4 rounded-lg border border-indigo-700/30">
+                      <h4 className="text-lg font-semibold text-indigo-400 mb-2 flex items-center">
                         <TrendingUp className="w-5 h-5 mr-2" />
                         Expected Outcome
                       </h4>
-                      <p className="text-sm text-green-300">{service.outcome}</p>
+                      <p className="text-sm text-indigo-300">{service.outcome}</p>
                     </div>
                   )}
 
@@ -241,7 +241,7 @@ const PricingPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-gray-900 border-gray-700 text-center p-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">1</span>
               </div>
               <CardTitle className="text-white mb-3">Free Consultation</CardTitle>
@@ -251,7 +251,7 @@ const PricingPage = () => {
             </Card>
 
             <Card className="bg-gray-900 border-gray-700 text-center p-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">2</span>
               </div>
               <CardTitle className="text-white mb-3">Clear Proposal</CardTitle>
@@ -261,7 +261,7 @@ const PricingPage = () => {
             </Card>
 
             <Card className="bg-gray-900 border-gray-700 text-center p-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold">3</span>
               </div>
               <CardTitle className="text-white mb-3">Proven Results</CardTitle>

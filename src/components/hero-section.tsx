@@ -20,23 +20,23 @@ const HeroSection = () => {
   }, [])
 
   return (
-    <section 
+    <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black"
       role="banner"
       aria-label="Hero section"
     >
       {/* Enhanced gradient background with parallax effect */}
-      <div 
-        className="absolute inset-0 opacity-50"
+      <div
+        className="absolute inset-0 opacity-30"
         style={{
           transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
           transition: 'transform 0.5s ease-out'
         }}
         aria-hidden="true"
       >
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-400/15 rounded-full blur-3xl" />
       </div>
       
       {/* Strong grid pattern overlay */}
@@ -44,27 +44,17 @@ const HeroSection = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <div className="space-y-8 animate-fade-in-up">
-          {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700">
-            <Sparkles className="w-4 h-4 text-indigo-400" />
-            <span className="text-sm font-medium text-indigo-300">
-              🇺🇸 ThoughtWorks Consultant • Creative Technologist • Atlanta-Based
-            </span>
-          </div>
-
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" id="main-heading">
             <span className="block text-white">Building AI Solutions</span>
-            <span className="block text-gradient-creative mt-2 hover-glow">That Actually Work</span>
+            <span className="block text-indigo-400 mt-2">That Actually Work</span>
           </h1>
 
           {/* Subheading */}
           <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed" aria-describedby="main-heading">
-            <span className="text-indigo-400 font-semibold">ThoughtWorks-trained consultant</span> with 7+ years building software that matters. 
-            I specialize in <span className="text-cyan-400 font-semibold">AI-first development</span> and 
-            <span className="text-amber-400 font-semibold">team leadership</span>. 
-            My approach? Technology is only as good as the 
-            <span className="text-gradient-primary font-semibold">people who build it</span> – 
+            <span className="text-indigo-400 font-semibold">ThoughtWorks-trained consultant</span> with 7+ years building software that matters.
+            I specialize in <span className="text-indigo-400 font-semibold">AI-first development</span> and <span className="text-indigo-400 font-semibold">team leadership</span>.
+            My approach? Technology is only as good as the <span className="text-indigo-300 font-semibold">people who build it</span> –
             I focus on both the code and the humans behind it.
           </p>
 
@@ -95,20 +85,20 @@ const HeroSection = () => {
                 Technical solutions with human understanding
               </p>
             </div>
-            
+
             <div className="text-center group px-4 sm:px-0">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
-                <Code2 className="w-8 h-8 text-cyan-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
+                <Code2 className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2" id="feature-social-impact">Social Impact Focus</h3>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-social-impact">
                 Technology that makes a real difference
               </p>
             </div>
-            
+
             <div className="text-center group px-4 sm:px-0">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
-                <Sparkles className="w-8 h-8 text-amber-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
+                <Sparkles className="w-8 h-8 text-indigo-400" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2" id="feature-journey">Proven Experience</h3>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-journey">

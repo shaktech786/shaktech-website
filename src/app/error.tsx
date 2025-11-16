@@ -94,7 +94,7 @@ export default function Error({
           </p>
           <a
             href="mailto:hi@shak-tech.com"
-            className="text-cyan-400 hover:text-cyan-300 underline transition-colors"
+            className="text-indigo-400 hover:text-indigo-300 underline transition-colors"
           >
             hi@shak-tech.com
           </a>

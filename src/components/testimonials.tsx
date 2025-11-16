@@ -23,17 +23,17 @@ const TestimonialCard: React.FC<TestimonialProps> = ({
     <CardContent className="p-6">
       <div className="flex items-center mb-4">
         {[...Array(rating)].map((_, i) => (
-          <Star key={i} className="w-5 h-5 text-amber-500 fill-current" />
+          <Star key={i} className="w-5 h-5 text-indigo-400 fill-current" />
         ))}
       </div>
-      
+
       <div className="relative mb-6">
         <Quote className="absolute -top-2 -left-1 w-8 h-8 text-indigo-400/30" />
         <p className="text-gray-200 leading-relaxed pl-6 italic">
           &quot;{content}&quot;
         </p>
       </div>
-      
+
       <div className="border-t border-gray-700 pt-4">
         <div className="font-semibold text-white">
           {clientName}
@@ -72,22 +72,22 @@ const Testimonials = () => {
   ]
 
   return (
-    <section className="py-24 bg-gradient-radial relative">
+    <section className="py-24 bg-gray-950 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             What <span className="text-gradient-primary">Clients Say</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            From small businesses to established companies – 
-            see why clients trust a developer who combines 
+            From small businesses to established companies –
+            see why clients trust a developer who combines
             technical skills with genuine care for people and outcomes.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div 
+            <div
               key={index}
               className="animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
@@ -96,9 +96,9 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Trust Indicators */}
-        <div className="mt-16 pt-16 border-t border-gray-200 dark:border-gray-700">
+        <div className="mt-16 pt-16 border-t border-gray-700">
           <div className="text-center mb-8">
             <h3 className="text-lg font-semibold text-white mb-2">
               ThoughtWorks Consultant & Creative Technologist
@@ -107,19 +107,19 @@ const Testimonials = () => {
               7+ years of professional development experience. Based in Atlanta, serving clients nationwide.
             </p>
           </div>
-          
+
           <div className="flex items-center justify-center space-x-8 opacity-70">
             <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">ATL</div>
-              <div className="text-sm text-gray-500">Atlanta Based</div>
+              <div className="text-2xl font-bold text-indigo-400">ATL</div>
+              <div className="text-sm text-gray-400">Atlanta Based</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-cyan-600">7+ Years</div>
-              <div className="text-sm text-gray-500">Professional Dev</div>
+              <div className="text-2xl font-bold text-indigo-400">7+ Years</div>
+              <div className="text-sm text-gray-400">Professional Dev</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-amber-600">GA</div>
-              <div className="text-sm text-gray-500">Georgia Tech</div>
+              <div className="text-2xl font-bold text-indigo-400">GA</div>
+              <div className="text-sm text-gray-400">Georgia Tech</div>
             </div>
           </div>
         </div>

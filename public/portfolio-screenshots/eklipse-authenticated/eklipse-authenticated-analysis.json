@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "timestamp": "2025-09-19T18:29:12.955Z",
+    "baseUrl": "https://app.eklipse.gg",
+    "analysisType": "authenticated"
+  },
+  "authentication": {
+    "success": false,
+    "error": "Navigation timeout of 30000 ms exceeded",
+    "timestamp": "2025-09-19T18:29:44.018Z"
+  },
+  "dashboard": {
+    "title": "Eklipse",
+    "url": "https://app.eklipse.gg/login",
+    "navigation": [],
+    "buttons": [
+      {
+        "text": "",
+        "type": "button",
+        "disabled": false,
+        "classes": "btn btn-twitch"
+      },
+      {
+        "text": "",
+        "type": "button",
+        "disabled": false,
+        "classes": "btn btn-kick"
+      },
+      {
+        "text": "",
+        "type": "button",
+        "disabled": false,
+        "classes": "btn btn-xbox"
+      },
+      {
+        "text": "",
+        "type": "button",
+        "disabled": false,
+        "classes": "btn-google nic-google"
+      },
+      {
+        "text": "",
+        "type": "button",
+        "disabled": false,
+        "classes": "kep-login-facebook metro"
+      },
+      {
+        "text": "",
+        "type": "button",
+        "disabled": false,
+        "classes": "bg-white"
+      },
+      {
+        "text": "Sign In",
+        "type": "submit",
+        "disabled": false,
+        "classes": "btn btn-primary special w-100"
+      },
+      {
+        "text": "Reject",
+        "type": "submit",
+        "disabled": false,
+        "classes": ""
+      },
+      {
+        "text": "Accept",
+        "type": "submit",
+        "disabled": false,
+        "classes": ""
+      }
+    ],
+    "sections": [
+      {
+        "tagName": "DIV",
+        "classes": "section-info d-none d-lg-block col-lg-6 p-0",
+        "id": "",
+        "testId": null,
+        "text": "Easily get highlights, edits, and share clips with Eklipse—all free!Automate highlights from Twitch,"
+      },
+      {
+        "tagName": "DIV",
+        "classes": "section-login min-vh-100 col-12 col-lg-5",
+        "id": "",
+        "testId": null,
+        "text": "Welcome back!Continue with.kep-login-facebook{font-family:Helvetica,sans-serif;font-weight:700;-webk"
+      }
+    ],
+    "hasUserProfile": false,
+    "hasNotifications": false,
+    "hasSidebar": false
+  },
+  "features": {},
+  "userFlows": [],
+  "uiPatterns": {},
+  "technicalDetails": {}
+}
