@@ -3,7 +3,7 @@
 import React from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, ArrowRight, Zap, Brain, Users, TrendingUp } from "lucide-react"
+import { ExternalLink, Github, ArrowRight, Bot, Brain, Users, TrendingUp, Gamepad2, Smartphone } from "lucide-react"
 import Link from "next/link"
 
 interface ProjectCardProps {
@@ -101,12 +101,29 @@ const PortfolioPreview = () => {
       icon: <Brain className="w-5 h-5" />
     },
     {
-      title: "Tmux Orchestrator - 24/7 AI Teams",
-      description: "Enable Claude agents to work autonomously around the clock, self-trigger check-ins, and coordinate across multiple projects without human intervention. A breakthrough in AI team management.",
-      category: "Automation",
-      techStack: ["Python", "Tmux", "Claude API", "Shell Scripting"],
-      githubUrl: "#",
-      icon: <Zap className="w-5 h-5" />
+      title: "ASIS - Autonomous Software Improvement",
+      description: "A fully autonomous, distributed system that discovers issues, fixes bugs, and improves codebases 24/7 using AI workers with a 5-level validation pipeline.",
+      category: "AI Infrastructure",
+      techStack: ["TypeScript", "Node.js", "PostgreSQL", "Redis"],
+      githubUrl: "https://github.com/shaktech786/asis",
+      icon: <Bot className="w-5 h-5" />
+    },
+    {
+      title: "VeryGoodMelon.Fun - Anxiety-Reducing Games",
+      description: "A curated collection of thoughtful web games designed to reduce anxiety. 8 unique games including AI conversations with 39+ historical figures via real-time video avatars.",
+      category: "Gaming Platform",
+      techStack: ["Next.js 16", "Supabase", "Gemini AI", "ElevenLabs"],
+      demoUrl: "https://verygoodmelon.fun",
+      githubUrl: "https://github.com/shaktech786/verygoodmelon.fun",
+      icon: <Gamepad2 className="w-5 h-5" />
+    },
+    {
+      title: "Morpheus - Voice-First AI Remote Control",
+      description: "A JARVIS-like voice-first system for remotely controlling machines via Claude Code with push-to-talk, QR pairing, and end-to-end encryption.",
+      category: "Mobile + Desktop",
+      techStack: ["React Native", "Electron", "TypeScript", "WebSocket"],
+      githubUrl: "https://github.com/shaktech786/morpheus",
+      icon: <Smartphone className="w-5 h-5" />
     },
     {
       title: "AI Stock Researcher (MIDAS)",

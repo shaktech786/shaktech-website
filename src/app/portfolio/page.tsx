@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Footer from "@/components/footer"
-import { 
+import {
   ExternalLink,
   Github,
   ArrowRight,
@@ -14,7 +14,10 @@ import {
   TrendingUp,
   Code,
   Globe,
-  Sparkles
+  Sparkles,
+  Gamepad2,
+  Smartphone,
+  Bot
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -55,32 +58,90 @@ const PortfolioPage = () => {
       color: "from-indigo-600 to-indigo-500"
     },
     {
-      id: "tmux-orchestrator",
-      title: "Tmux Orchestrator - 24/7 AI Teams",
-      category: "Automation",
-      description: "Revolutionary system enabling Claude agents to work autonomously around the clock, self-trigger check-ins, and coordinate across multiple projects without human intervention.",
-      longDescription: "A groundbreaking approach to AI team management that overcomes context window limitations through a three-tier hierarchy. This system allows AI agents to persist work sessions, coordinate tasks, and maintain progress across multiple codebases simultaneously.",
-      techStack: ["Python", "Tmux", "Claude API", "Shell Scripting", "Docker", "Linux", "Git", "MCP"],
+      id: "asis",
+      title: "ASIS - Autonomous Software Improvement",
+      category: "AI Infrastructure",
+      description: "A fully autonomous, distributed system that discovers issues, fixes bugs, and improves codebases 24/7 using AI workers with a 5-level validation pipeline.",
+      longDescription: "ASIS (Autonomous Software Improvement System) orchestrates multiple Claude Code workers to systematically improve codebases. It autonomously discovers issues via security audits, test failures, and code quality gaps, then validates all changes through syntax, build, unit test, integration test, and security gates before committing.",
+      techStack: ["TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker", "Claude API", "MCP", "Drizzle ORM"],
       features: [
-        "Self-Triggering AI Agents",
-        "Multi-Project Coordination",
-        "Persistent Work Sessions",
-        "Hierarchical Team Structure",
-        "Automatic Progress Tracking",
-        "Context Window Management",
-        "Cross-Repository Coordination",
-        "24/7 Autonomous Operation"
+        "Autonomous Issue Discovery & Fix",
+        "5-Level Validation Pipeline",
+        "Distributed Claude Code Workers",
+        "Self-Healing with Auto-Rollback",
+        "Real API Integration Testing",
+        "Knowledge Base & Learning",
+        "MCP Server Integration",
+        "Headless 24/7 Operation"
       ],
       metrics: [
-        "99.9% Uptime",
-        "5x Development Speed",
-        "Zero Context Loss",
-        "Multi-Team Scaling"
+        "5-Level Validation Gates",
+        "Multi-Worker Scaling",
+        "Self-Healing System",
+        "24/7 Autonomous Operation"
       ],
       demoUrl: "#",
-      githubUrl: "https://github.com/shaktech786/tmux-orchestrator",
+      githubUrl: "https://github.com/shaktech786/asis",
       imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Bot className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "verygoodmelon",
+      title: "VeryGoodMelon.Fun - Anxiety-Reducing Games",
+      category: "Gaming Platform",
+      description: "A curated collection of thoughtful web games designed to reduce anxiety and promote reflection. Zero friction — no accounts, no ads, just meaningful experiences.",
+      longDescription: "VeryGoodMelon.Fun offers philosophical, accessible web games that prioritize emotional well-being. Features 8 unique games including AI-powered conversations with 39+ historical figures via real-time video avatars, daily word puzzles, ethical dilemma voting, and mindfulness experiences.",
+      techStack: ["Next.js 16", "TypeScript", "Supabase", "Google Gemini", "ElevenLabs", "Simli.ai", "Tailwind CSS", "Zustand"],
+      features: [
+        "8 Unique Thoughtful Games",
+        "AI Conversations with Historical Figures",
+        "Real-Time Video Avatars (Simli.ai)",
+        "Voice-to-Voice with ElevenLabs TTS",
+        "WCAG 2.1 AA+ Accessible",
+        "Neurodivergent-Friendly Design",
+        "Community Word Clouds & Voting",
+        "Zero-Friction (No Login Required)"
+      ],
+      metrics: [
+        "8 Unique Games",
+        "39+ AI Historical Figures",
+        "WCAG 2.1 AA+ Compliant",
+        "90+ Lighthouse Score"
+      ],
+      demoUrl: "https://verygoodmelon.fun",
+      githubUrl: "https://github.com/shaktech786/verygoodmelon.fun",
+      imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
+      icon: <Gamepad2 className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "morpheus",
+      title: "Morpheus - Voice-First AI Remote Control",
+      category: "Mobile + Desktop",
+      description: "A JARVIS-like voice-first system for remotely controlling machines via Claude Code. Features push-to-talk mobile app, desktop agent, and end-to-end encrypted communication.",
+      longDescription: "Morpheus provides a unified interface to remotely control multiple machines through voice commands. The mobile app connects to a desktop Electron agent that sandboxes Claude Code execution, with QR code pairing, risk-based approval gates, and real-time streaming of terminal output.",
+      techStack: ["React Native", "Expo", "Electron", "TypeScript", "Turborepo", "WebSocket", "TweetNaCl", "SQLite"],
+      features: [
+        "Push-to-Talk Voice Commands",
+        "Multi-Device Management",
+        "End-to-End Encryption (NaCl)",
+        "QR Code Secure Pairing",
+        "Risk-Based Approval Gates",
+        "Real-Time Terminal Streaming",
+        "Biometric Authentication",
+        "Cross-Platform (iOS, Android, Desktop)"
+      ],
+      metrics: [
+        "End-to-End Encrypted",
+        "Cross-Platform Support",
+        "Voice-First Interface",
+        "Real-Time Streaming"
+      ],
+      demoUrl: "#",
+      githubUrl: "https://github.com/shaktech786/morpheus",
+      imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
+      icon: <Smartphone className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500"
     },
     {
