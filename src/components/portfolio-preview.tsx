@@ -105,7 +105,7 @@ const PortfolioPreview = () => {
       description: "A fully autonomous, distributed system that discovers issues, fixes bugs, and improves codebases 24/7 using AI workers with a 5-level validation pipeline.",
       category: "AI Infrastructure",
       techStack: ["TypeScript", "Node.js", "PostgreSQL", "Redis"],
-      githubUrl: "https://github.com/shaktech786/asis",
+      githubUrl: "#",
       icon: <Bot className="w-5 h-5" />
     },
     {
@@ -122,7 +122,7 @@ const PortfolioPreview = () => {
       description: "A JARVIS-like voice-first system for remotely controlling machines via Claude Code with push-to-talk, QR pairing, and end-to-end encryption.",
       category: "Mobile + Desktop",
       techStack: ["React Native", "Electron", "TypeScript", "WebSocket"],
-      githubUrl: "https://github.com/shaktech786/morpheus",
+      githubUrl: "#",
       icon: <Smartphone className="w-5 h-5" />
     },
     {
