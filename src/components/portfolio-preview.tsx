@@ -130,7 +130,7 @@ const PortfolioPreview = () => {
       description: "Intelligent stock research platform with AI-powered analysis, real-time data processing, paper trading engine, and predictive insights for investment decisions.",
       category: "FinTech AI",
       techStack: ["Next.js", "Python", "OpenAI", "Financial APIs", "Docker"],
-      demoUrl: "https://ai-stock-researcher.com",
+      demoUrl: "https://ai-stock-researcher.vercel.app",
       githubUrl: "#",
       icon: <TrendingUp className="w-5 h-5" />
     },
@@ -139,7 +139,7 @@ const PortfolioPreview = () => {
       description: "AI-enhanced planning poker for agile teams featuring real-time collaboration, intelligent story analysis, and automated estimation recommendations for better sprint planning.",
       category: "AgTech",
       techStack: ["Next.js", "Pusher", "OpenAI", "Tailwind", "Prisma"],
-      demoUrl: "https://estimate.com",
+      demoUrl: "https://estimaite.vercel.app",
       githubUrl: "#",
       icon: <Users className="w-5 h-5" />
     }

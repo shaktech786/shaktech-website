@@ -167,7 +167,7 @@ const PortfolioPage = () => {
         "500+ Stocks Analyzed",
         "Advanced Risk Models"
       ],
-      demoUrl: "https://ai-stock-researcher.com",
+      demoUrl: "https://ai-stock-researcher.vercel.app",
       githubUrl: "#",
       imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
       icon: <TrendingUp className="w-6 h-6" />,
