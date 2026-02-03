@@ -202,7 +202,7 @@ const AboutPage = () => {
                 <div key={index} className="relative">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
                     {/* Left Content (odd indexes) or Empty (even indexes) */}
-                    <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-1'}`}>
+                    <div className={`hidden lg:block ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-1'}`}>
                       {index % 2 !== 0 ? (
                         <Card className="bg-gray-800/30 border-gray-700 hover:bg-gray-800/50 transition-all duration-300">
                           <CardContent className="p-6">
@@ -219,7 +219,7 @@ const AboutPage = () => {
                           </CardContent>
                         </Card>
                       ) : (
-                        <div className="hidden lg:block" />
+                        <div />
                       )}
                     </div>
 
@@ -231,7 +231,7 @@ const AboutPage = () => {
                     </div>
 
                     {/* Right Content (even indexes) or Empty (odd indexes) */}
-                    <div className={`${index % 2 === 0 ? 'lg:order-3' : 'lg:order-3'}`}>
+                    <div className={`hidden lg:block ${index % 2 === 0 ? 'lg:order-3' : 'lg:order-3'}`}>
                       {index % 2 === 0 ? (
                         <Card className="bg-gray-800/30 border-gray-700 hover:bg-gray-800/50 transition-all duration-300">
                           <CardContent className="p-6">
@@ -248,7 +248,7 @@ const AboutPage = () => {
                           </CardContent>
                         </Card>
                       ) : (
-                        <div className="hidden lg:block" />
+                        <div />
                       )}
                     </div>
                   </div>
