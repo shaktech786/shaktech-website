@@ -9,7 +9,6 @@ import {
   Github,
   ArrowRight,
   Brain,
-  Zap,
   Users,
   TrendingUp,
   Code,
@@ -50,8 +49,7 @@ const PortfolioPage = () => {
         "300% Engagement Increase",
         "24/7 Autonomous Operation"
       ],
-      demoUrl: "https://shakgpt.com",
-      githubUrl: "#",
+      demoUrl: "https://shakgpt.vercel.app",
       imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
       featured: true,
       icon: <Brain className="w-6 h-6" />,
@@ -80,8 +78,6 @@ const PortfolioPage = () => {
         "Self-Healing System",
         "24/7 Autonomous Operation"
       ],
-      demoUrl: "#",
-      githubUrl: "#",
       imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
       icon: <Bot className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500"
@@ -138,8 +134,6 @@ const PortfolioPage = () => {
         "Voice-First Interface",
         "Real-Time Streaming"
       ],
-      demoUrl: "#",
-      githubUrl: "#",
       imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
       icon: <Smartphone className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500"
@@ -168,7 +162,6 @@ const PortfolioPage = () => {
         "Advanced Risk Models"
       ],
       demoUrl: "https://ai-stock-researcher.vercel.app",
-      githubUrl: "#",
       imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
       icon: <TrendingUp className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500"

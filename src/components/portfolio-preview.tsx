@@ -95,8 +95,7 @@ const PortfolioPreview = () => {
       description: "Revolutionary AI-powered platform for autonomous social media management with 15+ platform support, real-time analytics, and intelligent scheduling that surpasses traditional tools like Buffer and Hootsuite.",
       category: "AI Platform",
       techStack: ["Next.js", "OpenAI", "PostgreSQL", "Tailwind", "Prisma"],
-      demoUrl: "https://shakgpt.com",
-      githubUrl: "#",
+      demoUrl: "https://shakgpt.vercel.app",
       featured: true,
       icon: <Brain className="w-5 h-5" />
     },
@@ -105,7 +104,6 @@ const PortfolioPreview = () => {
       description: "A fully autonomous, distributed system that discovers issues, fixes bugs, and improves codebases 24/7 using AI workers with a 5-level validation pipeline.",
       category: "AI Infrastructure",
       techStack: ["TypeScript", "Node.js", "PostgreSQL", "Redis"],
-      githubUrl: "#",
       icon: <Bot className="w-5 h-5" />
     },
     {
@@ -122,7 +120,6 @@ const PortfolioPreview = () => {
       description: "A JARVIS-like voice-first system for remotely controlling machines via Claude Code with push-to-talk, QR pairing, and end-to-end encryption.",
       category: "Mobile + Desktop",
       techStack: ["React Native", "Electron", "TypeScript", "WebSocket"],
-      githubUrl: "#",
       icon: <Smartphone className="w-5 h-5" />
     },
     {
@@ -131,7 +128,6 @@ const PortfolioPreview = () => {
       category: "FinTech AI",
       techStack: ["Next.js", "Python", "OpenAI", "Financial APIs", "Docker"],
       demoUrl: "https://ai-stock-researcher.vercel.app",
-      githubUrl: "#",
       icon: <TrendingUp className="w-5 h-5" />
     },
     {
@@ -140,7 +136,7 @@ const PortfolioPreview = () => {
       category: "AgTech",
       techStack: ["Next.js", "Pusher", "OpenAI", "Tailwind", "Prisma"],
       demoUrl: "https://estimaite.vercel.app",
-      githubUrl: "#",
+      githubUrl: "https://github.com/shaktech786/estimaite",
       icon: <Users className="w-5 h-5" />
     }
   ]
