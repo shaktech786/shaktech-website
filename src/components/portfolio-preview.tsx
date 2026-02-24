@@ -91,11 +91,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const PortfolioPreview = () => {
   const projects = [
     {
-      title: "ShakGPT - AI Social Media Platform",
-      description: "Revolutionary AI-powered platform for autonomous social media management with 15+ platform support, real-time analytics, and intelligent scheduling that surpasses traditional tools like Buffer and Hootsuite.",
+      title: "Prelive - AI-Powered Creator Platform",
+      description: "AI-powered creator platform for streaming content creation, social media management with 15+ platform support, real-time analytics, and intelligent scheduling that surpasses traditional tools like Buffer and Hootsuite.",
       category: "AI Platform",
       techStack: ["Next.js", "OpenAI", "PostgreSQL", "Tailwind", "Prisma"],
-      demoUrl: "https://shakgpt.vercel.app",
+      demoUrl: "https://prelive.ai",
       featured: true,
       icon: <Brain className="w-5 h-5" />
     },

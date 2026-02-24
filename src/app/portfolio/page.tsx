@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 const PortfolioPage = () => {
   const projects = [
     {
-      id: "shakgpt",
-      title: "ShakGPT - AI Social Media Platform",
+      id: "prelive",
+      title: "Prelive - AI-Powered Creator Platform",
       category: "AI Platform",
-      description: "Revolutionary AI-powered platform for autonomous social media management with 15+ platform support, real-time analytics, and intelligent scheduling that surpasses traditional tools like Buffer and Hootsuite.",
-      longDescription: "ShakGPT represents the future of social media management - a fully autonomous AI system that learns, adapts, and optimizes content strategy across multiple platforms simultaneously. Built with enterprise-grade architecture and powered by advanced AI agents.",
+      description: "AI-powered creator platform for streaming content creation, social media management with 15+ platform support, real-time analytics, and intelligent scheduling that surpasses traditional tools like Buffer and Hootsuite.",
+      longDescription: "Prelive is the everything-before-you-go-live platform - a fully autonomous AI system that helps creators plan, create, and optimize content strategy across multiple platforms simultaneously. Built with enterprise-grade architecture and powered by advanced AI agents.",
       techStack: ["Next.js 15", "OpenAI GPT-4", "PostgreSQL", "Prisma", "Tailwind CSS", "Node.js", "TypeScript", "Docker"],
       features: [
         "15+ Platform Integration (Twitter, Instagram, Facebook, LinkedIn, TikTok, YouTube, etc.)",
@@ -49,7 +49,7 @@ const PortfolioPage = () => {
         "300% Engagement Increase",
         "24/7 Autonomous Operation"
       ],
-      demoUrl: "https://shakgpt.vercel.app",
+      demoUrl: "https://prelive.ai",
       imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
       featured: true,
       icon: <Brain className="w-6 h-6" />,

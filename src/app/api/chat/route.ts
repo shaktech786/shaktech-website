@@ -34,7 +34,7 @@ Services Offered:
 3. **Team Training** ($5,000+): Hands-on workshops, code reviews, mentoring
 
 Notable Projects:
-- **ShakGPT**: Autonomous social media AI agent
+- **Prelive**: AI-powered creator platform for streaming and content creation
 - **Tmux Orchestrator**: 24/7 AI team management system
 - **AI Stock Researcher**: Financial analysis platform
 - **EstimAIte**: AI-enhanced agile planning tool
