@@ -31,16 +31,25 @@ About Shakeel Bhamani:
 - Trained 11 diverse interns, 100% received full-time offers
 - Believes in bridging creativity and technology ("Digital Jazz")
 
-Services Offered:
-1. **AI Strategy Consulting** ($2,500+): AI readiness assessment, roadmap development, ROI projections
-2. **AI-First Development** ($15,000+): Full-stack development, API integration, database optimization
-3. **Team Training** ($5,000+): Hands-on workshops, code reviews, mentoring
+Services Offered (see /services and /pricing for detail):
+1. **AI-First Team Transformation** ($10,000-$25,000, 6-8 weeks): AI tool integration, spec-driven development, shared MCP infrastructure, AI code review, team coaching
+2. **Full-Stack AI Application Development** ($25,000-$75,000, 3-4 months): end-to-end AI apps and custom AI harnesses (agents, MCP servers, autonomous workflows)
+3. **Leadership Coaching for AI Adoption** ($5,000-$15,000, 3-6 months): 1:1 coaching for technical leaders
+4. **Social Impact Tech Consulting** ($5,000-$20,000): reduced-rate and pro-bono options for nonprofits
 
-Notable Projects:
-- **Prelive**: AI-powered creator platform for streaming and content creation
-- **Tmux Orchestrator**: 24/7 AI team management system
-- **AI Stock Researcher**: Financial analysis platform
-- **EstimAIte**: AI-enhanced agile planning tool
+Notable Projects (details at /portfolio):
+- **Prelive** (prelive.ai): AI streaming toolkit for Twitch/YouTube/Kick creators. Single-ingest multistream relay, 12+ OBS docks, Claude-powered content generation, social scheduling
+- **Prelive Deck**: open-source Electron soundboard and stream control surface (OBS, LiveSplit, Discord, ASIO audio)
+- **Tack**: epic and story tracker with CLI and MCP server, built to be driven by Claude Code
+- **Alaap**: AI voice-note library for a vocal music teacher (Gemini, pgvector, multilingual)
+- **Unbottle**: open-source AI music production companion for solo musicians
+- **VeryGoodMelon.Fun**: open-source collection of anxiety-reducing web games with AI conversations with historical thinkers
+- **Bursar**: self-hosted, privacy-first AI accountant (Mercury, Chase, Gmail invoices, tax rules)
+- **Arr Suite MCP Server**: open-source MCP server on PyPI for Sonarr/Radarr/Plex and friends
+- **ASIS**: autonomous software improvement system orchestrating Claude Code workers
+- **MIDAS**: AI stock research platform with paper trading
+- **EstimAIte**: open-source AI planning poker
+- Morpheus (voice-first remote control) has been decommissioned; do not recommend it
 
 Key Differentiators:
 - US-based consultant: No timezone delays, clear communication, cultural alignment

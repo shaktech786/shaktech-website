@@ -19,19 +19,19 @@ const Footer = () => {
     {
       title: "Portfolio",
       links: [
-        { name: "AI Platforms", href: "/portfolio#ai-platforms" },
-        { name: "Automation Systems", href: "/portfolio#automation" },
-        { name: "Web Applications", href: "/portfolio#web-apps" },
-        { name: "Case Studies", href: "/portfolio#case-studies" }
+        { name: "Prelive", href: "/portfolio#prelive" },
+        { name: "Tack for AI Agents", href: "/portfolio#tack" },
+        { name: "Arr Suite MCP Server", href: "/portfolio#arr-suite-mcp" },
+        { name: "Client Work", href: "/portfolio#client-work" }
       ]
     },
     {
       title: "Resources",
       links: [
         { name: "Blog & Insights", href: "/blog" },
-        { name: "AIFSD Methodology", href: "/blog/aifsd-methodology" },
-        { name: "Speaking & Events", href: "/about#speaking" },
-        { name: "Open Source", href: "https://github.com/shaktech786", external: true }
+        { name: "AI-First Software Delivery", href: "/blog/ai-first-software-delivery" },
+        { name: "Free Tools & Open Source", href: "/resources" },
+        { name: "GitHub", href: "https://github.com/shaktech786", external: true }
       ]
     },
     {
@@ -66,8 +66,8 @@ const Footer = () => {
             </Link>
 
             <p className="text-gray-400 leading-relaxed mb-4 max-w-md">
-              Empathetic AI Software Delivery where human creativity meets AI acceleration.
-              Building the future with enterprise expertise and creative innovation.
+              AI harnesses, agent tooling, and enterprise-grade products, shipped solo at the pace of a full team.
+              A decade of Thoughtworks and Staff Engineering experience behind every build.
             </p>
 
             <p className="text-sm text-gray-300 mb-6 flex items-center">

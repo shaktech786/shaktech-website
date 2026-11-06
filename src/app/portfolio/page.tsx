@@ -1,5 +1,6 @@
 import React from "react"
 import { Metadata } from "next"
+import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -15,183 +16,202 @@ import {
   Globe,
   Sparkles,
   Gamepad2,
-  Smartphone,
-  Bot
+  Bot,
+  Radio,
+  KanbanSquare,
+  Mic,
+  Music,
+  Wallet,
+  Server,
+  Package
 } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "AI-First Portfolio - ShakTech Projects & Case Studies",
-  description: "Explore Shakeel's AI-powered platforms and applications: from autonomous social media management to 24/7 AI teams and intelligent financial analysis systems.",
+  description: "Explore Shakeel's shipped products and AI harnesses: a streaming toolkit for creators, developer tooling for Claude Code, privacy-first finance automation, and open-source MCP servers.",
 }
 
 const PortfolioPage = () => {
   const projects = [
     {
       id: "prelive",
-      title: "Prelive - AI-Powered Creator Platform",
+      title: "Prelive - AI Streaming Toolkit",
       category: "AI Platform",
-      description: "AI-powered creator platform for streaming content creation, social media management with 15+ platform support, real-time analytics, and intelligent scheduling that surpasses traditional tools like Buffer and Hootsuite.",
-      longDescription: "Prelive is the everything-before-you-go-live platform - a fully autonomous AI system that helps creators plan, create, and optimize content strategy across multiple platforms simultaneously. Built with enterprise-grade architecture and powered by advanced AI agents.",
-      techStack: ["Next.js 15", "OpenAI GPT-4", "PostgreSQL", "Prisma", "Tailwind CSS", "Node.js", "TypeScript", "Docker"],
-      features: [
-        "15+ Platform Integration (Twitter, Instagram, Facebook, LinkedIn, TikTok, YouTube, etc.)",
-        "Autonomous AI Agents for Content Creation",
-        "Real-Time Performance Analytics",
-        "Intelligent Scheduling & Optimization",
-        "Crisis Management & Auto-Response",
-        "Cross-Platform Campaign Orchestration",
-        "ML-Powered Engagement Prediction",
-        "Brand Voice Consistency Engine"
-      ],
+      longDescription: "Prelive (v5 \"Horizon\") is the everything-before-you-go-live platform for Twitch, YouTube, and Kick streamers. One OBS stream fans out to all three platforms through a single-ingest relay with no re-encoding. A dozen OBS browser-source docks handle go-live, metadata, unified chat, alerts, talking points, and mic tuning, while Claude-powered content generation writes titles, descriptions, scripts, and social posts.",
+      techStack: ["Next.js 15", "React 19", "TypeScript", "PostgreSQL", "Prisma", "Redis + BullMQ", "Claude API", "Deepgram", "Vertex AI", "Stripe"],
       metrics: [
-        "1000+ Active Users",
-        "95% Content Approval Rate",
-        "300% Engagement Increase",
-        "24/7 Autonomous Operation"
+        "Twitch + YouTube + Kick, One Ingest",
+        "12+ OBS Docks & Overlays",
+        "6 Social Platforms Scheduled",
+        "v5.0 in Production"
       ],
       demoUrl: "https://prelive.ai",
-      imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
+      imageUrl: "/portfolio-screenshots/prelive-viewport.webp",
       featured: true,
       icon: <Brain className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "prelive-deck",
+      title: "Prelive Deck - Soundboard & Stream Control Surface",
+      category: "Desktop App",
+      longDescription: "An Electron soundboard built for fightpad and arcade-stick controllers, with a Haute42-style 4x4 pad layout. Every pad is dual-purpose: it plays a sound and fires an integration action on the same press. It drives OBS over WebSocket v5, splits LiveSplit timers, toggles Discord mute via local RPC, detects the foreground game, and routes audio through a low-latency ASIO engine into VoiceMeeter.",
+      techStack: ["Electron", "TypeScript", "React", "Web Gamepad API", "node-hid", "OBS WebSocket v5", "Howler.js", "RtAudio ASIO"],
+      metrics: [
+        "~10.7 ms ASIO Latency",
+        "OBS + LiveSplit + Discord",
+        "Native HID for GP2040-CE",
+        "Open Source"
+      ],
+      githubUrl: "https://github.com/shaktech786/soundpad-pro",
+      icon: <Radio className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "tack",
+      title: "Tack - Epic & Story Tracker for AI Agents",
+      category: "Developer Tooling",
+      longDescription: "A lightweight issue tracker designed to be driven by Claude Code rather than clicked through by humans. Ships as a web app, a CLI, and an MCP server so an agent can pull the next ready story, claim it, link PRs, and move it to Done without leaving the terminal. A GitHub App links commits and deploys back to stories automatically.",
+      techStack: ["Next.js", "TypeScript", "pnpm + Turborepo", "PostgreSQL", "MCP Server", "GitHub App", "Vitest", "Playwright"],
+      metrics: [
+        "Web + CLI + MCP Server",
+        "Agent-First Workflow",
+        "GitHub App Integration",
+        "Monorepo, Fully Typed"
+      ],
+      icon: <KanbanSquare className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "alaap",
+      title: "Alaap - AI Voice-Note Library for a Vocal Teacher",
+      category: "Applied AI",
+      longDescription: "A phone-first PWA that turns thousands of unnamed voice notes in Hindi, Urdu, and English into a searchable, organised library. Each recording is classified (speech, singing, instrumental), transcribed with timestamps, titled, tagged, and annotated with raga, taal, key, and tempo guesses with confidence scores. Semantic search works across scripts, and a swipe-based review queue makes triage fast on a phone.",
+      techStack: ["Next.js 16", "TypeScript", "Neon Postgres + pgvector", "Cloudflare R2", "Google Gemini", "Vercel Workflow", "PWA"],
+      metrics: [
+        "Multilingual Transcription",
+        "Semantic Search Across Scripts",
+        "Raga / Taal / Key Detection",
+        "Installable on iOS & Android"
+      ],
+      icon: <Mic className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "unbottle",
+      title: "Unbottle - AI Music Production Companion",
+      category: "Creative AI",
+      longDescription: "An AI producer for solo musicians, especially those with ADHD or creative anxiety who struggle to finish tracks. Hum a melody, tap a rhythm, or describe a vibe, and a Claude-powered producer that knows your session's BPM, key, and sections handles arrangement structure, chord voicings, and what to work on next. Includes a canvas piano roll, ElevenLabs audio generation, and MIDI export to any DAW.",
+      techStack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Supabase", "Claude API", "Tone.js", "ElevenLabs Music API"],
+      metrics: [
+        "Streaming AI Producer Chat",
+        "Piano Roll + MIDI Export",
+        "Momentum & Hyperfocus Guards",
+        "Open Source"
+      ],
+      demoUrl: "https://unbottle-rouge.vercel.app",
+      githubUrl: "https://github.com/shaktech786/unbottle",
+      imageUrl: "/portfolio-screenshots/unbottle-viewport.webp",
+      icon: <Music className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "verygoodmelon",
+      title: "VeryGoodMelon.Fun - Thoughtful Games",
+      category: "Gaming Platform",
+      longDescription: "A curated collection of twelve web games designed to reduce anxiety and invite reflection. No accounts, no ads, no distractions. Includes The Sage, an AI-powered conversation with 61 historical thinkers, The Arena, where any two minds debate a topic you pick, a daily word puzzle about global progress, ethical dilemma voting, breathing games, and a collective last-words word cloud.",
+      techStack: ["Next.js 16", "TypeScript", "Supabase", "Google Gemini", "ElevenLabs", "Tailwind CSS", "Zustand"],
+      metrics: [
+        "12 Original Games",
+        "61 AI Wisdom Figures",
+        "WCAG 2.1 AA+ Accessible",
+        "No Accounts, No Ads"
+      ],
+      demoUrl: "https://verygoodmelon.fun",
+      githubUrl: "https://github.com/shaktech786/verygoodmelon.fun",
+      imageUrl: "/portfolio-screenshots/verygoodmelon-viewport.webp",
+      icon: <Gamepad2 className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "bursar",
+      title: "Bursar - Privacy-First AI Accountant",
+      category: "FinOps",
+      longDescription: "A self-hosted accountant for a one-person software company. It pulls transactions from Mercury and Chase, reads invoices out of Gmail, attributes every dollar to a product, and applies federal, Georgia, and Illinois tax rules. Money is bigint minor units so no float ever touches a balance, the bank provider interface has no method that can move funds, and a transport-layer gate guarantees the LLM never sees an account number.",
+      techStack: ["TypeScript", "Node.js", "PostgreSQL", "Mercury API", "Teller mTLS", "Gmail API", "Claude API", "Tailscale"],
+      metrics: [
+        "Deterministic Rules First, LLM Last",
+        "Every Categorisation Explainable",
+        "Read-Only by Type Design",
+        "Self-Hosted, Tailscale-Only"
+      ],
+      icon: <Wallet className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500"
+    },
+    {
+      id: "arr-suite-mcp",
+      title: "Arr Suite MCP Server",
+      category: "Open Source MCP",
+      longDescription: "A Model Context Protocol server that gives Claude and other AI assistants natural-language control over a full media automation stack: Sonarr, Radarr, Prowlarr, Bazarr, Overseerr, and Plex. Intent recognition routes each request to the right service, so \"grab the new season of that show and add subtitles\" just works. Published on PyPI.",
+      techStack: ["Python 3.10+", "MCP", "Pydantic", "httpx", "asyncio"],
+      metrics: [
+        "6 Services, One Interface",
+        "Published on PyPI",
+        "Async-First, Type-Safe",
+        "MIT Licensed"
+      ],
+      demoUrl: "https://pypi.org/project/arr-suite-mcp-server/",
+      githubUrl: "https://github.com/shaktech786/arr-suite-mcp-server",
+      icon: <Server className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500"
     },
     {
       id: "asis",
       title: "ASIS - Autonomous Software Improvement",
       category: "AI Infrastructure",
-      description: "A fully autonomous, distributed system that discovers issues, fixes bugs, and improves codebases 24/7 using AI workers with a 5-level validation pipeline.",
-      longDescription: "ASIS (Autonomous Software Improvement System) orchestrates multiple Claude Code workers to systematically improve codebases. It autonomously discovers issues via security audits, test failures, and code quality gaps, then validates all changes through syntax, build, unit test, integration test, and security gates before committing.",
-      techStack: ["TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker", "Claude API", "MCP", "Drizzle ORM"],
-      features: [
-        "Autonomous Issue Discovery & Fix",
-        "5-Level Validation Pipeline",
-        "Distributed Claude Code Workers",
-        "Self-Healing with Auto-Rollback",
-        "Real API Integration Testing",
-        "Knowledge Base & Learning",
-        "MCP Server Integration",
-        "Headless 24/7 Operation"
-      ],
+      longDescription: "ASIS orchestrates multiple Claude Code workers to systematically improve codebases without human interaction. It discovers issues through security audits, failing tests, and code-quality gaps, then pushes every change through five validation gates (syntax, build, unit tests, integration tests, security) before committing, with automatic rollback when a gate fails.",
+      techStack: ["TypeScript", "Node.js", "PostgreSQL", "Redis", "Docker", "Claude Code", "MCP", "Drizzle ORM"],
       metrics: [
         "5-Level Validation Gates",
-        "Multi-Worker Scaling",
-        "Self-Healing System",
-        "24/7 Autonomous Operation"
+        "Parallel Claude Code Workers",
+        "Auto-Rollback on Failure",
+        "Headless 24/7 Operation"
       ],
-      imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
       icon: <Bot className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500"
     },
     {
-      id: "verygoodmelon",
-      title: "VeryGoodMelon.Fun - Anxiety-Reducing Games",
-      category: "Gaming Platform",
-      description: "A curated collection of thoughtful web games designed to reduce anxiety and promote reflection. Zero friction — no accounts, no ads, just meaningful experiences.",
-      longDescription: "VeryGoodMelon.Fun offers philosophical, accessible web games that prioritize emotional well-being. Features 8 unique games including AI-powered conversations with 39+ historical figures via real-time video avatars, daily word puzzles, ethical dilemma voting, and mindfulness experiences.",
-      techStack: ["Next.js 16", "TypeScript", "Supabase", "Google Gemini", "ElevenLabs", "Simli.ai", "Tailwind CSS", "Zustand"],
-      features: [
-        "8 Unique Thoughtful Games",
-        "AI Conversations with Historical Figures",
-        "Real-Time Video Avatars (Simli.ai)",
-        "Voice-to-Voice with ElevenLabs TTS",
-        "WCAG 2.1 AA+ Accessible",
-        "Neurodivergent-Friendly Design",
-        "Community Word Clouds & Voting",
-        "Zero-Friction (No Login Required)"
-      ],
-      metrics: [
-        "8 Unique Games",
-        "39+ AI Historical Figures",
-        "WCAG 2.1 AA+ Compliant",
-        "90+ Lighthouse Score"
-      ],
-      demoUrl: "https://verygoodmelon.fun",
-      githubUrl: "https://github.com/shaktech786/verygoodmelon.fun",
-      imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
-      icon: <Gamepad2 className="w-6 h-6" />,
-      color: "from-indigo-600 to-indigo-500"
-    },
-    {
-      id: "morpheus",
-      title: "Morpheus - Voice-First AI Remote Control",
-      category: "Mobile + Desktop",
-      description: "A JARVIS-like voice-first system for remotely controlling machines via Claude Code. Features push-to-talk mobile app, desktop agent, and end-to-end encrypted communication.",
-      longDescription: "Morpheus provides a unified interface to remotely control multiple machines through voice commands. The mobile app connects to a desktop Electron agent that sandboxes Claude Code execution, with QR code pairing, risk-based approval gates, and real-time streaming of terminal output.",
-      techStack: ["React Native", "Expo", "Electron", "TypeScript", "Turborepo", "WebSocket", "TweetNaCl", "SQLite"],
-      features: [
-        "Push-to-Talk Voice Commands",
-        "Multi-Device Management",
-        "End-to-End Encryption (NaCl)",
-        "QR Code Secure Pairing",
-        "Risk-Based Approval Gates",
-        "Real-Time Terminal Streaming",
-        "Biometric Authentication",
-        "Cross-Platform (iOS, Android, Desktop)"
-      ],
-      metrics: [
-        "End-to-End Encrypted",
-        "Cross-Platform Support",
-        "Voice-First Interface",
-        "Real-Time Streaming"
-      ],
-      imageUrl: "/portfolio-screenshots/github-profile-viewport.png",
-      icon: <Smartphone className="w-6 h-6" />,
-      color: "from-indigo-600 to-indigo-500"
-    },
-    {
       id: "ai-stock-researcher",
-      title: "AI Stock Researcher (MIDAS)",
+      title: "MIDAS - AI Stock Researcher",
       category: "FinTech AI",
-      description: "Intelligent stock research platform with AI-powered analysis, real-time data processing, paper trading engine, and predictive insights for investment decisions.",
-      longDescription: "MIDAS (Machine Intelligence Data Analysis System) combines advanced AI with comprehensive financial data to deliver institutional-grade investment research and analysis tools for individual and professional investors.",
-      techStack: ["Next.js", "Python", "OpenAI", "Financial APIs", "PostgreSQL", "Docker", "Kubernetes", "Redis"],
-      features: [
-        "AI-Powered Stock Analysis",
-        "Real-Time Market Data Integration",
-        "Paper Trading Simulation",
-        "Predictive Analytics Engine",
-        "Risk Assessment Tools",
-        "Portfolio Optimization",
-        "News Sentiment Analysis",
-        "Automated Research Reports"
-      ],
+      longDescription: "MIDAS (Machine Intelligence Data Analysis System) combines LLM analysis with live market data to produce research reports, risk assessments, and news sentiment for individual investors, with a paper-trading engine to test ideas without real money.",
+      techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "OpenAI", "Financial Data APIs", "Vitest", "Playwright"],
       metrics: [
-        "85% Prediction Accuracy",
-        "Real-Time Data Processing",
-        "500+ Stocks Analyzed",
-        "Advanced Risk Models"
+        "AI Research Reports",
+        "Paper Trading Engine",
+        "News Sentiment Analysis",
+        "End-to-End Tested"
       ],
       demoUrl: "https://ai-stock-researcher.vercel.app",
-      imageUrl: "/portfolio-screenshots/shaktech-website-viewport.png",
+      imageUrl: "/portfolio-screenshots/midas-viewport.webp",
       icon: <TrendingUp className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500"
     },
     {
       id: "estimaite",
       title: "EstimAIte - AI Planning Poker",
-      category: "AgTech",
-      description: "AI-enhanced planning poker for agile teams featuring real-time collaboration, intelligent story analysis, and automated estimation recommendations for better sprint planning.",
-      longDescription: "EstimAIte revolutionizes agile estimation by combining the collaborative benefits of planning poker with AI-powered story analysis and estimation recommendations, helping teams achieve more accurate sprint planning.",
-      techStack: ["Next.js", "Pusher", "OpenAI", "Tailwind CSS", "Prisma", "PostgreSQL", "TypeScript"],
-      features: [
-        "Real-Time Collaborative Estimation",
-        "AI Story Analysis",
-        "Automated Complexity Assessment",
-        "Team Performance Analytics",
-        "Historical Estimation Data",
-        "Sprint Planning Integration",
-        "Custom Estimation Scales",
-        "Export & Reporting Tools"
-      ],
+      category: "Agile Tooling",
+      longDescription: "Planning poker for agile teams with an AI twist: real-time rooms over Pusher, plus story analysis that flags ambiguity and suggests a complexity range before the team votes. Open source under MIT.",
+      techStack: ["Next.js", "TypeScript", "Pusher", "OpenAI", "Prisma", "PostgreSQL", "Tailwind CSS"],
       metrics: [
-        "90% Estimation Accuracy",
-        "50% Faster Planning",
-        "Real-Time Collaboration",
-        "Agile Team Optimization"
+        "Real-Time Rooms",
+        "AI Story Analysis",
+        "Custom Estimation Scales",
+        "Open Source (MIT)"
       ],
       demoUrl: "https://estimaite.vercel.app",
       githubUrl: "https://github.com/shaktech786/estimaite",
-      imageUrl: "/portfolio-screenshots/estimaite-viewport.png",
+      imageUrl: "/portfolio-screenshots/estimaite-viewport.webp",
       icon: <Users className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500"
     }
@@ -234,22 +254,23 @@ const PortfolioPage = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-            Transforming Ideas Into
-            <span className="block text-indigo-400">AI-Powered Reality</span>
+            Shipped Products,
+            <span className="block text-indigo-400">Built Solo with AI</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            From autonomous AI platforms serving thousands of users to enterprise consulting solutions - 
-            explore how I&apos;m pushing the boundaries of AI-first software delivery.
+            A production streaming platform, developer tooling for AI agents, privacy-first finance automation,
+            and open-source MCP servers. Every project here was designed, built, and shipped by one engineer
+            using an AI-first workflow.
           </p>
-          
+
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
             <div className="flex items-center space-x-2">
               <Code className="w-5 h-5 text-indigo-400" />
-              <span>10+ Projects</span>
+              <span>15+ Shipped Projects</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Users className="w-5 h-5 text-indigo-400" />
-              <span>1000+ Users</span>
+              <Package className="w-5 h-5 text-indigo-400" />
+              <span>Open Source on GitHub & PyPI</span>
             </div>
             <div className="flex items-center space-x-2">
               <TrendingUp className="w-5 h-5 text-indigo-400" />
@@ -267,26 +288,39 @@ const PortfolioPage = () => {
               Featured <span className="text-gradient-primary">Projects</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Breakthrough AI applications that demonstrate the power of human creativity 
-              combined with artificial intelligence.
+              Real products in production, not demos. Each one shows what a single senior engineer
+              with the right AI harness can ship.
             </p>
           </div>
 
           <div className="space-y-16">
             {projects.map((project, index) => (
-              <div key={project.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+              <div key={project.id} id={project.id} className={`scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                 {/* Project Image */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="relative group">
                     <div className={`aspect-video bg-gradient-to-br ${project.color} rounded-xl p-1`}>
-                      <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center">
-                        <div className="text-center">
-                          <div className={`w-24 h-24 bg-gradient-to-br ${project.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white`}>
-                            {project.icon}
-                          </div>
-                          <p className="text-gray-400">Project Screenshot</p>
+                      {project.imageUrl ? (
+                        <div className="w-full h-full bg-gray-900 rounded-lg overflow-hidden">
+                          <Image
+                            src={project.imageUrl}
+                            alt={`${project.title} screenshot`}
+                            width={1280}
+                            height={720}
+                            className="w-full h-full object-cover object-top"
+                            sizes="(min-width: 1024px) 50vw, 100vw"
+                          />
                         </div>
-                      </div>
+                      ) : (
+                        <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center">
+                          <div className="text-center">
+                            <div className={`w-24 h-24 bg-gradient-to-br ${project.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white`}>
+                              {project.icon}
+                            </div>
+                            <p className="text-gray-400">{project.githubUrl ? "Open Source" : "Private Build"}</p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                     {project.featured && (
                       <div className="absolute -top-4 -right-4 bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg">
@@ -336,15 +370,15 @@ const PortfolioPage = () => {
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    {project.demoUrl && project.demoUrl !== "#" && (
+                    {project.demoUrl && (
                       <Button variant="cta" className="group" asChild>
                         <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="w-4 h-4 mr-2" />
-                          Live Demo
+                          {project.demoUrl.includes("pypi.org") ? "View on PyPI" : "Live Site"}
                         </Link>
                       </Button>
                     )}
-                    {project.githubUrl && project.githubUrl !== "#" && (
+                    {project.githubUrl && (
                       <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-800" asChild>
                         <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                           <Github className="w-4 h-4 mr-2" />
@@ -361,14 +395,14 @@ const PortfolioPage = () => {
       </section>
 
       {/* Client Work Section */}
-      <section className="py-24 bg-gray-950">
+      <section id="client-work" className="py-24 bg-gray-950 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Client <span className="text-indigo-400">Success Stories</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Trusted by businesses across industries to deliver professional web solutions 
+              Trusted by businesses across industries to deliver professional web solutions
               that drive results and exceed expectations.
             </p>
           </div>
@@ -391,7 +425,7 @@ const PortfolioPage = () => {
                   <p className="text-gray-300 leading-relaxed">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.techStack.map((tech) => (
                       <span
@@ -420,8 +454,8 @@ const PortfolioPage = () => {
             Ready to Build Your Next AI Project?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Whether you need a custom AI platform, enterprise consulting, or team training,
-            let&apos;s discuss how we can bring your vision to life with cutting-edge technology.
+            Whether you need a custom AI platform, an agent harness for your team, or enterprise consulting,
+            let&apos;s discuss how to ship it faster than you thought possible.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="cta" size="xl" className="group" asChild>

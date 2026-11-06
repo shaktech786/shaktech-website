@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://shak-tech.com'),
   title: "ShakTech - US-Based AI-First Software Delivery",
   description: "US-based AI Software Expert in Atlanta. Georgia Tech educated, Fortune 500 experienced. Clear communication, EST timezone, no offshore delays. Led by Shakeel Bhamani.",
-  keywords: ["US-Based AI Developer", "Atlanta Software Consultant", "AI-First Development", "Georgia Tech", "American Software Developer", "TEDx Speaker", "Shakeel Bhamani"],
+  keywords: ["US-Based AI Developer", "Atlanta Software Consultant", "AI-First Development", "AI Harness", "MCP Server Development", "Claude Code", "AI Agents", "Georgia Tech", "TEDx Speaker", "Shakeel Bhamani"],
   authors: [{ name: "Shakeel Bhamani" }],
   creator: "Shakeel Bhamani",
   icons: {

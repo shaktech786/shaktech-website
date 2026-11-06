@@ -1,165 +1,90 @@
-"use client"
-
 import React from "react"
+import { Metadata } from "next"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Footer from "@/components/footer"
 import AICostCalculator from "@/components/ai-cost-calculator"
 import NewsletterSignup from "@/components/newsletter-signup"
-import { 
-  Calculator,
-  Download,
-  BookOpen,
-  FileText,
-  Video,
-  Code,
-  Lightbulb,
-  TrendingUp,
+import { getAllPosts } from "@/lib/mdx"
+import {
   Sparkles,
   ArrowRight,
   ExternalLink,
   Clock,
-  CheckCircle,
-  Mail,
-  FileCode,
-  Cpu,
-  Zap
+  Github,
+  Server,
+  Radio,
+  Music,
+  Gamepad2,
+  Users,
+  Terminal,
+  BookOpen,
+  Mic2,
+  Package
 } from "lucide-react"
 
-const ResourcesPage = () => {
-  const freeResources = [
-    {
-      title: "AI Readiness Checklist",
-      description: "Comprehensive 50-point checklist to assess your organization's AI readiness",
-      icon: <CheckCircle className="w-6 h-6" />,
-      type: "PDF Download",
-      cta: "Download Free",
-      featured: true,
-      comingSoon: false,
-    },
-    {
-      title: "10 AI Integration Mistakes",
-      description: "Learn from common pitfalls when implementing AI in production",
-      icon: <FileText className="w-6 h-6" />,
-      type: "PDF Guide",
-      cta: "Get the Guide",
-      featured: false,
-      comingSoon: false,
-    },
-    {
-      title: "AI Prompt Templates",
-      description: "20+ battle-tested prompts for development tasks",
-      icon: <Code className="w-6 h-6" />,
-      type: "GitHub Repo",
-      cta: "View on GitHub",
-      featured: false,
-      comingSoon: false,
-    },
-    {
-      title: "Weekly AI Newsletter",
-      description: "Latest AI tools, techniques, and trends for developers",
-      icon: <Mail className="w-6 h-6" />,
-      type: "Email Series",
-      cta: "Subscribe Free",
-      featured: false,
-      comingSoon: false,
-    },
-    {
-      title: "AI Cost-Benefit Analysis Template",
-      description: "Excel template to calculate ROI for AI projects",
-      icon: <TrendingUp className="w-6 h-6" />,
-      type: "Excel Template",
-      cta: "Download Template",
-      featured: false,
-      comingSoon: true,
-    },
-    {
-      title: "AI Development Roadmap",
-      description: "Step-by-step guide to AI implementation",
-      icon: <Lightbulb className="w-6 h-6" />,
-      type: "Interactive Guide",
-      cta: "Coming Soon",
-      featured: false,
-      comingSoon: true,
-    },
-  ]
+export const metadata: Metadata = {
+  title: "Free AI Tools & Open Source - ShakTech Resources",
+  description: "A free AI ROI calculator, open-source MCP servers and developer tools, and writing on AI-first software delivery from Shakeel Bhamani.",
+}
 
-  const tools = [
-    {
-      title: "AI ROI Calculator",
-      description: "Calculate potential savings and ROI from AI implementation",
-      icon: <Calculator className="w-6 h-6" />,
-      interactive: true,
-      component: "calculator",
-    },
-    {
-      title: "Complexity Estimator",
-      description: "Estimate the complexity and effort for AI integration",
-      icon: <Cpu className="w-6 h-6" />,
-      interactive: false,
-      comingSoon: true,
-    },
-    {
-      title: "Tech Stack Analyzer",
-      description: "Get AI recommendations based on your current stack",
-      icon: <FileCode className="w-6 h-6" />,
-      interactive: false,
-      comingSoon: true,
-    },
-  ]
+const openSource = [
+  {
+    title: "Arr Suite MCP Server",
+    description: "Give Claude natural-language control over Sonarr, Radarr, Prowlarr, Bazarr, Overseerr, and Plex. Intent recognition routes each request to the right service.",
+    tech: ["Python", "MCP", "Pydantic"],
+    icon: <Server className="w-6 h-6" />,
+    githubUrl: "https://github.com/shaktech786/arr-suite-mcp-server",
+    linkUrl: "https://pypi.org/project/arr-suite-mcp-server/",
+    linkLabel: "PyPI",
+    featured: true,
+  },
+  {
+    title: "Claude Code Preferences",
+    description: "My real-world Claude Code setup: global instructions, hooks, custom agents, and the prompt-injection guard I run across every project.",
+    tech: ["Claude Code", "Shell", "Hooks"],
+    icon: <Terminal className="w-6 h-6" />,
+    githubUrl: "https://github.com/shaktech786/claude-code-preferences",
+  },
+  {
+    title: "Prelive Deck",
+    description: "Electron soundboard and stream control surface for fightpad controllers. Drives OBS, LiveSplit, and Discord with low-latency ASIO audio routing.",
+    tech: ["Electron", "TypeScript", "OBS WebSocket"],
+    icon: <Radio className="w-6 h-6" />,
+    githubUrl: "https://github.com/shaktech786/soundpad-pro",
+  },
+  {
+    title: "Unbottle",
+    description: "AI music production companion for solo musicians. Session-aware Claude producer, canvas piano roll, ElevenLabs audio generation, MIDI export.",
+    tech: ["Next.js 16", "Supabase", "Tone.js"],
+    icon: <Music className="w-6 h-6" />,
+    githubUrl: "https://github.com/shaktech786/unbottle",
+    linkUrl: "https://unbottle-rouge.vercel.app",
+    linkLabel: "Live Site",
+  },
+  {
+    title: "VeryGoodMelon.Fun",
+    description: "Twelve anxiety-reducing web games including AI conversations and debates with historical thinkers. No accounts, no ads, WCAG 2.1 AA+.",
+    tech: ["Next.js 16", "Gemini", "ElevenLabs"],
+    icon: <Gamepad2 className="w-6 h-6" />,
+    githubUrl: "https://github.com/shaktech786/verygoodmelon.fun",
+    linkUrl: "https://verygoodmelon.fun",
+    linkLabel: "Play",
+  },
+  {
+    title: "EstimAIte",
+    description: "Planning poker with AI story analysis. Real-time rooms, no sign-up, sessions are temporary and private. MIT licensed.",
+    tech: ["Next.js", "Pusher", "OpenAI"],
+    icon: <Users className="w-6 h-6" />,
+    githubUrl: "https://github.com/shaktech786/estimaite",
+    linkUrl: "https://estimaite.vercel.app",
+    linkLabel: "Live Site",
+  },
+]
 
-  const guides = [
-    {
-      title: "Getting Started with OpenAI API",
-      description: "Complete guide to integrating OpenAI in your applications",
-      readTime: "15 min read",
-      level: "Beginner",
-      icon: <BookOpen className="w-5 h-5" />,
-    },
-    {
-      title: "Building AI Agents with LangChain",
-      description: "Advanced patterns for autonomous AI agents",
-      readTime: "25 min read",
-      level: "Advanced",
-      icon: <Zap className="w-5 h-5" />,
-    },
-    {
-      title: "AI Security Best Practices",
-      description: "Secure your AI implementations against common vulnerabilities",
-      readTime: "20 min read",
-      level: "Intermediate",
-      icon: <Sparkles className="w-5 h-5" />,
-    },
-    {
-      title: "Cost Optimization for AI Apps",
-      description: "Strategies to reduce AI API costs by 70%",
-      readTime: "18 min read",
-      level: "Intermediate",
-      icon: <TrendingUp className="w-5 h-5" />,
-    },
-  ]
-
-  const videos = [
-    {
-      title: "AI-First Development Workflow",
-      duration: "12:34",
-      views: "2.3k",
-      thumbnail: "🎥",
-    },
-    {
-      title: "Building a RAG System in 30 Minutes",
-      duration: "28:45",
-      views: "1.8k",
-      thumbnail: "🎬",
-    },
-    {
-      title: "Prompt Engineering Masterclass",
-      duration: "45:20",
-      views: "3.1k",
-      thumbnail: "📹",
-    },
-  ]
+const ResourcesPage = async () => {
+  const posts = await getAllPosts()
 
   return (
     <main className="min-h-screen bg-gray-900">
@@ -168,130 +93,98 @@ const ResourcesPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="inline-flex items-center space-x-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-4 py-2 mb-6">
             <Sparkles className="w-4 h-4 text-indigo-400" />
-            <span className="text-indigo-400 text-sm font-medium">Free AI Development Resources</span>
+            <span className="text-indigo-400 text-sm font-medium">Free Tools & Open Source</span>
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
             AI Development
             <span className="block text-gradient-creative">Resource Hub</span>
           </h1>
-          
+
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Free tools, calculators, guides, and templates to accelerate your AI journey. 
-            Everything you need to evaluate, plan, and implement AI solutions.
+            A free ROI calculator, open-source MCP servers and developer tools you can run today,
+            and writing on how AI-first delivery actually works.
           </p>
         </div>
       </section>
 
-      {/* Interactive Tools Section */}
+      {/* Interactive Tool */}
       <section className="py-24 section-services relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Interactive <span className="text-gradient-primary">AI Tools</span>
+              AI ROI <span className="text-gradient-primary">Calculator</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Use our free calculators and tools to plan your AI implementation
+              Estimate the savings and payback period of an AI implementation before you commit budget.
             </p>
           </div>
 
-          {/* AI Cost Calculator */}
-          <div className="mb-12">
-            <AICostCalculator />
-          </div>
-
-          {/* Other Tools Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-            {tools.slice(1).map((tool, idx) => (
-              <Card key={idx} className="bg-gray-900 border-gray-700 hover:shadow-xl transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-lg flex items-center justify-center text-white">
-                        {tool.icon}
-                      </div>
-                      <div>
-                        <CardTitle className="text-xl text-white">{tool.title}</CardTitle>
-                        {tool.comingSoon && (
-                          <span className="text-xs bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-full">
-                            Coming Soon
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <CardDescription className="text-gray-400 mt-3">
-                    {tool.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button 
-                    variant={tool.comingSoon ? "outline" : "cta"}
-                    className="w-full"
-                    disabled={tool.comingSoon}
-                  >
-                    {tool.comingSoon ? "Coming Soon" : "Launch Tool"}
-                    {!tool.comingSoon && <ArrowRight className="w-4 h-4 ml-2" />}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <AICostCalculator />
         </div>
       </section>
 
-      {/* Free Resources Section */}
+      {/* Open Source Section */}
       <section className="py-24 bg-diagonal-lines relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Free <span className="text-gradient-creative">Downloads</span>
+              Open <span className="text-gradient-creative">Source</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Practical resources to help you get started with AI development
+              Real code from real products. Clone it, run it, learn from it.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {freeResources.map((resource, idx) => (
-              <Card 
-                key={idx}
-                className={`bg-gray-900 border-gray-700 hover:shadow-xl transition-all duration-300 ${
-                  resource.featured ? 'ring-2 ring-indigo-400' : ''
-                } ${resource.comingSoon ? 'opacity-75' : ''}`}
+            {openSource.map((project) => (
+              <Card
+                key={project.title}
+                className={`bg-gray-900 border-gray-700 hover:shadow-xl transition-all duration-300 flex flex-col ${
+                  project.featured ? 'ring-2 ring-indigo-400' : ''
+                }`}
               >
                 <CardHeader>
                   <div className="flex items-start justify-between mb-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-lg flex items-center justify-center text-white">
-                      {resource.icon}
+                      {project.icon}
                     </div>
-                    {resource.featured && (
-                      <span className="text-xs bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-full">
-                        Featured
+                    {project.featured && (
+                      <span className="text-xs bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded-full flex items-center">
+                        <Package className="w-3 h-3 mr-1" />
+                        On PyPI
                       </span>
                     )}
                   </div>
-                  <CardTitle className="text-lg text-white mb-2">{resource.title}</CardTitle>
+                  <CardTitle className="text-lg text-white mb-2">{project.title}</CardTitle>
                   <CardDescription className="text-gray-400">
-                    {resource.description}
+                    {project.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm text-gray-500">{resource.type}</span>
-                    {!resource.comingSoon && (
-                      <span className="text-sm text-indigo-400">Free</span>
+                <CardContent className="mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                      <span key={tech} className="text-xs px-2 py-1 bg-gray-800/50 text-gray-300 rounded-md border border-gray-700/50">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Button variant={project.featured ? "cta" : "outline"} size="sm" className="group" asChild>
+                      <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </Link>
+                    </Button>
+                    {project.linkUrl && (
+                      <Button variant="ghost" size="sm" asChild>
+                        <Link href={project.linkUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          {project.linkLabel}
+                        </Link>
+                      </Button>
                     )}
                   </div>
-                  <Button 
-                    variant={resource.featured ? "cta" : "outline"}
-                    size="sm"
-                    className="w-full group"
-                    disabled={resource.comingSoon}
-                  >
-                    {resource.cta}
-                    {!resource.comingSoon && <Download className="w-4 h-4 ml-2 group-hover:translate-y-0.5 transition-transform" />}
-                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -299,104 +192,108 @@ const ResourcesPage = () => {
         </div>
       </section>
 
-      {/* Learning Resources */}
+      {/* Writing & Talks */}
       <section className="py-24 bg-grid-pattern relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Guides */}
+            {/* Writing */}
             <div>
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  Development <span className="text-gradient-primary">Guides</span>
+                  <span className="text-gradient-primary">Writing</span>
                 </h3>
-                <p className="text-gray-400">In-depth tutorials and best practices</p>
+                <p className="text-gray-400">Essays on AI-first delivery and engineering leadership</p>
               </div>
-              
+
               <div className="space-y-4">
-                {guides.map((guide, idx) => (
-                  <Card key={idx} className="bg-gray-900 border-gray-700 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                    <CardContent className="p-4">
-                      <div className="flex items-start space-x-4">
-                        <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
-                          {guide.icon}
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="text-white font-medium mb-1 group-hover:text-indigo-400 transition-colors">
-                            {guide.title}
-                          </h4>
-                          <p className="text-sm text-gray-400 mb-2">{guide.description}</p>
-                          <div className="flex items-center space-x-4 text-xs">
-                            <span className="text-gray-500 flex items-center">
-                              <Clock className="w-3 h-3 mr-1" />
-                              {guide.readTime}
-                            </span>
-                            <span className={`px-2 py-1 rounded-full ${
-                              guide.level === 'Beginner' ? 'bg-indigo-900/30 text-indigo-400' :
-                              guide.level === 'Intermediate' ? 'bg-indigo-900/30 text-indigo-400' :
-                              'bg-indigo-900/30 text-indigo-400'
-                            }`}>
-                              {guide.level}
-                            </span>
+                {posts.map((post) => (
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
+                    <Card className="bg-gray-900 border-gray-700 hover:shadow-lg hover:border-indigo-500/50 transition-all duration-300">
+                      <CardContent className="p-4">
+                        <div className="flex items-start space-x-4">
+                          <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                            <BookOpen className="w-5 h-5" />
                           </div>
+                          <div className="flex-1">
+                            <h4 className="text-white font-medium mb-1 group-hover:text-indigo-400 transition-colors">
+                              {post.title}
+                            </h4>
+                            <p className="text-sm text-gray-400 mb-2 line-clamp-2">{post.excerpt}</p>
+                            {post.readTime && (
+                              <span className="text-xs text-gray-500 flex items-center">
+                                <Clock className="w-3 h-3 mr-1" />
+                                {post.readTime} min read
+                              </span>
+                            )}
+                          </div>
+                          <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all" />
                         </div>
-                        <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all" />
-                      </div>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 ))}
               </div>
 
               <Button variant="outline" className="w-full mt-6 group" asChild>
                 <Link href="/blog">
-                  View All Guides
+                  View the Blog
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
             </div>
 
-            {/* Videos */}
+            {/* Talks */}
             <div>
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  Video <span className="text-gradient-creative">Tutorials</span>
+                  <span className="text-gradient-creative">Talks</span> & Creative Work
                 </h3>
-                <p className="text-gray-400">Watch and learn AI development techniques</p>
+                <p className="text-gray-400">Speaking, performing, and the creative side of engineering</p>
               </div>
 
               <div className="space-y-4">
-                {videos.map((video, idx) => (
-                  <Card key={idx} className="bg-gray-900 border-gray-700 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                <Link href="https://linktr.ee/shakbbx" target="_blank" rel="noopener noreferrer" className="block group">
+                  <Card className="bg-gray-900 border-gray-700 hover:shadow-lg hover:border-indigo-500/50 transition-all duration-300">
                     <CardContent className="p-4">
                       <div className="flex items-center space-x-4">
-                        <div className="w-20 h-20 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center text-3xl">
-                          {video.thumbnail}
+                        <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center text-white">
+                          <Mic2 className="w-6 h-6" />
                         </div>
                         <div className="flex-1">
-                          <h4 className="text-white font-medium mb-2 group-hover:text-indigo-400 transition-colors">
-                            {video.title}
+                          <h4 className="text-white font-medium mb-1 group-hover:text-indigo-400 transition-colors">
+                            TEDx Talk & Beatboxing
                           </h4>
-                          <div className="flex items-center space-x-4 text-sm text-gray-400">
-                            <span className="flex items-center">
-                              <Video className="w-4 h-4 mr-1" />
-                              {video.duration}
-                            </span>
-                            <span>{video.views} views</span>
-                          </div>
+                          <p className="text-sm text-gray-400">
+                            TEDx speaker on creativity and innovation. 2017 American Beatbox Championships loopstation vice champion.
+                          </p>
                         </div>
-                        <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-indigo-500 transition-colors">
-                          <ExternalLink className="w-5 h-5 text-white" />
-                        </div>
+                        <ExternalLink className="w-5 h-5 text-gray-600 group-hover:text-indigo-400 transition-colors" />
                       </div>
                     </CardContent>
                   </Card>
-                ))}
-              </div>
+                </Link>
 
-              <Button variant="outline" className="w-full mt-6 group">
-                <Video className="w-4 h-4 mr-2" />
-                View All Videos
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <Link href="https://www.linkedin.com/in/shakeelbhamani" target="_blank" rel="noopener noreferrer" className="block group">
+                  <Card className="bg-gray-900 border-gray-700 hover:shadow-lg hover:border-indigo-500/50 transition-all duration-300">
+                    <CardContent className="p-4">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-lg flex items-center justify-center text-white">
+                          <Users className="w-6 h-6" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-white font-medium mb-1 group-hover:text-indigo-400 transition-colors">
+                            Engineering Leadership on LinkedIn
+                          </h4>
+                          <p className="text-sm text-gray-400">
+                            Notes on spec-driven development, agent maturity, and leading teams in the AI era.
+                          </p>
+                        </div>
+                        <ExternalLink className="w-5 h-5 text-gray-600 group-hover:text-indigo-400 transition-colors" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -416,7 +313,7 @@ const ResourcesPage = () => {
             Ready for Personalized Guidance?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            These resources are just the beginning. Get custom recommendations 
+            These resources are just the beginning. Get custom recommendations
             and strategies tailored to your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

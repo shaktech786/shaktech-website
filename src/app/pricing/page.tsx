@@ -25,15 +25,15 @@ const PricingPage = () => {
       tier: "team-transformation",
       title: "AI-First Team Transformation",
       subtitle: "Teams That Actually Succeed with AI",
-      description: "Transform your existing development team from traditional practices to AI-assisted delivery. Based on my experience mentoring developers and fostering team growth at ThoughtWorks.",
+      description: "Transform your existing development team from traditional practices to AI-assisted delivery. Based on the AI enablement programme I built for an enterprise engineering org and six years of coaching teams at Thoughtworks.",
       pricing: "$10,000 - $25,000",
       duration: "6-8 weeks",
       icon: <Users className="w-8 h-8" />,
       color: "from-indigo-500 to-indigo-700",
       features: [
         "Team psychological safety assessment & improvement",
-        "AI tool integration (GitHub Copilot, ChatGPT, etc.)",
-        "Pair programming with AI best practices",
+        "AI tool integration (Claude Code, GitHub Copilot, Cursor)",
+        "Spec-driven development and shared MCP infrastructure",
         "Test-driven development with AI assistance",
         "Code review processes that leverage AI",
         "Individual mentoring for each team member",
@@ -45,7 +45,7 @@ const PricingPage = () => {
       tier: "development",
       title: "Full-Stack AI Application Development",
       subtitle: "Technology That Makes a Real Difference",
-      description: "End-to-end development of AI-powered applications with modern development practices. From social impact projects to business applications that solve real problems.",
+      description: "End-to-end development of AI-powered applications and AI harnesses, built with enterprise-grade practices. One senior engineer with an AI-first workflow delivering the output of a full development team.",
       pricing: "$25,000 - $75,000",
       duration: "3-4 months",
       icon: <Code className="w-8 h-8" />,
@@ -53,10 +53,11 @@ const PricingPage = () => {
       featured: true,
       features: [
         "Next.js/React + AI integration (LLMs, RAG, fine-tuning)",
+        "Custom AI harnesses: agents, MCP servers, autonomous workflows",
         "Enterprise-grade security & compliance",
         "PostgreSQL database design & optimization",
-        "Comprehensive testing (Jest, Cypress, Pact)",
-        "CI/CD deployment pipeline (CircleCI/GitHub Actions)",
+        "Comprehensive testing (Vitest, Playwright, contract tests)",
+        "CI/CD deployment pipeline (GitHub Actions, Vercel)",
         "Team training on AI-first development practices",
         "3-month post-launch maintenance included"
       ],
@@ -66,7 +67,7 @@ const PricingPage = () => {
       tier: "leadership",
       title: "Leadership Coaching for AI Adoption",
       subtitle: "From Intern to Lead - I&apos;ve Been Where You Are",
-      description: "1:1 coaching for technical leaders navigating AI transformation. Drawing from my development experience at ThoughtWorks and focus on team collaboration.",
+      description: "1:1 coaching for technical leaders navigating AI transformation. Drawing on a decade of tech-lead and Staff Engineer experience, including writing the AI-era leadership guide and Agent Maturity Model for an enterprise engineering org.",
       pricing: "$5,000 - $15,000",
       duration: "3-6 months",
       icon: <Target className="w-8 h-8" />,
@@ -78,7 +79,7 @@ const PricingPage = () => {
         "Change management for AI tool adoption",
         "Technical leadership skills development",
         "Performance review and feedback techniques",
-        "Access to ThoughtWorks leadership frameworks"
+        "Agent Maturity Model and spec-culture playbooks"
       ],
       outcome: "Leaders who can effectively guide AI transformation while maintaining team health"
     },
@@ -114,7 +115,7 @@ const PricingPage = () => {
             <span className="block text-gradient-creative">Investment</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Four proven service offerings based on real ThoughtWorks experience. 
+            Four proven service offerings based on a decade of Thoughtworks consulting and enterprise Staff Engineering.
             No recurring subscriptions, hidden fees, or unrealistic promises. 
             Just authentic expertise with measurable outcomes.
           </p>

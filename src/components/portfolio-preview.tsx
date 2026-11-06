@@ -3,7 +3,7 @@
 import React from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, ArrowRight, Bot, Brain, Users, TrendingUp, Gamepad2, Smartphone } from "lucide-react"
+import { ExternalLink, Github, ArrowRight, Brain, Gamepad2, Radio, KanbanSquare, Music, Wallet } from "lucide-react"
 import Link from "next/link"
 
 interface ProjectCardProps {
@@ -13,6 +13,7 @@ interface ProjectCardProps {
   techStack: string[]
   demoUrl?: string
   githubUrl?: string
+  detailsHref: string
   featured?: boolean
   icon: React.ReactNode
 }
@@ -24,6 +25,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   techStack,
   demoUrl,
   githubUrl,
+  detailsHref,
   featured = false,
   icon
 }) => (
@@ -67,11 +69,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       <div className="flex items-center space-x-3 mt-auto pt-4">
-        {demoUrl && (
+        {demoUrl ? (
           <Button variant="outline" size="sm" className="group" asChild>
             <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="w-4 h-4 mr-2" />
-              Live Demo
+              Live Site
+            </Link>
+          </Button>
+        ) : (
+          <Button variant="outline" size="sm" className="group" asChild>
+            <Link href={detailsHref}>
+              Details
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
         )}
@@ -91,53 +100,59 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const PortfolioPreview = () => {
   const projects = [
     {
-      title: "Prelive - AI-Powered Creator Platform",
-      description: "AI-powered creator platform for streaming content creation, social media management with 15+ platform support, real-time analytics, and intelligent scheduling that surpasses traditional tools like Buffer and Hootsuite.",
+      title: "Prelive - AI Streaming Toolkit",
+      description: "The everything-before-you-go-live platform for Twitch, YouTube, and Kick. One OBS stream fans out to all three, a dozen OBS docks handle go-live and chat, and Claude writes the titles, scripts, and social posts.",
       category: "AI Platform",
-      techStack: ["Next.js", "OpenAI", "PostgreSQL", "Tailwind", "Prisma"],
+      techStack: ["Next.js 15", "PostgreSQL", "Redis", "Claude API", "Stripe"],
       demoUrl: "https://prelive.ai",
+      detailsHref: "/portfolio#prelive",
       featured: true,
       icon: <Brain className="w-5 h-5" />
     },
     {
-      title: "ASIS - Autonomous Software Improvement",
-      description: "A fully autonomous, distributed system that discovers issues, fixes bugs, and improves codebases 24/7 using AI workers with a 5-level validation pipeline.",
-      category: "AI Infrastructure",
-      techStack: ["TypeScript", "Node.js", "PostgreSQL", "Redis"],
-      icon: <Bot className="w-5 h-5" />
+      title: "Prelive Deck - Stream Control Surface",
+      description: "Electron soundboard for fightpad controllers where every pad plays a sound and drives OBS, LiveSplit, or Discord on the same press. Low-latency ASIO audio routing included.",
+      category: "Desktop App",
+      techStack: ["Electron", "TypeScript", "OBS WebSocket", "ASIO"],
+      githubUrl: "https://github.com/shaktech786/soundpad-pro",
+      detailsHref: "/portfolio#prelive-deck",
+      icon: <Radio className="w-5 h-5" />
     },
     {
-      title: "VeryGoodMelon.Fun - Anxiety-Reducing Games",
-      description: "A curated collection of thoughtful web games designed to reduce anxiety. 8 unique games including AI conversations with 39+ historical figures via real-time video avatars.",
+      title: "Tack - Story Tracker for AI Agents",
+      description: "An issue tracker built to be driven by Claude Code: web app, CLI, and MCP server so an agent can claim the next ready story, link PRs, and close it without leaving the terminal.",
+      category: "Developer Tooling",
+      techStack: ["Next.js", "Turborepo", "PostgreSQL", "MCP"],
+      detailsHref: "/portfolio#tack",
+      icon: <KanbanSquare className="w-5 h-5" />
+    },
+    {
+      title: "Bursar - Privacy-First AI Accountant",
+      description: "Self-hosted accountant that pulls Mercury and Chase transactions, reads Gmail invoices, attributes every dollar to a product, and applies tax rules. The LLM never sees an account number.",
+      category: "FinOps",
+      techStack: ["TypeScript", "PostgreSQL", "Claude API", "Tailscale"],
+      detailsHref: "/portfolio#bursar",
+      icon: <Wallet className="w-5 h-5" />
+    },
+    {
+      title: "Unbottle - AI Music Production Companion",
+      description: "An AI producer for solo musicians with ADHD or creative anxiety. Hum, tap, or describe an idea and a session-aware Claude producer handles arrangement, voicings, and what to do next.",
+      category: "Creative AI",
+      techStack: ["Next.js 16", "Supabase", "Tone.js", "ElevenLabs"],
+      demoUrl: "https://unbottle-rouge.vercel.app",
+      githubUrl: "https://github.com/shaktech786/unbottle",
+      detailsHref: "/portfolio#unbottle",
+      icon: <Music className="w-5 h-5" />
+    },
+    {
+      title: "VeryGoodMelon.Fun - Thoughtful Games",
+      description: "Twelve web games designed to reduce anxiety, including AI conversations with 61 historical thinkers and AI-staged debates between any two of them. No accounts, no ads, WCAG 2.1 AA+ accessible.",
       category: "Gaming Platform",
-      techStack: ["Next.js 16", "Supabase", "Gemini AI", "ElevenLabs"],
+      techStack: ["Next.js 16", "Supabase", "Gemini", "ElevenLabs"],
       demoUrl: "https://verygoodmelon.fun",
       githubUrl: "https://github.com/shaktech786/verygoodmelon.fun",
+      detailsHref: "/portfolio#verygoodmelon",
       icon: <Gamepad2 className="w-5 h-5" />
-    },
-    {
-      title: "Morpheus - Voice-First AI Remote Control",
-      description: "A JARVIS-like voice-first system for remotely controlling machines via Claude Code with push-to-talk, QR pairing, and end-to-end encryption.",
-      category: "Mobile + Desktop",
-      techStack: ["React Native", "Electron", "TypeScript", "WebSocket"],
-      icon: <Smartphone className="w-5 h-5" />
-    },
-    {
-      title: "AI Stock Researcher (MIDAS)",
-      description: "Intelligent stock research platform with AI-powered analysis, real-time data processing, paper trading engine, and predictive insights for investment decisions.",
-      category: "FinTech AI",
-      techStack: ["Next.js", "Python", "OpenAI", "Financial APIs", "Docker"],
-      demoUrl: "https://ai-stock-researcher.vercel.app",
-      icon: <TrendingUp className="w-5 h-5" />
-    },
-    {
-      title: "EstimAIte - AI Planning Poker",
-      description: "AI-enhanced planning poker for agile teams featuring real-time collaboration, intelligent story analysis, and automated estimation recommendations for better sprint planning.",
-      category: "AgTech",
-      techStack: ["Next.js", "Pusher", "OpenAI", "Tailwind", "Prisma"],
-      demoUrl: "https://estimaite.vercel.app",
-      githubUrl: "https://github.com/shaktech786/estimaite",
-      icon: <Users className="w-5 h-5" />
     }
   ]
 
@@ -149,8 +164,8 @@ const PortfolioPreview = () => {
             AI-Powered <span className="text-gradient-primary">Portfolio</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
-            From autonomous AI agents to intelligent platforms – see how I&apos;m pushing the boundaries
-            of what&apos;s possible when human creativity meets artificial intelligence.
+            Production platforms, developer tooling for AI agents, and open-source MCP servers –
+            all designed, built, and shipped solo with an AI-first workflow.
           </p>
         </div>
 
