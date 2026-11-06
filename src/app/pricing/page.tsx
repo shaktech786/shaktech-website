@@ -72,7 +72,7 @@ const PricingPage = () => {
       icon: <Target className="w-8 h-8" />,
       color: "from-indigo-500 to-indigo-700",
       features: [
-        "Monthly 1:1 coaching sessions with ThoughtWorks Lead",
+        "Monthly 1:1 coaching sessions with a Staff Engineer and former Thoughtworks Lead",
         "Team psychology and psychological safety frameworks",
         "AI strategy development and communication",
         "Change management for AI tool adoption",
@@ -130,7 +130,7 @@ const PricingPage = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Target className="w-5 h-5 text-indigo-400" />
-              <span>ThoughtWorks Lead</span>
+              <span>10+ Years · Ex-Thoughtworks Lead</span>
             </div>
           </div>
         </div>

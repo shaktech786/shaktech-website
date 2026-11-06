@@ -32,11 +32,29 @@ const AboutPage = () => {
   const journeyMilestones = [
     {
       year: "Present",
-      title: "ThoughtWorks Consultant",
-      description: "Building software solutions with modern development practices and mentoring fellow developers. Contributing to diverse engineering teams and fostering inclusive tech environments.",
+      title: "Staff Software Engineer",
+      description: "Tech lead on an enterprise supplier content platform. Built the team's AI enablement programme: an autonomous weekly refactoring agent, AI code review wired to Jira acceptance criteria, a five-server MCP setup, and a spec-driven development playbook adopted company-wide.",
+      icon: <Sparkles className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500",
+      badge: "2026-Present",
+      badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
+    },
+    {
+      year: "2016-2026",
+      title: "Thoughtworks Lead Consultant",
+      description: "Six years across two stints, ending as Lead Software Consultant. Tech lead for a Fortune 500 health retailer's digital accelerator, a social impact prison oversight platform, and the 2022 DEI internship program where all 11 interns earned full-time offers.",
       icon: <Building className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500",
-      badge: "Present",
+      badge: "2016-2026",
+      badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
+    },
+    {
+      year: "2018-2020",
+      title: "Senior & Lead UI Engineer",
+      description: "Senior Software Engineer at Arity (Allstate) building Java/React platforms on Kafka and Cassandra, then Lead UI Engineer at Groundbreaker introducing modern React, GraphQL, and feature-flag practices.",
+      icon: <Code className="w-6 h-6" />,
+      color: "from-indigo-600 to-indigo-500",
+      badge: "2018-2020",
       badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
     },
     {
@@ -85,7 +103,7 @@ const AboutPage = () => {
       category: "AI & Machine Learning",
       icon: <Sparkles className="w-5 h-5" />,
       color: "text-purple-400",
-      skills: ["OpenAI API", "Claude API", "LangChain", "Vector Databases", "RAG Systems", "AI Agents", "Prompt Engineering", "ML Operations"]
+      skills: ["AI Harnesses", "MCP Servers", "Autonomous Agents", "Claude API", "OpenAI API", "GitHub Copilot", "RAG Systems", "Spec-Driven Development"]
     },
     {
       category: "Full-Stack Development",
@@ -118,7 +136,7 @@ const AboutPage = () => {
             <div className="space-y-8 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700/50">
                 <Sparkles className="w-4 h-4 text-indigo-400" />
-                <span className="text-sm font-medium text-indigo-300">ThoughtWorks Consultant</span>
+                <span className="text-sm font-medium text-indigo-300">Staff Software Engineer · Ex-Thoughtworks Lead</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
@@ -127,8 +145,8 @@ const AboutPage = () => {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                My journey from <strong className="text-indigo-400">Georgia Tech</strong> to <strong className="text-indigo-400">ThoughtWorks</strong>
-                has taught me that the best technology solutions come from understanding the <em className="text-indigo-400">people</em> who will use them.
+                Ten-plus years from <strong className="text-indigo-400">Georgia Tech</strong> through <strong className="text-indigo-400">Thoughtworks</strong> to Staff Engineer
+                taught me that the best technology solutions come from understanding the <em className="text-indigo-400">people</em> who will use them.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -154,7 +172,7 @@ const AboutPage = () => {
                   <div className="w-full h-full bg-gray-900 rounded-xl overflow-hidden">
                     <Image
                       src="/shakeel_linkedin.jpeg"
-                      alt="Shakeel Bhamani - ThoughtWorks Lead Consultant"
+                      alt="Shakeel Bhamani - Staff Software Engineer"
                       width={400}
                       height={400}
                       className="w-full h-full object-cover"
@@ -370,7 +388,15 @@ const AboutPage = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">7+ years professional software development experience</span>
+                      <span className="text-gray-300">10+ years professional software development experience</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Built AI harnesses: autonomous agents, MCP servers, and AI code review pipelines</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Ships enterprise-grade code solo at the pace of a full development team</span>
                     </div>
                   </div>
                 </CardContent>
@@ -399,7 +425,7 @@ const AboutPage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <Card className="bg-gray-800/50 border-gray-700 text-center">
                   <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-indigo-400 mb-2">7+</div>
+                    <div className="text-3xl font-bold text-indigo-400 mb-2">10+</div>
                     <div className="text-sm text-gray-400">Years Experience</div>
                   </CardContent>
                 </Card>

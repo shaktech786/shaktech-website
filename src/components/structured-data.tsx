@@ -15,8 +15,8 @@ export default function StructuredData({ type }: StructuredDataProps) {
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Shakeel Bhamani",
-          "jobTitle": "Software Consultant",
-          "description": "Software Consultant at Thoughtworks with experience in AI-First Software Development and team collaboration",
+          "jobTitle": "Staff Software Engineer",
+          "description": "Staff Software Engineer and former Thoughtworks Lead Consultant with 10+ years of experience in AI-first software development, AI harnesses, and team leadership",
           "url": baseUrl,
           "image": `${baseUrl}/shakeel-profile.jpg`,
           "sameAs": [
@@ -26,6 +26,8 @@ export default function StructuredData({ type }: StructuredDataProps) {
           ],
           "knowsAbout": [
             "AI-First Software Development",
+            "AI Harnesses & Agents",
+            "Model Context Protocol (MCP)",
             "Team Leadership",
             "Software Consulting",
             "Agile Development",
@@ -41,7 +43,7 @@ export default function StructuredData({ type }: StructuredDataProps) {
           },
           "worksFor": {
             "@type": "Organization",
-            "name": "Thoughtworks"
+            "name": "ShakTech"
           },
           "address": {
             "@type": "PostalAddress",

@@ -101,10 +101,10 @@ const Testimonials = () => {
         <div className="mt-16 pt-16 border-t border-gray-700">
           <div className="text-center mb-8">
             <h3 className="text-lg font-semibold text-white mb-2">
-              ThoughtWorks Consultant & Creative Technologist
+              Staff Software Engineer & Creative Technologist
             </h3>
             <p className="text-gray-400">
-              7+ years of professional development experience. Based in Atlanta, serving clients nationwide.
+              10+ years of professional development experience, including 6 years at Thoughtworks. Based in Atlanta, serving clients nationwide.
             </p>
           </div>
 
@@ -114,7 +114,7 @@ const Testimonials = () => {
               <div className="text-sm text-gray-400">Atlanta Based</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-400">7+ Years</div>
+              <div className="text-2xl font-bold text-indigo-400">10+ Years</div>
               <div className="text-sm text-gray-400">Professional Dev</div>
             </div>
             <div className="text-center">

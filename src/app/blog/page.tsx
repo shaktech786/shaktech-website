@@ -48,7 +48,7 @@ const BlogPage = () => {
     },
     {
       id: "thoughtworks-lessons",
-      title: "Lessons from 4 Years at Thoughtworks",
+      title: "Lessons from 6 Years at Thoughtworks",
       excerpt: "Key insights and practices learned from consulting at one of the world's leading software consultancies.",
       content: "Essential lessons in software craftsmanship, client consulting, and team empowerment.",
       readTime: 10,

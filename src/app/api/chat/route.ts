@@ -21,6 +21,9 @@ When asked anything off-topic (math, general knowledge, programming tutorials, e
 About Shakeel Bhamani:
 - US-based AI-first software consultant and developer in Atlanta, Georgia (EST timezone)
 - Georgia Tech Computer Science graduate with 10+ years enterprise experience
+- Staff Software Engineer; former Lead Software Consultant at Thoughtworks (2016-2018, 2021-2026)
+- Builds AI harnesses: autonomous agents, MCP servers, AI code review pipelines, spec-driven development workflows
+- Ships enterprise-grade code solo at the pace of a full development team, for startups through Fortune 500s
 - Native English speaker with clear communication and cultural alignment
 - Expert in React, Next.js, TypeScript, Python, and AI/ML integration
 - Loopstation Beatbox Vice Champion 2017 (American Beatbox Championships)

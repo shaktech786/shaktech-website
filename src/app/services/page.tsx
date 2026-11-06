@@ -65,7 +65,7 @@ const ServicesPage = () => {
       tier: "development",
       title: "Full-Stack AI Application Development",
       subtitle: "Technology That Makes a Real Difference",
-      description: "End-to-end development of AI-powered applications with modern development practices. From social impact projects to business applications that solve real problems.",
+      description: "End-to-end development of AI-powered applications and AI harnesses, built with enterprise-grade practices. One senior engineer with an AI-first workflow delivering the output of a full development team - for startups, social impact projects, and enterprises.",
       pricing: "$25,000 - $75,000",
       duration: "3-4 months",
       icon: <Code className="w-8 h-8" />,
@@ -73,6 +73,7 @@ const ServicesPage = () => {
       featured: true,
       features: [
         "Next.js/React + AI integration (LLMs, RAG, fine-tuning)",
+        "Custom AI harnesses: agents, MCP servers, autonomous workflows",
         "Enterprise-grade security & compliance",
         "PostgreSQL database design & optimization",
         "Comprehensive testing (Jest, Cypress, Pact)",
@@ -203,9 +204,9 @@ const ServicesPage = () => {
             <span className="block text-gradient-creative">Services</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            ThoughtWorks-trained consultant with 7+ years of development experience. 
-            Whether you need team transformation, full-stack AI development, or leadership coaching - 
-            I combine technical skills with collaborative leadership.
+            Staff Software Engineer and former Thoughtworks Lead Consultant with 10+ years of development experience.
+            I build AI harnesses and enterprise-grade systems for startups through Fortune 500s -
+            and deliver solo, in weeks, what most full development teams need months to ship.
           </p>
           
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
@@ -347,7 +348,7 @@ const ServicesPage = () => {
               My <span className="text-gradient-creative">Process</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A practical methodology refined through 7+ years of software development 
+              A practical methodology refined through 10+ years of software development
               and team collaboration.
             </p>
           </div>

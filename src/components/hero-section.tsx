@@ -52,8 +52,8 @@ const HeroSection = () => {
 
           {/* Subheading */}
           <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed" aria-describedby="main-heading">
-            <span className="text-indigo-400 font-semibold">ThoughtWorks-trained consultant</span> with 7+ years building software that matters.
-            I specialize in <span className="text-indigo-400 font-semibold">AI-first development</span> and <span className="text-indigo-400 font-semibold">team leadership</span>.
+            <span className="text-indigo-400 font-semibold">Staff Software Engineer</span> and former Thoughtworks Lead Consultant with 10+ years building software that matters.
+            I build <span className="text-indigo-400 font-semibold">AI harnesses</span> and enterprise-grade systems for startups and Fortune 500s alike – shipping solo what usually takes a full team.
             My approach? Technology is only as good as the <span className="text-indigo-300 font-semibold">people who build it</span> –
             I focus on both the code and the humans behind it.
           </p>
@@ -102,7 +102,7 @@ const HeroSection = () => {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2" id="feature-journey">Proven Experience</h3>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-journey">
-                7+ years of real-world software development
+                10+ years of real-world software development
               </p>
             </div>
           </div>
