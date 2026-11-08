@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Footer from "@/components/footer"
 import AICostCalculator from "@/components/ai-cost-calculator"
-import NewsletterSignup from "@/components/newsletter-signup"
 import { getAllPosts } from "@/lib/mdx"
 import {
   Sparkles,
@@ -299,12 +298,6 @@ const ResourcesPage = async () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-24 bg-gradient-conic relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NewsletterSignup />
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-radial relative">

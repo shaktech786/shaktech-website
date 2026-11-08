@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Footer from "@/components/footer"
-import NewsletterSignup from "@/components/newsletter-signup"
 import { getAllPosts, PostMeta } from "@/lib/mdx"
 import {
   ArrowRight,
@@ -221,12 +220,6 @@ const BlogPage = async () => {
         </section>
       )}
 
-      {/* Newsletter */}
-      <section className="py-24 bg-gray-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <NewsletterSignup />
-        </div>
-      </section>
 
       <Footer />
     </main>

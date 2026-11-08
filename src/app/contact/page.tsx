@@ -44,6 +44,7 @@ const ContactPage = () => {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
   const [errors, setErrors] = useState<Partial<FormData>>({})
   const [touched, setTouched] = useState<Record<string, boolean>>({})
 
@@ -121,6 +122,7 @@ const ContactPage = () => {
     }
     
     setIsSubmitting(true)
+    setSubmitError(null)
     
     try {
       const response = await fetch('/api/contact', {
@@ -148,12 +150,10 @@ const ContactPage = () => {
         setErrors({})
         setTouched({})
       } else {
-        console.error('Contact form error:', data.error)
-        // You could show an error message to the user here
+        setSubmitError(data.error || 'Your message could not be sent. Please try again.')
       }
-    } catch (error) {
-      console.error('Network error:', error)
-      // You could show an error message to the user here
+    } catch {
+      setSubmitError('Network error. Please check your connection and try again.')
     } finally {
       setIsSubmitting(false)
     }
@@ -399,6 +399,13 @@ const ContactPage = () => {
                         </>
                       )}
                     </Button>
+
+                    {submitError && (
+                      <p role="alert" className="text-sm text-red-400 bg-red-900/30 border border-red-700/50 rounded-lg px-4 py-3">
+                        {submitError} You can also email{' '}
+                        <a href="mailto:hi@shak-tech.com" className="underline">hi@shak-tech.com</a>.
+                      </p>
+                    )}
                   </form>
                 </CardContent>
               </Card>

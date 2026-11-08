@@ -94,7 +94,6 @@ export interface RateLimitConfig {
 export const RATE_LIMITS: Record<string, RateLimitConfig> = {
   // API routes
   '/api/contact': { requests: 3, window: 60000 }, // 3 per minute
-  '/api/newsletter': { requests: 2, window: 60000 }, // 2 per minute  
   '/api/chat': { requests: 10, window: 60000 }, // 10 per minute
   '/api/error': { requests: 20, window: 60000 }, // 20 per minute
   '/api/vitals': { requests: 100, window: 60000 }, // 100 per minute

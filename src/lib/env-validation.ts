@@ -1,6 +1,8 @@
 interface EnvironmentConfig {
   NODE_ENV: 'development' | 'production' | 'test'
   OPENAI_API_KEY?: string
+  GMAIL_USER?: string
+  GMAIL_APP_PASSWORD?: string
   ERROR_WEBHOOK_URL?: string
   PERFORMANCE_WEBHOOK_URL?: string
   ANALYTICS_API_KEY?: string
@@ -21,6 +23,8 @@ class EnvironmentValidator {
     return {
       NODE_ENV: (process.env.NODE_ENV as EnvironmentConfig['NODE_ENV']) || 'development',
       OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+      GMAIL_USER: process.env.GMAIL_USER,
+      GMAIL_APP_PASSWORD: process.env.GMAIL_APP_PASSWORD,
       ERROR_WEBHOOK_URL: process.env.ERROR_WEBHOOK_URL,
       PERFORMANCE_WEBHOOK_URL: process.env.PERFORMANCE_WEBHOOK_URL,
       ANALYTICS_API_KEY: process.env.ANALYTICS_API_KEY,
@@ -53,6 +57,10 @@ class EnvironmentValidator {
 
     if (!this.config.OPENAI_API_KEY) {
       this.warnings.push('OPENAI_API_KEY not set - AI chat will run in demo mode')
+    }
+
+    if (!this.config.GMAIL_USER || !this.config.GMAIL_APP_PASSWORD) {
+      this.warnings.push('GMAIL_USER / GMAIL_APP_PASSWORD not set - contact form submissions will fail')
     }
 
     if (!this.config.ERROR_WEBHOOK_URL && this.config.NODE_ENV === 'production') {
