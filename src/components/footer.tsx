@@ -6,41 +6,32 @@ import { Github, Linkedin, Mail, ExternalLink } from "lucide-react"
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
-  const footerSections = [
-    {
-      title: "Services",
-      links: [
-        { name: "AI Strategy Consulting", href: "/services#strategy" },
-        { name: "AI-First Development", href: "/services#development" },
-        { name: "Team Training & Enablement", href: "/services#training" },
-        { name: "Technical Leadership", href: "/services#leadership" }
-      ]
-    },
+  const footerSections: Array<{ title: string; links: Array<{ name: string; href: string; external?: boolean }> }> = [
     {
       title: "Portfolio",
       links: [
         { name: "Prelive", href: "/portfolio#prelive" },
-        { name: "Tack for AI Agents", href: "/portfolio#tack" },
-        { name: "Arr Suite MCP Server", href: "/portfolio#arr-suite-mcp" },
-        { name: "Client Work", href: "/portfolio#client-work" }
+        { name: "Alaap", href: "/portfolio#alaap" },
+        { name: "Tack", href: "/portfolio#tack" },
+        { name: "VeryGoodMelon", href: "/portfolio#verygoodmelon" },
+        { name: "MCP servers", href: "/portfolio#arr-suite-mcp" }
       ]
     },
     {
-      title: "Resources",
+      title: "Studio",
       links: [
-        { name: "Blog & Insights", href: "/blog" },
-        { name: "AI-First Software Delivery", href: "/blog/ai-first-software-delivery" },
-        { name: "Free Tools & Open Source", href: "/resources" },
-        { name: "GitHub", href: "https://github.com/shaktech786", external: true }
-      ]
-    },
-    {
-      title: "Connect",
-      links: [
-        { name: "LinkedIn", href: "https://linkedin.com/in/shakeelbhamani", external: true },
-        { name: "GitHub", href: "https://github.com/shaktech786", external: true },
-        { name: "TEDx Talk", href: "https://linktr.ee/shakbbx", external: true },
+        { name: "Services", href: "/services" },
+        { name: "Pricing", href: "/pricing" },
+        { name: "About", href: "/about" },
         { name: "Contact", href: "/contact" }
+      ]
+    },
+    {
+      title: "Elsewhere",
+      links: [
+        { name: "GitHub", href: "https://github.com/shaktech786", external: true },
+        { name: "LinkedIn", href: "https://linkedin.com/in/shakeelbhamani", external: true },
+        { name: "TEDx talk and music", href: "https://linktr.ee/shakbbx", external: true }
       ]
     }
   ]
@@ -48,7 +39,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 border-t border-gray-800" role="contentinfo" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-6">
@@ -60,19 +51,18 @@ const Footer = () => {
                 className="rounded-lg"
               />
               <div>
-                <span className="text-xl font-bold text-white">ShakTech</span>
-                <div className="text-xs text-gray-400 -mt-1">AI-First Software Delivery</div>
+                <span className="text-xl font-bold text-white">ShakTech Labs</span>
+                <div className="text-xs text-gray-400 -mt-1">One-person software studio</div>
               </div>
             </Link>
 
             <p className="text-gray-400 leading-relaxed mb-4 max-w-md">
-              AI harnesses, agent tooling, and enterprise-grade products, shipped solo at the pace of a full team.
-              A decade of Thoughtworks and Staff Engineering experience behind every build.
+              One engineer directing AI agents to design, build and run complete products at the pace of a full team.
             </p>
 
-            <p className="text-sm text-gray-300 mb-6 flex items-center">
-              <span className="mr-2">🇺🇸</span>
-              <span>Proudly serving clients from <strong>Atlanta, Georgia</strong></span>
+            <p className="text-sm text-gray-300 mb-6">
+              Atlanta, Georgia ·{" "}
+              <a href="mailto:hi@shak-tech.com" className="text-indigo-400 hover:text-indigo-300">hi@shak-tech.com</a>
             </p>
 
             <div className="flex items-center space-x-4" role="group" aria-label="Social media links">
@@ -95,9 +85,9 @@ const Footer = () => {
                 <Github className="w-5 h-5" aria-hidden="true" />
               </Link>
               <Link
-                href="/contact"
+                href="mailto:hi@shak-tech.com"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-600 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900"
-                aria-label="Contact us via email"
+                aria-label="Email Shakeel"
               >
                 <Mail className="w-5 h-5" aria-hidden="true" />
               </Link>
@@ -107,13 +97,13 @@ const Footer = () => {
           {/* Footer Links */}
           {footerSections.map((section, index) => (
             <div key={index}>
-              <h3 className="text-white font-semibold mb-4" id={`footer-${section.title.toLowerCase()}`}>{section.title}</h3>
+              <h2 className="text-white font-semibold mb-4" id={`footer-${section.title.toLowerCase()}`}>{section.title}</h2>
               <ul className="space-y-3" aria-labelledby={`footer-${section.title.toLowerCase()}`}>
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group"
+                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center group py-1"
                       {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     >
                       {link.name}
@@ -131,7 +121,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 sm:mt-16 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {currentYear} ShakTech. All rights reserved. Made with ❤️ and AI in the USA.
+            © {currentYear} ShakTech Labs. All rights reserved.
           </div>
 
           <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-400">
@@ -141,12 +131,6 @@ const Footer = () => {
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms of Service
             </Link>
-            <div className="flex items-center space-x-1">
-              <span>Built with</span>
-              <span className="text-gradient-primary font-semibold">Next.js 15</span>
-              <span>&</span>
-              <span className="text-gradient-primary font-semibold">AI</span>
-            </div>
           </div>
         </div>
       </div>

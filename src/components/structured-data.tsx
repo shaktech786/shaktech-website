@@ -1,190 +1,86 @@
-import Script from 'next/script'
-
 interface StructuredDataProps {
-  type: 'person' | 'organization' | 'service' | 'website'
-  data?: Record<string, unknown>
+  type: 'person' | 'organization' | 'website'
+}
+
+const baseUrl = 'https://shak-tech.com'
+
+const structuredData = {
+  person: {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shakeel Bhamani",
+    "jobTitle": "Staff Software Engineer",
+    "description": "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio. Georgia Tech CS graduate, six years at Thoughtworks, TEDx speaker.",
+    "url": baseUrl,
+    "image": `${baseUrl}/shakeel_linkedin.jpeg`,
+    "sameAs": [
+      "https://linkedin.com/in/shakeelbhamani",
+      "https://github.com/shaktech786",
+      "https://linktr.ee/shakbbx"
+    ],
+    "knowsAbout": [
+      "AI Agents",
+      "Model Context Protocol (MCP)",
+      "Full-Stack Software Development",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Python"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Georgia Institute of Technology"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    }
+  },
+  organization: {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ShakTech Labs",
+    "url": baseUrl,
+    "logo": `${baseUrl}/shaktech_logo.png`,
+    "founder": {
+      "@type": "Person",
+      "name": "Shakeel Bhamani"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA",
+      "addressCountry": "US"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "hi@shak-tech.com",
+      "availableLanguage": "en",
+      "url": `${baseUrl}/contact`
+    }],
+    "description": "A one-person software studio: one engineer directing AI agents to design, build and run complete products."
+  },
+  website: {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ShakTech Labs",
+    "url": baseUrl,
+    "publisher": {
+      "@type": "Person",
+      "name": "Shakeel Bhamani"
+    }
+  }
 }
 
 export default function StructuredData({ type }: StructuredDataProps) {
-  const getStructuredData = () => {
-    const baseUrl = 'https://shak-tech.com'
-    
-    switch (type) {
-      case 'person':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Shakeel Bhamani",
-          "jobTitle": "Staff Software Engineer",
-          "description": "Staff Software Engineer and former Thoughtworks Lead Consultant with 10+ years of experience in AI-first software development, AI harnesses, and team leadership",
-          "url": baseUrl,
-          "image": `${baseUrl}/shakeel-profile.jpg`,
-          "sameAs": [
-            "https://linkedin.com/in/shakeelbhamani",
-            "https://github.com/shaktech786",
-            "https://linktr.ee/shakbbx"
-          ],
-          "knowsAbout": [
-            "AI-First Software Development",
-            "AI Harnesses & Agents",
-            "Model Context Protocol (MCP)",
-            "Team Leadership",
-            "Software Consulting",
-            "Agile Development",
-            "TypeScript",
-            "React",
-            "Next.js",
-            "Python",
-            "Machine Learning"
-          ],
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "Georgia Institute of Technology"
-          },
-          "worksFor": {
-            "@type": "Organization",
-            "name": "ShakTech"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Atlanta",
-            "addressRegion": "GA",
-            "addressCountry": "US"
-          }
-        }
-      
-      case 'organization':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "ShakTech",
-          "legalName": "ShakTech",
-          "url": baseUrl,
-          "logo": `${baseUrl}/logo.png`,
-          "foundingDate": "2020",
-          "founders": [{
-            "@type": "Person",
-            "name": "Shakeel Bhamani"
-          }],
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Atlanta",
-            "addressRegion": "GA",  
-            "addressCountry": "US"
-          },
-          "contactPoint": [{
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "availableLanguage": "en",
-            "url": `${baseUrl}/contact`
-          }],
-          "description": "AI-First Software Delivery services including strategy consulting, development, and team training",
-          "knowsAbout": [
-            "AI Software Development",
-            "Software Consulting", 
-            "Team Training",
-            "Web Development",
-            "Mobile Development"
-          ],
-          "areaServed": "Worldwide",
-          "serviceType": [
-            "AI Strategy Consulting",
-            "AI-First Development", 
-            "Team Training & Enablement"
-          ]
-        }
-      
-      case 'website':
-        return {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "ShakTech - AI-First Software Delivery",
-          "url": baseUrl,
-          "description": "Empathetic AI Software Delivery where human creativity meets AI acceleration",
-          "publisher": {
-            "@type": "Person",
-            "name": "Shakeel Bhamani"
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": `${baseUrl}/search?q={search_term_string}`
-            },
-            "query-input": "required name=search_term_string"
-          }
-        }
-      
-      case 'service':
-        return {
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "serviceType": "AI Software Development Services",
-          "provider": {
-            "@type": "Person",
-            "name": "Shakeel Bhamani"
-          },
-          "areaServed": "Worldwide",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "AI-First Software Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "AI Strategy Consulting",
-                  "description": "Strategic guidance on AI adoption and implementation"
-                },
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "minPrice": 2500,
-                  "priceCurrency": "USD"
-                }
-              },
-              {
-                "@type": "Offer", 
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "AI-First Development",
-                  "description": "End-to-end development of AI-powered applications"
-                },
-                "priceSpecification": {
-                  "@type": "PriceSpecification", 
-                  "minPrice": 15000,
-                  "priceCurrency": "USD"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Team Training & Enablement", 
-                  "description": "Upskilling teams in AI-first development practices"
-                },
-                "priceSpecification": {
-                  "@type": "PriceSpecification",
-                  "minPrice": 5000,
-                  "priceCurrency": "USD"
-                }
-              }
-            ]
-          }
-        }
-      
-      default:
-        return {}
-    }
-  }
-
-  const structuredData = getStructuredData()
-
   return (
-    <Script
-      id={`structured-data-${type}`}
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData),
+        __html: JSON.stringify(structuredData[type]),
       }}
     />
   )

@@ -24,13 +24,10 @@ const Navigation = () => {
   }, [])
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "Portfolio", href: "/portfolio" },
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
-    // { name: "Resources", href: "/resources" }, // WIP - Hidden
-    { name: "Portfolio", href: "/portfolio" },
-    // { name: "Blog", href: "/blog" }, // WIP - Hidden
+    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ]
 
@@ -50,7 +47,7 @@ const Navigation = () => {
           <Link 
             href="/" 
             className="flex items-center space-x-2 group"
-            aria-label="ShakTech Home - AI-First Software Delivery"
+            aria-label="ShakTech Labs home"
           >
             <Image 
               src="/shaktech_logo.png" 
@@ -60,9 +57,9 @@ const Navigation = () => {
               className="rounded-lg group-hover:scale-110 transition-transform duration-200"
               priority
             />
-            <div className="hidden sm:block" aria-hidden="true">
-              <span className="text-xl font-bold text-gradient-primary">ShakTech</span>
-              <div className="text-xs text-gray-400 -mt-1">AI-First Software Delivery</div>
+            <div aria-hidden="true">
+              <span className="text-xl font-bold text-gradient-primary">ShakTech Labs</span>
+              <div className="hidden sm:block text-xs text-gray-400 -mt-1">One-person software studio</div>
             </div>
           </Link>
 
@@ -78,7 +75,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button variant="cta" size="sm" asChild>
-              <Link href="/contact">Get Started</Link>
+              <Link href="/contact">Get in Touch</Link>
             </Button>
           </div>
 
@@ -103,16 +100,13 @@ const Navigation = () => {
           <div className="lg:hidden" id="mobile-navigation">
             <div
               className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-md border-t border-gray-800"
-              role="menu"
-              aria-orientation="vertical"
             >
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-indigo-400 transition-colors duration-200 font-medium"
+                  className="block px-3 py-3 text-gray-300 hover:text-indigo-400 transition-colors duration-200 font-medium"
                   onClick={() => setIsOpen(false)}
-                  role="menuitem"
                 >
                   {item.name}
                 </Link>
@@ -120,7 +114,7 @@ const Navigation = () => {
               <div className="pt-4 px-1">
                 <Button variant="cta" size="sm" className="w-full" asChild>
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    Get Started
+                    Get in Touch
                   </Link>
                 </Button>
               </div>

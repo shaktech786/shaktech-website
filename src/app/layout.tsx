@@ -6,9 +6,6 @@ import StructuredData from "@/components/structured-data";
 import ClientWidgets from "@/components/client-widgets";
 import ErrorBoundary from "@/components/error-boundary";
 import WebVitals from "@/components/web-vitals";
-import PerformanceOptimizer from "@/components/performance-optimizer";
-import { ThemeProvider } from "@/components/theme-provider";
-import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,50 +13,41 @@ const inter = Inter({
   display: "swap",
 });
 
+const title = "ShakTech Labs | One-Person Software Studio";
+const description =
+  "One engineer directing AI agents to design, build and run complete products at the pace of a full team. 12+ products built solo by Shakeel Bhamani.";
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://shak-tech.com'),
-  title: "ShakTech - US-Based AI-First Software Delivery",
-  description: "US-based AI Software Expert in Atlanta. Georgia Tech educated, Fortune 500 experienced. Clear communication, EST timezone, no offshore delays. Led by Shakeel Bhamani.",
-  keywords: ["US-Based AI Developer", "Atlanta Software Consultant", "AI-First Development", "AI Harness", "MCP Server Development", "Claude Code", "AI Agents", "Georgia Tech", "TEDx Speaker", "Shakeel Bhamani"],
+  title: {
+    default: title,
+    template: "%s | ShakTech Labs",
+  },
+  description,
   authors: [{ name: "Shakeel Bhamani" }],
   creator: "Shakeel Bhamani",
+  alternates: { canonical: "/" },
   icons: {
     icon: "/shaktech_logo.png",
     shortcut: "/shaktech_logo.png",
     apple: "/shaktech_logo.png",
   },
   openGraph: {
-    title: "ShakTech - US-Based AI-First Software Delivery",
-    description: "US-based AI expert in Atlanta. Clear communication, EST timezone, enterprise experience.",
+    title,
+    description,
     url: "https://shak-tech.com",
-    siteName: "ShakTech",
+    siteName: "ShakTech Labs",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "ShakTech - US-Based AI-First Software Delivery",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ShakTech - US-Based AI Expert",
-    description: "Empathetic AI Software Delivery where human creativity meets AI acceleration.",
-    images: ["/og-image.png"],
+    title,
+    description,
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
 };
 
@@ -78,13 +66,12 @@ export default function RootLayout({
         <StructuredData type="website" />
         <Navigation />
         <ErrorBoundary>
-          <main className="pt-16 md:pt-16 lg:pt-16">
+          <div className="pt-16">
             {children}
-          </main>
+          </div>
         </ErrorBoundary>
         <ClientWidgets />
         <WebVitals />
-        <PerformanceOptimizer />
       </body>
     </html>
   );

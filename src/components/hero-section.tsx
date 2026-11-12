@@ -1,116 +1,50 @@
-"use client"
-
-import React, { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, Zap, Code2 } from "lucide-react"
+import React from "react"
 import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { studioStats } from "@/lib/projects"
 
-const HeroSection = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20
-      const y = (e.clientY / window.innerHeight - 0.5) * 20
-      setMousePosition({ x, y })
-    }
-    
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+const HeroSection = () => (
+  <section className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+    <div className="absolute inset-0 bg-grid-pattern opacity-20" aria-hidden="true" />
 
-  return (
-    <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black"
-      role="banner"
-      aria-label="Hero section"
-    >
-      {/* Enhanced gradient background with parallax effect */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-          transition: 'transform 0.5s ease-out'
-        }}
-        aria-hidden="true"
-      >
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-400/15 rounded-full blur-3xl" />
+    <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 pt-16 pb-16 sm:pt-24 sm:pb-24 text-center">
+      <p className="text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-6">
+        ShakTech Labs · One-person software studio
+      </p>
+
+      <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white">
+        One engineer.
+        <span className="block text-indigo-400">A full product team&apos;s output.</span>
+      </h1>
+
+      <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 leading-relaxed">
+        I&apos;m Shakeel Bhamani. I direct a team of AI agents that plan, build, test and review,
+        and I ship complete products with them: web platforms, desktop apps, games and developer tools.
+      </p>
+
+      <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-md sm:max-w-none mx-auto">
+        <Button variant="cta" size="xl" className="group" asChild>
+          <Link href="/portfolio">
+            See what I&apos;ve built
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+          </Link>
+        </Button>
+        <Button variant="outline" size="xl" asChild>
+          <Link href="/contact">Get in touch</Link>
+        </Button>
       </div>
-      
-      {/* Strong grid pattern overlay */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-20" aria-hidden="true" />
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-        <div className="space-y-8 animate-fade-in-up">
-          {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight" id="main-heading">
-            <span className="block text-white">Building AI Solutions</span>
-            <span className="block text-indigo-400 mt-2">That Actually Work</span>
-          </h1>
 
-          {/* Subheading */}
-          <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed" aria-describedby="main-heading">
-            <span className="text-indigo-400 font-semibold">Staff Software Engineer</span> and former Thoughtworks Lead Consultant with 10+ years building software that matters.
-            I build <span className="text-indigo-400 font-semibold">AI harnesses</span> and enterprise-grade systems for startups and Fortune 500s alike – shipping solo what usually takes a full team.
-            My approach? Technology is only as good as the <span className="text-indigo-300 font-semibold">people who build it</span> –
-            I focus on both the code and the humans behind it.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6 pt-8 max-w-md sm:max-w-none mx-auto">
-            <Button variant="cta" size="xl" className="group" asChild>
-              <Link href="/contact">
-                Let&apos;s Build Something
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-            <Button variant="outline" size="xl" className="group" asChild>
-              <Link href="/portfolio">
-                <Code2 className="w-5 h-5 mr-2" />
-                See My Work
-              </Link>
-            </Button>
+      <dl className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {studioStats.map((stat) => (
+          <div key={stat.label} className="flex flex-col-reverse rounded-xl border border-gray-800 bg-gray-900/60 px-4 py-5">
+            <dt className="mt-1 text-sm text-gray-400">{stat.label}</dt>
+            <dd className="text-3xl sm:text-4xl font-bold text-white">{stat.value}</dd>
           </div>
-
-          {/* Key Value Props */}
-          <div className="pt-16 sm:pt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4 sm:px-0">
-            <div className="text-center group px-4 sm:px-0">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
-                <Zap className="w-8 h-8 text-indigo-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2" id="feature-team-psychology">People-First Development</h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-team-psychology">
-                Technical solutions with human understanding
-              </p>
-            </div>
-
-            <div className="text-center group px-4 sm:px-0">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
-                <Code2 className="w-8 h-8 text-indigo-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2" id="feature-social-impact">Social Impact Focus</h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-social-impact">
-                Technology that makes a real difference
-              </p>
-            </div>
-
-            <div className="text-center group px-4 sm:px-0">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-900/30 rounded-full mb-4 group-hover:scale-110 transition-transform duration-200 mx-auto" aria-hidden="true">
-                <Sparkles className="w-8 h-8 text-indigo-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2" id="feature-journey">Proven Experience</h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed" aria-describedby="feature-journey">
-                10+ years of real-world software development
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-  )
-}
+        ))}
+      </dl>
+    </div>
+  </section>
+)
 
 export default HeroSection
