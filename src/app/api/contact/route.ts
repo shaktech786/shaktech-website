@@ -61,7 +61,7 @@ async function handleContactForm(request: NextRequest) {
   }
 
   return NextResponse.json(
-    { success: true, message: "Thank you for your message! I'll get back to you within 24 hours." },
+    { success: true, message: "Thank you for your message! I'll reply within one business day." },
     { status: 200 }
   )
 }

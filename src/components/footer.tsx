@@ -14,7 +14,7 @@ const Footer = () => {
         { name: "Alaap", href: "/portfolio#alaap" },
         { name: "Tack", href: "/portfolio#tack" },
         { name: "VeryGoodMelon", href: "/portfolio#verygoodmelon" },
-        { name: "MCP servers", href: "/portfolio#arr-suite-mcp" }
+        { name: "Arr Suite MCP", href: "/portfolio#arr-suite-mcp" }
       ]
     },
     {
@@ -62,7 +62,7 @@ const Footer = () => {
 
             <p className="text-sm text-gray-300 mb-6">
               Atlanta, Georgia ·{" "}
-              <a href="mailto:hi@shak-tech.com" className="text-indigo-400 hover:text-indigo-300">hi@shak-tech.com</a>
+              <a href="mailto:hi@shak-tech.com" className="text-indigo-400 underline hover:text-indigo-300">hi@shak-tech.com</a>
             </p>
 
             <div className="flex items-center space-x-4" role="group" aria-label="Social media links">
