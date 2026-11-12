@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 const PrivacyPage = () => {
-  const lastUpdated = "January 1, 2024"
+  const lastUpdated = "November 12, 2026"
 
   return (
     <main className="min-h-screen bg-gray-900">

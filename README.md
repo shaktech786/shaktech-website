@@ -69,4 +69,4 @@ The easiest way to deploy this Next.js app is to use the [Vercel Platform](https
 
 ## License
 
-© 2024 ShakTech. All rights reserved.
+© 2026 ShakTech. All rights reserved.
