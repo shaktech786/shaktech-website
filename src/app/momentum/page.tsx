@@ -56,7 +56,7 @@ const MomentumPage = () => (
           You pitched it this weekend. I can build it.
         </h1>
         <p className="text-lg sm:text-xl text-gray-300">
-          I&apos;m Shakeel Bhamani, a Staff Engineer from Atlanta, at Momentum all weekend. I build
+          I&apos;m Shakeel Bhamani, a Staff Engineer at Grainger, in from Atlanta for Momentum. I build
           complete products for founders with a team of AI agents, at a fixed price.
         </p>
 

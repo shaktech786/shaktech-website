@@ -4,7 +4,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 const credentials = [
-  "Staff Software Engineer",
+  "Staff Software Engineer at Grainger",
   "Seven years at Thoughtworks",
   "Georgia Tech, B.S. Computer Science",
   "TEDx speaker",
@@ -28,7 +28,7 @@ const FounderSection = () => (
         </h2>
         <p className="mt-3 text-lg text-gray-300 leading-relaxed">
           Shakeel Bhamani, based in Atlanta. Ten-plus years of professional software engineering,
-          from consulting at Thoughtworks to Staff Engineer.
+          from consulting at Thoughtworks to Staff Engineer at Grainger.
         </p>
         <ul className="mt-5 flex flex-wrap gap-2">
           {credentials.map((credential) => (

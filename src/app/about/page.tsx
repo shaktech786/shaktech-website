@@ -23,7 +23,7 @@ import Image from "next/image"
 
 export const metadata: Metadata = pageMetadata(
   "About Shakeel Bhamani",
-  "Staff Software Engineer and founder of ShakTech Labs, a founder-led product engineering studio in Atlanta. Georgia Tech CS, seven years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
+  "Staff Software Engineer at Grainger and founder of ShakTech Labs, a founder-led product engineering studio in Atlanta. Georgia Tech CS, seven years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
   "/about"
 )
 
@@ -144,7 +144,7 @@ const AboutPage = () => {
             <div className="space-y-8 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700/50">
                 <Sparkles className="w-4 h-4 text-indigo-400" />
-                <span className="text-sm font-medium text-indigo-300">Founder, ShakTech Labs · Staff Software Engineer</span>
+                <span className="text-sm font-medium text-indigo-300">Founder, ShakTech Labs · Staff Software Engineer at Grainger</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
@@ -153,7 +153,7 @@ const AboutPage = () => {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                Ten-plus years from <strong className="text-indigo-400">Georgia Tech</strong> through <strong className="text-indigo-400">Thoughtworks</strong> to Staff Engineer.
+                Ten-plus years from <strong className="text-indigo-400">Georgia Tech</strong> through <strong className="text-indigo-400">Thoughtworks</strong> to Staff Engineer at <strong className="text-indigo-400">Grainger</strong>.
                 Outside the day job I run ShakTech Labs, where I direct AI agents to build and run complete products on my own.
                 I&apos;m raising a pre-seed round to do it full-time.
               </p>
@@ -215,7 +215,7 @@ const AboutPage = () => {
               My <span className="text-gradient-primary">Journey</span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              From Georgia Tech to Staff Engineer, with a stage career along the way.
+              From Georgia Tech to Staff Engineer at Grainger, with a stage career along the way.
             </p>
           </div>
 
