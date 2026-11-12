@@ -50,7 +50,7 @@ const Navigation = () => {
             aria-label="ShakTech Labs home"
           >
             <Image 
-              src="/shaktech_logo.png" 
+              src="/shaktech-logo.png" 
               alt="ShakTech Logo" 
               width={40} 
               height={40} 

@@ -43,7 +43,7 @@ const structuredData = {
     "@type": "Organization",
     "name": "ShakTech Labs",
     "url": baseUrl,
-    "logo": `${baseUrl}/shaktech_logo.png`,
+    "logo": `${baseUrl}/shaktech-logo.png`,
     "founder": {
       "@type": "Person",
       "name": "Shakeel Bhamani"
