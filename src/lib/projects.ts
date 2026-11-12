@@ -46,7 +46,7 @@ export const leadProjects: Project[] = [
       "A vocal teacher had thousands of unnamed voice notes in Hindi, Urdu and English. Alaap classifies each one as speech, singing or instrumental, transcribes it, titles and tags it, guesses raga, taal and key, and makes the whole library searchable by meaning from a phone.",
     facts: ["Hindi, Urdu and English", "Semantic search across scripts", "Installable PWA"],
     techStack: ["Next.js 16", "Neon Postgres + pgvector", "Cloudflare R2", "Google Gemini", "Vercel Workflow"],
-    visual: { type: "image", src: "/portfolio-screenshots/alaap.webp" },
+    visual: { type: "image", src: "/portfolio-screenshots/alaap-library.webp" },
     access: "Private client app",
   },
   {
