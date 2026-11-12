@@ -1,4 +1,5 @@
 import React from "react"
+import { pageMetadata } from "@/lib/metadata"
 import { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Globe, Smartphone, Monitor, Gamepad2, Terminal, Bot } from "lucide-react"
@@ -7,12 +8,11 @@ import Engagements from "@/components/engagements"
 import StudioApproach from "@/components/studio-approach"
 import Footer from "@/components/footer"
 
-export const metadata: Metadata = {
-  title: "Services: What the Studio Builds",
-  description:
-    "Web platforms, mobile-first apps, desktop software, games, developer tools and AI agent systems, built end to end by one engineer directing AI agents. Fixed-price builds from $25,000.",
-  alternates: { canonical: "/services" },
-}
+export const metadata: Metadata = pageMetadata(
+  "Services: What the Studio Builds",
+  "Web platforms, mobile-first apps, desktop software, games, developer tools and AI agent systems, built end to end by one engineer directing AI agents. Fixed-price builds from $25,000.",
+  "/services"
+)
 
 const capabilities = [
   {

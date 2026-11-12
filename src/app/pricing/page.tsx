@@ -1,4 +1,5 @@
 import React from "react"
+import { pageMetadata } from "@/lib/metadata"
 import { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -6,12 +7,11 @@ import { Button } from "@/components/ui/button"
 import Engagements from "@/components/engagements"
 import Footer from "@/components/footer"
 
-export const metadata: Metadata = {
-  title: "Pricing",
-  description:
-    "Three ways to work with ShakTech Labs: a fixed-price product build from $25,000, a monthly studio retainer from $10,000, or an equity and go-to-market partnership.",
-  alternates: { canonical: "/pricing" },
-}
+export const metadata: Metadata = pageMetadata(
+  "Pricing",
+  "Three ways to work with ShakTech Labs: a fixed-price product build from $25,000, a monthly studio retainer from $10,000, or an equity and go-to-market partnership.",
+  "/pricing"
+)
 
 const faqs = [
   {

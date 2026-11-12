@@ -1,12 +1,14 @@
 import React from "react"
+import { pageMetadata } from "@/lib/metadata"
 import { Metadata } from "next"
 import Footer from "@/components/footer"
 import { Shield, AlertCircle, Scale, FileText } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Terms and conditions for using the ShakTech Labs website and services.",
-}
+export const metadata: Metadata = pageMetadata(
+  "Terms of Service",
+  "Terms and conditions for using the ShakTech Labs website and services.",
+  "/terms"
+)
 
 const TermsPage = () => {
   const lastUpdated = "November 12, 2026"
@@ -49,12 +51,12 @@ const TermsPage = () => {
                 1. Agreement to Terms
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                By accessing or using ShakTech&apos;s services (&ldquo;Services&rdquo;), you agree to be bound by these Terms of Service (&ldquo;Terms&rdquo;). 
+                By accessing or using ShakTech Labs&apos; services (&ldquo;Services&rdquo;), you agree to be bound by these Terms of Service (&ldquo;Terms&rdquo;). 
                 If you disagree with any part of these terms, you do not have permission to access our Services.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 These Terms apply to all visitors, users, and others who access or use the Service, including but not limited to 
-                AI strategy consulting, software development, and training services.
+                software design, development and operations services.
               </p>
             </div>
 

@@ -1,4 +1,5 @@
 import React from "react"
+import { pageMetadata } from "@/lib/metadata"
 import { Metadata } from "next"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -20,11 +21,11 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 
-export const metadata: Metadata = {
-  title: "About Shakeel Bhamani",
-  description: "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio in Atlanta. Georgia Tech CS, six years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
-  alternates: { canonical: "/about" },
-}
+export const metadata: Metadata = pageMetadata(
+  "About Shakeel Bhamani",
+  "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio in Atlanta. Georgia Tech CS, six years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
+  "/about"
+)
 
 const AboutPage = () => {
   const journeyMilestones = [

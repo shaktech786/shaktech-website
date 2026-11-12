@@ -32,7 +32,7 @@ export const leadProjects: Project[] = [
     category: "Web platform",
     description:
       "Everything a streamer does before, during and after going live, in one product: OBS docks for running the stream, AI-written titles, scripts and social posts, and VOD repurposing. Subscriptions, background workers and a desktop installer included.",
-    facts: ["v6.40 in production", "2,200+ commits since Jan 2025", "380+ tagged releases"],
+    facts: ["v6.40 in production", "2,100+ commits since Jan 2025", "370+ tagged releases"],
     techStack: ["Next.js 15", "React 19", "PostgreSQL", "Prisma", "Redis + BullMQ", "Stripe"],
     visual: { type: "image", src: "/portfolio-screenshots/prelive-2026.webp" },
     liveUrl: "https://prelive.ai",

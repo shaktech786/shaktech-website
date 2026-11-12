@@ -1,12 +1,14 @@
 import React from "react"
+import { pageMetadata } from "@/lib/metadata"
 import { Metadata } from "next"
 import Footer from "@/components/footer"
 import { Shield, Lock, Eye, Database, Globe, UserCheck, AlertCircle } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "How ShakTech collects, uses, and protects your personal information.",
-}
+export const metadata: Metadata = pageMetadata(
+  "Privacy Policy",
+  "How ShakTech collects, uses, and protects your personal information.",
+  "/privacy"
+)
 
 const PrivacyPage = () => {
   const lastUpdated = "November 12, 2026"
