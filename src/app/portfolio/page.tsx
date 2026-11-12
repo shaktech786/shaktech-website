@@ -7,6 +7,7 @@ import Footer from "@/components/footer"
 import ProjectVisual from "@/components/project-visual"
 import ProjectLinks from "@/components/project-links"
 import { leadProjects, moreProjects, studioStats } from "@/lib/projects"
+import { bookingUrl } from "@/lib/site"
 
 const title = "Portfolio: 12+ Products Built Solo"
 const description =
@@ -142,7 +143,7 @@ const PortfolioPage = () => (
             </Link>
           </Button>
           <Button variant="outline" size="xl" asChild>
-            <Link href="/about">About Shakeel</Link>
+            <a href={bookingUrl} target="_blank" rel="noopener noreferrer">Book a call</a>
           </Button>
         </div>
       </div>

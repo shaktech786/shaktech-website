@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
+import EventBanner from "@/components/event-banner";
 import StructuredData from "@/components/structured-data";
 import ClientWidgets from "@/components/client-widgets";
 import ErrorBoundary from "@/components/error-boundary";
@@ -51,6 +52,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Re-render hourly so the event banner takes itself down when it expires.
+export const revalidate = 3600;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,6 +71,7 @@ export default function RootLayout({
         <Navigation />
         <ErrorBoundary>
           <div className="pt-16">
+            <EventBanner />
             {children}
           </div>
         </ErrorBoundary>

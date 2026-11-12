@@ -5,6 +5,8 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Engagements from "@/components/engagements"
+import { buyerQuestions } from "@/components/buyer-questions"
+import { bookingUrl } from "@/lib/site"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = pageMetadata(
@@ -38,6 +40,7 @@ const faqs = [
     question: "Do you work with nonprofits?",
     answer: "Yes, at reduced rates. Tell me about the mission when you get in touch.",
   },
+  ...buyerQuestions,
 ]
 
 const PricingPage = () => (
@@ -79,7 +82,7 @@ const PricingPage = () => (
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Have something to build?</h2>
         <p className="text-lg text-gray-300 mb-8">
-          Send a few lines about it. I reply within one business day.
+          Send a few lines about it, or book a call. I reply within one business day.
         </p>
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
           <Button variant="cta" size="xl" className="group" asChild>
@@ -89,7 +92,7 @@ const PricingPage = () => (
             </Link>
           </Button>
           <Button variant="outline" size="xl" asChild>
-            <Link href="/portfolio">See the work</Link>
+            <a href={bookingUrl} target="_blank" rel="noopener noreferrer">Book a call</a>
           </Button>
         </div>
       </div>

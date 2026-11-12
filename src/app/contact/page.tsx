@@ -1,5 +1,6 @@
 "use client"
 
+import { bookingUrl } from "@/lib/site"
 import React, { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -507,7 +508,7 @@ const ContactPage = () => {
                 </CardHeader>
                 <CardContent>
                   <Button variant="outline" className="w-full border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white" asChild>
-                    <a href="https://calendly.com/shakeel-bhamani" target="_blank" rel="noopener noreferrer">
+                    <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
                       <Calendar className="w-4 h-4 mr-2" />
                       Schedule Call
                     </a>
