@@ -32,7 +32,8 @@ const StudioApproach = () => (
       </h2>
       <p className="mt-3 text-lg text-gray-300 max-w-2xl">
         Most engineers use AI to type faster. I run it as a team of autonomous agents and hold
-        their work to the engineering discipline I learned shipping enterprise software.
+        their work to the engineering discipline I learned in 10+ years of shipping enterprise
+        software.
       </p>
 
       <ol className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
