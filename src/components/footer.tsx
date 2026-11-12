@@ -57,7 +57,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-gray-400 leading-relaxed mb-4 max-w-md">
-              A founder-led product studio: a senior engineer directing AI agents to design, build and run complete products.
+              A founder-led product studio: a Staff Engineer directing AI agents to design, build and run complete products.
             </p>
 
             <p className="text-sm text-gray-300 mb-6">

@@ -7,7 +7,7 @@ export const contentType = "image/png"
 export default function OpengraphImage() {
   return renderOgImage(
     "ShakTech Labs",
-    "Your product, built by a senior engineer and a team of AI agents.",
+    "Your product, built by a Staff Engineer and a team of AI agents.",
     "12+ products shipped · Shakeel Bhamani"
   )
 }

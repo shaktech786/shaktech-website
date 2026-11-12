@@ -48,7 +48,7 @@ const HeroSection = () => (
     <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 pt-10 pb-14 sm:px-8 sm:pt-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:px-12 lg:pt-20 lg:pb-24">
       <div>
         <h1 className="text-balance text-4xl leading-[1.05] font-bold text-white sm:text-5xl lg:text-6xl">
-          Your product, built by a senior engineer and a team of AI agents.
+          Your product, built by a Staff Engineer and a team of AI agents.
         </h1>
 
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-300 sm:text-xl">

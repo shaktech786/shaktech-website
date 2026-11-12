@@ -61,7 +61,7 @@ const structuredData = {
       "availableLanguage": "en",
       "url": `${baseUrl}/contact`
     }],
-    "description": "A founder-led product engineering studio: a senior engineer directing AI agents to design, build and run complete products."
+    "description": "A founder-led product engineering studio: a Staff Engineer directing AI agents to design, build and run complete products."
   },
   website: {
     "@context": "https://schema.org",
