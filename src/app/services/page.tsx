@@ -1,408 +1,131 @@
 import React from "react"
 import { Metadata } from "next"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { ArrowRight, Globe, Smartphone, Monitor, Gamepad2, Terminal, Bot } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Engagements from "@/components/engagements"
+import StudioApproach from "@/components/studio-approach"
 import Footer from "@/components/footer"
-import { 
-  Lightbulb,
-  Code,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Target,
-  Brain,
-  Zap,
-  Shield,
-  Award,
-  Clock,
-  TrendingUp
-} from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "AI-First Team & Technology Services | ThoughtWorks Consultant",
-  description: "Team transformation, full-stack AI development, leadership coaching, and social impact consulting. Experienced ThoughtWorks consultant focused on building both great software and strong teams.",
+  title: "Services: What the Studio Builds",
+  description:
+    "Web platforms, mobile-first apps, desktop software, games, developer tools and AI agent systems, built end to end by one engineer directing AI agents. Fixed-price builds from $25,000.",
+  alternates: { canonical: "/services" },
 }
 
-const ServicesPage = () => {
-  const services = [
-    {
-      tier: "team-transformation",
-      title: "AI-First Team Transformation",
-      subtitle: "Teams That Actually Succeed with AI",
-      description: "Transform your existing development team from traditional practices to AI-assisted delivery. Based on the AI enablement programme I built for an enterprise engineering org and six years of coaching teams at Thoughtworks.",
-      pricing: "$10,000 - $25,000",
-      duration: "6-8 weeks",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-indigo-500 to-indigo-700",
-      features: [
-        "Team psychological safety assessment & improvement",
-        "AI tool integration (Claude Code, GitHub Copilot, Cursor)",
-        "Spec-driven development: stop prompting, start specifying",
-        "Shared MCP servers and prompt libraries as team infrastructure",
-        "Test-driven development with AI assistance",
-        "AI code review wired to your acceptance criteria",
-        "Team retrospectives focused on AI adoption",
-        "Individual mentoring for each team member",
-        "Leadership coaching for technical managers"
-      ],
-      deliverables: [
-        "Team AI Readiness Assessment Report",
-        "Custom AI-First Development Playbook",
-        "Individual Development Plans for each team member",
-        "AI Tool Integration Guide",
-        "3-month follow-up coaching sessions"
-      ],
-      ideal_for: [
-        "Development teams struggling with AI adoption",
-        "CTOs wanting to upskill existing developers",
-        "Teams experiencing low morale or productivity",
-        "Organizations prioritizing psychological safety"
-      ],
-      outcome: "Teams improve their velocity with AI tools while building healthier collaboration patterns"
-    },
-    {
-      tier: "development",
-      title: "Full-Stack AI Application Development",
-      subtitle: "Technology That Makes a Real Difference",
-      description: "End-to-end development of AI-powered applications and AI harnesses, built with enterprise-grade practices. One senior engineer with an AI-first workflow delivering the output of a full development team - for startups, social impact projects, and enterprises.",
-      pricing: "$25,000 - $75,000",
-      duration: "3-4 months",
-      icon: <Code className="w-8 h-8" />,
-      color: "from-indigo-500 to-indigo-700",
-      featured: true,
-      features: [
-        "Next.js/React + AI integration (LLMs, RAG, fine-tuning)",
-        "Custom AI harnesses: agents, MCP servers, autonomous workflows",
-        "Enterprise-grade security & compliance",
-        "PostgreSQL database design & optimization",
-        "Comprehensive testing (Vitest, Playwright, contract tests)",
-        "CI/CD deployment pipeline (GitHub Actions, Vercel)",
-        "Team training on AI-first development practices",
-        "Code review and mentoring throughout project",
-        "Social impact and accessibility considerations"
-      ],
-      deliverables: [
-        "Production-ready AI application",
-        "Complete documented source code",
-        "Deployment infrastructure & CI/CD pipeline",
-        "Team training materials & knowledge transfer",
-        "3-month post-launch maintenance included"
-      ],
-      ideal_for: [
-        "Startups building AI-first products",
-        "Social impact organizations needing custom solutions",
-        "Companies requiring enterprise-grade AI applications",
-        "Teams wanting to learn while building"
-      ],
-      outcome: "Production-ready AI applications with measurable business impact & team upskilling"
-    },
-    {
-      tier: "leadership",
-      title: "Leadership Coaching for AI Adoption",
-      subtitle: "Guidance from Real Development Experience",
-      description: "1:1 coaching for technical leaders navigating AI transformation. Drawing on a decade of tech-lead and Staff Engineer experience, including writing the AI-era leadership guide and Agent Maturity Model for an enterprise engineering org.",
-      pricing: "$5,000 - $15,000",
-      duration: "3-6 months",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-indigo-500 to-indigo-700",
-      features: [
-        "Monthly 1:1 coaching sessions with experienced consultant",
-        "Team psychology and psychological safety frameworks",
-        "AI strategy development and communication",
-        "Change management for AI tool adoption",
-        "Technical leadership skills development",
-        "Conflict resolution and team dynamics",
-        "Performance review and feedback techniques",
-        "Career progression planning and mentorship"
-      ],
-      deliverables: [
-        "Personalized leadership development plan",
-        "AI adoption strategy for your team",
-        "Team health assessment & improvement roadmap",
-        "Monthly progress check-ins and adjustments",
-        "Access to proven leadership frameworks"
-      ],
-      ideal_for: [
-        "New technical managers and team leads",
-        "Senior developers transitioning to leadership",
-        "CTOs implementing AI transformation",
-        "Leaders struggling with team dynamics"
-      ],
-      outcome: "Leaders who can effectively guide AI transformation while maintaining team health"
-    },
-    {
-      tier: "social-impact",
-      title: "Social Impact Tech Consulting",
-      subtitle: "Technology for Positive Change",
-      description: "Specialized consulting for nonprofits and social impact organizations. Based on my experience building prison oversight systems and commitment to diversity, equity, and inclusion in tech.",
-      pricing: "$5,000 - $20,000",
-      duration: "Flexible based on impact",
-      icon: <Lightbulb className="w-8 h-8" />,
-      color: "from-green-500 to-green-700",
-      features: [
-        "Pro-bono and reduced-rate options for qualifying organizations",
-        "Open-source development when possible",
-        "Accessibility and inclusive design focus",
-        "Community-driven development practices",
-        "Volunteer developer coordination and training",
-        "Grant writing and funding strategy support",
-        "Long-term sustainability planning",
-        "Impact measurement and reporting"
-      ],
-      deliverables: [
-        "Custom social impact application",
-        "Open-source codebase (when appropriate)",
-        "Volunteer developer training materials",
-        "Sustainability and maintenance plan",
-        "Impact measurement dashboard"
-      ],
-      ideal_for: [
-        "Nonprofits needing custom technology solutions",
-        "Social justice organizations with limited budgets",
-        "Community groups wanting to build internal capacity",
-        "Organizations focused on equitable technology"
-      ],
-      outcome: "Technology that creates measurable positive social change"
-    }
-  ]
+const capabilities = [
+  {
+    icon: Globe,
+    title: "Web platforms and SaaS",
+    description: "Subscriptions, background jobs, third-party integrations, the lot.",
+    proof: { name: "Prelive", href: "/portfolio#prelive" },
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile-first apps",
+    description: "Installable, phone-first apps with AI doing real work behind them.",
+    proof: { name: "Alaap", href: "/portfolio#alaap" },
+  },
+  {
+    icon: Monitor,
+    title: "Desktop software",
+    description: "Electron apps that talk to hardware and other local software.",
+    proof: { name: "Prelive Deck", href: "/portfolio#prelive-deck" },
+  },
+  {
+    icon: Gamepad2,
+    title: "Games",
+    description: "Original browser games, with AI characters where they help.",
+    proof: { name: "VeryGoodMelon", href: "/portfolio#verygoodmelon" },
+  },
+  {
+    icon: Terminal,
+    title: "Developer tools",
+    description: "CLIs, MCP servers and open-source packages.",
+    proof: { name: "Tack", href: "/portfolio#tack" },
+  },
+  {
+    icon: Bot,
+    title: "AI agent systems",
+    description: "Agents that plan, build and check their own work inside guardrails.",
+    proof: { name: "ASIS", href: "/portfolio#asis" },
+  },
+]
 
-  const process_steps = [
-    {
-      step: 1,
-      title: "Discovery Call",
-      description: "We start with a deep dive into your business challenges, goals, and current technical landscape.",
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      step: 2, 
-      title: "Strategy & Planning",
-      description: "Together we craft a tailored approach that aligns AI solutions with your business objectives.",
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      step: 3,
-      title: "Implementation",
-      description: "I work with your team to build, train, or strategize using proven methodologies and best practices.",
-      icon: <Rocket className="w-6 h-6" />
-    },
-    {
-      step: 4,
-      title: "Success & Growth",
-      description: "We ensure successful deployment and provide ongoing support for continuous improvement.",
-      icon: <TrendingUp className="w-6 h-6" />
-    }
-  ]
+const ServicesPage = () => (
+  <main className="min-h-screen bg-gray-900">
+    <section className="pt-12 pb-10 sm:pt-20 sm:pb-14 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-5">
+          Tell me what you need.
+          <span className="block text-indigo-400">I&apos;ll build all of it.</span>
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+          ShakTech Labs takes a product from idea to production: design, code, tests, deployment
+          and running it afterwards. One engineer, one point of contact, no handoffs.
+        </p>
+      </div>
+    </section>
 
-  return (
-    <main className="min-h-screen bg-gray-900">
-      {/* Hero Section */}
-      <section className="py-24 pt-40 bg-hexagon-pattern relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-            AI-First Team & Technology
-            <span className="block text-gradient-creative">Services</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Staff Software Engineer and former Thoughtworks Lead Consultant with 10+ years of development experience.
-            I build AI harnesses and enterprise-grade systems for startups through Fortune 500s -
-            and deliver solo, in weeks, what most full development teams need months to ship.
-          </p>
-          
-          <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
-            <div className="flex items-center space-x-2">
-              <span className="text-lg">🇺🇸</span>
-              <span>US-Based</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Shield className="w-5 h-5 text-indigo-400" />
-              <span>Enterprise Grade</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Award className="w-5 h-5 text-indigo-400" />
-              <span>Georgia Tech</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Clock className="w-5 h-5 text-indigo-400" />
-              <span>EST Timezone</span>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section className="py-12 sm:py-16 bg-gray-900" aria-labelledby="capabilities-heading">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="capabilities-heading" className="text-3xl font-bold text-white">What I build</h2>
+        <p className="mt-2 text-gray-300">Each one links to a product I have already built.</p>
 
-      {/* Services Grid */}
-      <section className="py-24 section-services relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <Card 
-                key={service.tier} 
-                className={`relative overflow-hidden hover:shadow-2xl transition-all duration-300 bg-gray-900 border-gray-700 ${service.featured ? 'ring-2 ring-accent-400 scale-105' : ''}`}
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {capabilities.map((capability) => (
+            <div key={capability.title} className="flex flex-col rounded-xl border border-gray-800 bg-gray-950 p-6">
+              <capability.icon className="w-7 h-7 text-indigo-400" aria-hidden="true" />
+              <h3 className="mt-4 text-lg font-semibold text-white">{capability.title}</h3>
+              <p className="mt-2 mb-4 text-gray-300 leading-relaxed">{capability.description}</p>
+              <Link
+                href={capability.proof.href}
+                className="mt-auto inline-flex items-center py-2 text-sm font-medium text-indigo-400 hover:text-indigo-300"
               >
-                {service.featured && (
-                  <div className="absolute top-0 right-0 bg-indigo-500 text-white px-4 py-2 text-sm font-bold rounded-bl-lg">
-                    Most Popular
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-4">
-                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center mx-auto mb-4 text-white`}>
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-white mb-2">
-                    {service.title}
-                  </CardTitle>
-                  <p className="text-indigo-400 font-medium text-lg">
-                    {service.subtitle}
-                  </p>
-                  <p className="text-gray-400 mt-3 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="text-3xl font-bold text-indigo-400 mt-4">
-                    {service.pricing}
-                  </div>
-                  <div className="text-sm text-indigo-400 mt-2">
-                    {service.duration}
-                  </div>
-                </CardHeader>
-
-                <CardContent className="space-y-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-2" />
-                      What&apos;s Included
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start space-x-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-indigo-400 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                      <Zap className="w-5 h-5 text-indigo-400 mr-2" />
-                      Deliverables
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.deliverables.map((deliverable, idx) => (
-                        <li key={idx} className="flex items-start space-x-2 text-gray-300">
-                          <ArrowRight className="w-4 h-4 text-indigo-400 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm">{deliverable}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                      <Target className="w-5 h-5 text-indigo-400 mr-2" />
-                      Ideal For
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.ideal_for.map((item, idx) => (
-                        <li key={idx} className="flex items-start space-x-2 text-gray-300">
-                          <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-sm">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {service.outcome && (
-                    <div className="bg-indigo-900/20 p-4 rounded-lg border border-indigo-700/30">
-                      <h4 className="text-lg font-semibold text-indigo-400 mb-2 flex items-center">
-                        <TrendingUp className="w-5 h-5 mr-2" />
-                        Expected Outcome
-                      </h4>
-                      <p className="text-sm text-indigo-300">{service.outcome}</p>
-                    </div>
-                  )}
-
-                  <Button 
-                    variant={service.featured ? "cta" : "outline"} 
-                    size="lg" 
-                    className="w-full group"
-                    asChild
-                  >
-                    <Link href="/contact">
-                      Get Started
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-24 bg-gradient-radial relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              My <span className="text-gradient-creative">Process</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A practical methodology refined through 10+ years of software development
-              and team collaboration.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process_steps.map((step, index) => (
-              <div key={index} className="text-center group">
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center mx-auto text-white group-hover:scale-110 transition-transform duration-200">
-                    {step.icon}
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                    {step.step}
-                  </div>
-                  {index < process_steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-indigo-500/50 to-indigo-400/50" />
-                  )}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-conic relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Build Something Great Together?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how we can work together to achieve your goals. 
-            Every engagement starts with a conversation to understand your unique needs.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="xl" className="bg-white text-gray-900 hover:bg-gray-100 group" asChild>
-              <Link href="/contact">
-                Book Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                Proof: {capability.proof.name}
+                <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
               </Link>
-            </Button>
-            <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-gray-900" asChild>
-              <Link href="/portfolio">View Success Stories</Link>
-            </Button>
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
 
-      <Footer />
-    </main>
-  )
-}
+    <StudioApproach />
+
+    <section className="py-12 sm:py-16 bg-gray-900" aria-labelledby="engagements-heading">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="engagements-heading" className="text-3xl font-bold text-white">Ways to work together</h2>
+        <p className="mt-2 mb-8 text-gray-300">
+          Every engagement starts with a free 30-minute call and a written scope.
+        </p>
+        <Engagements />
+      </div>
+    </section>
+
+    <section className="py-14 sm:py-20 bg-gray-950">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Have something to build?</h2>
+        <p className="text-lg text-gray-300 mb-8">
+          Send a few lines about it. I reply within one business day.
+        </p>
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+          <Button variant="cta" size="xl" className="group" asChild>
+            <Link href="/contact">
+              Get in touch
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+            </Link>
+          </Button>
+          <Button variant="outline" size="xl" asChild>
+            <Link href="/portfolio">See the work</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </main>
+)
 
 export default ServicesPage
