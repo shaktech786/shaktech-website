@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
 @layer base {
   :root {
     /* Light Mode - Professional & Clean */
@@ -56,6 +60,30 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
+  }
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display), var(--font-inter), system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@keyframes window-settle {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-window {
+    animation: window-settle 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
   }
 }
 

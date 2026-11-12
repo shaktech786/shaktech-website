@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import EventBanner from "@/components/event-banner";
@@ -14,9 +14,15 @@ const inter = Inter({
   display: "swap",
 });
 
-const title = "ShakTech Labs | One-Person Software Studio";
+const display = Bricolage_Grotesque({
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const title = "ShakTech Labs | Product Engineering Studio";
 const description =
-  "One engineer directing AI agents to design, build and run complete products at the pace of a full team. 12+ products built solo by Shakeel Bhamani.";
+  "A founder-led product studio: a senior engineer directing AI agents to design, build and run complete products at a fixed price. 12+ products shipped by Shakeel Bhamani.";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://shak-tech.com'),
@@ -63,7 +69,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} font-sans antialiased min-h-screen bg-gray-950 text-gray-100`}
+        className={`${inter.variable} ${display.variable} font-sans antialiased min-h-screen bg-gray-950 text-gray-100`}
       >
         <StructuredData type="person" />
         <StructuredData type="organization" />
