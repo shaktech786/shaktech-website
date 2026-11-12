@@ -51,8 +51,8 @@ const MomentumPage = () => (
           <span className="block text-indigo-400">Let&apos;s keep talking.</span>
         </h1>
         <p className="text-lg sm:text-xl text-gray-300">
-          I&apos;m Shakeel Bhamani. ShakTech Labs is a one-person software studio: I direct a team
-          of AI agents and ship complete products with them.
+          I&apos;m Shakeel Bhamani. ShakTech Labs is my product studio: I direct a team of AI
+          agents and ship complete products at a fixed price.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">

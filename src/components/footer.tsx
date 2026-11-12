@@ -52,12 +52,12 @@ const Footer = () => {
               />
               <div>
                 <span className="text-xl font-bold text-white">ShakTech Labs</span>
-                <div className="text-xs text-gray-400 -mt-1">One-person software studio</div>
+                <div className="text-xs text-gray-400 -mt-1">Product engineering studio</div>
               </div>
             </Link>
 
             <p className="text-gray-400 leading-relaxed mb-4 max-w-md">
-              One engineer directing AI agents to design, build and run complete products at the pace of a full team.
+              A founder-led product studio: a senior engineer directing AI agents to design, build and run complete products.
             </p>
 
             <p className="text-sm text-gray-300 mb-6">

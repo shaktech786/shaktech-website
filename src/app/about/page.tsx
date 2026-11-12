@@ -23,7 +23,7 @@ import Image from "next/image"
 
 export const metadata: Metadata = pageMetadata(
   "About Shakeel Bhamani",
-  "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio in Atlanta. Georgia Tech CS, seven years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
+  "Staff Software Engineer and founder of ShakTech Labs, a founder-led product engineering studio in Atlanta. Georgia Tech CS, seven years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
   "/about"
 )
 

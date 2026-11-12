@@ -27,7 +27,7 @@ const BuyerQuestions = () => (
   <section className="py-12 sm:py-16 bg-gray-900" aria-labelledby="buyer-questions-heading">
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 id="buyer-questions-heading" className="text-3xl font-bold text-white mb-8">
-        What people ask before hiring a one-person studio
+        What founders ask before hiring the studio
       </h2>
       <dl className="space-y-8">
         {buyerQuestions.map((item) => (

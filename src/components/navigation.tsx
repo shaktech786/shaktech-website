@@ -59,7 +59,7 @@ const Navigation = () => {
             />
             <div aria-hidden="true">
               <span className="text-xl font-bold text-gradient-primary">ShakTech Labs</span>
-              <div className="hidden sm:block text-xs text-gray-400 -mt-1">One-person software studio</div>
+              <div className="hidden sm:block text-xs text-gray-400 -mt-1">Product engineering studio</div>
             </div>
           </Link>
 

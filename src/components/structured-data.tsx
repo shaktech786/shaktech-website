@@ -10,7 +10,7 @@ const structuredData = {
     "@type": "Person",
     "name": "Shakeel Bhamani",
     "jobTitle": "Staff Software Engineer",
-    "description": "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio. Georgia Tech CS graduate, seven years at Thoughtworks, TEDx speaker.",
+    "description": "Staff Software Engineer and founder of ShakTech Labs, a founder-led product engineering studio. Georgia Tech CS graduate, seven years at Thoughtworks, TEDx speaker.",
     "url": baseUrl,
     "image": `${baseUrl}/shakeel_linkedin.jpeg`,
     "sameAs": [
@@ -61,7 +61,7 @@ const structuredData = {
       "availableLanguage": "en",
       "url": `${baseUrl}/contact`
     }],
-    "description": "A one-person software studio: one engineer directing AI agents to design, build and run complete products."
+    "description": "A founder-led product engineering studio: a senior engineer directing AI agents to design, build and run complete products."
   },
   website: {
     "@context": "https://schema.org",
