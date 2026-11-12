@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
   compress: true,
 
 
-  // The blog and resources pages are hidden until they have content worth showing.
+  // Old blog and resources URLs still get visits; send them to the portfolio.
   async redirects() {
     return [
       { source: '/blog', destination: '/portfolio', permanent: false },

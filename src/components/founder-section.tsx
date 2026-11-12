@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 
 const credentials = [
   "Staff Software Engineer",
-  "Six years at Thoughtworks",
+  "Seven years at Thoughtworks",
   "Georgia Tech, B.S. Computer Science",
   "TEDx speaker",
   "2017 American Beatbox Championships vice champion",

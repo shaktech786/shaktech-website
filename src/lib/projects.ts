@@ -93,8 +93,8 @@ export const leadProjects: Project[] = [
     tagline: "Open-source MCP server, published on PyPI",
     category: "Open source",
     description:
-      "A Model Context Protocol server that lets Claude and other AI assistants control a home media stack in plain language: Sonarr, Radarr, Prowlarr, Bazarr, Overseerr and Plex behind one interface.",
-    facts: ["Published on PyPI", "8 stars, 8 forks on GitHub", "MIT licensed"],
+      "A Model Context Protocol server that lets Claude and other AI assistants control a home media stack in plain language: Sonarr, Radarr, Prowlarr, Bazarr, Overseerr and Plex behind one interface. One of three MCP servers I have published, alongside a Restream server and the Prelive server on npm.",
+    facts: ["Published on PyPI", "8 stars, 8 forks on GitHub", "Listed in the official MCP community servers"],
     techStack: ["Python", "MCP", "Pydantic", "httpx"],
     visual: { type: "image", src: "/portfolio-screenshots/arr-suite-mcp.webp" },
     liveUrl: "https://pypi.org/project/arr-suite-mcp/",

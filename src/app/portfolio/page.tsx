@@ -10,7 +10,7 @@ import { leadProjects, moreProjects, studioStats } from "@/lib/projects"
 
 const title = "Portfolio: 12+ Products Built Solo"
 const description =
-  "A streaming SaaS, an AI voice-note library, an issue tracker for AI agents, twelve web games and an open-source MCP server. All designed, built and run by one engineer."
+  "A streaming SaaS, an AI voice-note library, an issue tracker for AI agents, twelve web games and open-source MCP servers. All designed, built and run by one engineer."
 
 export const metadata: Metadata = {
   title,

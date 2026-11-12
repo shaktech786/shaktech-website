@@ -10,7 +10,7 @@ const structuredData = {
     "@type": "Person",
     "name": "Shakeel Bhamani",
     "jobTitle": "Staff Software Engineer",
-    "description": "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio. Georgia Tech CS graduate, six years at Thoughtworks, TEDx speaker.",
+    "description": "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio. Georgia Tech CS graduate, seven years at Thoughtworks, TEDx speaker.",
     "url": baseUrl,
     "image": `${baseUrl}/shakeel_linkedin.jpeg`,
     "sameAs": [

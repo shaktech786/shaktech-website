@@ -23,7 +23,7 @@ import Image from "next/image"
 
 export const metadata: Metadata = pageMetadata(
   "About Shakeel Bhamani",
-  "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio in Atlanta. Georgia Tech CS, six years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
+  "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio in Atlanta. Georgia Tech CS, seven years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
   "/about"
 )
 
@@ -41,7 +41,7 @@ const AboutPage = () => {
     {
       year: "2016-2026",
       title: "Thoughtworks, Lead Consultant",
-      description: "Six years across two stints, ending as Lead Software Consultant. Tech lead for a Fortune 500 health retailer's digital accelerator, a social impact prison oversight platform, and the 2022 DEI internship program where all 11 interns earned full-time offers.",
+      description: "Seven years across two stints, ending as Lead Software Consultant. Tech lead for a Fortune 500 health retailer's digital accelerator, a social impact prison oversight platform, and the 2022 DEI internship program where all 11 interns earned full-time offers.",
       icon: <Building className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500",
       badge: "2016-2018 · 2021-2026",
@@ -100,7 +100,7 @@ const AboutPage = () => {
   const highlights = [
     "12+ products built solo at ShakTech Labs, with 4,000+ commits across them",
     "Staff Software Engineer and tech lead on an enterprise platform",
-    "Six years at Thoughtworks, ending as Lead Software Consultant",
+    "Seven years at Thoughtworks, ending as Lead Software Consultant",
     "Tech lead for a 2022 internship program where all 11 interns earned full-time offers",
     "TEDx speaker and 2017 American Beatbox Championships vice champion",
     "B.S. in Computer Science, Georgia Institute of Technology",
