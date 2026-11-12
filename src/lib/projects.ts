@@ -58,19 +58,7 @@ export const leadProjects: Project[] = [
       "An epic and story tracker designed to be driven by coding agents instead of clicked through by people. It ships as a web app, a CLI and an MCP server, so an agent can pull the next ready story, claim it, link its pull request and close it without leaving the terminal. I run my own studio on it.",
     facts: ["Web app + CLI + MCP server", "Imports from Linear, Jira and GitHub", "Built in under four weeks"],
     techStack: ["Next.js", "TypeScript", "pnpm + Turborepo", "Drizzle ORM", "MCP"],
-    visual: {
-      type: "terminal",
-      title: "tack mcp · tools an agent calls",
-      lines: [
-        "next_ready_story",
-        "create_branch_name",
-        "move_story        → In Progress",
-        "add_code_pointer",
-        "list_linked_prs",
-        "get_deploy_status",
-        "move_story        → Done",
-      ],
-    },
+    visual: { type: "image", src: "/portfolio-screenshots/tack-board.webp" },
     access: "Private, in daily use",
   },
   {
