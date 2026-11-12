@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 import { bookingUrl } from "@/lib/site"
 
 const proof = [
-  { value: "12+", label: "products shipped" },
-  { value: "370+", label: "Prelive releases" },
+  { value: "10+ years", label: "shipping production software" },
+  { value: "12+", label: "apps live today" },
   { value: "<4 weeks", label: "to build Tack" },
 ]
 
@@ -52,8 +52,8 @@ const HeroSection = () => (
         </h1>
 
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-300 sm:text-xl">
-          ShakTech Labs is a founder-led product studio. Fixed scope, fixed price, and you talk
-          to the person writing the code.
+          ShakTech Labs is a founder-led product studio. New builds, legacy rescues and
+          everything between, at a fixed scope and price. You talk to the person writing the code.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">

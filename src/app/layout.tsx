@@ -22,7 +22,7 @@ const display = Bricolage_Grotesque({
 
 const title = "ShakTech Labs | Product Engineering Studio";
 const description =
-  "A founder-led product studio: a Staff Engineer directing AI agents to design, build and run complete products at a fixed price. 12+ products shipped by Shakeel Bhamani.";
+  "A founder-led product studio: a Staff Engineer directing AI agents to design, build and run complete products at a fixed price. 12+ apps live today, built by Shakeel Bhamani.";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://shak-tech.com'),
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   creator: "Shakeel Bhamani",
   alternates: { canonical: "/" },
   icons: {
-    icon: "/shaktech_logo.png",
-    shortcut: "/shaktech_logo.png",
-    apple: "/shaktech_logo.png",
+    icon: "/shaktech-logo.png",
+    shortcut: "/shaktech-logo.png",
+    apple: "/shaktech-logo.png",
   },
   openGraph: {
     title,

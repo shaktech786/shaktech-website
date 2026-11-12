@@ -8,6 +8,6 @@ export default function OpengraphImage() {
   return renderOgImage(
     "ShakTech Labs",
     "Your product, built by a Staff Engineer and a team of AI agents.",
-    "12+ products shipped · Shakeel Bhamani"
+    "12+ apps live today · Shakeel Bhamani"
   )
 }
