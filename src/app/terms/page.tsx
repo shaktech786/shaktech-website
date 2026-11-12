@@ -4,8 +4,8 @@ import Footer from "@/components/footer"
 import { Shield, AlertCircle, Scale, FileText } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Terms of Service - ShakTech",
-  description: "Terms and conditions for using ShakTech's AI-first software services.",
+  title: "Terms of Service",
+  description: "Terms and conditions for using the ShakTech Labs website and services.",
 }
 
 const TermsPage = () => {
@@ -64,14 +64,11 @@ const TermsPage = () => {
                 2. Description of Services
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                ShakTech provides AI-first software consulting, development, and training services. Our services include:
+                ShakTech Labs provides software design, development and operations services. Our services include:
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4 mb-4">
-                <li>AI Strategy Consulting and Roadmap Development</li>
-                <li>Custom Software Development and Implementation</li>
-                <li>Team Training and Enablement Programs</li>
-                <li>Technical Mentorship and Code Reviews</li>
-                <li>Digital Transformation Consulting</li>
+                <li>Fixed-scope product builds</li>
+                <li>Ongoing development and operations retainers</li>
               </ul>
               <p className="text-gray-300 leading-relaxed">
                 The specific scope, deliverables, and terms for each engagement will be defined in a separate Statement of Work (SOW) 

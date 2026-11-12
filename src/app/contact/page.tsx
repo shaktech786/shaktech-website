@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Footer from "@/components/footer"
-import { 
+import {
   Send,
   Calendar,
   Mail,
@@ -18,8 +18,7 @@ import {
   Building,
   MessageSquare,
   DollarSign,
-  Timer,
-  Sparkles
+  Timer
 } from "lucide-react"
 
 interface FormData {
@@ -50,7 +49,7 @@ const ContactPage = () => {
 
   const validateField = (name: string, value: string) => {
     const newErrors = { ...errors }
-    
+
     switch (name) {
       case 'name':
         if (!value.trim()) {
@@ -78,7 +77,7 @@ const ContactPage = () => {
         }
         break
     }
-    
+
     setErrors(newErrors)
   }
 
@@ -88,12 +87,12 @@ const ContactPage = () => {
       ...prev,
       [name]: value
     }))
-    
+
     if (touched[name]) {
       validateField(name, value)
     }
   }
-  
+
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setTouched(prev => ({ ...prev, [name]: true }))
@@ -102,7 +101,7 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Validate all fields
     const newErrors: Partial<FormData> = {}
     if (!formData.name.trim()) newErrors.name = 'Name is required'
@@ -110,7 +109,7 @@ const ContactPage = () => {
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Please enter a valid email address'
     if (!formData.message.trim()) newErrors.message = 'Message is required'
     else if (formData.message.length < 10) newErrors.message = 'Message must be at least 10 characters'
-    
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors)
       setTouched({
@@ -120,10 +119,10 @@ const ContactPage = () => {
       })
       return
     }
-    
+
     setIsSubmitting(true)
     setSubmitError(null)
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -132,9 +131,9 @@ const ContactPage = () => {
         },
         body: JSON.stringify(formData),
       })
-      
+
       const data = await response.json()
-      
+
       if (response.ok) {
         setSubmitted(true)
         // Reset form
@@ -160,18 +159,19 @@ const ContactPage = () => {
   }
 
   const services = [
-    { value: 'strategy', label: 'AI Strategy Consulting' },
-    { value: 'development', label: 'AI-First Development' },
-    { value: 'training', label: 'Team Training & Enablement' },
-    { value: 'other', label: 'Other / Not Sure Yet' }
+    { value: 'product-build', label: 'A product build' },
+    { value: 'retainer', label: 'A studio retainer' },
+    { value: 'investing', label: 'Investing in the studio' },
+    { value: 'partnership', label: 'Go-to-market or equity partnership' },
+    { value: 'other', label: 'Something else' }
   ]
 
   const budgets = [
-    { value: 'under-5k', label: 'Under $5,000' },
-    { value: '5k-15k', label: '$5,000 - $15,000' },
-    { value: '15k-50k', label: '$15,000 - $50,000' },
-    { value: '50k-plus', label: '$50,000+' },
-    { value: 'not-sure', label: 'Not sure yet' }
+    { value: 'under-25k', label: 'Under $25,000' },
+    { value: '25k-50k', label: '$25,000 - $50,000' },
+    { value: '50k-100k', label: '$50,000 - $100,000' },
+    { value: '100k-plus', label: '$100,000+' },
+    { value: 'not-applicable', label: 'Not sure / not applicable' }
   ]
 
   const timelines = [
@@ -191,8 +191,7 @@ const ContactPage = () => {
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">Message Sent Successfully!</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Thank you for reaching out. I&apos;ll review your message and get back to you within 24 hours
-            with next steps for our collaboration.
+            Thanks for reaching out. I&apos;ll reply within one business day.
           </p>
           <Button variant="cta" size="lg" onClick={() => setSubmitted(false)}>
             Send Another Message
@@ -205,40 +204,34 @@ const ContactPage = () => {
   return (
     <main className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="py-24 pt-40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-indigo-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center space-x-2 bg-indigo-800/50 px-4 py-2 rounded-full border border-indigo-700 mb-8">
-            <Sparkles className="w-4 h-4 text-indigo-400" />
-            <span className="text-sm font-medium text-indigo-300">
-              Let&apos;s Work Together
-            </span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-            Ready to Transform Your
-            <span className="block text-gradient-creative">Business with AI?</span>
+      <section className="pt-12 pb-10 sm:pt-20 sm:pb-14 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-5">
+            Get in touch
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            Every great project starts with a conversation. Let&apos;s discuss your vision, 
-            challenges, and how AI-first software delivery can accelerate your success.
+          <p className="text-lg sm:text-xl text-gray-300">
+            Investing, building something, or just curious how one person ships this much?
+            Write a few lines, email{' '}
+            <a href="mailto:hi@shak-tech.com" className="text-indigo-400 underline hover:text-indigo-300">hi@shak-tech.com</a>,
+            or book a call. I reply within one business day.
           </p>
         </div>
       </section>
 
       {/* Contact Content */}
-      <section className="py-24 bg-gray-900">
+      <section className="py-10 sm:py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <Card className="bg-gray-900 border-gray-700">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold text-white flex items-center">
                     <MessageSquare className="w-6 h-6 mr-3 text-indigo-400" />
-                    Tell Me About Your Project
+                    Send a message
                   </CardTitle>
                   <p className="text-gray-400">
-                    Fill out this form and I&apos;ll get back to you within 24 hours with next steps.
+                    Only name, email and message are required.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -264,7 +257,7 @@ const ContactPage = () => {
                           <p className="mt-1 text-sm text-red-400">{errors.name}</p>
                         )}
                       </div>
-                      
+
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                           <Mail className="w-4 h-4 inline mr-2" />
@@ -302,7 +295,7 @@ const ContactPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
                         <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                          Service Interested In
+                          I&apos;m interested in
                         </label>
                         <select
                           id="service"
@@ -311,7 +304,7 @@ const ContactPage = () => {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
-                          <option value="">Select a service</option>
+                          <option value="">Select one</option>
                           {services.map((service) => (
                             <option key={service.value} value={service.value}>
                               {service.label}
@@ -366,7 +359,7 @@ const ContactPage = () => {
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                         <MessageSquare className="w-4 h-4 inline mr-2" />
-                        Project Details *
+                        Message *
                       </label>
                       <textarea
                         id="message"
@@ -376,15 +369,15 @@ const ContactPage = () => {
                         value={formData.message}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-vertical"
-                        placeholder="Tell me about your project, goals, challenges, and what you're hoping to achieve. The more details you provide, the better I can help you."
+                        placeholder="What are you building, or what would you like to talk about?"
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      variant="cta" 
-                      size="lg" 
-                      className="w-full group" 
+                    <Button
+                      type="submit"
+                      variant="cta"
+                      size="lg"
+                      className="w-full group"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -435,8 +428,7 @@ const ContactPage = () => {
                     <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Location</p>
-                      <p className="text-gray-400">Atlanta, Georgia, USA 🇺🇸</p>
-                      <p className="text-gray-500 text-sm">EST Timezone</p>
+                      <p className="text-gray-400">Atlanta, Georgia (Eastern Time)</p>
                     </div>
                   </div>
 
@@ -444,7 +436,7 @@ const ContactPage = () => {
                     <Clock className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Response Time</p>
-                      <p className="text-gray-400">Within 24 hours</p>
+                      <p className="text-gray-400">Within one business day</p>
                     </div>
                   </div>
                 </CardContent>
@@ -467,11 +459,11 @@ const ContactPage = () => {
                     <Linkedin className="w-5 h-5 text-blue-400 flex-shrink-0" />
                     <div className="flex-1">
                       <p className="font-medium">LinkedIn</p>
-                      <p className="text-gray-500 text-sm">Professional profile</p>
+                      <p className="text-gray-400 text-sm">Professional profile</p>
                     </div>
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
-                  
+
                   <a
                     href="https://github.com/shaktech786"
                     target="_blank"
@@ -481,11 +473,11 @@ const ContactPage = () => {
                     <Github className="w-5 h-5 text-gray-400 flex-shrink-0" />
                     <div className="flex-1">
                       <p className="font-medium">GitHub</p>
-                      <p className="text-gray-500 text-sm">Open source projects</p>
+                      <p className="text-gray-400 text-sm">Open source projects</p>
                     </div>
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
-                  
+
                   <a
                     href="https://linktr.ee/shakbbx"
                     target="_blank"
@@ -495,7 +487,7 @@ const ContactPage = () => {
                     <ExternalLink className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                     <div className="flex-1">
                       <p className="font-medium">TEDx & Music</p>
-                      <p className="text-gray-500 text-sm">Beatboxing & speaking</p>
+                      <p className="text-gray-400 text-sm">Beatboxing & speaking</p>
                     </div>
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
@@ -510,8 +502,7 @@ const ContactPage = () => {
                     Book a Discovery Call
                   </CardTitle>
                   <p className="text-gray-400 text-sm">
-                    Prefer a live conversation? Schedule a 30-minute discovery call with a US-based expert – 
-                    no timezone confusion, just clear communication in Eastern Time.
+                    Prefer to talk? Book a free 30-minute call.
                   </p>
                 </CardHeader>
                 <CardContent>

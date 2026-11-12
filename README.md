@@ -1,35 +1,13 @@
-# ShakTech Website
+# ShakTech Labs Website
 
-AI-First Software Delivery services website built with Next.js 15, TypeScript, and Tailwind CSS.
-
-## Features
-
-- 🚀 **Next.js 15** with Turbopack for lightning-fast development
-- 💻 **TypeScript** for type-safe code
-- 🎨 **Tailwind CSS** with custom Digital Jazz theme
-- 🤖 **AI Chat Widget** for interactive user engagement
-- 🎵 **Music Mode** reflecting beatbox background
-- 📱 **Fully Responsive** design
-- 🔍 **SEO Optimized** with structured data and sitemap
-- ♿ **Accessible** with WCAG compliance
+The website for ShakTech Labs, a one-person software studio. Built with Next.js 15, TypeScript and Tailwind CSS, deployed on Vercel at https://shak-tech.com.
 
 ## Getting Started
 
-### Prerequisites
+Requires Node.js 18.17 or later.
 
-- Node.js 18.17 or later
-- PostgreSQL database (for future CMS features)
-
-### Installation
-
-1. Clone the repository
-2. Install dependencies:
 ```bash
 npm install
-```
-
-3. Run the development server:
-```bash
 npm run dev
 ```
 
@@ -37,10 +15,11 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 
 ## Scripts
 
-- `npm run dev` - Start development server with Turbopack
+- `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm run screenshot <url> <name>` - Capture a website screenshot
 
 ## Project Structure
 
@@ -48,25 +27,21 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 src/
 ├── app/              # Next.js app router pages
 ├── components/       # React components
-│   ├── ui/          # Reusable UI components
-│   └── ...          # Feature components
-├── lib/             # Utility functions and database
-└── styles/          # Global styles
+│   └── ui/           # Reusable UI components
+└── lib/              # Shared data and utilities
 ```
+
+Portfolio content lives in `src/lib/projects.ts` and is shared by the homepage and the portfolio page. Engagement models and prices live in `src/components/engagements.tsx` and are shared by the services and pricing pages.
 
 ## Pages
 
-- **Home** - Hero section with AI-first positioning
-- **About** - Personal journey and philosophy
-- **Services** - Three-tier service offerings
-- **Portfolio** - AI projects and case studies
-- **Blog** - Insights and articles
-- **Contact** - Contact form and information
-
-## Deploy on Vercel
-
-The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com).
+- **Home** - Studio pitch, featured products, approach, founder
+- **Portfolio** - Every product, with screenshots and links
+- **Services** - What the studio builds and how to engage it
+- **Pricing** - Engagement models and common questions
+- **About** - Shakeel Bhamani's background
+- **Contact** - Contact form (delivered over Gmail SMTP)
 
 ## License
 
-© 2026 ShakTech. All rights reserved.
+© 2026 ShakTech Labs. All rights reserved.

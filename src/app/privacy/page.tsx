@@ -4,7 +4,7 @@ import Footer from "@/components/footer"
 import { Shield, Lock, Eye, Database, Globe, UserCheck, AlertCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - ShakTech",
+  title: "Privacy Policy",
   description: "How ShakTech collects, uses, and protects your personal information.",
 }
 
@@ -129,7 +129,7 @@ const PrivacyPage = () => {
               <h3 className="text-xl font-semibold text-white mb-3">3.1 Service Providers</h3>
               <p className="text-gray-300 leading-relaxed mb-4">
                 We may share information with third-party vendors who perform services on our behalf, such as payment processing, 
-                data analysis, email delivery, hosting services, and customer service.
+                email delivery and hosting. Contact form messages are delivered by email through Google, and the site is hosted on Vercel.
               </p>
 
               <h3 className="text-xl font-semibold text-white mb-3">3.2 Legal Requirements</h3>
@@ -163,7 +163,7 @@ const PrivacyPage = () => {
                 <li>Encryption of data in transit and at rest</li>
                 <li>Regular security assessments and updates</li>
                 <li>Access controls and authentication requirements</li>
-                <li>Employee training on data protection</li>
+                <li>Limiting access to the people who need it</li>
                 <li>Secure development practices</li>
               </ul>
               <p className="text-gray-300 leading-relaxed">

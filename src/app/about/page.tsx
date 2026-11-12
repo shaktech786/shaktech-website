@@ -4,28 +4,26 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Footer from "@/components/footer"
-import { 
-  Code, 
-  Users, 
-  Award, 
-  GraduationCap, 
-  Building, 
+import {
+  Code,
+  Users,
+  Award,
+  GraduationCap,
+  Building,
   Heart,
-  Lightbulb,
-  Target,
   ArrowRight,
   Music,
   Sparkles,
   CheckCircle,
   TrendingUp,
-  Calendar,
   MapPin
 } from "lucide-react"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "About Shakeel Bhamani - Software Developer & Creative Technologist",
-  description: "Atlanta-based software developer with a unique background in technology and creative arts. Learn about my journey in software development, team collaboration, and building solutions that matter.",
+  title: "About Shakeel Bhamani",
+  description: "Staff Software Engineer and founder of ShakTech Labs, a one-person software studio in Atlanta. Georgia Tech CS, six years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
+  alternates: { canonical: "/about" },
 }
 
 const AboutPage = () => {
@@ -41,11 +39,11 @@ const AboutPage = () => {
     },
     {
       year: "2016-2026",
-      title: "Thoughtworks Lead Consultant",
+      title: "Thoughtworks, Lead Consultant",
       description: "Six years across two stints, ending as Lead Software Consultant. Tech lead for a Fortune 500 health retailer's digital accelerator, a social impact prison oversight platform, and the 2022 DEI internship program where all 11 interns earned full-time offers.",
       icon: <Building className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500",
-      badge: "2016-2026",
+      badge: "2016-2018 · 2021-2026",
       badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
     },
     {
@@ -59,8 +57,8 @@ const AboutPage = () => {
     },
     {
       year: "2017",
-      title: "Creative Performer & Public Speaker",
-      description: "Developed strong communication and performance skills through creative arts, including competitive beatboxing and public speaking engagements.",
+      title: "Beatboxer & TEDx Speaker",
+      description: "Vice champion at the 2017 American Beatbox Championships, and a TEDx speaker. Performing taught me to prepare hard and deliver live.",
       icon: <Award className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500",
       badge: "2017",
@@ -79,50 +77,59 @@ const AboutPage = () => {
 
   const coreValues = [
     {
-      title: "Empathy-Driven Development",
-      description: "Every technical solution starts with understanding the human story. I listen first, then build technology that truly serves people's needs.",
+      title: "Start with the person",
+      description: "Alaap exists because one music teacher could not find her own recordings. I build for a specific person with a specific problem.",
       icon: <Heart className="w-8 h-8" />,
       color: "from-indigo-600 to-indigo-500"
     },
     {
-      title: "Creative Problem Solving",
-      description: "My beatboxing background taught me that innovation comes from combining existing elements in new ways. I apply this creative thinking to AI solutions.",
-      icon: <Lightbulb className="w-8 h-8" />,
+      title: "Range over repetition",
+      description: "A SaaS platform, a desktop app, games and developer tools. I would rather learn a new kind of software than build the same one twice.",
+      icon: <Sparkles className="w-8 h-8" />,
       color: "from-indigo-600 to-indigo-500"
     },
     {
-      title: "Enterprise Excellence",
-      description: "Trained in industry-standard practices: test-driven development, continuous integration, and agile methodologies that deliver reliable software.",
-      icon: <Target className="w-8 h-8" />,
+      title: "Discipline at speed",
+      description: "Test-driven development, continuous integration and code review apply to agents exactly as they apply to people.",
+      icon: <CheckCircle className="w-8 h-8" />,
       color: "from-indigo-600 to-indigo-500"
     }
   ]
 
+  const highlights = [
+    "12+ products built solo at ShakTech Labs, with 4,000+ commits across them",
+    "Staff Software Engineer and tech lead on an enterprise platform",
+    "Six years at Thoughtworks, ending as Lead Software Consultant",
+    "Tech lead for a 2022 internship program where all 11 interns earned full-time offers",
+    "TEDx speaker and 2017 American Beatbox Championships vice champion",
+    "B.S. in Computer Science, Georgia Institute of Technology",
+  ]
+
   const skillCategories = [
     {
-      category: "AI & Machine Learning",
+      category: "AI Agents",
       icon: <Sparkles className="w-5 h-5" />,
       color: "text-purple-400",
-      skills: ["AI Harnesses", "MCP Servers", "Autonomous Agents", "Claude API", "OpenAI API", "GitHub Copilot", "RAG Systems", "Spec-Driven Development"]
+      skills: ["Claude Code", "MCP Servers", "Autonomous Agents", "Claude API", "Gemini API", "Spec-Driven Development"]
     },
     {
       category: "Full-Stack Development",
       icon: <Code className="w-5 h-5" />,
-      color: "text-blue-400", 
+      color: "text-blue-400",
       skills: ["React & Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL", "AWS & Azure", "Docker", "GraphQL"]
     },
     {
-      category: "Leadership & Strategy",
+      category: "Leadership",
       icon: <Users className="w-5 h-5" />,
       color: "text-emerald-400",
-      skills: ["Team Psychology", "Agile Coaching", "Technical Training", "Client Consulting", "Public Speaking", "Change Management"]
+      skills: ["Tech Lead", "Mentoring", "Client Consulting", "Public Speaking"]
     }
   ]
 
   return (
     <main className="min-h-screen bg-gray-900">
       {/* Hero Section - Enhanced */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
           <div className="absolute inset-0 bg-circuit-board opacity-20" />
@@ -130,36 +137,37 @@ const AboutPage = () => {
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Content */}
             <div className="space-y-8 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700/50">
                 <Sparkles className="w-4 h-4 text-indigo-400" />
-                <span className="text-sm font-medium text-indigo-300">Staff Software Engineer · Ex-Thoughtworks Lead</span>
+                <span className="text-sm font-medium text-indigo-300">Founder, ShakTech Labs · Staff Software Engineer</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span className="text-white">Software Developer with a</span>
-                <span className="block text-gradient-creative mt-2">Creative Edge</span>
+                <span className="text-white">Shakeel Bhamani</span>
+                <span className="block text-indigo-400 mt-2 text-3xl sm:text-4xl lg:text-5xl">One engineer, running a studio</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                Ten-plus years from <strong className="text-indigo-400">Georgia Tech</strong> through <strong className="text-indigo-400">Thoughtworks</strong> to Staff Engineer
-                taught me that the best technology solutions come from understanding the <em className="text-indigo-400">people</em> who will use them.
+                Ten-plus years from <strong className="text-indigo-400">Georgia Tech</strong> through <strong className="text-indigo-400">Thoughtworks</strong> to Staff Engineer.
+                Outside the day job I run ShakTech Labs, where I direct AI agents to build and run complete products on my own.
+                I&apos;m raising a pre-seed round to do it full-time.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button variant="cta" size="xl" className="group" asChild>
                   <Link href="/contact">
-                    Let&apos;s Connect
+                    Get in touch
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="xl" className="group" asChild>
                   <Link href="https://linktr.ee/shakbbx" target="_blank" rel="noopener noreferrer">
                     <Music className="w-5 h-5 mr-2" />
-                    Creative Work
+                    TEDx talk and music
                   </Link>
                 </Button>
               </div>
@@ -180,15 +188,15 @@ const AboutPage = () => {
                     />
                   </div>
                 </div>
-                
+
                 {/* Info Card - Positioned below photo */}
                 <Card className="bg-gray-900/95 border-gray-700 backdrop-blur-sm">
                   <CardContent className="p-4 text-center">
                     <h3 className="font-bold text-white text-lg">Shakeel Bhamani</h3>
-                    <p className="text-indigo-400 text-sm font-medium">AI-First Software Expert</p>
+                    <p className="text-indigo-400 text-sm font-medium">Founder, ShakTech Labs</p>
                     <div className="flex items-center justify-center space-x-2 mt-2 text-sm text-gray-400">
                       <MapPin className="w-4 h-4" />
-                      <span>Atlanta, Georgia 🇺🇸</span>
+                      <span>Atlanta, Georgia</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -206,15 +214,14 @@ const AboutPage = () => {
               My <span className="text-gradient-primary">Journey</span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Combining technical skills, creative thinking, and collaborative leadership 
-              to build software solutions that make a real difference.
+              From Georgia Tech to Staff Engineer, with a stage career along the way.
             </p>
           </div>
 
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-indigo-600 to-indigo-500 opacity-30 hidden lg:block" />
-            
+
             <div className="space-y-16">
               {journeyMilestones.map((milestone, index) => (
                 <div key={index} className="relative">
@@ -300,10 +307,10 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Core <span className="text-gradient-creative">Values</span>
+              How I <span className="text-gradient-creative">Work</span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              The principles that guide my approach to software development and collaboration.
+              Three habits behind everything in the portfolio.
             </p>
           </div>
 
@@ -361,81 +368,36 @@ const AboutPage = () => {
               ))}
             </div>
 
-            {/* Achievements & Stats */}
+            {/* Highlights */}
             <div className="space-y-8">
               <Card className="bg-gray-800/20 border-gray-700">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <TrendingUp className="w-5 h-5 text-indigo-400" />
-                    <h3 className="text-lg font-bold text-white">Experience Highlights</h3>
+                    <TrendingUp className="w-5 h-5 text-indigo-400" aria-hidden="true" />
+                    <h3 className="text-lg font-bold text-white">Highlights</h3>
                   </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Experienced in mentoring junior developers and fostering team growth</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Public speaker with experience in creative technology topics</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Competitive beatboxer with national-level performance experience</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Built modern web applications with focus on user experience</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">10+ years professional software development experience</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Built AI harnesses: autonomous agents, MCP servers, and AI code review pipelines</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
-                      <span className="text-gray-300">Ships enterprise-grade code solo at the pace of a full development team</span>
-                    </div>
-                  </div>
+                  <ul className="space-y-3">
+                    {highlights.map((highlight) => (
+                      <li key={highlight} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                        <span className="text-gray-300">{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
 
               <Card className="bg-gray-800/20 border-gray-700">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <Heart className="w-5 h-5 text-indigo-400" />
-                    <h3 className="text-lg font-bold text-white">My Approach</h3>
+                    <Heart className="w-5 h-5 text-indigo-400" aria-hidden="true" />
+                    <h3 className="text-lg font-bold text-white">Social impact</h3>
                   </div>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    I believe the best technology solutions come from understanding the people who will use them. 
-                    Every project is an opportunity to create something that makes a real difference.
+                  <p className="text-gray-300 leading-relaxed">
+                    I offer reduced rates for nonprofits and organizations working on social good.
                   </p>
-                  <div className="bg-indigo-900/20 p-3 rounded-lg border border-indigo-700/30">
-                    <p className="text-indigo-300 text-sm">
-                      <strong>Social Impact:</strong> I offer discounted rates for non-profits
-                      and organizations working on social good initiatives.
-                    </p>
-                  </div>
                 </CardContent>
               </Card>
-
-              {/* Contact Stats */}
-              <div className="grid grid-cols-2 gap-4">
-                <Card className="bg-gray-800/50 border-gray-700 text-center">
-                  <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-indigo-400 mb-2">10+</div>
-                    <div className="text-sm text-gray-400">Years Experience</div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-gray-800/50 border-gray-700 text-center">
-                  <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-indigo-400 mb-2">GA</div>
-                    <div className="text-sm text-gray-400">Georgia Tech</div>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
           </div>
         </div>
@@ -445,42 +407,27 @@ const AboutPage = () => {
       <section className="py-24 bg-gradient-conic relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Ready to Build Something Great Together?
+            Want to talk?
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Whether you&apos;re building something new or improving what exists, 
-            I&apos;d love to hear your story and explore how we can create solutions that make a real difference.
+            Investors, founders with something to build, and engineers curious about the process are all welcome.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Button size="xl" className="bg-white text-gray-900 hover:bg-gray-100 group shadow-lg" asChild>
               <Link href="/contact">
-                Let&apos;s Talk
+                Get in touch
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
             <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-gray-900 group" asChild>
               <Link href="/portfolio">
                 <Code className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                View My Work
+                See the work
               </Link>
             </Button>
           </div>
 
-          <div className="mt-12 flex items-center justify-center space-x-8 text-white/70">
-            <div className="flex items-center space-x-2">
-              <Calendar className="w-5 h-5" />
-              <span>Free Consultation</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>US-Based</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-5 h-5" />
-              <span>Atlanta-Based</span>
-            </div>
-          </div>
         </div>
       </section>
 

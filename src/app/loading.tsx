@@ -6,7 +6,7 @@ export default function Loading() {
           <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin" />
         </div>
         <h2 className="text-xl font-semibold text-white mb-2">Loading ShakTech</h2>
-        <p className="text-gray-400">Preparing your AI-first experience...</p>
+        <p className="text-gray-400">Loading...</p>
       </div>
     </div>
   )

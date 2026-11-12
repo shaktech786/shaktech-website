@@ -13,18 +13,27 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  
+
   // Performance optimizations
   experimental: {
     // optimizeCss: true, // Disabled to fix build issues
     // optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
-  
+
   // Production optimizations
   productionBrowserSourceMaps: false,
   compress: true,
-  
-  
+
+
+  // The blog and resources pages are hidden until they have content worth showing.
+  async redirects() {
+    return [
+      { source: '/blog', destination: '/portfolio', permanent: false },
+      { source: '/blog/:slug*', destination: '/portfolio', permanent: false },
+      { source: '/resources', destination: '/portfolio', permanent: false },
+    ];
+  },
+
   // Headers for security and performance
   async headers() {
     return [

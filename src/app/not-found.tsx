@@ -23,7 +23,7 @@ export default function NotFound() {
           Page Not Found
         </h2>
         <p className="text-xl text-gray-300 mb-8">
-          Oops! The page you&apos;re looking for doesn&apos;t exist or has been moved.
+          That page doesn&apos;t exist or has moved.
         </p>
 
         {/* Actions */}
@@ -38,16 +38,16 @@ export default function NotFound() {
               Go Home
             </Link>
           </Button>
-          
+
           <Button
             variant="outline"
             size="lg"
             asChild
             className="border-gray-700 hover:bg-gray-800"
           >
-            <Link href="/blog">
+            <Link href="/portfolio">
               <Search className="w-5 h-5 mr-2" />
-              Browse Blog
+              See the Portfolio
             </Link>
           </Button>
 
@@ -70,9 +70,9 @@ export default function NotFound() {
         {/* Popular Links */}
         <div className="p-6 bg-gray-900/50 border border-gray-700 rounded-lg">
           <h3 className="text-lg font-semibold text-white mb-4">
-            Popular Pages
+            Pages
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             <Link
               href="/"
               className="text-gray-400 hover:text-indigo-400 transition-colors"
@@ -97,12 +97,7 @@ export default function NotFound() {
             >
               Portfolio
             </Link>
-            <Link
-              href="/blog"
-              className="text-gray-400 hover:text-indigo-400 transition-colors"
-            >
-              Blog
-            </Link>
+
             <Link
               href="/contact"
               className="text-gray-400 hover:text-indigo-400 transition-colors"
@@ -115,12 +110,7 @@ export default function NotFound() {
             >
               Pricing
             </Link>
-            <Link
-              href="/resources"
-              className="text-gray-400 hover:text-indigo-400 transition-colors"
-            >
-              Resources
-            </Link>
+
           </div>
         </div>
 
@@ -132,7 +122,7 @@ export default function NotFound() {
               href="/contact"
               className="text-indigo-400 hover:text-indigo-300 underline transition-colors"
             >
-              Contact us
+              Get in touch
             </Link>
           </p>
         </div>
