@@ -20,22 +20,28 @@ export const metadata: Metadata = {
 
 const audiences = [
   {
-    audience: "Founders",
-    title: "Get your product built",
+    audience: "You have the idea and no technical co-founder",
+    title: "I build the first version",
     description:
-      "Tell me the idea on a call. Afterwards I send a written scope with a fixed price and a timeline. For early-stage founders I can take part of the fee as equity.",
+      "Tack went from an empty repo to a web app, a CLI and an MCP server in under four weeks. Product builds start at $25,000, fixed in writing before work starts. For early-stage founders, part of the fee can be equity.",
   },
   {
-    audience: "Investors and mentors",
-    title: "Back the studio",
+    audience: "You have an MVP that is starting to creak",
+    title: "I take over the codebase",
     description:
-      "I am raising a pre-seed round to run ShakTech Labs full-time. Everything in the portfolio was built with no team and no outside funding.",
+      "In ten-plus years I have worked greenfield, brownfield and legacy, including enterprise systems taken from scratch to production. Retainers start at $10,000 a month, with no long-term contract.",
   },
   {
-    audience: "Operators and marketers",
-    title: "Take a product to market",
+    audience: "You invest in or mentor founders",
+    title: "Ask me how one engineer ships this much",
     description:
-      "The studio has finished products that need distribution. I am looking for a go-to-market partner.",
+      "I am raising a pre-seed round to run the studio full-time. Everything below was built with no team and no outside funding, and I will walk you through any of it.",
+  },
+  {
+    audience: "You are good at distribution",
+    title: "I have products that need you",
+    description:
+      "Prelive and VeryGoodMelon are built and live. They need distribution more than they need code, and I am looking for a go-to-market partner.",
   },
 ]
 
@@ -47,12 +53,11 @@ const MomentumPage = () => (
           {momentumEvent.name} · {momentumEvent.place} · {momentumEvent.dates}
         </p>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-5">
-          Good to meet you at Momentum.
-          <span className="block text-indigo-400">Let&apos;s keep talking.</span>
+          You pitched it this weekend. I can build it.
         </h1>
         <p className="text-lg sm:text-xl text-gray-300">
-          I&apos;m Shakeel Bhamani. ShakTech Labs is my product studio: I direct a team of AI
-          agents and ship complete products at a fixed price.
+          I&apos;m Shakeel Bhamani, a Staff Engineer from Atlanta, at Momentum all weekend. I build
+          complete products for founders with a team of AI agents, at a fixed price.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
@@ -77,13 +82,14 @@ const MomentumPage = () => (
         <div className="rounded-xl border border-indigo-600 bg-indigo-950/40 p-6 sm:p-8">
           <p className="text-sm font-medium text-indigo-300">For Momentum founders</p>
           <h2 id="offer-heading" className="mt-1 text-2xl sm:text-3xl font-bold text-white">
-            A free build plan, and the front of the queue
+            Go home with a build plan
           </h2>
           <p className="mt-4 text-gray-200 leading-relaxed">
-            Book a call by {momentumEvent.offerDeadline} and mention Momentum. Bring the idea, however
-            rough. After the call I send you a written scope with a fixed price and a timeline, at no
-            cost and with no obligation. I take on a small number of builds at a time, and Momentum
-            founders get the next open slots.
+            Book a 30-minute call for the week after Momentum. Bring the idea, the deck, or the
+            feedback a mentor gave you this weekend. Afterwards I send you a written scope: what gets
+            built first, a fixed price and a delivery date. It is free, and it is yours to use even
+            if you hire someone else. Book by {momentumEvent.offerDeadline}, mention Momentum, and you
+            get the next open build slot.
           </p>
           <a
             href={bookingUrl}
@@ -107,7 +113,7 @@ const MomentumPage = () => (
         </div>
 
         <p className="mt-8 text-gray-300">
-          Not ready for a call?{" "}
+          Rather read first?{" "}
           <Link href="/pricing" className="text-indigo-400 underline hover:text-indigo-300">
             See pricing
           </Link>{" "}
