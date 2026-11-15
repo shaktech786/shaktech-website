@@ -29,7 +29,7 @@ const FounderSection = () => (
         <p className="mt-3 text-lg text-gray-300 leading-relaxed">
           Shakeel Bhamani, based in Atlanta. Ten-plus years of solving problems with software for
           a Fortune 500 retailer, Allstate, startups and social-impact platforms, from consulting at
-          Thoughtworks to Staff Engineer. No account managers in between: you work with me.
+          Thoughtworks to Staff Software Engineer. No account managers in between: you work with me.
         </p>
         <ul className="mt-5 flex flex-wrap gap-2">
           {credentials.map((credential) => (

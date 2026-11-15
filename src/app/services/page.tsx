@@ -13,7 +13,7 @@ import Footer from "@/components/footer"
 
 export const metadata: Metadata = pageMetadata(
   "Services: Problems Solved, Products Built",
-  "New products, rescues of struggling apps, and internal tools that replace manual work, built end to end by a Staff Engineer with 10+ years of experience. Fixed-price builds from $25,000.",
+  "New products, rescues of struggling apps, and internal tools that replace manual work, built end to end by a Staff Software Engineer with 10+ years of experience. Fixed-price builds from $25,000.",
   "/services"
 )
 

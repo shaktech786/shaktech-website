@@ -153,7 +153,7 @@ const AboutPage = () => {
               </h1>
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-                Ten-plus years from <strong className="text-indigo-400">Georgia Tech</strong> through <strong className="text-indigo-400">Thoughtworks</strong> to Staff Engineer.
+                Ten-plus years from <strong className="text-indigo-400">Georgia Tech</strong> through <strong className="text-indigo-400">Thoughtworks</strong> to Staff Software Engineer.
                 Outside the day job I run ShakTech Labs, where I solve software problems for clients and build complete products end to end.
                 I&apos;m raising a pre-seed round to do it full-time.
               </p>
@@ -215,7 +215,7 @@ const AboutPage = () => {
               My <span className="text-gradient-primary">Journey</span>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              From Georgia Tech to Staff Engineer, with a stage career along the way.
+              From Georgia Tech to Staff Software Engineer, with a stage career along the way.
             </p>
           </div>
 

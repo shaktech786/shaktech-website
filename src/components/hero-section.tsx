@@ -52,7 +52,7 @@ const HeroSection = () => (
         </h1>
 
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-300 sm:text-xl">
-          I&apos;m Shakeel Bhamani, a Staff Engineer with 10+ years of building software for
+          I&apos;m Shakeel Bhamani, a Staff Software Engineer with 10+ years of building software for
           Fortune 500 companies, startups and social-impact teams. New products, app rescues and
           tools that end the busywork, at a fixed scope and price. You talk to the person doing the work.
         </p>

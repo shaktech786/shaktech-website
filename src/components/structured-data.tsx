@@ -62,7 +62,7 @@ const structuredData = {
       "availableLanguage": "en",
       "url": `${baseUrl}/contact`
     }],
-    "description": "A founder-led product engineering studio. Shakeel Bhamani, a Staff Engineer with 10+ years of experience, designs, builds and runs software that solves real business problems, at a fixed scope and price."
+    "description": "A founder-led product engineering studio. Shakeel Bhamani, a Staff Software Engineer with 10+ years of experience, designs, builds and runs software that solves real business problems, at a fixed scope and price."
   },
   website: {
     "@context": "https://schema.org",

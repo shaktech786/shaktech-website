@@ -22,7 +22,7 @@ const display = Bricolage_Grotesque({
 
 const title = "ShakTech Labs | Product Engineering Studio";
 const description =
-  "Bring me the problem, I'll build what solves it. Shakeel Bhamani is a Staff Engineer with 10+ years of experience building new products, rescuing struggling apps and automating busywork, at a fixed scope and price. 12+ products live today.";
+  "Bring me the problem, I'll build what solves it. Shakeel Bhamani is a Staff Software Engineer with 10+ years of experience building new products, rescuing struggling apps and automating busywork, at a fixed scope and price. 12+ products live today.";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://shak-tech.com'),

@@ -57,7 +57,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-gray-400 leading-relaxed mb-4 max-w-md">
-              Software that solves real problems, designed, built and run by a Staff Engineer with 10+ years in the industry.
+              Software that solves real problems, designed, built and run by a Staff Software Engineer with 10+ years in the industry.
             </p>
 
             <p className="text-sm text-gray-300 mb-6">
