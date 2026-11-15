@@ -79,7 +79,7 @@ const AboutPage = () => {
   const coreValues = [
     {
       title: "Start with the person",
-      description: "Alaap exists because one music teacher could not find her own recordings. I build for a specific person with a specific problem.",
+      description: "Alaap exists because one music teacher could not find his own recordings. I build for a specific person with a specific problem.",
       icon: <Heart className="w-8 h-8" />,
       color: "from-indigo-600 to-indigo-500"
     },

@@ -7,7 +7,7 @@ const problems = [
     problem: "“I have an idea and no one to build it.”",
     title: "I build the first version",
     description:
-      "From a rough sketch to a live product with real users, built so it can grow without a rewrite. Alaap started with one music teacher who had thousands of unnamed voice notes. Now she finds any recording from her phone.",
+      "From a rough sketch to a live product with real users, built so it can grow without a rewrite. Alaap started with one music teacher who had thousands of unnamed voice notes. Now he finds any recording from his phone.",
     proof: { label: "See Alaap", href: "/portfolio#alaap" },
   },
   {
