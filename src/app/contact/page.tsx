@@ -160,7 +160,8 @@ const ContactPage = () => {
   }
 
   const services = [
-    { value: 'product-build', label: 'A product build' },
+    { value: 'product-build', label: 'A new product build' },
+    { value: 'rescue', label: 'Fixing or taking over an existing app' },
     { value: 'retainer', label: 'A studio retainer' },
     { value: 'investing', label: 'Investing in the studio' },
     { value: 'partnership', label: 'Go-to-market or equity partnership' },
@@ -211,7 +212,7 @@ const ContactPage = () => {
             Get in touch
           </h1>
           <p className="text-lg sm:text-xl text-gray-300">
-            Investing, building something, or just curious how one person ships this much?
+            Have a problem to solve, an app that needs rescuing, or an interest in investing?
             Write a few lines, email{' '}
             <a href="mailto:hi@shak-tech.com" className="text-indigo-400 underline hover:text-indigo-300">hi@shak-tech.com</a>,
             or book a call. I reply within one business day.
@@ -370,7 +371,7 @@ const ContactPage = () => {
                         value={formData.message}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-vertical"
-                        placeholder="What are you building, or what would you like to talk about?"
+                        placeholder="What problem are you trying to solve, or what would you like to talk about?"
                       />
                     </div>
 

@@ -3,6 +3,7 @@ import { Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import HeroSection from "@/components/hero-section"
 import PortfolioPreview from "@/components/portfolio-preview"
+import ProblemsSection from "@/components/problems-section"
 import StudioApproach from "@/components/studio-approach"
 import FounderSection from "@/components/founder-section"
 import VisitorPaths from "@/components/visitor-paths"
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <ProblemsSection />
       <PortfolioPreview />
       <StudioApproach />
       <FounderSection />
@@ -22,7 +24,7 @@ export default function Home() {
 
       <section className="py-14 sm:py-20 bg-gray-950">
         <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Have a product in mind?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">Have a problem worth solving?</h2>
           <p className="mt-4 text-lg text-gray-300">
             Tell me about it on a call. Afterwards I send a written scope with a fixed price and a timeline.
           </p>

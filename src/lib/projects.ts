@@ -31,7 +31,7 @@ export const leadProjects: Project[] = [
     tagline: "Streaming SaaS for Twitch, YouTube and Kick creators",
     category: "Web platform",
     description:
-      "Everything a streamer does before, during and after going live, in one product: OBS docks for running the stream, AI-written titles, scripts and social posts, and VOD repurposing. Subscriptions, background workers and a desktop installer included.",
+      "Everything a streamer does before, during and after going live, in one product: OBS docks for running the stream, auto-drafted titles, scripts and social posts, and VOD repurposing. Subscriptions, background workers and a desktop installer included.",
     facts: ["v6.40 in production", "2,100+ commits since Jan 2025", "370+ tagged releases"],
     techStack: ["Next.js 15", "React 19", "PostgreSQL", "Prisma", "Redis + BullMQ", "Stripe"],
     visual: { type: "image", src: "/portfolio-screenshots/prelive-2026.webp" },
@@ -40,8 +40,8 @@ export const leadProjects: Project[] = [
   {
     id: "alaap",
     name: "Alaap",
-    tagline: "AI voice-note library for a music teacher",
-    category: "Mobile-first AI app",
+    tagline: "Searchable voice-note library for a music teacher",
+    category: "Mobile-first app",
     description:
       "A vocal teacher had thousands of unnamed voice notes in Hindi, Urdu and English. Alaap classifies each one as speech, singing or instrumental, transcribes it, titles and tags it, guesses raga, taal and key, and makes the whole library searchable by meaning from a phone.",
     facts: ["Hindi, Urdu and English", "Semantic search across scripts", "Installable PWA"],
@@ -52,11 +52,11 @@ export const leadProjects: Project[] = [
   {
     id: "tack",
     name: "Tack",
-    tagline: "Issue tracker built for AI agents",
+    tagline: "Project tracker that runs from the terminal",
     category: "Developer tool",
     description:
-      "An epic and story tracker designed to be driven by coding agents instead of clicked through by people. It ships as a web app, a CLI and an MCP server, so an agent can pull the next ready story, claim it, link its pull request and close it without leaving the terminal. I run my own studio on it.",
-    facts: ["Web app + CLI + MCP server", "Imports from Linear, Jira and GitHub", "Built in under four weeks"],
+      "An epic and story tracker for teams that would rather automate their workflow than click through it. It ships as a web app and a command-line tool, so work can be picked up, claimed, linked to its pull request and closed without leaving the terminal. I run my own studio on it.",
+    facts: ["Web app + command-line tool", "Imports from Linear, Jira and GitHub", "Built in under four weeks"],
     techStack: ["Next.js", "TypeScript", "pnpm + Turborepo", "Drizzle ORM", "MCP"],
     visual: { type: "image", src: "/portfolio-screenshots/tack-board.webp" },
     access: "Private, in daily use",
@@ -67,7 +67,7 @@ export const leadProjects: Project[] = [
     tagline: "Twelve web games built to calm you down",
     category: "Games",
     description:
-      "A collection of twelve original browser games about slowing down and thinking clearly: ethical dilemmas, a patience game, breathing exercises, and AI conversations and debates with historical thinkers. No ads, and no account needed to play.",
+      "A collection of twelve original browser games about slowing down and thinking clearly: ethical dilemmas, a patience game, breathing exercises, and voiced conversations and debates with historical thinkers. No ads, and no account needed to play.",
     facts: ["12 original games", "No ads, no sign-up to play", "Open source"],
     techStack: ["Next.js 16", "TypeScript", "Supabase", "Google Gemini", "ElevenLabs"],
     visual: { type: "image", src: "/portfolio-screenshots/verygoodmelon-2026.webp" },
@@ -78,10 +78,10 @@ export const leadProjects: Project[] = [
   {
     id: "arr-suite-mcp",
     name: "Arr Suite MCP Server",
-    tagline: "Open-source MCP server, published on PyPI",
+    tagline: "Open-source home media integration, on PyPI",
     category: "Open source",
     description:
-      "A Model Context Protocol server that lets Claude and other AI assistants control a home media stack in plain language: Sonarr, Radarr, Prowlarr, Bazarr, Overseerr and Plex behind one interface. One of three MCP servers I have published, alongside a Restream server and the Prelive server on npm.",
+      "Six separate media apps, Sonarr, Radarr, Prowlarr, Bazarr, Overseerr and Plex, behind one interface you can drive in plain language. One of three open-source integrations I have published, alongside a Restream integration and the Prelive one on npm.",
     facts: ["Published on PyPI", "8 stars, 8 forks on GitHub", "Listed in the official MCP community servers"],
     techStack: ["Python", "MCP", "Pydantic", "httpx"],
     visual: { type: "image", src: "/portfolio-screenshots/arr-suite-mcp.webp" },
@@ -107,10 +107,10 @@ export const moreProjects: Project[] = [
   {
     id: "unbottle",
     name: "Unbottle",
-    tagline: "AI music production companion",
+    tagline: "Helps solo musicians finish their tracks",
     category: "Creative tool",
     description:
-      "An AI producer for solo musicians who struggle to finish tracks. Hum, tap or describe an idea, and a session-aware assistant helps with arrangement, chords and what to work on next.",
+      "A production companion for solo musicians who start more tracks than they finish. Hum, tap or describe an idea, and it helps with arrangement, chords and what to work on next, remembering where each session left off.",
     facts: ["Open source"],
     techStack: ["Next.js 16", "Supabase", "Tailwind CSS 4"],
     visual: { type: "image", src: "/portfolio-screenshots/unbottle-viewport.webp" },
@@ -123,7 +123,7 @@ export const moreProjects: Project[] = [
     tagline: "Self-hosted accountant for a one-person company",
     category: "Internal system",
     description:
-      "Pulls transactions from Mercury and Chase, reads invoices out of Gmail, and attributes every dollar to a product. Bank access is read-only by design, and the LLM never sees an account number.",
+      "Pulls transactions from Mercury and Chase, reads invoices out of Gmail, and attributes every dollar to a product. Bank access is read-only by design, and account numbers are redacted before anything is sent to an outside service.",
     facts: ["Self-hosted", "Read-only bank access"],
     techStack: ["TypeScript", "Node.js", "Next.js"],
     visual: {
@@ -143,10 +143,10 @@ export const moreProjects: Project[] = [
   {
     id: "asis",
     name: "ASIS",
-    tagline: "Autonomous software improvement system",
-    category: "Agent infrastructure",
+    tagline: "Automated code-quality pipeline",
+    category: "Developer tooling",
     description:
-      "Runs several Claude Code workers in parallel against a codebase. Every change has to pass five validation gates before it is committed, and a failed gate rolls the change back.",
+      "Keeps a codebase healthy without manual cleanup. Improvement passes run in parallel, every change has to pass five validation gates before it is committed, and a failed gate rolls the change back.",
     facts: ["5 validation gates", "Auto-rollback"],
     techStack: ["TypeScript", "Node.js", "PostgreSQL", "Redis", "MCP"],
     visual: {
@@ -159,10 +159,10 @@ export const moreProjects: Project[] = [
   {
     id: "midas",
     name: "MIDAS",
-    tagline: "AI stock research app",
+    tagline: "Stock research reports on demand",
     category: "Web app",
     description:
-      "Combines LLM analysis with market data to produce research reports on individual stocks.",
+      "Pulls market data on any individual stock and turns it into a readable research report.",
     facts: [],
     techStack: ["Next.js", "TypeScript", "Prisma", "OpenAI"],
     visual: { type: "image", src: "/portfolio-screenshots/midas-viewport.webp" },
@@ -171,10 +171,10 @@ export const moreProjects: Project[] = [
   {
     id: "estimaite",
     name: "EstimAIte",
-    tagline: "AI-enhanced planning poker",
+    tagline: "Planning poker for agile teams",
     category: "Web app",
     description:
-      "Planning poker for agile teams, with real-time rooms and AI story analysis.",
+      "Real-time estimation rooms for agile teams, with automated story analysis before the team votes.",
     facts: ["Open source (MIT)"],
     techStack: ["Next.js", "TypeScript", "Pusher", "Tailwind CSS"],
     visual: { type: "image", src: "/portfolio-screenshots/estimaite-viewport.webp" },

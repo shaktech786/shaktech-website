@@ -11,7 +11,7 @@ import { bookingUrl } from "@/lib/site"
 
 const title = "Portfolio: 12+ Products Built Solo"
 const description =
-  "A streaming SaaS, an AI voice-note library, an issue tracker for AI agents, twelve web games and open-source MCP servers. All designed, built and run by one engineer."
+  "A streaming SaaS, a searchable voice-note archive for a music teacher, a project tracker, twelve web games and open-source integrations. Every one started with a real problem, and all were designed, built and run by one engineer."
 
 export const metadata: Metadata = {
   title,
@@ -43,8 +43,8 @@ const PortfolioPage = () => (
           <span className="block text-indigo-400">built by one engineer</span>
         </h1>
         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-          I&apos;m Shakeel Bhamani. I design, build and run every product here myself,
-          directing a team of AI agents. No co-founders, no contractors, no outside funding.
+          I&apos;m Shakeel Bhamani. Each product here started with a real problem, and I designed,
+          built and run every one of them myself. No co-founders, no contractors, no outside funding.
         </p>
 
         <dl className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3">
@@ -102,7 +102,7 @@ const PortfolioPage = () => (
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id="more-heading" className="text-3xl font-bold text-white">More from the studio</h2>
         <p className="mt-2 text-gray-300 max-w-2xl">
-          Desktop software, internal systems and agent infrastructure. Same engineer, same process.
+          Desktop software, internal tools and automation. Same engineer, same process.
         </p>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

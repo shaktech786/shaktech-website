@@ -2,9 +2,14 @@ import React from "react"
 
 export const buyerQuestions = [
   {
-    question: "Is AI-built software safe to run a business on?",
+    question: "What if I'm not sure exactly what I need?",
     answer:
-      "The agents write code. They do not decide what ships. Every change has to pass type-check, lint and automated tests, then a separate review pass, and I make the architecture and release calls myself. Prelive has run in production this way through 370+ tagged releases.",
+      "That is what the first call is for. Most people come with a problem, not a spec. I will help you work out what to build first, and sometimes the right answer is smaller than you expected.",
+  },
+  {
+    question: "How do I know the software will hold up?",
+    answer:
+      "Every change has to pass type-check, lint and automated tests, then a review, before it ships, and I make the architecture and release calls myself. It is the standard I have held on enterprise teams for over ten years. Prelive has run in production this way through 370+ releases.",
   },
   {
     question: "What happens if you are unavailable?",
@@ -14,7 +19,7 @@ export const buyerQuestions = [
   {
     question: "How long does a build take?",
     answer:
-      "It depends on scope, and the timeline is in the written scope before you commit to anything. As a reference point, Tack, a web app with a CLI and an MCP server, was built in under four weeks.",
+      "It depends on scope, and the timeline is in the written scope before you commit to anything. As a reference point, Tack, a project tracker with a web app and a command-line tool, was built in under four weeks.",
   },
   {
     question: "Can I check your claims?",
@@ -27,7 +32,7 @@ const BuyerQuestions = () => (
   <section className="py-12 sm:py-16 bg-gray-900" aria-labelledby="buyer-questions-heading">
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 id="buyer-questions-heading" className="text-3xl font-bold text-white mb-8">
-        What founders ask before hiring the studio
+        What people ask before hiring me
       </h2>
       <dl className="space-y-8">
         {buyerQuestions.map((item) => (

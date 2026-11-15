@@ -12,8 +12,8 @@ const PortfolioPreview = () => (
         The proof is the portfolio
       </h2>
       <p className="mt-3 text-lg text-gray-300 max-w-2xl">
-        A SaaS platform, a mobile-first AI app, a developer tool, twelve games and an open-source package.
-        Different kinds of software, one builder.
+        A streaming platform, a searchable archive for a music teacher, a developer tool, twelve games and
+        an open-source package. Different problems, one engineer.
       </p>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -32,7 +32,7 @@ const PortfolioPreview = () => (
         ))}
 
         <div className="flex flex-col justify-center rounded-xl border border-dashed border-gray-700 p-6">
-          <p className="text-lg font-semibold text-white">Plus desktop apps, internal systems and agent infrastructure.</p>
+          <p className="text-lg font-semibold text-white">Plus desktop apps, internal tools and automation.</p>
           <Button variant="cta" size="lg" className="mt-5 group" asChild>
             <Link href="/portfolio">
               See all the work

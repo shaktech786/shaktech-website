@@ -1,26 +1,30 @@
 import React from "react"
-import { ClipboardList, Hammer, FlaskConical, SearchCheck } from "lucide-react"
+import { MessagesSquare, ClipboardList, Hammer, KeyRound } from "lucide-react"
 
 const steps = [
   {
+    icon: MessagesSquare,
+    title: "Understand",
+    description:
+      "We start with the problem, not a feature list. I talk to the people who have it and work out what actually needs to exist.",
+  },
+  {
     icon: ClipboardList,
-    title: "Plan",
-    description: "Agents research the codebase and turn an idea into a written spec, broken into small stories.",
+    title: "Scope",
+    description:
+      "You get it in writing: what gets built first, a fixed price, a delivery date and what done looks like.",
   },
   {
     icon: Hammer,
     title: "Build",
-    description: "Several agents implement stories in parallel, each in an isolated workspace.",
+    description:
+      "Working software on a live URL early, so you see progress instead of hearing about it. Every change is tested and reviewed before it ships.",
   },
   {
-    icon: FlaskConical,
-    title: "Test",
-    description: "Every change has to pass type-check, lint and automated tests before it can merge.",
-  },
-  {
-    icon: SearchCheck,
-    title: "Review",
-    description: "Separate agents review each change. I make the calls on architecture, product and what ships.",
+    icon: KeyRound,
+    title: "Hand over",
+    description:
+      "You own the code, the infrastructure and the docs. I can stay on to run it, or any competent engineer can take it from there.",
   },
 ]
 
@@ -28,12 +32,11 @@ const StudioApproach = () => (
   <section className="py-14 sm:py-20 bg-gray-950" aria-labelledby="approach-heading">
     <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
       <h2 id="approach-heading" className="text-3xl sm:text-4xl font-bold text-white">
-        AI as a team, not autocomplete
+        How a project runs
       </h2>
       <p className="mt-3 text-lg text-gray-300 max-w-2xl">
-        Most engineers use AI to type faster. I run it as a team of autonomous agents and hold
-        their work to the engineering discipline I learned in 10+ years of shipping enterprise
-        software.
+        The same discipline I have used on enterprise teams for 10+ years, sized to your project.
+        No surprises, no handoffs, no black box.
       </p>
 
       <ol className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

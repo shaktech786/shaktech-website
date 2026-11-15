@@ -24,7 +24,7 @@ const windows = [
     id: "tack",
     title: "Tack",
     src: "/portfolio-screenshots/tack-board.webp",
-    alt: "Tack, an issue tracker built for AI agents",
+    alt: "Tack, a project tracker that runs from the terminal",
     position: "top-[34%] left-0 w-[64%]",
     delay: "120ms",
   },
@@ -32,7 +32,7 @@ const windows = [
     id: "alaap",
     title: "Alaap",
     src: "/portfolio-screenshots/alaap-library.webp",
-    alt: "Alaap, an AI voice-note library",
+    alt: "Alaap, a searchable voice-note library",
     position: "bottom-0 right-[3%] w-[54%]",
     delay: "240ms",
   },
@@ -48,12 +48,13 @@ const HeroSection = () => (
     <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 pt-10 pb-14 sm:px-8 sm:pt-16 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:px-12 lg:pt-20 lg:pb-24">
       <div>
         <h1 className="text-balance text-4xl leading-[1.05] font-bold text-white sm:text-5xl lg:text-6xl">
-          Your product, built by a Staff Engineer and a team of AI agents.
+          Bring me the problem. I&apos;ll build what solves it.
         </h1>
 
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-300 sm:text-xl">
-          ShakTech Labs is a founder-led product studio. New builds, legacy rescues and
-          everything between, at a fixed scope and price. You talk to the person writing the code.
+          I&apos;m Shakeel Bhamani, a Staff Engineer with 10+ years of building software for
+          Fortune 500 companies, startups and social-impact teams. New products, app rescues and
+          tools that end the busywork, at a fixed scope and price. You talk to the person doing the work.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">

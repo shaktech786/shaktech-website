@@ -2,17 +2,18 @@ import React from "react"
 import { pageMetadata } from "@/lib/metadata"
 import { Metadata } from "next"
 import Link from "next/link"
-import { ArrowRight, Globe, Smartphone, Monitor, Gamepad2, Terminal, Bot } from "lucide-react"
+import { ArrowRight, Globe, Smartphone, Monitor, Gamepad2, Terminal, Workflow } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Engagements from "@/components/engagements"
+import ProblemsSection from "@/components/problems-section"
 import StudioApproach from "@/components/studio-approach"
 import BuyerQuestions from "@/components/buyer-questions"
 import { bookingUrl } from "@/lib/site"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = pageMetadata(
-  "Services: What the Studio Builds",
-  "Web platforms, mobile-first apps, desktop software, games, developer tools and AI agent systems, built end to end by one engineer directing AI agents. Fixed-price builds from $25,000.",
+  "Services: Problems Solved, Products Built",
+  "New products, rescues of struggling apps, and internal tools that replace manual work, built end to end by a Staff Engineer with 10+ years of experience. Fixed-price builds from $25,000.",
   "/services"
 )
 
@@ -26,7 +27,7 @@ const capabilities = [
   {
     icon: Smartphone,
     title: "Mobile-first apps",
-    description: "Installable, phone-first apps with AI doing real work behind them.",
+    description: "Installable, phone-first apps that feel native, without waiting on an app store.",
     proof: { name: "Alaap", href: "/portfolio#alaap" },
   },
   {
@@ -38,20 +39,20 @@ const capabilities = [
   {
     icon: Gamepad2,
     title: "Games",
-    description: "Original browser games, with AI characters where they help.",
+    description: "Original browser games, from quick puzzles to fully voiced characters.",
     proof: { name: "VeryGoodMelon", href: "/portfolio#verygoodmelon" },
   },
   {
     icon: Terminal,
     title: "Developer tools",
-    description: "CLIs, MCP servers and open-source packages.",
+    description: "Command-line tools, integrations and open-source packages.",
     proof: { name: "Tack", href: "/portfolio#tack" },
   },
   {
-    icon: Bot,
-    title: "AI agent systems",
-    description: "Agents that plan, build and check their own work inside guardrails.",
-    proof: { name: "ASIS", href: "/portfolio#asis" },
+    icon: Workflow,
+    title: "Internal tools and automation",
+    description: "Software that takes repetitive, manual work off your team's plate.",
+    proof: { name: "Bursar", href: "/portfolio#bursar" },
   },
 ]
 
@@ -60,15 +61,18 @@ const ServicesPage = () => (
     <section className="pt-12 pb-10 sm:pt-20 sm:pb-14 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-5">
-          Tell me what you need.
-          <span className="block text-indigo-400">I&apos;ll build all of it.</span>
+          Tell me the problem.
+          <span className="block text-indigo-400">I&apos;ll handle the rest.</span>
         </h1>
         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-          ShakTech Labs takes a product from idea to production: design, code, tests, deployment
-          and running it afterwards. One engineer, one point of contact, no handoffs.
+          ShakTech Labs takes a problem from first conversation to software in production: scoping,
+          design, code, tests, deployment and running it afterwards. One engineer, one point of
+          contact, no handoffs.
         </p>
       </div>
     </section>
+
+    <ProblemsSection />
 
     <section className="py-12 sm:py-16 bg-gray-900" aria-labelledby="capabilities-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -23,7 +23,7 @@ const audiences = [
     audience: "You have the idea and no technical co-founder",
     title: "I build the first version",
     description:
-      "Tack went from an empty repo to a web app, a CLI and an MCP server in under four weeks. Product builds start at $25,000, fixed in writing before work starts. For early-stage founders, part of the fee can be equity.",
+      "Tack went from an empty repo to a web app and a command-line tool in under four weeks. Product builds start at $25,000, fixed in writing before work starts. For early-stage founders, part of the fee can be equity.",
   },
   {
     audience: "You have an MVP that is starting to creak",
@@ -56,8 +56,9 @@ const MomentumPage = () => (
           You pitched it this weekend. I can build it.
         </h1>
         <p className="text-lg sm:text-xl text-gray-300">
-          I&apos;m Shakeel Bhamani, a Staff Engineer from Atlanta, at Momentum all weekend. I build
-          complete products for founders with a team of AI agents, at a fixed price.
+          I&apos;m Shakeel Bhamani, a Staff Engineer from Atlanta with 10+ years of shipping
+          production software, at Momentum all weekend. I build complete products for founders, at
+          a fixed price.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">

@@ -8,6 +8,6 @@ export default function OpengraphImage() {
   return renderOgImage(
     "ShakTech Labs · Portfolio",
     "12+ products. One engineer. No team.",
-    "Prelive · Alaap · Tack · VeryGoodMelon · Arr Suite MCP"
+    "Prelive · Alaap · Tack · VeryGoodMelon · Arr Suite"
   )
 }

@@ -14,7 +14,7 @@ import {
   Heart,
   ArrowRight,
   Music,
-  Sparkles,
+  Shapes,
   CheckCircle,
   TrendingUp,
   MapPin
@@ -32,8 +32,8 @@ const AboutPage = () => {
     {
       year: "Present",
       title: "Staff Software Engineer",
-      description: "Tech lead on an enterprise supplier content platform. Built the team's AI enablement programme: an autonomous weekly refactoring agent, AI code review wired to Jira acceptance criteria, a five-server MCP setup, and a spec-driven development playbook adopted company-wide.",
-      icon: <Sparkles className="w-6 h-6" />,
+      description: "Tech lead on an enterprise supplier content platform. Led the team's engineering productivity programme: automated weekly refactoring, code review checked against Jira acceptance criteria, and a spec-driven development playbook adopted company-wide.",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-indigo-600 to-indigo-500",
       badge: "2026-Present",
       badgeColor: "bg-indigo-900/30 text-indigo-300 border-indigo-700/50"
@@ -85,13 +85,13 @@ const AboutPage = () => {
     },
     {
       title: "Range over repetition",
-      description: "A SaaS platform, a desktop app, games and developer tools. I would rather learn a new kind of software than build the same one twice.",
-      icon: <Sparkles className="w-8 h-8" />,
+      description: "A SaaS platform, a desktop app, games and developer tools. Every new kind of problem teaches me something the next client benefits from.",
+      icon: <Shapes className="w-8 h-8" />,
       color: "from-indigo-600 to-indigo-500"
     },
     {
       title: "Discipline at speed",
-      description: "Test-driven development, continuous integration and code review apply to agents exactly as they apply to people.",
+      description: "Moving fast only helps if nothing breaks. Test-driven development, continuous integration and review on every change, the same as on any enterprise team.",
       icon: <CheckCircle className="w-8 h-8" />,
       color: "from-indigo-600 to-indigo-500"
     }
@@ -108,16 +108,16 @@ const AboutPage = () => {
 
   const skillCategories = [
     {
-      category: "AI Agents",
-      icon: <Sparkles className="w-5 h-5" />,
-      color: "text-purple-400",
-      skills: ["Claude Code", "MCP Servers", "Autonomous Agents", "Claude API", "Gemini API", "Spec-Driven Development"]
-    },
-    {
       category: "Full-Stack Development",
       icon: <Code className="w-5 h-5" />,
       color: "text-blue-400",
       skills: ["React & Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL", "AWS & Azure", "Docker", "GraphQL"]
+    },
+    {
+      category: "Delivery",
+      icon: <CheckCircle className="w-5 h-5" />,
+      color: "text-purple-400",
+      skills: ["Product Scoping", "System Design", "Legacy Modernization", "Integrations & APIs", "Test-Driven Development", "CI/CD"]
     },
     {
       category: "Leadership",
@@ -143,7 +143,7 @@ const AboutPage = () => {
             {/* Content */}
             <div className="space-y-8 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 bg-indigo-900/30 px-4 py-2 rounded-full border border-indigo-700/50">
-                <Sparkles className="w-4 h-4 text-indigo-400" />
+                <Building className="w-4 h-4 text-indigo-400" aria-hidden="true" />
                 <span className="text-sm font-medium text-indigo-300">Founder, ShakTech Labs · Staff Software Engineer</span>
               </div>
 
@@ -154,7 +154,7 @@ const AboutPage = () => {
 
               <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
                 Ten-plus years from <strong className="text-indigo-400">Georgia Tech</strong> through <strong className="text-indigo-400">Thoughtworks</strong> to Staff Engineer.
-                Outside the day job I run ShakTech Labs, where I direct AI agents to build and run complete products on my own.
+                Outside the day job I run ShakTech Labs, where I solve software problems for clients and build complete products end to end.
                 I&apos;m raising a pre-seed round to do it full-time.
               </p>
 
@@ -411,7 +411,7 @@ const AboutPage = () => {
             Want to talk?
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Investors, founders with something to build, and engineers curious about the process are all welcome.
+            Investors, anyone with a problem worth solving, and engineers curious about the work are all welcome.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

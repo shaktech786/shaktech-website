@@ -24,11 +24,12 @@ const FounderSection = () => (
       />
       <div>
         <h2 id="founder-heading" className="text-3xl sm:text-4xl font-bold text-white">
-          Who is behind it
+          Who you&apos;ll work with
         </h2>
         <p className="mt-3 text-lg text-gray-300 leading-relaxed">
-          Shakeel Bhamani, based in Atlanta. Ten-plus years of professional software engineering,
-          from consulting at Thoughtworks to Staff Engineer.
+          Shakeel Bhamani, based in Atlanta. Ten-plus years of solving problems with software for
+          a Fortune 500 retailer, Allstate, startups and social-impact platforms, from consulting at
+          Thoughtworks to Staff Engineer. No account managers in between: you work with me.
         </p>
         <ul className="mt-5 flex flex-wrap gap-2">
           {credentials.map((credential) => (

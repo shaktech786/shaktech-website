@@ -14,7 +14,7 @@ const Footer = () => {
         { name: "Alaap", href: "/portfolio#alaap" },
         { name: "Tack", href: "/portfolio#tack" },
         { name: "VeryGoodMelon", href: "/portfolio#verygoodmelon" },
-        { name: "Arr Suite MCP", href: "/portfolio#arr-suite-mcp" }
+        { name: "Arr Suite", href: "/portfolio#arr-suite-mcp" }
       ]
     },
     {
@@ -57,7 +57,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-gray-400 leading-relaxed mb-4 max-w-md">
-              A founder-led product studio: a Staff Engineer directing AI agents to design, build and run complete products.
+              Software that solves real problems, designed, built and run by a Staff Engineer with 10+ years in the industry.
             </p>
 
             <p className="text-sm text-gray-300 mb-6">

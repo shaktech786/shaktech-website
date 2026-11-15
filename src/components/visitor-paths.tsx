@@ -14,7 +14,7 @@ const paths = [
   },
   {
     audience: "Founders and companies",
-    title: "Get something built",
+    title: "Get a problem solved",
     description:
       "Fixed-price product builds from $25,000, monthly retainers from $10,000, and equity hybrids for the right product.",
     href: "/services",
@@ -25,7 +25,7 @@ const paths = [
     audience: "Engineers",
     title: "Read the code",
     description:
-      "VeryGoodMelon, Prelive Deck, Unbottle and the Arr Suite MCP server are open source.",
+      "VeryGoodMelon, Prelive Deck, Unbottle and the Arr Suite integration are open source.",
     href: "https://github.com/shaktech786",
     cta: "GitHub",
     external: true,

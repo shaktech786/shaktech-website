@@ -19,8 +19,9 @@ const structuredData = {
       "https://linktr.ee/shakbbx"
     ],
     "knowsAbout": [
-      "AI Agents",
-      "Model Context Protocol (MCP)",
+      "Product Engineering",
+      "Software Architecture",
+      "Legacy System Modernization",
       "Full-Stack Software Development",
       "TypeScript",
       "React",
@@ -61,7 +62,7 @@ const structuredData = {
       "availableLanguage": "en",
       "url": `${baseUrl}/contact`
     }],
-    "description": "A founder-led product engineering studio: a Staff Engineer directing AI agents to design, build and run complete products."
+    "description": "A founder-led product engineering studio. Shakeel Bhamani, a Staff Engineer with 10+ years of experience, designs, builds and runs software that solves real business problems, at a fixed scope and price."
   },
   website: {
     "@context": "https://schema.org",

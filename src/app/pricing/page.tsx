@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How can one person deliver a whole product?",
     answer:
-      "I direct a team of AI agents that plan, build, test and review in parallel, and I hold their output to the same standards I apply as a Staff Engineer. The portfolio is the proof: every product on it was built this way, by one person.",
+      "Ten years of doing exactly this, and a process built to avoid rework: a written scope up front, small changes, automated tests on everything, and no handoffs between people. The portfolio is the proof: every product on it was built by one person.",
   },
   {
     question: "What does a build include?",
@@ -41,6 +41,11 @@ const faqs = [
     answer: "Yes, at reduced rates. Tell me about the mission when you get in touch.",
   },
   ...buyerQuestions,
+  {
+    question: "Do you use AI tools?",
+    answer:
+      "Yes, the way most engineering teams do now: as tools. They don't decide what gets built or what ships. I do, and every change goes through the same tests and review either way. You are paying for judgment and accountability, and those stay with me.",
+  },
 ]
 
 const PricingPage = () => (

@@ -25,7 +25,7 @@ export const engagements = [
     price: "From $10,000 / month",
     terms: "Month to month",
     description:
-      "A standing share of the studio for teams that need continuous shipping: new features, a second product, or running what is already live.",
+      "A standing share of the studio for teams that need continuous shipping: new features, stabilizing a codebase that has become hard to change, or running what is already live.",
     includes: [
       "A prioritized backlog, shipped continuously",
       "Production monitoring and fixes",
