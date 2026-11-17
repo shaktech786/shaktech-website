@@ -25,12 +25,20 @@ const nextConfig: NextConfig = {
   compress: true,
 
 
-  // Old blog and resources URLs still get visits; send them to the portfolio.
   async redirects() {
     return [
-      { source: '/blog', destination: '/portfolio', permanent: false },
-      { source: '/blog/:slug*', destination: '/portfolio', permanent: false },
-      { source: '/resources', destination: '/portfolio', permanent: false },
+      // One host only, so Google stops indexing www as a duplicate site.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.shak-tech.com' }],
+        destination: 'https://shak-tech.com/:path*',
+        permanent: true,
+      },
+      // The blog and resources pages are gone for good. Permanent, so Google
+      // drops the old URLs from results and credits the portfolio instead.
+      { source: '/blog', destination: '/portfolio', permanent: true },
+      { source: '/blog/:slug*', destination: '/portfolio', permanent: true },
+      { source: '/resources', destination: '/portfolio', permanent: true },
     ];
   },
 

@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { pageMetadata } from "@/lib/metadata"
 
 export const metadata: Metadata = pageMetadata(
-  "Contact",
+  "Contact: Book a Call or Send a Message",
   "Get in touch with Shakeel Bhamani at ShakTech Labs about investing, a product build, or a partnership. Replies within one business day.",
   "/contact"
 )

@@ -1,3 +1,5 @@
+export const siteUrl = "https://shak-tech.com"
+
 export const bookingUrl = "https://calendly.com/shakeel-bhamani/catch-up"
 
 export const momentumEvent = {

@@ -3,7 +3,7 @@ import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navigation";
 import EventBanner from "@/components/event-banner";
-import StructuredData from "@/components/structured-data";
+import StructuredData, { siteGraph } from "@/components/structured-data";
 import ClientWidgets from "@/components/client-widgets";
 import ErrorBoundary from "@/components/error-boundary";
 import WebVitals from "@/components/web-vitals";
@@ -20,9 +20,9 @@ const display = Bricolage_Grotesque({
   display: "swap",
 });
 
-const title = "ShakTech Labs | Product Engineering Studio";
+const title = "ShakTech Labs | Custom Software Development Studio, Atlanta";
 const description =
-  "Bring me the problem, I'll build what solves it. Shakeel Bhamani is a Staff Software Engineer with 10+ years of experience building new products, rescuing struggling apps and automating busywork, at a fixed scope and price. 12+ products live today.";
+  "Shakeel Bhamani, a Staff Software Engineer with 10+ years of experience, builds new products, rescues struggling apps and automates busywork at a fixed price.";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://shak-tech.com'),
@@ -33,7 +33,6 @@ export const metadata: Metadata = {
   description,
   authors: [{ name: "Shakeel Bhamani" }],
   creator: "Shakeel Bhamani",
-  alternates: { canonical: "/" },
   icons: {
     icon: "/shaktech-logo.png",
     shortcut: "/shaktech-logo.png",
@@ -71,9 +70,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${display.variable} font-sans antialiased min-h-screen bg-gray-950 text-gray-100`}
       >
-        <StructuredData type="person" />
-        <StructuredData type="organization" />
-        <StructuredData type="website" />
+        <StructuredData data={siteGraph} />
         <Navigation />
         <ErrorBoundary>
           <div className="pt-16">

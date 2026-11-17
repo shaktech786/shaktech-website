@@ -4,16 +4,17 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight, Globe, Smartphone, Monitor, Gamepad2, Terminal, Workflow } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Engagements from "@/components/engagements"
+import Engagements, { engagements } from "@/components/engagements"
 import ProblemsSection from "@/components/problems-section"
 import StudioApproach from "@/components/studio-approach"
 import BuyerQuestions from "@/components/buyer-questions"
-import { bookingUrl } from "@/lib/site"
+import StructuredData, { organizationRef, pageGraph } from "@/components/structured-data"
+import { bookingUrl, siteUrl } from "@/lib/site"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = pageMetadata(
-  "Services: Problems Solved, Products Built",
-  "New products, rescues of struggling apps, and internal tools that replace manual work, built end to end by a Staff Software Engineer with 10+ years of experience. Fixed-price builds from $25,000.",
+  "Custom Software Development Services",
+  "New products, rescues of struggling apps and internal tools that replace manual work, built end to end by one Staff Software Engineer. Fixed-price builds from $25,000.",
   "/services"
 )
 
@@ -56,8 +57,23 @@ const capabilities = [
   },
 ]
 
+const structuredData = pageGraph(
+  "Services",
+  "/services",
+  engagements.map((engagement) => ({
+    "@type": "Service",
+    "name": engagement.title,
+    "description": engagement.description,
+    "serviceType": "Custom software development",
+    "provider": organizationRef,
+    "areaServed": "US",
+    "url": `${siteUrl}/pricing#${engagement.id}`,
+  }))
+)
+
 const ServicesPage = () => (
   <main className="min-h-screen bg-gray-900">
+    <StructuredData data={structuredData} />
     <section className="pt-12 pb-10 sm:pt-20 sm:pb-14 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-5">

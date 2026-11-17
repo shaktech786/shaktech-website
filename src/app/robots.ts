@@ -1,21 +1,9 @@
 import { MetadataRoute } from 'next'
+import { siteUrl } from '@/lib/site'
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/admin/', '/api/', '/logs/', '/scraped-data/', '/.vercel/', '/.next/'],
-        crawlDelay: 1,
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/admin/', '/api/', '/logs/', '/scraped-data/'],
-      },
-    ],
-    sitemap: 'https://shak-tech.com/sitemap.xml',
-    host: 'https://shak-tech.com',
+    rules: [{ userAgent: '*', allow: '/', disallow: ['/api/'] }],
+    sitemap: `${siteUrl}/sitemap.xml`,
   }
 }

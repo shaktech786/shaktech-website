@@ -5,8 +5,7 @@ export default function Loading() {
         <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
           <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin" />
         </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Loading ShakTech</h2>
-        <p className="text-gray-400">Loading...</p>
+        <p role="status" className="text-gray-400">Loading...</p>
       </div>
     </div>
   )

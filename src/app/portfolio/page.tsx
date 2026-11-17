@@ -7,11 +7,12 @@ import Footer from "@/components/footer"
 import ProjectVisual from "@/components/project-visual"
 import ProjectLinks from "@/components/project-links"
 import { leadProjects, moreProjects, studioStats } from "@/lib/projects"
-import { bookingUrl } from "@/lib/site"
+import StructuredData, { pageGraph, personRef } from "@/components/structured-data"
+import { bookingUrl, siteUrl } from "@/lib/site"
 
 const title = "Portfolio: 12+ Products Built Solo"
 const description =
-  "A streaming SaaS, a searchable voice-note archive for a music teacher, a project tracker, twelve web games and open-source integrations. Every one started with a real problem, and all were designed, built and run by one engineer."
+  "A streaming SaaS, a searchable voice-note archive, a project tracker, twelve web games and open-source integrations, all designed, built and run by one engineer."
 
 export const metadata: Metadata = {
   title,
@@ -31,8 +32,28 @@ export const metadata: Metadata = {
   },
 }
 
+const structuredData = pageGraph("Portfolio", "/portfolio", [
+  {
+    "@type": "ItemList",
+    "name": "Products built by ShakTech Labs",
+    "itemListElement": [...leadProjects, ...moreProjects].map((project, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": project.name,
+        "description": project.description,
+        "applicationCategory": project.category,
+        "url": project.liveUrl ?? `${siteUrl}/portfolio#${project.id}`,
+        "creator": personRef,
+      },
+    })),
+  },
+])
+
 const PortfolioPage = () => (
   <main className="min-h-screen bg-gray-950">
+    <StructuredData data={structuredData} />
     <section className="pt-12 pb-10 sm:pt-20 sm:pb-14 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-4">

@@ -8,9 +8,10 @@ import Engagements from "@/components/engagements"
 import { buyerQuestions } from "@/components/buyer-questions"
 import { bookingUrl } from "@/lib/site"
 import Footer from "@/components/footer"
+import StructuredData, { pageGraph } from "@/components/structured-data"
 
 export const metadata: Metadata = pageMetadata(
-  "Pricing",
+  "Pricing: Fixed-Price Software Builds from $25,000",
   "Three ways to work with ShakTech Labs: a fixed-price product build from $25,000, a monthly studio retainer from $10,000, or an equity and go-to-market partnership.",
   "/pricing"
 )
@@ -48,8 +49,20 @@ const faqs = [
   },
 ]
 
+const structuredData = pageGraph("Pricing", "/pricing", [
+  {
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer },
+    })),
+  },
+])
+
 const PricingPage = () => (
   <main className="min-h-screen bg-gray-900">
+    <StructuredData data={structuredData} />
     <section className="pt-12 pb-10 sm:pt-20 sm:pb-14 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">

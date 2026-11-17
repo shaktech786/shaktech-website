@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -10,6 +11,8 @@ import VisitorPaths from "@/components/visitor-paths"
 import BuyerQuestions from "@/components/buyer-questions"
 import Footer from "@/components/footer"
 import { bookingUrl } from "@/lib/site"
+
+export const metadata: Metadata = { alternates: { canonical: "/" } }
 
 export default function Home() {
   return (

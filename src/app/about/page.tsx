@@ -20,12 +20,17 @@ import {
   MapPin
 } from "lucide-react"
 import Image from "next/image"
+import StructuredData, { pageGraph, personRef } from "@/components/structured-data"
 
 export const metadata: Metadata = pageMetadata(
-  "About Shakeel Bhamani",
-  "Staff Software Engineer and founder of ShakTech Labs, a founder-led product engineering studio in Atlanta. Georgia Tech CS, seven years at Thoughtworks, TEDx speaker, 2017 American Beatbox Championships vice champion.",
+  "About Shakeel Bhamani, Staff Software Engineer",
+  "Founder of ShakTech Labs, a product engineering studio in Atlanta. Georgia Tech CS, seven years at Thoughtworks, TEDx speaker and 2017 American Beatbox vice champion.",
   "/about"
 )
+
+const structuredData = pageGraph("About", "/about", [
+  { "@type": "ProfilePage", "mainEntity": personRef },
+])
 
 const AboutPage = () => {
   const journeyMilestones = [
@@ -129,6 +134,7 @@ const AboutPage = () => {
 
   return (
     <main className="min-h-screen bg-gray-900">
+      <StructuredData data={structuredData} />
       {/* Hero Section - Enhanced */}
       <section className="relative flex items-center justify-center overflow-hidden">
         {/* Animated Background */}

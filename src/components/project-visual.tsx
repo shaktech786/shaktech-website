@@ -16,7 +16,7 @@ const ProjectVisual = ({ project, priority = false, sizes }: ProjectVisualProps)
       <div className="aspect-video overflow-hidden rounded-lg border border-gray-700 bg-gray-950">
         <Image
           src={visual.src}
-          alt={`${project.name} screenshot`}
+          alt={`${project.name}: ${project.tagline}`}
           width={1280}
           height={720}
           priority={priority}
